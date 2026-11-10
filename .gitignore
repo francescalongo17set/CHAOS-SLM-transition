@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+mlruns/
+runs/
+dist/
+data/corpus/
+data/gen/
+.pytest_cache/
+kaggle_*/
+.DS_Store
+mlflow.db
+*.safetensors

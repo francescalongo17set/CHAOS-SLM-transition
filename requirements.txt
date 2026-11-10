@@ -1,0 +1,6 @@
+# Kaggle already ships torch. Everything else installs with pip.
+transformers>=4.44
+accelerate
+huggingface_hub
+mlflow
+matplotlib
