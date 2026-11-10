@@ -11,3 +11,5 @@ kaggle_*/
 mlflow.db
 *.safetensors
 .idea/
+.env
+models_cache/

@@ -66,7 +66,8 @@ if __name__ == "__main__":
     ap.add_argument("--agentic-cost", type=float, default=COST["agentic"], help="cost of an agentic run relative to lightweight=1")
     ap.add_argument("--target-recall", type=float, default=0.9, help="minimum share of unsafe queries the stop thresholds must catch on calibration")
     ap.add_argument("--out", default=f"runs/{time.strftime('%Y%m%d-%H%M%S')}")
-    ap.add_argument("--mlflow-uri", default="sqlite:///mlflow.db", help="local SQLite file, no server. (MLflow now blocks the plain-folder store unless MLFLOW_ALLOW_FILE_STORE=true.)")
+    ap.add_argument("--mlflow-uri", default=os.environ.get("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db"),
+                    help="default: $MLFLOW_TRACKING_URI, else a local SQLite file. (MLflow now blocks the plain-folder store unless MLFLOW_ALLOW_FILE_STORE=true.)")
     ap.add_argument("--no-mlflow", action="store_true")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
