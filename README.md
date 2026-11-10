@@ -69,6 +69,10 @@ python app.py          # http://127.0.0.1:7860 (7861 if busy); needs: pip instal
 
 `app.py` downloads whatever `laya-router@champion` points at (first start: ~650 MB, cached in `models_cache/`) and re-checks the alias every 30 s, so a new champion goes live without a restart. Every query becomes a trace tagged with `registry_version`.
 
+For each query the page shows the route and reason, a table of the three decisions (answer, probabilities, the threshold rule applied, which row decided), the model version and weights hash, the thresholds used, the time taken, a link to the trace in MLflow, the raw decision-log record, and a table of the session's queries. The threshold sliders start at the values tuned with the served model (read from its registered run) and can be changed to see when a route flips.
+
+Optional environment variables: `MLFLOW_UI_URL` (base address of your MLflow UI for the trace link, default `http://127.0.0.1:5001`), `GRADIO_SERVER_NAME=0.0.0.0` (reachable on your network), `GRADIO_SHARE=1` (temporary public gradio.live link; treat it as public).
+
 **Look at it.**
 
 ```bash
