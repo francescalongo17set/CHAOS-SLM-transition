@@ -116,6 +116,7 @@ Stop thresholds are chosen on **calib**: best route accuracy among settings that
 
 - **MLflow:** params, metrics and artifacts per run in a local SQLite file `mlflow.db` (`mlflow ui --backend-store-uri sqlite:///mlflow.db`). The plain-folder `mlruns/` store is refused by the current MLflow release, so SQLite is the same idea: one local file, no server.
 - **Dataset versioning:** plain versioned folders (`data/v2/`) with a SHA-256 manifest, no DVC. Files are small, no remote to set up, and every MLflow run logs the hash of the exact files it used.
+- **Tracing:** `Orchestrator.run` emits one MLflow trace per query: root `orchestrator`, one span per question (`safety`, `scope`, `complexity`), then `route`; model, weights hash and thresholds go in trace metadata. Point it at a server with `export MLFLOW_TRACKING_URI=http://127.0.0.1:5000 MLFLOW_EXPERIMENT_ID=1`; without them traces go to the default local store. `run_eval.py` scores through the backend directly and emits no traces.
 - **Decision log:** `decision_log.jsonl`, one line per routed query: query, each decision with probability, thresholds, route, reason, model name and weights hash. `Orchestrator(backend, log_path=...)` writes the same format in use.
 - **CI:** `.github/workflows/tests.yml` runs `pytest`. No GPU, no model download, no Laya install.
 

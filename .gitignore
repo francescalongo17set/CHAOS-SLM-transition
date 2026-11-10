@@ -10,3 +10,4 @@ kaggle_*/
 .DS_Store
 mlflow.db
 *.safetensors
+.idea/
