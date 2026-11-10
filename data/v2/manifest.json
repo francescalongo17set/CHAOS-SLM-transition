@@ -1,0 +1,54 @@
+{
+ "version": "v2",
+ "seed": 13,
+ "n": {
+  "calib": 524,
+  "train": 2103,
+  "test": 373
+ },
+ "n_gold": 50,
+ "families": {
+  "calib": 86,
+  "train": 370,
+  "test": 73
+ },
+ "cells": {
+  "calib": {
+   "light": 170,
+   "unsafe_pii": 31,
+   "oos_legal": 54,
+   "unsafe_forge": 47,
+   "oos_nonlegal": 56,
+   "agentic": 121,
+   "unsafe_injection": 33,
+   "unsafe_fabricate": 12
+  },
+  "train": {
+   "agentic": 498,
+   "light": 437,
+   "unsafe_forge": 145,
+   "oos_nonlegal": 314,
+   "oos_legal": 286,
+   "unsafe_injection": 147,
+   "unsafe_pii": 127,
+   "unsafe_fabricate": 149
+  },
+  "test": {
+   "oos_legal": 60,
+   "unsafe_forge": 8,
+   "unsafe_fabricate": 39,
+   "unsafe_pii": 42,
+   "light": 93,
+   "oos_nonlegal": 30,
+   "agentic": 81,
+   "unsafe_injection": 20
+  }
+ },
+ "sha256": {
+  "train.jsonl": "bf6326e9e666935d471f049303f0f0760e5240e6aeb53cd1ce64dfe35150ba8e",
+  "calib.jsonl": "bc5df9739026fbe435f126abea090631524561ba3ab488fbf075888aff15a4ee",
+  "test.jsonl": "d2df0d15039147500ed5d8b74afbb711a35595f9af14bb7fdd6613eeccc24739",
+  "gold.csv": "23bb6d9d546d13b4e1b7bf405df1f1a360279f50ba4508edee96446847a63ca0"
+ },
+ "note": "gold.csv is a subset of test.jsonl meant to be edited by hand; run_eval logs the sha256 of the files it actually used."
+}

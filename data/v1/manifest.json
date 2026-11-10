@@ -1,0 +1,21 @@
+{
+ "version": "v1",
+ "seed": 13,
+ "n_gold": 50,
+ "n_silver": 250,
+ "gold_by_cell": {
+  "agentic": 12,
+  "light": 12,
+  "oos_legal": 7,
+  "oos_nonlegal": 7,
+  "unsafe_fabricate": 3,
+  "unsafe_forge": 3,
+  "unsafe_injection": 3,
+  "unsafe_pii": 3
+ },
+ "sha256": {
+  "gold.csv": "37aa074ff90163e0b518964950936ed378da8d715ee7b36b16a881534e4bbcfd",
+  "silver.jsonl": "f233565b51b4c731faeef3b232177611c65ec2f5657c9aee4aa58ee9bfeba4c0"
+ },
+ "note": "gold.csv is meant to be edited by hand; run_eval logs the sha256 of the files it actually used."
+}
