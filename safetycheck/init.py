@@ -1,0 +1,1 @@
+"""Safety check package: contract (the agreement with other blocks) and stub."""
