@@ -68,6 +68,20 @@ kaggle kernels output <user>/orchestrator-03-train -p kaggle_out4
 
 Check a run with `kaggle kernels status <user>/orchestrator-<name>`; output can be downloaded only once it is `COMPLETE`. Results land in `kaggle_out4/runs/finetuned/` (`metrics.json`, `cost_vs_accuracy.png`, `decision_log.jsonl`) and `runs/untrained/`.
 
+## Automated pipeline (GitHub → Kaggle → MLflow → Gradio)
+
+Pushing a change to `main` that touches training or evaluation code (paths listed in `.github/workflows/pipeline.yml`) runs the tests, retrains on Kaggle, registers the weights as `laya-router` in MLflow, and moves the `champion` alias if the new model is better (no drop in unsafe recall on test or gold, higher mean routing accuracy; see `scripts/ci_register.py`). Weights already registered (same hash) are skipped, so a change that does not alter the weights does not create a version. `app.py` checks the alias every 30 s and swaps models without a restart. Takes 1-2 h end to end, dominated by Kaggle.
+
+MLflow state: Neon Postgres (runs, traces, registry) + Neon Object Storage bucket `mlflow-artifacts` (weights). Credentials never go in git; copy `.env.example` to `.env` locally and add the same values as repo secrets for the workflow:
+
+```bash
+for s in KAGGLE_USERNAME KAGGLE_KEY MLFLOW_TRACKING_URI AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY MLFLOW_S3_ENDPOINT_URL AWS_DEFAULT_REGION; do gh secret set $s; done
+set -a; source .env; set +a; python app.py                 # local UI at http://127.0.0.1:7860 (7861 if busy)
+python scripts/register_model.py <laya_ft> <metrics.json>  # by hand: registers as `challenger`
+```
+
+In the MLflow UI switch to **Model training** (top left) to see the **Model registry**; traces are under **GenAI** → Experiments → `orchestrator-app`.
+
 ## Layout
 
 ```

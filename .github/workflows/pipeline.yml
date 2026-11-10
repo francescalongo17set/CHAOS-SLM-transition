@@ -1,0 +1,93 @@
+name: train-and-promote
+
+# A change to anything that decides the model's weights or scores: retrain on Kaggle, register the result in MLflow,
+# and move the `champion` alias if it is better. The Gradio app picks the alias up by itself (it checks every 30 s).
+# Needs these repo secrets: KAGGLE_USERNAME, KAGGLE_KEY, MLFLOW_TRACKING_URI, AWS_ACCESS_KEY_ID (write key),
+# AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL, AWS_DEFAULT_REGION.
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/train_laya.py
+      - scripts/run_eval.py
+      - scripts/make_kaggle.py
+      - orch/backends.py
+      - orch/decision.py
+      - orch/evalkit.py
+      - orch/laya_data.py
+      - orch/router.py
+  workflow_dispatch:
+
+concurrency:
+  group: kaggle-training
+  cancel-in-progress: false   # never abandon a training run half way
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340      # Kaggle run is 1-2 h; Actions stops a job at 6 h
+    env:
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      KERNEL: ${{ secrets.KAGGLE_USERNAME }}/orchestrator-03-train
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install kaggle pytest mlflow psycopg2-binary boto3
+
+      - name: Tests first (no point training on broken code)
+        run: pytest -q
+
+      - name: Build bundle and publish the code dataset
+        run: |
+          KAGGLE_USER="$KAGGLE_USERNAME" python scripts/make_kaggle.py
+          kaggle datasets version -p dist/code -m "ci ${GITHUB_SHA::7}" -r zip
+          for i in $(seq 1 20); do   # the notebook must start from the new dataset version, not the previous one
+            s=$(kaggle datasets status "$KAGGLE_USERNAME/orchestrator-code" 2>&1 | tail -1); echo "dataset: $s"
+            case "$s" in *ready*|*READY*) break;; esac
+            sleep 15
+          done
+
+      - name: Start the Kaggle run
+        run: |
+          kaggle kernels push -p dist/03-train
+          for i in $(seq 1 20); do   # right after a push the status can still show the previous run as COMPLETE
+            s=$(kaggle kernels status "$KERNEL" 2>&1 | tail -1); echo "kernel: $s"
+            case "$s" in *RUNNING*|*QUEUED*) break;; esac
+            sleep 30
+          done
+
+      - name: Wait for the Kaggle run
+        run: |
+          for i in $(seq 1 60); do   # 5 h at 5 min per check
+            s=$(kaggle kernels status "$KERNEL" 2>&1 | tail -1); echo "kernel: $s"
+            case "$s" in
+              *COMPLETE*) exit 0;;
+              *ERROR*|*CANCEL*) kaggle kernels output "$KERNEL" -p failed_run || true; echo "::error::Kaggle run failed: $s"; exit 1;;
+            esac
+            sleep 300
+          done
+          echo "::error::Kaggle run still going after 5 h"; exit 1
+
+      - name: Download the output
+        run: kaggle kernels output "$KERNEL" -p out
+
+      - name: Register in MLflow, promote if better
+        env:
+          MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          MLFLOW_S3_ENDPOINT_URL: ${{ secrets.MLFLOW_S3_ENDPOINT_URL }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: python scripts/ci_register.py out | tee "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: |
+            out/runs/finetuned/metrics.json
+            out/runs/finetuned/cost_vs_accuracy.png
+            failed_run/*.log
+          if-no-files-found: ignore
