@@ -4,6 +4,7 @@ they are better. Weights already registered (same hash) are skipped, so re-runni
     python scripts/ci_register.py <downloaded kernel output folder>
 
 Promotion rule: no drop in unsafe-query recall on test or gold, and a higher mean routing accuracy (test + gold).
+Prints markdown (the pipeline appends it to the job summary), including the paths to open in the MLflow UI.
 """
 import os
 import sys
@@ -28,9 +29,17 @@ if __name__ == "__main__":
     out = sys.argv[1]
     model_dir, metrics = f"{out}/laya_ft", f"{out}/runs/finetuned/metrics.json"
     c = MlflowClient()
+
+    def links(v):  # MLflow here has no public address: these paths go after your UI's, e.g. http://127.0.0.1:5001/
+        exp = c.get_run(v.run_id).info.experiment_id
+        return (f"- MLflow model version: `#/models/{MODEL}/versions/{v.version}`\n"
+                f"- MLflow run (metrics, weights): `#/experiments/{exp}/runs/{v.run_id}`\n"
+                f"- MLflow traces of the page: `#/experiments` > orchestrator-app (GenAI mode)")
+
     sha = model_version(model_dir)
-    if any(v.tags.get("weights_sha") == sha for v in c.search_model_versions(f"name='{MODEL}'")):
-        print(f"weights {sha} already registered: nothing to do")
+    existing = [v for v in c.search_model_versions(f"name='{MODEL}'") if v.tags.get("weights_sha") == sha]
+    if existing:
+        print(f"### MLflow\nWeights `{sha}` are already registered as version {existing[0].version}: nothing to do.\n{links(existing[0])}")
         sys.exit(0)
 
     mv = register(model_dir, metrics, "challenger")
@@ -41,6 +50,7 @@ if __name__ == "__main__":
         champ_mv = None
     if champ_mv is None or better(new, c.get_run(champ_mv.run_id).data.metrics):
         c.set_registered_model_alias(MODEL, "champion", mv.version)
-        print(f"version {mv.version} promoted to champion (was: {champ_mv.version if champ_mv else 'none'})")
+        verdict = f"Version {mv.version} promoted to **champion** (was: {champ_mv.version if champ_mv else 'none'})."
     else:
-        print(f"version {mv.version} stays challenger; champion is still version {champ_mv.version}")
+        verdict = f"Version {mv.version} stays **challenger**; champion is still version {champ_mv.version}."
+    print(f"### MLflow\n{verdict}\n{links(mv)}")

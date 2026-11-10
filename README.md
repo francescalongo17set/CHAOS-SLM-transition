@@ -1,5 +1,8 @@
 # Insurance-law orchestrator
 
+[![tests](https://github.com/francescalongo17set/CHAOS-SLM-transition/actions/workflows/tests.yml/badge.svg)](https://github.com/francescalongo17set/CHAOS-SLM-transition/actions/workflows/tests.yml)
+[![train-and-promote](https://github.com/francescalongo17set/CHAOS-SLM-transition/actions/workflows/pipeline.yml/badge.svg)](https://github.com/francescalongo17set/CHAOS-SLM-transition/actions/workflows/pipeline.yml)
+
 Routes each user query to **stop**, **lightweight** or **agentic** before anything expensive runs. It never answers the query.
 
 A small fine-tuned decision model ([Laya-multilingual](https://huggingface.co/convaiinnovations/laya-multilingual), a 322M encoder, no LLM, no text generation) answers three questions with probabilities; plain code applies thresholds:
@@ -97,6 +100,17 @@ A push to `main` that touches training or evaluation code (the paths are listed 
 7. the running page picks up the new champion on its own.
 
 Limits: training is deterministic, so retraining the same code and data gives the same weights; changing `data/v2` does not retrain (it is a separate Kaggle dataset); the page runs only where you start it (free Hugging Face Spaces no longer host Gradio); Kaggle's weekly GPU quota caps retraining.
+
+### Following a run
+
+Open the run in the repo's **Actions** tab (the `train-and-promote` badge above links to the list). Its **Summary** page has a "Follow this run" box with:
+
+- the Actions run itself (live step log);
+- the **Kaggle** notebook, whose page shows the live training log (`https://www.kaggle.com/code/<user>/orchestrator-03-train`);
+- the Kaggle code dataset;
+- once training is done, an **MLflow** section with the new model version and run as paths to append to your MLflow UI address (for example `http://127.0.0.1:5001/` + `#/models/laya-router/versions/3`). MLflow has no public address here and nothing is logged to it while Kaggle trains, so there is no live MLflow log.
+
+If the Kaggle link shows `***` (Actions masks secrets), add a repo **variable** `KAGGLE_USERNAME` with the same value. The badge shows the last run's result on `main`.
 
 ### One-time setup
 

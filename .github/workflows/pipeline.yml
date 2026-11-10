@@ -30,8 +30,22 @@ jobs:
       KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
       KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}   # kaggle CLI 2.x reads this; KAGGLE_USERNAME only names the kernel/dataset ids
       KERNEL: ${{ secrets.KAGGLE_USERNAME }}/orchestrator-03-train
+      # Actions masks secret values as *** in logs and summaries. If the Kaggle link below shows ***, add a repo *variable*
+      # (Settings > Secrets and variables > Actions > Variables) named KAGGLE_USERNAME with the same value.
+      KAGGLE_USER_PUBLIC: ${{ vars.KAGGLE_USERNAME || secrets.KAGGLE_USERNAME }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Links to follow this run
+        run: |
+          {
+            echo "### Follow this run"
+            echo "- GitHub Actions: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "- Kaggle notebook and live log: https://www.kaggle.com/code/$KAGGLE_USER_PUBLIC/orchestrator-03-train"
+            echo "- Kaggle code dataset: https://www.kaggle.com/datasets/$KAGGLE_USER_PUBLIC/orchestrator-code"
+            echo "- MLflow: nothing is logged while Kaggle trains. The last step below lists the version and run to open in your MLflow UI."
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
       - run: pip install "kaggle>=2" pytest mlflow psycopg2-binary boto3
