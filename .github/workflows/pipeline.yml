@@ -6,9 +6,8 @@ name: train-and-promote
 # MLFLOW_TRACKING_URI, AWS_ACCESS_KEY_ID (write key), AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL, AWS_DEFAULT_REGION.
 on:
   push:
-    branches: [main, orchestrator-jev]   # TEMP: orchestrator-jev is for testing, remove before merging
+    branches: [main]
     paths:
-      - .github/workflows/pipeline.yml   # TEMP: so pushing this file starts a run, remove before merging
       - scripts/train_laya.py
       - scripts/run_eval.py
       - scripts/make_kaggle.py
