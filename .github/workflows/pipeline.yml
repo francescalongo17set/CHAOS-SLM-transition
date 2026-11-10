@@ -2,8 +2,8 @@ name: train-and-promote
 
 # A change to anything that decides the model's weights or scores: retrain on Kaggle, register the result in MLflow,
 # and move the `champion` alias if it is better. The Gradio app picks the alias up by itself (it checks every 30 s).
-# Needs these repo secrets: KAGGLE_USERNAME, KAGGLE_KEY, MLFLOW_TRACKING_URI, AWS_ACCESS_KEY_ID (write key),
-# AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL, AWS_DEFAULT_REGION.
+# Needs these repo secrets: KAGGLE_USERNAME, KAGGLE_API_TOKEN (Kaggle > Settings > API > Generate New Token),
+# MLFLOW_TRACKING_URI, AWS_ACCESS_KEY_ID (write key), AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL, AWS_DEFAULT_REGION.
 on:
   push:
     branches: [main]
@@ -28,13 +28,13 @@ jobs:
     timeout-minutes: 340      # Kaggle run is 1-2 h; Actions stops a job at 6 h
     env:
       KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
-      KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}   # kaggle CLI 2.x reads this; KAGGLE_USERNAME only names the kernel/dataset ids
       KERNEL: ${{ secrets.KAGGLE_USERNAME }}/orchestrator-03-train
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
-      - run: pip install kaggle pytest mlflow psycopg2-binary boto3
+      - run: pip install "kaggle>=2" pytest mlflow psycopg2-binary boto3
 
       - name: Tests first (no point training on broken code)
         run: pytest -q
