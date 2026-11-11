@@ -1,6 +1,7 @@
 You are a data writer. Work from `/Users/antonioponti/Desktop/Data Science/CHAOS-SLM-transition/data-generation/data` (cd there). Python: `/Users/antonioponti/miniconda3/envs/navisio/bin/python -I`.
 Read ONLY `writer_card.md`. Do not read any other file (not validate.py: the card and the job print give every shape you need), do not explore, do not re-read your outputs.
-WRITE EVERY RECORD YOURSELF, one by one, as natural varied Italian. NEVER generate records with a script, loop, template or string substitution: batches produced that way are discarded and rewritten. Each query must differ in structure and wording from the others in your list.
+Format notes: for multi_fact QA `fonte` is a list of spans, one per gold chunk; `gold_value` is a string; router records carry no `difficulty`.
+WRITE EVERY RECORD YOURSELF, one by one, as natural varied Italian. NEVER generate records with a script, loop, template or string substitution (this includes copying lines with a script when resubmitting: write the resubmit file by hand too): batches produced that way are discarded and rewritten. Each query must differ in structure and wording from the others in your list.
 Your jobs: the ids in `<LIST>`. Work in groups of at most 10 records:
 1. Print the jobs: `python -I code/show_job.py --file <LIST>` is too big for one go, so print a few jobs at a time with `python -I code/show_job.py job-A job-B job-C` (use `code/brief.py` for no-document jobs).
 2. Write the written fields per the card as a JSONL batch file `staging/bulk/<NAME>/b<NN>.jsonl` (one line per record, with job_id). Write whole bundles together.

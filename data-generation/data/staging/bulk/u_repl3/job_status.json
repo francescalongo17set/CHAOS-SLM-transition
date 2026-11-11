@@ -1,0 +1,122 @@
+{
+ "job-000260": {
+  "accepted": [
+   "qa-000260"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000285": {
+  "accepted": [
+   "qa-000285"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000286": {
+  "accepted": [
+   "qa-000286"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000299": {
+  "accepted": [
+   "qa-000299"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000748": {
+  "accepted": [
+   "qa-000748"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000751": {
+  "accepted": [
+   "qa-000751"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000804": {
+  "accepted": [
+   "qa-000804"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000813": {
+  "accepted": [
+   "qa-000813"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000814": {
+  "accepted": [
+   "qa-000814"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000815": {
+  "accepted": [
+   "qa-000815"
+  ],
+  "attempts": 2,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000837": {
+  "accepted": [
+   "qa-000837"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000839": {
+  "accepted": [
+   "qa-000839"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000843": {
+  "accepted": [
+   "qa-000843"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-000844": {
+  "accepted": [
+   "qa-000844"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ },
+ "job-001931": {
+  "accepted": [
+   "qa-001484"
+  ],
+  "attempts": 1,
+  "status": "done",
+  "last_errors": {}
+ }
+}

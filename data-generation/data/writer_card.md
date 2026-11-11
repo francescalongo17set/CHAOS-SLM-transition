@@ -5,8 +5,9 @@ Read the job with `python -I code/show_job.py job-XXXXXX` (or `brief.py` for no-
 ## Output lines (one JSON per line, always with job_id)
 - Router: `{job_id, kind:"router", query_id, query, history, resolved_slots}`
 - QA: `{job_id, kind:"qa", qa_id, question, risposta, fonte, gold_value, gold_condition, difficulty}`
+- Format traps seen in bulk (all rejected by the validator): router lines carry NO `difficulty`; `gold_value` is a string (never a list); for multi_fact QA `fonte` is a LIST of spans, one per gold chunk, and a single string is rejected. If the job print shows no difficulty hint, choose easy, medium or hard by your judgement (do not default to medium for all).
 - Skip: `{job_id, kind:"skip", reason}` when the chunk has no further distinct fact (`fact_index`) or no honest question exists.
-Batches of at most 10 records. Submit with `python -I code/write_batch.py batch.jsonl --dir staging/bulk/<NAME> --writer <your exact model id>` (the lead gives NAME; read your model id from your system prompt). Bundle jobs (qa_*, pairs_*, router_only_*) are accepted all or nothing: resubmit EVERY line of the job (QA and router), not only the one you fixed.
+Batches of at most 10 records. Submit with `python -I code/write_batch.py batch.jsonl --dir staging/bulk/<NAME> --writer <your exact model id>` (the lead gives NAME; read your model id from your system prompt). Bundle jobs (qa_*, pairs_*, router_only_*) are accepted all or nothing: resubmit EVERY line of the job (QA and router), not only the one you fixed. After a skip line the output may still reprint the old REJECT lines next to `skipped: n`: they are stale, the skip is registered. Never copy lines with a script when resubmitting; write the file by hand.
 
 ## Hard rules
 1. **No invention.** Every figure, condition and name in a risposta comes from a supplied chunk. Assistant turns in history contain no figures.

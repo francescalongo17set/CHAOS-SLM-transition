@@ -1,0 +1,3899 @@
+{
+"job-000046": {
+"accepted": [
+"qa-000046",
+"orc-000052"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000047": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000047": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk (Allegato 1 table row) not in bge top 5 after 3 tries"
+},
+"job-000048": {
+"accepted": [
+"qa-000048",
+"orc-000054"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001252": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000866": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries (5-word telegraphic constraint)"
+},
+"job-001253": {
+"accepted": [
+"qa-000867",
+"orc-002114",
+"orc-002115"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001254": {
+"accepted": [
+"qa-000868"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001255": {
+"accepted": [
+"qa-000869",
+"orc-002116"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001312": {
+"accepted": [
+"qa-000926",
+"orc-002140"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001313": {
+"accepted": [
+"qa-000927"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001314": {
+"accepted": [
+"qa-000928",
+"orc-002141"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001315": {
+"accepted": [
+"qa-000929",
+"orc-002142"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001316": {
+"accepted": [],
+"attempts": 3,
+"status": "skipped",
+"last_errors": {
+"qa-000930": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries (near-duplicate Casa Start/Plus/In Touch chunks)"
+},
+"job-001317": {
+"accepted": [
+"qa-000931",
+"orc-002144",
+"orc-002145"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001318": {
+"accepted": [
+"qa-000932"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001319": {
+"accepted": [
+"qa-000933",
+"orc-002146"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001320": {
+"accepted": [
+"qa-000934"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001321": {
+"accepted": [
+"qa-000935",
+"orc-002147",
+"orc-002148"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001322": {
+"accepted": [
+"qa-000936"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001323": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000937": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 tries (telegraphic 5-word question cannot reach gold chunk in bge top 5)"
+},
+"job-001325": {
+"accepted": [
+"qa-000939"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001326": {
+"accepted": [
+"qa-000940",
+"orc-002149"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001328": {
+"accepted": [
+"qa-000942"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001329": {
+"accepted": [
+"qa-000943"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001330": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000944": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 tries (near-identical Casa Start/Plus/In Touch table chunks outrank gold)"
+},
+"job-001448": {
+"accepted": [
+"qa-001001",
+"orc-002401"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001449": {
+"accepted": [
+"qa-001002",
+"orc-002402"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001450": {
+"accepted": [
+"qa-001003"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001451": {
+"accepted": [
+"qa-001004"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001452": {
+"accepted": [
+"qa-001005"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001453": {
+"accepted": [
+"qa-001006",
+"orc-002403",
+"orc-002404"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001454": {
+"accepted": [
+"qa-001007",
+"orc-002405"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001455": {
+"accepted": [
+"qa-001008"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001456": {
+"accepted": [
+"qa-001009"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001457": {
+"accepted": [
+"qa-001010"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001458": {
+"accepted": [
+"qa-001011"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001459": {
+"accepted": [
+"qa-001012"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001460": {
+"accepted": [
+"qa-001013"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001461": {
+"accepted": [
+"qa-001014"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001462": {
+"accepted": [
+"qa-001015"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001463": {
+"accepted": [
+"qa-001016"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001464": {
+"accepted": [
+"qa-001017",
+"orc-002406"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001465": {
+"accepted": [
+"qa-001018"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001466": {
+"accepted": [
+"qa-001019"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001467": {
+"accepted": [
+"qa-001020",
+"orc-002407"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001468": {
+"accepted": [
+"qa-001021"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001469": {
+"accepted": [
+"qa-001022"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001470": {
+"accepted": [
+"qa-001023"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001471": {
+"accepted": [
+"qa-001024",
+"orc-002408"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001472": {
+"accepted": [
+"qa-001025"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001473": {
+"accepted": [
+"qa-001026",
+"orc-002409",
+"orc-002410"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001474": {
+"accepted": [
+"qa-001027"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001475": {
+"accepted": [
+"qa-001028",
+"orc-002411",
+"orc-002412"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001476": {
+"accepted": [
+"qa-001029"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001477": {
+"accepted": [
+"qa-001030"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001478": {
+"accepted": [
+"qa-001031"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001479": {
+"accepted": [
+"qa-001032"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001480": {
+"accepted": [
+"qa-001033",
+"orc-002413"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-001481": {
+"accepted": [
+"qa-001034"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001482": {
+"accepted": [
+"qa-001035"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-001483": {
+"accepted": [
+"qa-001036"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001484": {
+"accepted": [
+"qa-001037",
+"orc-002414",
+"orc-002415"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001485": {
+"accepted": [
+"qa-001038"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001486": {
+"accepted": [
+"qa-001039"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001487": {
+"accepted": [
+"qa-001040",
+"orc-002416"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001488": {
+"accepted": [
+"qa-001041"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-001490": {
+"accepted": [
+"qa-001043"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001491": {
+"accepted": [
+"qa-001044"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001492": {
+"accepted": [
+"qa-001045",
+"orc-002418"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001493": {
+"accepted": [
+"qa-001046",
+"orc-002419"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001494": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001047": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries (5-word telegraphic question)"
+},
+"job-001495": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001048": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries (5-word telegraphic question)"
+},
+"job-001496": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001049": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries (5-word telegraphic question)"
+},
+"job-001497": {
+"accepted": [
+"qa-001050"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001498": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001051": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after repeated rewording"
+},
+"job-001499": {
+"accepted": [
+"qa-001052"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001501": {
+"accepted": [
+"qa-001054"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001502": {
+"accepted": [
+"qa-001055"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001503": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001056": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after repeated rewording"
+},
+"job-001504": {
+"accepted": [
+"qa-001057"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001505": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001058": [
+"question: >12-word run copied from a chunk"
+]
+},
+"reason": "retrieval check failed after repeated rewording"
+},
+"job-001506": {
+"accepted": [
+"qa-001059",
+"orc-002420"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001507": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001060": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries"
+},
+"job-001508": {
+"accepted": [
+"qa-001061",
+"orc-002422"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001509": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001062": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries"
+},
+"job-001510": {
+"accepted": [
+"qa-001063",
+"orc-002424"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001511": {
+"accepted": [
+"qa-001064"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001512": {
+"accepted": [
+"qa-001065",
+"orc-002425"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001513": {
+"accepted": [
+"qa-001066"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001514": {
+"accepted": [
+"qa-001067",
+"orc-002426"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001515": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001068": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 times: gold chunk (tutela legale sanction threshold) never in bge top 5"
+},
+"job-001516": {
+"accepted": [
+"qa-001069"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001517": {
+"accepted": [
+"qa-001070"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001518": {
+"accepted": [
+"qa-001071"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001519": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001072": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 times: gold chunk (anticipo indennizzi) never in bge top 5"
+},
+"job-001520": {
+"accepted": [
+"qa-001073"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001521": {
+"accepted": [
+"qa-001074",
+"orc-002430"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001522": {
+"accepted": [
+"qa-001075"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001523": {
+"accepted": [
+"qa-001076"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001524": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001077": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries"
+},
+"job-001525": {
+"accepted": [
+"qa-001078"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001526": {
+"accepted": [
+"qa-001079"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001527": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001080": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries"
+},
+"job-001528": {
+"accepted": [
+"qa-001081"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001529": {
+"accepted": [
+"qa-001082",
+"orc-002432",
+"orc-002433"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001530": {
+"accepted": [
+"qa-001083"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001532": {
+"accepted": [
+"qa-001085",
+"orc-002434"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001533": {
+"accepted": [
+"qa-001086"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001534": {
+"accepted": [
+"qa-001087"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001535": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001088": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 tries"
+},
+"job-001536": {
+"accepted": [
+"qa-001089"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001537": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001090": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 tries"
+},
+"job-001538": {
+"accepted": [
+"qa-001091"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001540": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001093": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 tries"
+},
+"job-001541": {
+"accepted": [
+"qa-001094"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001544": {
+"accepted": [
+"qa-001097"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001545": {
+"accepted": [
+"qa-001098"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001547": {
+"accepted": [
+"qa-001100"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001542": {
+"accepted": [
+"qa-001095",
+"orc-002435"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001543": {
+"accepted": [
+"qa-001096",
+"orc-002436"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001546": {
+"accepted": [
+"qa-001099",
+"orc-002437"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001548": {
+"accepted": [
+"qa-001101"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001549": {
+"accepted": [
+"qa-001102",
+"orc-002438"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001550": {
+"accepted": [
+"qa-001103"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001551": {
+"accepted": [
+"qa-001104"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001552": {
+"accepted": [
+"qa-001105",
+"orc-002439"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001553": {
+"accepted": [
+"qa-001106",
+"orc-002440",
+"orc-002441"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001554": {
+"accepted": [
+"qa-001107"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001555": {
+"accepted": [
+"qa-001108",
+"orc-002442",
+"orc-002443"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001556": {
+"accepted": [
+"qa-001109",
+"orc-002444"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001557": {
+"accepted": [
+"qa-001110"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001558": {
+"accepted": [
+"qa-001111"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001559": {
+"accepted": [
+"qa-001112"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001560": {
+"accepted": [
+"qa-001113",
+"orc-002445"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001561": {
+"accepted": [
+"qa-001114"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001562": {
+"accepted": [
+"qa-001115",
+"orc-002446"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001563": {
+"accepted": [
+"qa-001116",
+"orc-002447"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001564": {
+"accepted": [
+"qa-001117",
+"orc-002448"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001565": {
+"accepted": [
+"qa-001118"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001566": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001119": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries"
+},
+"job-001567": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001120": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries"
+},
+"job-001569": {
+"accepted": [
+"qa-001122"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001572": {
+"accepted": [
+"qa-001125"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000209": {
+"accepted": [
+"qa-000209",
+"orc-000238"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000211": {
+"accepted": [
+"qa-000211"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000212": {
+"accepted": [
+"qa-000212"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000213": {
+"accepted": [
+"qa-000213"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000214": {
+"accepted": [
+"qa-000214"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000215": {
+"accepted": [
+"qa-000215",
+"orc-000240"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000216": {
+"accepted": [
+"qa-000216"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000217": {
+"accepted": [
+"qa-000217"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000218": {
+"accepted": [
+"qa-000218",
+"orc-000241"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000219": {
+"accepted": [
+"qa-000219"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000220": {
+"accepted": [
+"qa-000220",
+"orc-000242"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000221": {
+"accepted": [
+"qa-000221"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000222": {
+"accepted": [
+"qa-000222",
+"orc-000243"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000223": {
+"accepted": [
+"qa-000223"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000224": {
+"accepted": [
+"qa-000224"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000225": {
+"accepted": [
+"qa-000225",
+"orc-000244"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000226": {
+"accepted": [
+"qa-000226"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-000227": {
+"accepted": [
+"qa-000227",
+"orc-000245"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000228": {
+"accepted": [
+"qa-000228",
+"orc-000246"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000229": {
+"accepted": [
+"qa-000229"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000230": {
+"accepted": [
+"qa-000230",
+"orc-000247"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000231": {
+"accepted": [
+"qa-000231"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000232": {
+"accepted": [
+"qa-000232"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000233": {
+"accepted": [
+"qa-000233"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000234": {
+"accepted": [
+"qa-000234",
+"orc-000248"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000235": {
+"accepted": [
+"qa-000235"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000236": {
+"accepted": [
+"qa-000236"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000237": {
+"accepted": [
+"qa-000237",
+"orc-000249"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000239": {
+"accepted": [
+"qa-000239"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000240": {
+"accepted": [
+"qa-000240",
+"orc-000251"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000241": {
+"accepted": [
+"qa-000241",
+"orc-000252"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000242": {
+"accepted": [
+"qa-000242"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000243": {
+"accepted": [
+"qa-000243"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000244": {
+"accepted": [
+"qa-000244"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000246": {
+"accepted": [
+"qa-000246",
+"orc-000254"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000247": {
+"accepted": [
+"qa-000247",
+"orc-000255"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000248": {
+"accepted": [
+"qa-000248"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000249": {
+"accepted": [
+"qa-000249"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000250": {
+"accepted": [
+"qa-000250"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000251": {
+"accepted": [
+"qa-000251",
+"orc-000256"
+],
+"attempts": 5,
+"status": "done",
+"last_errors": {}
+},
+"job-000252": {
+"accepted": [
+"qa-000252",
+"orc-000257"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000253": {
+"accepted": [
+"qa-000253"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000254": {
+"accepted": [
+"qa-000254",
+"orc-000258"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000255": {
+"accepted": [
+"qa-000255",
+"orc-000259"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000256": {
+"accepted": [
+"qa-000256",
+"orc-000260"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000665": {
+"accepted": [
+"qa-000665"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000666": {
+"accepted": [
+"qa-000666"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000667": {
+"accepted": [
+"qa-000667",
+"orc-000493"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000668": {
+"accepted": [
+"qa-000668"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000669": {
+"accepted": [
+"qa-000669"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000670": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000670": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed on 3 rewordings"
+},
+"job-000671": {
+"accepted": [
+"qa-000671"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000672": {
+"accepted": [
+"qa-000672"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000673": {
+"accepted": [
+"qa-000673"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000674": {
+"accepted": [
+"qa-000674"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000675": {
+"accepted": [
+"qa-000675"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000676": {
+"accepted": [
+"qa-000676"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000677": {
+"accepted": [
+"qa-000677"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000678": {
+"accepted": [
+"qa-000678",
+"orc-000494",
+"orc-000495"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000679": {
+"accepted": [
+"qa-000679"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000680": {
+"accepted": [
+"qa-000680"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000681": {
+"accepted": [
+"qa-000681"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000682": {
+"accepted": [
+"qa-000682",
+"orc-000496"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000683": {
+"accepted": [
+"qa-000683",
+"orc-000497"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000684": {
+"accepted": [
+"qa-000684"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000685": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000685": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed three times: no gold chunk in bge top 5"
+},
+"job-000686": {
+"accepted": [
+"qa-000686",
+"orc-000498"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000687": {
+"accepted": [
+"qa-000687",
+"orc-000499",
+"orc-000500"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000688": {
+"accepted": [
+"qa-000688"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000691": {
+"accepted": [
+"qa-000691"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000692": {
+"accepted": [
+"qa-000692"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000693": {
+"accepted": [
+"qa-000693"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000694": {
+"accepted": [
+"qa-000694"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000695": {
+"accepted": [
+"qa-000695"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000697": {
+"accepted": [
+"qa-000697"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000698": {
+"accepted": [],
+"attempts": 1,
+"status": "skipped",
+"reason": "chunks are only table of contents lines, no distinct answerable fact"
+},
+"job-000699": {
+"accepted": [],
+"attempts": 1,
+"status": "skipped",
+"reason": "chunks are only table of contents lines, no distinct answerable fact"
+},
+"job-000700": {
+"accepted": [
+"qa-000700"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000701": {
+"accepted": [
+"qa-000701"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000702": {
+"accepted": [
+"qa-000702"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000703": {
+"accepted": [
+"qa-000703"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000704": {
+"accepted": [
+"qa-000704"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000705": {
+"accepted": [],
+"attempts": 6,
+"status": "skipped",
+"last_errors": {
+"qa-000705": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times, gold chunks not in bge top 5"
+},
+"job-000706": {
+"accepted": [],
+"attempts": 1,
+"status": "skipped",
+"reason": "QA gold chunks are only table of contents lines, no honest question"
+},
+"job-000707": {
+"accepted": [
+"qa-000707"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000708": {
+"accepted": [
+"qa-000708",
+"orc-000503"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000710": {
+"accepted": [
+"qa-000710"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000711": {
+"accepted": [
+"qa-000711"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000712": {
+"accepted": [
+"qa-000712"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000713": {
+"accepted": [
+"qa-000713"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000714": {
+"accepted": [
+"qa-000714"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000715": {
+"accepted": [
+"qa-000715"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000716": {
+"accepted": [
+"qa-000716"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000717": {
+"accepted": [
+"qa-000717",
+"orc-000504"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000718": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000718": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 times (gold chunks not in bge top 5)"
+},
+"job-000719": {
+"accepted": [
+"qa-000719"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000720": {
+"accepted": [
+"qa-000720",
+"orc-000505"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000721": {
+"accepted": [
+"qa-000721",
+"orc-000506"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000723": {
+"accepted": [
+"qa-000723",
+"orc-000507"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000724": {
+"accepted": [
+"qa-000724",
+"orc-000508"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000725": {
+"accepted": [
+"qa-000725"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-000726": {
+"accepted": [
+"qa-000726",
+"orc-000509"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000727": {
+"accepted": [
+"qa-000727"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000728": {
+"accepted": [
+"qa-000728"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000729": {
+"accepted": [
+"qa-000729"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000730": {
+"accepted": [
+"qa-000730"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000731": {
+"accepted": [
+"qa-000731",
+"orc-000510"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000732": {
+"accepted": [
+"qa-000732"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000734": {
+"accepted": [
+"qa-000734"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000735": {
+"accepted": [
+"qa-000735"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000736": {
+"accepted": [
+"qa-000736",
+"orc-000513"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000737": {
+"accepted": [
+"qa-000737"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000738": {
+"accepted": [
+"qa-000738"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000739": {
+"accepted": [
+"qa-000739"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000740": {
+"accepted": [
+"qa-000740"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000741": {
+"accepted": [
+"qa-000741"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000742": {
+"accepted": [
+"qa-000742"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000743": {
+"accepted": [
+"qa-000743"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000744": {
+"accepted": [
+"qa-000744"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001286": {
+"accepted": [
+"qa-000900"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001287": {
+"accepted": [
+"qa-000901"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001288": {
+"accepted": [
+"qa-000902"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001289": {
+"accepted": [
+"qa-000903"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001290": {
+"accepted": [
+"qa-000904"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001291": {
+"accepted": [
+"qa-000905",
+"orc-002138"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001292": {
+"accepted": [
+"qa-000906"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001293": {
+"accepted": [
+"qa-000907",
+"orc-002139"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001294": {
+"accepted": [
+"qa-000908"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001295": {
+"accepted": [
+"qa-000909"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001367": {
+"accepted": [
+"qa-000981"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001368": {
+"accepted": [
+"qa-000982"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001369": {
+"accepted": [
+"qa-000983"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001370": {
+"accepted": [
+"qa-000984",
+"orc-002173"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001371": {
+"accepted": [
+"qa-000985"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001773": {
+"accepted": [
+"qa-001326"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001774": {
+"accepted": [
+"qa-001327"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001775": {
+"accepted": [
+"qa-001328"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001776": {
+"accepted": [
+"qa-001329"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001778": {
+"accepted": [
+"qa-001331"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001779": {
+"accepted": [
+"qa-001332"
+],
+"attempts": 5,
+"status": "done",
+"last_errors": {}
+},
+"job-001780": {
+"accepted": [
+"qa-001333"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001781": {
+"accepted": [
+"qa-001334"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001782": {
+"accepted": [
+"qa-001335"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001783": {
+"accepted": [
+"qa-001336"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001784": {
+"accepted": [
+"qa-001337",
+"orc-002535"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001785": {
+"accepted": [
+"qa-001338"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001786": {
+"accepted": [
+"qa-001339"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001787": {
+"accepted": [
+"qa-001340"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001788": {
+"accepted": [
+"qa-001341"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001789": {
+"accepted": [
+"qa-001342",
+"orc-002536"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001790": {
+"accepted": [
+"qa-001343",
+"orc-002537"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001791": {
+"accepted": [
+"qa-001344"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001792": {
+"accepted": [
+"qa-001345",
+"orc-002538",
+"orc-002539"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001793": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001346": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval hit@5 failed after 3 tries"
+},
+"job-001794": {
+"accepted": [
+"qa-001347"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001795": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001348": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval hit@5 failed after 3 tries"
+},
+"job-001796": {
+"accepted": [
+"qa-001349"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001797": {
+"accepted": [
+"qa-001350"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001798": {
+"accepted": [
+"qa-001351"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001799": {
+"accepted": [
+"qa-001352",
+"orc-002540"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001800": {
+"accepted": [
+"qa-001353"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001802": {
+"accepted": [
+"qa-001355"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001803": {
+"accepted": [
+"qa-001356"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001804": {
+"accepted": [
+"qa-001357"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001806": {
+"accepted": [
+"qa-001359"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001807": {
+"accepted": [
+"qa-001360"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001808": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001361": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold glossary chunks not in bge top 5 after 3 rewordings"
+},
+"job-001809": {
+"accepted": [
+"qa-001362"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001810": {
+"accepted": [
+"qa-001363"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001811": {
+"accepted": [
+"qa-001364"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001813": {
+"accepted": [
+"qa-001366"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001814": {
+"accepted": [
+"qa-001367"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001815": {
+"accepted": [
+"qa-001368"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001816": {
+"accepted": [
+"qa-001369"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001817": {
+"accepted": [
+"qa-001370"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001818": {
+"accepted": [
+"qa-001371"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001819": {
+"accepted": [
+"qa-001372"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001820": {
+"accepted": [
+"qa-001373",
+"orc-002542",
+"orc-002543"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001821": {
+"accepted": [
+"qa-001374"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001822": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-001375": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed on 4 rewordings of the 5-word telegraphic multi_fact question"
+},
+"job-001823": {
+"accepted": [
+"qa-001376"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001824": {
+"accepted": [
+"qa-001377"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001825": {
+"accepted": [
+"qa-001378"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001826": {
+"accepted": [
+"qa-001379"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001827": {
+"accepted": [
+"qa-001380"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001828": {
+"accepted": [
+"qa-001381"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001829": {
+"accepted": [
+"qa-001382"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001830": {
+"accepted": [
+"qa-001383"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001831": {
+"accepted": [
+"qa-001384"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001832": {
+"accepted": [
+"qa-001385",
+"orc-002545"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001833": {
+"accepted": [
+"qa-001386"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {}
+},
+"job-001834": {
+"accepted": [
+"qa-001387"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001835": {
+"accepted": [
+"qa-001388"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001836": {
+"accepted": [
+"qa-001389"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001837": {
+"accepted": [
+"qa-001390",
+"orc-002546"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001838": {
+"accepted": [
+"qa-001391"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001839": {
+"accepted": [
+"qa-001392"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001840": {
+"accepted": [
+"qa-001393"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-001842": {
+"accepted": [
+"qa-001395"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001843": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-001396": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed after 3 tries (DIP chunks not retrievable in bge top 5)"
+},
+"job-001844": {
+"accepted": [
+"qa-001397"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001845": {
+"accepted": [
+"qa-001398"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001846": {
+"accepted": [
+"qa-001399"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-001847": {
+"accepted": [
+"qa-001400"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000081": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000081": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: 3 tries without gold chunk in bge top 5 for a 5-word telegraphic question"
+},
+"job-000082": {
+"accepted": [
+"qa-000082",
+"orc-000094"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000083": {
+"accepted": [
+"qa-000083"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000084": {
+"accepted": [
+"qa-000084",
+"orc-000095"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000085": {
+"accepted": [
+"qa-000085",
+"orc-000096"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000086": {
+"accepted": [
+"qa-000086",
+"orc-000097",
+"orc-000098"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000088": {
+"accepted": [
+"qa-000088",
+"orc-000099"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000089": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000089": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: 3 tries without gold chunk in bge top 5 for a 5-word telegraphic question"
+},
+"job-000091": {
+"accepted": [
+"qa-000091",
+"orc-000103"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001361": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000975": [
+"retrieval: no gold chunk in bge top 5 (ranks [None, None, None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries (generic Casa Plus assistance chunks)"
+},
+"job-001362": {
+"accepted": [
+"qa-000976"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001363": {
+"accepted": [
+"qa-000977"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001364": {
+"accepted": [
+"qa-000978"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-001365": {
+"accepted": [
+"qa-000979",
+"orc-002171"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000092": {
+"accepted": [
+"qa-000092",
+"orc-000104"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000093": {
+"accepted": [
+"qa-000093",
+"orc-000105"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000094": {
+"accepted": [
+"qa-000094",
+"orc-000106",
+"orc-000107"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000095": {
+"accepted": [
+"qa-000095",
+"orc-000108",
+"orc-000109"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000096": {
+"accepted": [
+"qa-000096"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000097": {
+"accepted": [
+"qa-000097",
+"orc-000110",
+"orc-000111"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000098": {
+"accepted": [
+"qa-000098",
+"orc-000112"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000099": {
+"accepted": [
+"qa-000099"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000100": {
+"accepted": [
+"qa-000100",
+"orc-000113"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000101": {
+"accepted": [
+"qa-000101",
+"orc-000114"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000102": {
+"accepted": [
+"qa-000102",
+"orc-000115"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000103": {
+"accepted": [
+"qa-000103",
+"orc-000116"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000104": {
+"accepted": [
+"qa-000104",
+"orc-000117"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000105": {
+"accepted": [
+"qa-000105",
+"orc-000118",
+"orc-000119"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000106": {
+"accepted": [
+"qa-000106",
+"orc-000120",
+"orc-000121"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000107": {
+"accepted": [
+"qa-000107",
+"orc-000122"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000108": {
+"accepted": [
+"qa-000108",
+"orc-000123"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000109": {
+"accepted": [
+"qa-000109",
+"orc-000124",
+"orc-000125"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000110": {
+"accepted": [
+"qa-000110",
+"orc-000126"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000111": {
+"accepted": [
+"qa-000111",
+"orc-000127"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000112": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000112": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 tries"
+},
+"job-000113": {
+"accepted": [
+"qa-000113",
+"orc-000129"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000114": {
+"accepted": [
+"qa-000114",
+"orc-000130"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000115": {
+"accepted": [
+"qa-000115",
+"orc-000131",
+"orc-000132"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000116": {
+"accepted": [
+"qa-000116",
+"orc-000133"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000117": {
+"accepted": [
+"qa-000117",
+"orc-000134"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000118": {
+"accepted": [
+"qa-000118",
+"orc-000135"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000119": {
+"accepted": [
+"qa-000119",
+"orc-000136",
+"orc-000137"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000120": {
+"accepted": [
+"qa-000120",
+"orc-000138"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000121": {
+"accepted": [
+"qa-000121",
+"orc-000139",
+"orc-000140"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000122": {
+"accepted": [
+"qa-000122",
+"orc-000141"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000123": {
+"accepted": [
+"qa-000123",
+"orc-000142"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000124": {
+"accepted": [
+"qa-000124"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000125": {
+"accepted": [
+"qa-000125",
+"orc-000143",
+"orc-000144"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000126": {
+"accepted": [
+"qa-000126",
+"orc-000145"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000127": {
+"accepted": [
+"qa-000127"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000128": {
+"accepted": [
+"qa-000128",
+"orc-000146"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000129": {
+"accepted": [
+"qa-000129",
+"orc-000147"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000130": {
+"accepted": [
+"qa-000130"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000131": {
+"accepted": [
+"qa-000131",
+"orc-000148"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000132": {
+"accepted": [
+"qa-000132",
+"orc-000149"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000133": {
+"accepted": [
+"qa-000133",
+"orc-000150"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000134": {
+"accepted": [
+"qa-000134",
+"orc-000151"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000135": {
+"accepted": [
+"qa-000135"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000137": {
+"accepted": [
+"qa-000137",
+"orc-000153"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000138": {
+"accepted": [
+"qa-000138"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000139": {
+"accepted": [
+"qa-000139",
+"orc-000154"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000140": {
+"accepted": [
+"qa-000140",
+"orc-000155"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000141": {
+"accepted": [
+"qa-000141",
+"orc-000156"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000142": {
+"accepted": [
+"qa-000142",
+"orc-000157"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000143": {
+"accepted": [
+"qa-000143",
+"orc-000158",
+"orc-000159"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000144": {
+"accepted": [
+"qa-000144"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000145": {
+"accepted": [
+"qa-000145",
+"orc-000160"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000146": {
+"accepted": [
+"qa-000146",
+"orc-000161"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000148": {
+"accepted": [
+"qa-000148",
+"orc-000163"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000149": {
+"accepted": [
+"qa-000149",
+"orc-000164",
+"orc-000165"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000150": {
+"accepted": [
+"qa-000150",
+"orc-000166",
+"orc-000167"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000151": {
+"accepted": [
+"qa-000151",
+"orc-000168"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000154": {
+"accepted": [
+"qa-000154",
+"orc-000171"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000156": {
+"accepted": [
+"qa-000156",
+"orc-000173"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000157": {
+"accepted": [
+"qa-000157",
+"orc-000174"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000158": {
+"accepted": [
+"qa-000158",
+"orc-000175",
+"orc-000176"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000159": {
+"accepted": [
+"qa-000159",
+"orc-000177"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000160": {
+"accepted": [
+"qa-000160"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000161": {
+"accepted": [
+"qa-000161",
+"orc-000178",
+"orc-000179"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000162": {
+"accepted": [
+"qa-000162",
+"orc-000180",
+"orc-000181"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000163": {
+"accepted": [
+"qa-000163",
+"orc-000182"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000164": {
+"accepted": [
+"qa-000164"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000165": {
+"accepted": [
+"qa-000165",
+"orc-000183",
+"orc-000184"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000166": {
+"accepted": [
+"qa-000166",
+"orc-000185",
+"orc-000186"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000167": {
+"accepted": [
+"qa-000167",
+"orc-000187"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000168": {
+"accepted": [
+"qa-000168",
+"orc-000188"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000170": {
+"accepted": [
+"qa-000170",
+"orc-000190",
+"orc-000191"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000171": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000171": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries"
+},
+"job-000172": {
+"accepted": [
+"qa-000172",
+"orc-000194"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000173": {
+"accepted": [
+"qa-000173"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000174": {
+"accepted": [
+"qa-000174",
+"orc-000195",
+"orc-000196"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000175": {
+"accepted": [
+"qa-000175",
+"orc-000197"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000176": {
+"accepted": [
+"qa-000176",
+"orc-000198",
+"orc-000199"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000177": {
+"accepted": [
+"qa-000177",
+"orc-000200",
+"orc-000201"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000178": {
+"accepted": [
+"qa-000178",
+"orc-000202"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000179": {
+"accepted": [
+"qa-000179",
+"orc-000203"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000180": {
+"accepted": [
+"qa-000180",
+"orc-000204"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000181": {
+"accepted": [
+"qa-000181",
+"orc-000205"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000182": {
+"accepted": [
+"qa-000182",
+"orc-000206"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {}
+},
+"job-000183": {
+"accepted": [
+"qa-000183",
+"orc-000207"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+},
+"job-000185": {
+"accepted": [
+"qa-000185",
+"orc-000210",
+"orc-000211"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {}
+},
+"job-000187": {
+"accepted": [
+"qa-000187",
+"orc-000212"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {}
+}
+}
