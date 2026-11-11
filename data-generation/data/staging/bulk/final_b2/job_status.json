@@ -1,0 +1,2518 @@
+{
+"job-001108": {
+"accepted": [
+"orc-000857",
+"orc-000858",
+"orc-000859",
+"orc-000860",
+"orc-000861",
+"orc-000862",
+"orc-000863",
+"orc-000864",
+"orc-000865",
+"orc-000866"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001113": {
+"accepted": [
+"orc-000899",
+"orc-000900",
+"orc-000901",
+"orc-000902",
+"orc-000903",
+"orc-000904",
+"orc-000905",
+"orc-000906",
+"orc-000907",
+"orc-000908"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001114": {
+"accepted": [
+"orc-000909",
+"orc-000910",
+"orc-000911",
+"orc-000912",
+"orc-000913",
+"orc-000914",
+"orc-000915",
+"orc-000916",
+"orc-000917",
+"orc-000918"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001115": {
+"accepted": [
+"orc-000919",
+"orc-000920",
+"orc-000921",
+"orc-000922",
+"orc-000923",
+"orc-000924",
+"orc-000925",
+"orc-000926",
+"orc-000927",
+"orc-000928"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001116": {
+"accepted": [
+"orc-000929",
+"orc-000930",
+"orc-000931",
+"orc-000932",
+"orc-000933",
+"orc-000934",
+"orc-000935",
+"orc-000936",
+"orc-000937",
+"orc-000938"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001118": {
+"accepted": [
+"orc-000950",
+"orc-000951",
+"orc-000952",
+"orc-000953",
+"orc-000954",
+"orc-000956",
+"orc-000957",
+"orc-000958",
+"orc-000949",
+"orc-000955"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001123": {
+"accepted": [
+"orc-000999",
+"orc-001000",
+"orc-001001",
+"orc-001002",
+"orc-001003",
+"orc-001004",
+"orc-001005",
+"orc-001006",
+"orc-001007",
+"orc-001008"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001109": {
+"accepted": [
+"orc-000867",
+"orc-000868",
+"orc-000869",
+"orc-000870",
+"orc-000871",
+"orc-000872",
+"orc-000873",
+"orc-000874",
+"orc-000875",
+"orc-000876"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001124": {
+"accepted": [
+"orc-001009",
+"orc-001010",
+"orc-001011",
+"orc-001012",
+"orc-001013",
+"orc-001014",
+"orc-001015",
+"orc-001016",
+"orc-001017",
+"orc-001018"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001126": {
+"accepted": [
+"orc-001029",
+"orc-001030",
+"orc-001031",
+"orc-001032",
+"orc-001033",
+"orc-001034",
+"orc-001035",
+"orc-001036",
+"orc-001037",
+"orc-001038"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001127": {
+"accepted": [
+"orc-001039",
+"orc-001040",
+"orc-001041",
+"orc-001043",
+"orc-001044",
+"orc-001045",
+"orc-001046",
+"orc-001047",
+"orc-001048",
+"orc-001042"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001131": {
+"accepted": [
+"orc-001079",
+"orc-001080",
+"orc-001081",
+"orc-001082",
+"orc-001084",
+"orc-001086",
+"orc-001087",
+"orc-001088",
+"orc-001083",
+"orc-001085"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_001"
+},
+"job-001132": {
+"accepted": [
+"orc-001089",
+"orc-001090",
+"orc-001091",
+"orc-001092",
+"orc-001093",
+"orc-001094",
+"orc-001095",
+"orc-001096",
+"orc-001097",
+"orc-001098"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001133": {
+"accepted": [
+"orc-001099",
+"orc-001100",
+"orc-001101",
+"orc-001102",
+"orc-001103",
+"orc-001104",
+"orc-001105",
+"orc-001106",
+"orc-001107",
+"orc-001108"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001424": {
+"accepted": [
+"orc-002223",
+"orc-002224",
+"orc-002225",
+"orc-002226",
+"orc-002227",
+"orc-002228",
+"orc-002229",
+"orc-002230",
+"orc-002231",
+"orc-002232"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001427": {
+"accepted": [
+"orc-002245",
+"orc-002246",
+"orc-002247",
+"orc-002248",
+"orc-002249",
+"orc-002250",
+"orc-002251",
+"orc-002252",
+"orc-002253",
+"orc-002254"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-002022": {
+"accepted": [
+"orc-002646",
+"orc-002647",
+"orc-002648",
+"orc-002649",
+"orc-002650",
+"orc-002651",
+"orc-002652",
+"orc-002653",
+"orc-002654",
+"orc-002655"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-002023": {
+"accepted": [
+"orc-002656",
+"orc-002657",
+"orc-002658",
+"orc-002659",
+"orc-002660",
+"orc-002661",
+"orc-002662",
+"orc-002663",
+"orc-002664",
+"orc-002665"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-002024": {
+"accepted": [
+"orc-002666",
+"orc-002667",
+"orc-002668",
+"orc-002669",
+"orc-002670",
+"orc-002671",
+"orc-002672",
+"orc-002673",
+"orc-002674",
+"orc-002675"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-002026": {
+"accepted": [
+"orc-002686",
+"orc-002687",
+"orc-002688",
+"orc-002689",
+"orc-002690",
+"orc-002691",
+"orc-002692",
+"orc-002693",
+"orc-002694",
+"orc-002695"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001111": {
+"accepted": [
+"orc-000887",
+"orc-000888",
+"orc-000889",
+"orc-000890",
+"orc-000891",
+"orc-000892",
+"orc-000893",
+"orc-000894",
+"orc-000895",
+"orc-000896"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001129": {
+"accepted": [
+"orc-001059",
+"orc-001060",
+"orc-001061",
+"orc-001062",
+"orc-001063",
+"orc-001064",
+"orc-001065",
+"orc-001066",
+"orc-001067",
+"orc-001068"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-002025": {
+"accepted": [
+"orc-002676",
+"orc-002677",
+"orc-002678",
+"orc-002679",
+"orc-002680",
+"orc-002681",
+"orc-002682",
+"orc-002683",
+"orc-002684",
+"orc-002685"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001219": {
+"accepted": [
+"orc-001922",
+"orc-001923",
+"orc-001924",
+"orc-001925",
+"orc-001926",
+"orc-001927",
+"orc-001928",
+"orc-001929",
+"orc-001930",
+"orc-001931"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_002"
+},
+"job-001220": {
+"accepted": [
+"orc-001932",
+"orc-001933",
+"orc-001934",
+"orc-001935",
+"orc-001936",
+"orc-001937",
+"orc-001938",
+"orc-001939",
+"orc-001940",
+"orc-001941"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001221": {
+"accepted": [
+"orc-001942",
+"orc-001943",
+"orc-001944",
+"orc-001945",
+"orc-001946",
+"orc-001947",
+"orc-001948",
+"orc-001949",
+"orc-001950",
+"orc-001951"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001222": {
+"accepted": [
+"orc-001952",
+"orc-001953",
+"orc-001954",
+"orc-001955",
+"orc-001956",
+"orc-001957",
+"orc-001958",
+"orc-001959",
+"orc-001960",
+"orc-001961"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001223": {
+"accepted": [
+"orc-001962",
+"orc-001963",
+"orc-001964",
+"orc-001965",
+"orc-001966",
+"orc-001967",
+"orc-001968",
+"orc-001969",
+"orc-001970",
+"orc-001971"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001224": {
+"accepted": [
+"orc-001972",
+"orc-001973",
+"orc-001974",
+"orc-001975",
+"orc-001976",
+"orc-001977",
+"orc-001978",
+"orc-001979",
+"orc-001980",
+"orc-001981"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001225": {
+"accepted": [
+"orc-001982",
+"orc-001983",
+"orc-001984",
+"orc-001985",
+"orc-001986",
+"orc-001987",
+"orc-001988",
+"orc-001989",
+"orc-001990",
+"orc-001991"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001226": {
+"accepted": [
+"orc-001992",
+"orc-001993",
+"orc-001994",
+"orc-001995",
+"orc-001996",
+"orc-001997",
+"orc-001998",
+"orc-001999",
+"orc-002000",
+"orc-002001"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001227": {
+"accepted": [
+"orc-002002",
+"orc-002003",
+"orc-002004",
+"orc-002005",
+"orc-002006",
+"orc-002007",
+"orc-002008",
+"orc-002009",
+"orc-002010",
+"orc-002011"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001228": {
+"accepted": [
+"orc-002012",
+"orc-002013",
+"orc-002014",
+"orc-002015",
+"orc-002016",
+"orc-002017",
+"orc-002018",
+"orc-002019",
+"orc-002020",
+"orc-002021"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001229": {
+"accepted": [
+"orc-002022",
+"orc-002023",
+"orc-002024",
+"orc-002025",
+"orc-002026",
+"orc-002027",
+"orc-002028",
+"orc-002029",
+"orc-002030",
+"orc-002031"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001230": {
+"accepted": [
+"orc-002032",
+"orc-002033",
+"orc-002034",
+"orc-002035",
+"orc-002036",
+"orc-002037",
+"orc-002038",
+"orc-002039",
+"orc-002040",
+"orc-002041"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001231": {
+"accepted": [
+"orc-002042",
+"orc-002043",
+"orc-002044",
+"orc-002045",
+"orc-002046",
+"orc-002047",
+"orc-002048",
+"orc-002049",
+"orc-002050",
+"orc-002051"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_003"
+},
+"job-001233": {
+"accepted": [
+"orc-002062",
+"orc-002063",
+"orc-002064",
+"orc-002065",
+"orc-002066",
+"orc-002067",
+"orc-002068",
+"orc-002069",
+"orc-002070",
+"orc-002071"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001234": {
+"accepted": [
+"orc-002072",
+"orc-002073",
+"orc-002074",
+"orc-002075",
+"orc-002076",
+"orc-002077",
+"orc-002078",
+"orc-002079",
+"orc-002080",
+"orc-002081"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001235": {
+"accepted": [
+"orc-002082",
+"orc-002083",
+"orc-002084",
+"orc-002085",
+"orc-002086",
+"orc-002087",
+"orc-002088",
+"orc-002089",
+"orc-002090",
+"orc-002091"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001445": {
+"accepted": [
+"orc-002374",
+"orc-002375",
+"orc-002376",
+"orc-002377",
+"orc-002378",
+"orc-002379",
+"orc-002380",
+"orc-002381",
+"orc-002382",
+"orc-002383"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001446": {
+"accepted": [
+"orc-002384",
+"orc-002385",
+"orc-002386",
+"orc-002387",
+"orc-002388",
+"orc-002389",
+"orc-002390",
+"orc-002391",
+"orc-002392",
+"orc-002393"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-002059": {
+"accepted": [
+"orc-002947",
+"orc-002948",
+"orc-002949",
+"orc-002950",
+"orc-002951",
+"orc-002952",
+"orc-002953",
+"orc-002954",
+"orc-002955",
+"orc-002956"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-002061": {
+"accepted": [
+"orc-002967",
+"orc-002968",
+"orc-002969",
+"orc-002970",
+"orc-002971",
+"orc-002972",
+"orc-002973",
+"orc-002974",
+"orc-002975",
+"orc-002976"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-002062": {
+"accepted": [
+"orc-002977",
+"orc-002978",
+"orc-002979",
+"orc-002980",
+"orc-002981",
+"orc-002982",
+"orc-002983",
+"orc-002984",
+"orc-002985",
+"orc-002986"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-002063": {
+"accepted": [
+"orc-002987",
+"orc-002988",
+"orc-002989",
+"orc-002990",
+"orc-002991",
+"orc-002992",
+"orc-002993",
+"orc-002994",
+"orc-002995",
+"orc-002996"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001212": {
+"accepted": [
+"orc-001852",
+"orc-001854",
+"orc-001855",
+"orc-001856",
+"orc-001857",
+"orc-001859",
+"orc-001860",
+"orc-001861",
+"orc-001853",
+"orc-001858"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001190": {
+"accepted": [
+"orc-001632",
+"orc-001633",
+"orc-001634",
+"orc-001635",
+"orc-001636",
+"orc-001637",
+"orc-001638",
+"orc-001639",
+"orc-001640",
+"orc-001641"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001191": {
+"accepted": [
+"orc-001642",
+"orc-001643",
+"orc-001644",
+"orc-001645",
+"orc-001646",
+"orc-001647",
+"orc-001648",
+"orc-001649",
+"orc-001650",
+"orc-001651"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_004"
+},
+"job-001192": {
+"accepted": [
+"orc-001652",
+"orc-001653",
+"orc-001654",
+"orc-001655",
+"orc-001656",
+"orc-001657",
+"orc-001658",
+"orc-001659",
+"orc-001660",
+"orc-001661"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001193": {
+"accepted": [
+"orc-001662",
+"orc-001663",
+"orc-001664",
+"orc-001665",
+"orc-001666",
+"orc-001667",
+"orc-001668",
+"orc-001669",
+"orc-001670",
+"orc-001671"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001194": {
+"accepted": [
+"orc-001672",
+"orc-001673",
+"orc-001674",
+"orc-001675",
+"orc-001676",
+"orc-001677",
+"orc-001678",
+"orc-001679",
+"orc-001680",
+"orc-001681"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001196": {
+"accepted": [
+"orc-001692",
+"orc-001693",
+"orc-001694",
+"orc-001695",
+"orc-001696",
+"orc-001697",
+"orc-001698",
+"orc-001699",
+"orc-001700",
+"orc-001701"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001197": {
+"accepted": [
+"orc-001702",
+"orc-001703",
+"orc-001704",
+"orc-001705",
+"orc-001706",
+"orc-001707",
+"orc-001708",
+"orc-001709",
+"orc-001710",
+"orc-001711"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001198": {
+"accepted": [
+"orc-001712",
+"orc-001713",
+"orc-001714",
+"orc-001715",
+"orc-001716",
+"orc-001717",
+"orc-001718",
+"orc-001719",
+"orc-001720",
+"orc-001721"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001199": {
+"accepted": [
+"orc-001722",
+"orc-001723",
+"orc-001724",
+"orc-001725",
+"orc-001726",
+"orc-001727",
+"orc-001728",
+"orc-001729",
+"orc-001730",
+"orc-001731"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001200": {
+"accepted": [
+"orc-001732",
+"orc-001733",
+"orc-001734",
+"orc-001735",
+"orc-001736",
+"orc-001737",
+"orc-001738",
+"orc-001739",
+"orc-001740",
+"orc-001741"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001201": {
+"accepted": [
+"orc-001742",
+"orc-001744",
+"orc-001745",
+"orc-001746",
+"orc-001747",
+"orc-001748",
+"orc-001749",
+"orc-001750",
+"orc-001751",
+"orc-001743"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001202": {
+"accepted": [
+"orc-001752",
+"orc-001754",
+"orc-001755",
+"orc-001756",
+"orc-001757",
+"orc-001758",
+"orc-001759",
+"orc-001760",
+"orc-001761",
+"orc-001753"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001204": {
+"accepted": [
+"orc-001772",
+"orc-001773",
+"orc-001774",
+"orc-001775",
+"orc-001776",
+"orc-001777",
+"orc-001778",
+"orc-001779",
+"orc-001780",
+"orc-001781"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001205": {
+"accepted": [
+"orc-001782",
+"orc-001783",
+"orc-001784",
+"orc-001785",
+"orc-001786",
+"orc-001787",
+"orc-001788",
+"orc-001789",
+"orc-001790",
+"orc-001791"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_005"
+},
+"job-001206": {
+"accepted": [
+"orc-001792",
+"orc-001793",
+"orc-001794",
+"orc-001795",
+"orc-001796",
+"orc-001797",
+"orc-001798",
+"orc-001799",
+"orc-001800",
+"orc-001801"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001208": {
+"accepted": [
+"orc-001812",
+"orc-001813",
+"orc-001814",
+"orc-001815",
+"orc-001816",
+"orc-001817",
+"orc-001818",
+"orc-001819",
+"orc-001820",
+"orc-001821"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001209": {
+"accepted": [
+"orc-001822",
+"orc-001823",
+"orc-001824",
+"orc-001825",
+"orc-001826",
+"orc-001827",
+"orc-001828",
+"orc-001829",
+"orc-001830",
+"orc-001831"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001210": {
+"accepted": [
+"orc-001832",
+"orc-001833",
+"orc-001834",
+"orc-001835",
+"orc-001836",
+"orc-001837",
+"orc-001838",
+"orc-001839",
+"orc-001840",
+"orc-001841"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001441": {
+"accepted": [
+"orc-002334",
+"orc-002335",
+"orc-002336",
+"orc-002337",
+"orc-002338",
+"orc-002339",
+"orc-002340",
+"orc-002341",
+"orc-002342",
+"orc-002343"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001442": {
+"accepted": [
+"orc-002344",
+"orc-002345",
+"orc-002346",
+"orc-002347",
+"orc-002348",
+"orc-002349",
+"orc-002350",
+"orc-002351",
+"orc-002352",
+"orc-002353"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-001443": {
+"accepted": [
+"orc-002354",
+"orc-002355",
+"orc-002356",
+"orc-002358",
+"orc-002359",
+"orc-002360",
+"orc-002361",
+"orc-002362",
+"orc-002363",
+"orc-002357"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-002051": {
+"accepted": [
+"orc-002867",
+"orc-002868",
+"orc-002869",
+"orc-002870",
+"orc-002871",
+"orc-002872",
+"orc-002873",
+"orc-002874",
+"orc-002875",
+"orc-002876"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-002052": {
+"accepted": [
+"orc-002877",
+"orc-002878",
+"orc-002879",
+"orc-002880",
+"orc-002881",
+"orc-002882",
+"orc-002883",
+"orc-002884",
+"orc-002885",
+"orc-002886"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-002054": {
+"accepted": [
+"orc-002897",
+"orc-002898",
+"orc-002899",
+"orc-002900",
+"orc-002901",
+"orc-002902",
+"orc-002903",
+"orc-002904",
+"orc-002905",
+"orc-002906"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_haiku_006"
+},
+"job-000833": {
+"accepted": [
+"qa-000833"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_repl_absent"
+},
+"job-000834": {
+"accepted": [
+"qa-000834"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_repl_absent"
+},
+"job-000835": {
+"accepted": [
+"qa-000835"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_repl_absent"
+},
+"job-000836": {
+"accepted": [
+"qa-000836"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_repl_absent"
+},
+"job-001154": {
+"accepted": [
+"orc-001294",
+"orc-001296",
+"orc-001297",
+"orc-001298",
+"orc-001299",
+"orc-001302",
+"orc-001295",
+"orc-001300",
+"orc-001301",
+"orc-001303"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001161": {
+"accepted": [
+"orc-001364",
+"orc-001365",
+"orc-001366",
+"orc-001367",
+"orc-001368",
+"orc-001369",
+"orc-001370",
+"orc-001371",
+"orc-001372",
+"orc-001373"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001168": {
+"accepted": [
+"orc-001425",
+"orc-001426",
+"orc-001427",
+"orc-001428",
+"orc-001429",
+"orc-001430",
+"orc-001431",
+"orc-001432",
+"orc-001433",
+"orc-001434"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001169": {
+"accepted": [
+"orc-001435",
+"orc-001436",
+"orc-001437",
+"orc-001438",
+"orc-001439",
+"orc-001440",
+"orc-001441",
+"orc-001442",
+"orc-001443",
+"orc-001444"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001182": {
+"accepted": [
+"orc-001552",
+"orc-001553",
+"orc-001554",
+"orc-001555",
+"orc-001556",
+"orc-001557",
+"orc-001558",
+"orc-001559",
+"orc-001560",
+"orc-001561"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001186": {
+"accepted": [
+"orc-001592",
+"orc-001593",
+"orc-001594",
+"orc-001595",
+"orc-001596",
+"orc-001597",
+"orc-001598",
+"orc-001599",
+"orc-001600",
+"orc-001601"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001187": {
+"accepted": [
+"orc-001602",
+"orc-001603",
+"orc-001604",
+"orc-001605",
+"orc-001606",
+"orc-001607",
+"orc-001608",
+"orc-001609",
+"orc-001610",
+"orc-001611"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001188": {
+"accepted": [
+"orc-001612",
+"orc-001613",
+"orc-001614",
+"orc-001615",
+"orc-001616",
+"orc-001617",
+"orc-001618",
+"orc-001620",
+"orc-001621",
+"orc-001619"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001189": {
+"accepted": [
+"orc-001622",
+"orc-001623",
+"orc-001624",
+"orc-001625",
+"orc-001626",
+"orc-001627",
+"orc-001628",
+"orc-001629",
+"orc-001630",
+"orc-001631"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001439": {
+"accepted": [
+"orc-002317",
+"orc-002318",
+"orc-002319",
+"orc-002320",
+"orc-002321",
+"orc-002322",
+"orc-002323",
+"orc-002324",
+"orc-002325",
+"orc-002326"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-002049": {
+"accepted": [
+"orc-002856",
+"orc-002857",
+"orc-002858",
+"orc-002859",
+"orc-002860",
+"orc-002861",
+"orc-002862",
+"orc-002863",
+"orc-002864",
+"orc-002865"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001145": {
+"accepted": [
+"orc-001204",
+"orc-001205",
+"orc-001206",
+"orc-001207",
+"orc-001208",
+"orc-001209",
+"orc-001210",
+"orc-001211",
+"orc-001212",
+"orc-001213"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_001"
+},
+"job-001146": {
+"accepted": [
+"orc-001215",
+"orc-001216",
+"orc-001218",
+"orc-001219",
+"orc-001221",
+"orc-001223",
+"orc-001214",
+"orc-001217",
+"orc-001220",
+"orc-001222"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001150": {
+"accepted": [
+"orc-001254",
+"orc-001255",
+"orc-001256",
+"orc-001257",
+"orc-001258",
+"orc-001259",
+"orc-001260",
+"orc-001261",
+"orc-001262",
+"orc-001263"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001171": {
+"accepted": [
+"orc-001455",
+"orc-001456",
+"orc-001457",
+"orc-001458",
+"orc-001459",
+"orc-001460",
+"orc-001461",
+"orc-001462",
+"orc-001463",
+"orc-001464"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001173": {
+"accepted": [
+"orc-001476",
+"orc-001477",
+"orc-001478",
+"orc-001479",
+"orc-001480",
+"orc-001481",
+"orc-001482",
+"orc-001483",
+"orc-001484",
+"orc-001475"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001176": {
+"accepted": [
+"orc-001505",
+"orc-001506",
+"orc-001507",
+"orc-001508",
+"orc-001509",
+"orc-001510",
+"orc-001511",
+"orc-001512",
+"orc-001513",
+"orc-001514"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-002031": {
+"accepted": [
+"orc-002721",
+"orc-002722",
+"orc-002723",
+"orc-002724",
+"orc-002725",
+"orc-002726",
+"orc-002727",
+"orc-002728",
+"orc-002729",
+"orc-002730"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001130": {
+"accepted": [
+"orc-001069",
+"orc-001070",
+"orc-001071",
+"orc-001072",
+"orc-001073",
+"orc-001074",
+"orc-001075",
+"orc-001076",
+"orc-001077",
+"orc-001078"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001144": {
+"accepted": [
+"orc-001196",
+"orc-001197",
+"orc-001198",
+"orc-001199",
+"orc-001200",
+"orc-001201",
+"orc-001202",
+"orc-001203"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001148": {
+"accepted": [
+"orc-001234",
+"orc-001235",
+"orc-001236",
+"orc-001237",
+"orc-001238",
+"orc-001239",
+"orc-001240",
+"orc-001241",
+"orc-001242",
+"orc-001243"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001151": {
+"accepted": [
+"orc-001264",
+"orc-001265",
+"orc-001266",
+"orc-001267",
+"orc-001268",
+"orc-001269",
+"orc-001270",
+"orc-001271",
+"orc-001272",
+"orc-001273"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001156": {
+"accepted": [
+"orc-001314",
+"orc-001315",
+"orc-001316",
+"orc-001317",
+"orc-001318",
+"orc-001319",
+"orc-001320",
+"orc-001321",
+"orc-001322",
+"orc-001323"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001163": {
+"accepted": [
+"orc-001379",
+"orc-001380",
+"orc-001381",
+"orc-001382",
+"orc-001383",
+"orc-001384",
+"orc-001385",
+"orc-001386",
+"orc-001387",
+"orc-001388"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_002"
+},
+"job-001164": {
+"accepted": [
+"orc-001389",
+"orc-001390",
+"orc-001391",
+"orc-001392",
+"orc-001393",
+"orc-001394"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001172": {
+"accepted": [
+"orc-001465",
+"orc-001466",
+"orc-001467",
+"orc-001468",
+"orc-001469",
+"orc-001470",
+"orc-001471",
+"orc-001472",
+"orc-001473",
+"orc-001474"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001174": {
+"accepted": [
+"orc-001485",
+"orc-001486",
+"orc-001487",
+"orc-001488",
+"orc-001489",
+"orc-001490",
+"orc-001491",
+"orc-001492",
+"orc-001493",
+"orc-001494"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001175": {
+"accepted": [
+"orc-001495",
+"orc-001496",
+"orc-001497",
+"orc-001498",
+"orc-001499",
+"orc-001500",
+"orc-001501",
+"orc-001502",
+"orc-001503",
+"orc-001504"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001177": {
+"accepted": [
+"orc-001515",
+"orc-001516",
+"orc-001517",
+"orc-001518",
+"orc-001519",
+"orc-001520",
+"orc-001521",
+"orc-001522"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001179": {
+"accepted": [
+"orc-001524",
+"orc-001525",
+"orc-001526",
+"orc-001527",
+"orc-001528",
+"orc-001529",
+"orc-001530",
+"orc-001531",
+"orc-001532",
+"orc-001533"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001181": {
+"accepted": [
+"orc-001542",
+"orc-001543",
+"orc-001544",
+"orc-001545",
+"orc-001546",
+"orc-001547",
+"orc-001548",
+"orc-001549",
+"orc-001550",
+"orc-001551"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001428": {
+"accepted": [
+"orc-002255",
+"orc-002256"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001431": {
+"accepted": [
+"orc-002265",
+"orc-002266",
+"orc-002267",
+"orc-002268"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001434": {
+"accepted": [
+"orc-002288",
+"orc-002289",
+"orc-002290",
+"orc-002291",
+"orc-002292",
+"orc-002293",
+"orc-002294",
+"orc-002295"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001435": {
+"accepted": [
+"orc-002296",
+"orc-002297",
+"orc-002298",
+"orc-002299",
+"orc-002300",
+"orc-002301",
+"orc-002302",
+"orc-002303",
+"orc-002304",
+"orc-002305"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_003"
+},
+"job-001438": {
+"accepted": [
+"orc-002315",
+"orc-002316"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002029": {
+"accepted": [
+"orc-002708",
+"orc-002709",
+"orc-002710",
+"orc-002711"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002038": {
+"accepted": [
+"orc-002773",
+"orc-002774",
+"orc-002775",
+"orc-002776",
+"orc-002777",
+"orc-002778",
+"orc-002779",
+"orc-002780",
+"orc-002781",
+"orc-002782"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002039": {
+"accepted": [
+"orc-002783",
+"orc-002784",
+"orc-002785",
+"orc-002786",
+"orc-002787",
+"orc-002788",
+"orc-002789",
+"orc-002790",
+"orc-002791",
+"orc-002792"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002042": {
+"accepted": [
+"orc-002811",
+"orc-002812"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002044": {
+"accepted": [
+"orc-002823",
+"orc-002824",
+"orc-002825",
+"orc-002826",
+"orc-002827",
+"orc-002828",
+"orc-002829",
+"orc-002830",
+"orc-002831",
+"orc-002832"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002045": {
+"accepted": [
+"orc-002833",
+"orc-002834"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-002047": {
+"accepted": [
+"orc-002836",
+"orc-002837",
+"orc-002838",
+"orc-002839",
+"orc-002840",
+"orc-002841",
+"orc-002842",
+"orc-002843",
+"orc-002844",
+"orc-002845"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-000257": {
+"accepted": [
+"qa-000257"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-000258": {
+"accepted": [
+"qa-000258"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-000259": {
+"accepted": [
+"qa-000259"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-000260": {
+"accepted": [
+"qa-000260"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_004"
+},
+"job-000593": {
+"accepted": [
+"qa-000593",
+"orc-000447"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000090": {
+"accepted": [
+"qa-000090",
+"orc-000102"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000477": {
+"accepted": [
+"qa-000477"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001944": {
+"accepted": [
+"qa-001497"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000136": {
+"accepted": [
+"qa-000136",
+"orc-000152"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001327": {
+"accepted": [
+"qa-000941",
+"orc-002150",
+"orc-002151"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000186": {
+"accepted": [
+"qa-000186"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001911": {
+"accepted": [
+"qa-001464"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000566": {
+"accepted": [
+"qa-000566"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001609": {
+"accepted": [
+"qa-001162"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001570": {
+"accepted": [
+"qa-001123"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001621": {
+"accepted": [
+"qa-001174"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000060": {
+"accepted": [
+"qa-000060",
+"orc-000070"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001742": {
+"accepted": [
+"qa-001295",
+"orc-002519"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000498": {
+"accepted": [
+"qa-000498",
+"orc-000387"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001896": {
+"accepted": [
+"qa-001449"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001359": {
+"accepted": [
+"qa-000973",
+"orc-002170"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000282": {
+"accepted": [
+"qa-000282"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000200": {
+"accepted": [
+"qa-000200",
+"orc-000227"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000184": {
+"accepted": [
+"qa-000184",
+"orc-000208",
+"orc-000209"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001654": {
+"accepted": [
+"qa-001207"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000757": {
+"accepted": [
+"qa-000757"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001906": {
+"accepted": [
+"qa-001459"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000238": {
+"accepted": [
+"qa-000238",
+"orc-000250"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-001272": {
+"accepted": [
+"qa-000886"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1a"
+},
+"job-000308": {
+"accepted": [
+"qa-000308"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001343": {
+"accepted": [
+"qa-000957",
+"orc-002160"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000621": {
+"accepted": [
+"qa-000621"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001801": {
+"accepted": [
+"qa-001354"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000690": {
+"accepted": [
+"qa-000690"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000789": {
+"accepted": [
+"qa-000789"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000155": {
+"accepted": [
+"qa-000155",
+"orc-000172"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000192": {
+"accepted": [
+"qa-000192",
+"orc-000219",
+"orc-000220"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000794": {
+"accepted": [
+"qa-000794"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000036": {
+"accepted": [
+"qa-000036",
+"orc-000041",
+"orc-000042"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000015": {
+"accepted": [
+"qa-000015",
+"orc-000015"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000573": {
+"accepted": [
+"qa-000573"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000464": {
+"accepted": [
+"qa-000464"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000018": {
+"accepted": [
+"qa-000018",
+"orc-000019"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000087": {
+"accepted": [
+"qa-000087"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001332": {
+"accepted": [
+"qa-000946"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001841": {
+"accepted": [
+"qa-001394",
+"orc-002547"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001754": {
+"accepted": [
+"qa-001307"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001723": {
+"accepted": [
+"qa-001276"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001768": {
+"accepted": [
+"qa-001321"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000513": {
+"accepted": [
+"qa-000513",
+"orc-000398"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000689": {
+"accepted": [
+"qa-000689"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-001934": {
+"accepted": [
+"qa-001487"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+},
+"job-000819": {
+"accepted": [
+"qa-000819"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_b1b"
+}
+}

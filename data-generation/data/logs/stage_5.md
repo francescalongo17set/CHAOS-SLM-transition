@@ -1,0 +1,7 @@
+# Stage 5: Plan (code/make_profiles.py, make_seeds.py, plan.py)
+
+- seeds/client_profiles.jsonl: 300 invented profiles (name or initial, age, city, situation, risk attitude, horizon, goal, vague label), generated from the global seed.
+- seeds/seeds.jsonl: 230 seeds (15 per cell x 12 cells + 10 per leak type x 5). 60 chunk-based seeds are few-shot only; 170 are dataset records. Leak seeds 9 and 10 of each type are the held-out phrasing families (seed 9 for validation, seed 10 for test). Allianz appears only in 6 IBIP seeds marked allianz_test_only.
+- code/plan.py (deterministic, seed 20261110; two runs give the identical jobs.jsonl hash): 3,000 router specs built with exact margins (integer controlled rounding with scipy), 450 contrastive pairs, Dataset 2 chunk draws under the caps, router attachment to QA bundles, comparison bundles, seed families split by greedy assignment, scenarios and modifiers, context windows, jobs, 69 assertions.
+- Outputs: plan/jobs.jsonl (2,064 jobs: 1,868 chunk bundles and 196 no-document calls of up to 10 records), plan/STATE.json, plan/compatibility_matrix.csv, plan/plan_assertions.md (69 of 69 pass).
+- Verified independently of the assertions: route mix 930/510/810/480/270; scenarios 1,200/900/360/300/240; all 8 modifier counts and the style totals equal the book; source table of section 5 equal; 900 paired examples (train 630, validation 90, test 180), each pair in one job; 1,182 examples with context_dependency true (need 1,050); no scenario or modifier outside the compatibility rules.

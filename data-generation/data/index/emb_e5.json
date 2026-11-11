@@ -1,0 +1,1 @@
+{"model": "intfloat/multilingual-e5-base", "revision": "d128750597153bb5987e10b1c3493a34e5a4502a", "dim": 768, "device": "mps", "max_seq_length": 512, "seconds": 131}

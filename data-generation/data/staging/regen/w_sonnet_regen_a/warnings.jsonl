@@ -1,0 +1,1 @@
+{"job_id": "job-000871", "id": "orc-000555", "warnings": ["warn: comparison labelled complex but the query names fewer than 2 fields and no criterion"], "written": {"kind": "router", "query_id": "orc-000555", "query": "Generali Immagina Adesso e Zurich Salute, che durata e recesso hanno?", "history": [], "resolved_slots": {}}}

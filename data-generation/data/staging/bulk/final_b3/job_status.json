@@ -1,0 +1,4656 @@
+{
+"job-001170": {
+"accepted": [
+"orc-001445",
+"orc-001446",
+"orc-001447",
+"orc-001448",
+"orc-001449",
+"orc-001450",
+"orc-001451",
+"orc-001452",
+"orc-001453",
+"orc-001454"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000261": {
+"accepted": [
+"qa-000261"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000262": {
+"accepted": [
+"qa-000262"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000263": {
+"accepted": [
+"qa-000263"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000264": {
+"accepted": [
+"qa-000264"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000265": {
+"accepted": [
+"qa-000265"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000266": {
+"accepted": [
+"qa-000266"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000267": {
+"accepted": [
+"qa-000267"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000268": {
+"accepted": [
+"qa-000268"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000269": {
+"accepted": [
+"qa-000269"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000270": {
+"accepted": [
+"qa-000270"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000271": {
+"accepted": [
+"qa-000271"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_001"
+},
+"job-000272": {
+"accepted": [
+"qa-000272"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000274": {
+"accepted": [
+"qa-000274"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000275": {
+"accepted": [
+"qa-000275"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000276": {
+"accepted": [
+"qa-000276"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000277": {
+"accepted": [
+"qa-000277"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000278": {
+"accepted": [
+"qa-000278"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000279": {
+"accepted": [
+"qa-000279"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000280": {
+"accepted": [
+"qa-000280"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000281": {
+"accepted": [
+"qa-000281"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000283": {
+"accepted": [
+"qa-000283"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000284": {
+"accepted": [
+"qa-000284"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000285": {
+"accepted": [
+"qa-000285"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_002"
+},
+"job-000286": {
+"accepted": [
+"qa-000286"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000287": {
+"accepted": [
+"qa-000287"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000288": {
+"accepted": [
+"qa-000288"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000289": {
+"accepted": [
+"qa-000289"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000291": {
+"accepted": [
+"qa-000291"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000292": {
+"accepted": [
+"qa-000292"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000293": {
+"accepted": [
+"qa-000293"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000294": {
+"accepted": [
+"qa-000294"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000295": {
+"accepted": [
+"qa-000295"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000296": {
+"accepted": [
+"qa-000296"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000297": {
+"accepted": [
+"qa-000297"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000298": {
+"accepted": [
+"qa-000298"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_003"
+},
+"job-000299": {
+"accepted": [
+"qa-000299"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000300": {
+"accepted": [
+"qa-000300"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000301": {
+"accepted": [
+"qa-000301"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000302": {
+"accepted": [
+"qa-000302"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000303": {
+"accepted": [
+"qa-000303"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000304": {
+"accepted": [
+"qa-000304"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000305": {
+"accepted": [
+"qa-000305"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000306": {
+"accepted": [
+"qa-000306"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000307": {
+"accepted": [
+"qa-000307"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000309": {
+"accepted": [
+"qa-000309"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000310": {
+"accepted": [
+"qa-000310"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000311": {
+"accepted": [
+"qa-000311"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_004"
+},
+"job-000774": {
+"accepted": [
+"qa-000774"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000775": {
+"accepted": [
+"qa-000775"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000776": {
+"accepted": [
+"qa-000776"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000777": {
+"accepted": [
+"qa-000777"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000778": {
+"accepted": [
+"qa-000778"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000779": {
+"accepted": [
+"qa-000779"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000780": {
+"accepted": [
+"qa-000780"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000781": {
+"accepted": [
+"qa-000781"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000782": {
+"accepted": [
+"qa-000782"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000783": {
+"accepted": [
+"qa-000783"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000784": {
+"accepted": [
+"qa-000784"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000785": {
+"accepted": [
+"qa-000785"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_005"
+},
+"job-000786": {
+"accepted": [
+"qa-000786"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000788": {
+"accepted": [
+"qa-000788"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000790": {
+"accepted": [
+"qa-000790"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000791": {
+"accepted": [
+"qa-000791"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000792": {
+"accepted": [
+"qa-000792"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000793": {
+"accepted": [
+"qa-000793"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000795": {
+"accepted": [
+"qa-000795"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000796": {
+"accepted": [
+"qa-000796"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000797": {
+"accepted": [
+"qa-000797"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000799": {
+"accepted": [
+"qa-000799"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000800": {
+"accepted": [
+"qa-000800"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000801": {
+"accepted": [
+"qa-000801"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r2_006"
+},
+"job-000802": {
+"accepted": [
+"qa-000802"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000803": {
+"accepted": [
+"qa-000803"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000804": {
+"accepted": [
+"qa-000804"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000805": {
+"accepted": [
+"qa-000805"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000806": {
+"accepted": [
+"qa-000806"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000807": {
+"accepted": [
+"qa-000807"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000808": {
+"accepted": [
+"qa-000808"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000809": {
+"accepted": [
+"qa-000809"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000810": {
+"accepted": [
+"qa-000810"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000811": {
+"accepted": [
+"qa-000811"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000812": {
+"accepted": [
+"qa-000812"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000813": {
+"accepted": [
+"qa-000813"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_001"
+},
+"job-000814": {
+"accepted": [
+"qa-000814"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000815": {
+"accepted": [
+"qa-000815"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000816": {
+"accepted": [
+"qa-000816"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000817": {
+"accepted": [
+"qa-000817"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000818": {
+"accepted": [
+"qa-000818"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000820": {
+"accepted": [
+"qa-000820"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000821": {
+"accepted": [
+"qa-000821"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000822": {
+"accepted": [
+"qa-000822"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000823": {
+"accepted": [
+"qa-000823"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000824": {
+"accepted": [
+"qa-000824"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000825": {
+"accepted": [
+"qa-000825"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000826": {
+"accepted": [
+"qa-000826"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_002"
+},
+"job-000827": {
+"accepted": [
+"qa-000827"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000828": {
+"accepted": [
+"qa-000828"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000829": {
+"accepted": [
+"qa-000829"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000830": {
+"accepted": [
+"qa-000830"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000831": {
+"accepted": [
+"qa-000831"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000832": {
+"accepted": [
+"qa-000832"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000837": {
+"accepted": [
+"qa-000837"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000838": {
+"accepted": [
+"qa-000838"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000839": {
+"accepted": [
+"qa-000839"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000840": {
+"accepted": [
+"qa-000840"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000841": {
+"accepted": [
+"qa-000841"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000842": {
+"accepted": [
+"qa-000842"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_003"
+},
+"job-000843": {
+"accepted": [
+"qa-000843"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000844": {
+"accepted": [
+"qa-000844"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000845": {
+"accepted": [
+"qa-000845"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000846": {
+"accepted": [
+"qa-000846"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000847": {
+"accepted": [
+"qa-000847"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000848": {
+"accepted": [
+"qa-000848"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000849": {
+"accepted": [
+"qa-000849"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-000850": {
+"accepted": [
+"qa-000850"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-001297": {
+"accepted": [
+"qa-000911"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-001298": {
+"accepted": [
+"qa-000912"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-001299": {
+"accepted": [
+"qa-000913"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-001300": {
+"accepted": [
+"qa-000914"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_004"
+},
+"job-001301": {
+"accepted": [
+"qa-000915"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001302": {
+"accepted": [
+"qa-000916"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001303": {
+"accepted": [
+"qa-000917"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001304": {
+"accepted": [
+"qa-000918"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001305": {
+"accepted": [
+"qa-000919"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001306": {
+"accepted": [
+"qa-000920"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001307": {
+"accepted": [
+"qa-000921"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001308": {
+"accepted": [
+"qa-000922"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001309": {
+"accepted": [
+"qa-000923"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001310": {
+"accepted": [
+"qa-000924"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001311": {
+"accepted": [
+"qa-000925"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001372": {
+"accepted": [
+"qa-000986"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_005"
+},
+"job-001373": {
+"accepted": [
+"qa-000987"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001374": {
+"accepted": [
+"qa-000988"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001375": {
+"accepted": [
+"qa-000989"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001376": {
+"accepted": [
+"qa-000990"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001377": {
+"accepted": [
+"qa-000991"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001378": {
+"accepted": [
+"qa-000992"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001379": {
+"accepted": [
+"qa-000993"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001380": {
+"accepted": [
+"qa-000994"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001381": {
+"accepted": [
+"qa-000995"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001382": {
+"accepted": [
+"qa-000996"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001383": {
+"accepted": [
+"qa-000997"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001384": {
+"accepted": [
+"qa-000998"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_006"
+},
+"job-001385": {
+"accepted": [
+"qa-000999"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001386": {
+"accepted": [
+"qa-001000"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001848": {
+"accepted": [
+"qa-001401"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001849": {
+"accepted": [
+"qa-001402"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001850": {
+"accepted": [
+"qa-001403"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001851": {
+"accepted": [
+"qa-001404"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001852": {
+"accepted": [
+"qa-001405"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001853": {
+"accepted": [
+"qa-001406"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001854": {
+"accepted": [
+"qa-001407"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001855": {
+"accepted": [
+"qa-001408"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001857": {
+"accepted": [
+"qa-001410"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001858": {
+"accepted": [
+"qa-001411"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_007"
+},
+"job-001859": {
+"accepted": [
+"qa-001412"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001860": {
+"accepted": [
+"qa-001413"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001861": {
+"accepted": [
+"qa-001414"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001862": {
+"accepted": [
+"qa-001415"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001863": {
+"accepted": [
+"qa-001416"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001864": {
+"accepted": [
+"qa-001417"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001865": {
+"accepted": [
+"qa-001418"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001866": {
+"accepted": [
+"qa-001419"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001867": {
+"accepted": [
+"qa-001420"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001868": {
+"accepted": [
+"qa-001421"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001869": {
+"accepted": [
+"qa-001422"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001870": {
+"accepted": [
+"qa-001423"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_008"
+},
+"job-001871": {
+"accepted": [
+"qa-001424"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001872": {
+"accepted": [
+"qa-001425"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001873": {
+"accepted": [
+"qa-001426"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001874": {
+"accepted": [
+"qa-001427"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001875": {
+"accepted": [
+"qa-001428"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001876": {
+"accepted": [
+"qa-001429"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001877": {
+"accepted": [
+"qa-001430"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001878": {
+"accepted": [
+"qa-001431"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001879": {
+"accepted": [
+"qa-001432"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001880": {
+"accepted": [
+"qa-001433"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001881": {
+"accepted": [
+"qa-001434"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001882": {
+"accepted": [
+"qa-001435"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_009"
+},
+"job-001883": {
+"accepted": [
+"qa-001436"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001884": {
+"accepted": [
+"qa-001437"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001885": {
+"accepted": [
+"qa-001438"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001886": {
+"accepted": [
+"qa-001439"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001887": {
+"accepted": [
+"qa-001440"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001888": {
+"accepted": [
+"qa-001441"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001889": {
+"accepted": [
+"qa-001442"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001890": {
+"accepted": [
+"qa-001443"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001891": {
+"accepted": [
+"qa-001444"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001892": {
+"accepted": [
+"qa-001445"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001893": {
+"accepted": [
+"qa-001446"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001894": {
+"accepted": [
+"qa-001447"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_010"
+},
+"job-001895": {
+"accepted": [
+"qa-001448"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001897": {
+"accepted": [
+"qa-001450"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001898": {
+"accepted": [
+"qa-001451"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001899": {
+"accepted": [
+"qa-001452"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001900": {
+"accepted": [
+"qa-001453"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001901": {
+"accepted": [
+"qa-001454"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001902": {
+"accepted": [
+"qa-001455"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001903": {
+"accepted": [
+"qa-001456"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001904": {
+"accepted": [
+"qa-001457"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001907": {
+"accepted": [
+"qa-001460"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001908": {
+"accepted": [
+"qa-001461"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001909": {
+"accepted": [
+"qa-001462"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_011"
+},
+"job-001910": {
+"accepted": [
+"qa-001463"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001912": {
+"accepted": [
+"qa-001465"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001913": {
+"accepted": [
+"qa-001466"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001914": {
+"accepted": [
+"qa-001467"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001915": {
+"accepted": [
+"qa-001468"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001916": {
+"accepted": [
+"qa-001469"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001917": {
+"accepted": [
+"qa-001470"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001918": {
+"accepted": [
+"qa-001471"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001919": {
+"accepted": [
+"qa-001472"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001920": {
+"accepted": [
+"qa-001473"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001921": {
+"accepted": [
+"qa-001474"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001922": {
+"accepted": [
+"qa-001475"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_012"
+},
+"job-001923": {
+"accepted": [
+"qa-001476"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001924": {
+"accepted": [
+"qa-001477"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001925": {
+"accepted": [
+"qa-001478"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001926": {
+"accepted": [
+"qa-001479"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001927": {
+"accepted": [
+"qa-001480"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001929": {
+"accepted": [
+"qa-001482"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001930": {
+"accepted": [
+"qa-001483"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001931": {
+"accepted": [
+"qa-001484"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001932": {
+"accepted": [
+"qa-001485"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001933": {
+"accepted": [
+"qa-001486"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001935": {
+"accepted": [
+"qa-001488"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001936": {
+"accepted": [
+"qa-001489"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_013"
+},
+"job-001937": {
+"accepted": [
+"qa-001490"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001938": {
+"accepted": [
+"qa-001491"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001939": {
+"accepted": [
+"qa-001492"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001941": {
+"accepted": [
+"qa-001494"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001942": {
+"accepted": [
+"qa-001495"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001943": {
+"accepted": [
+"qa-001496"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001945": {
+"accepted": [
+"qa-001498"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001946": {
+"accepted": [
+"qa-001499"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-001947": {
+"accepted": [
+"qa-001500"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-000001": {
+"accepted": [
+"qa-000001",
+"orc-000001"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-000002": {
+"accepted": [
+"qa-000002",
+"orc-000002"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_014"
+},
+"job-000003": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000003": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: no gold chunk in bge top 5 after 3 tries",
+"dir": "w_r3_014"
+},
+"job-000004": {
+"accepted": [
+"qa-000004",
+"orc-000004"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000005": {
+"accepted": [
+"qa-000005",
+"orc-000005"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000006": {
+"accepted": [
+"qa-000006",
+"orc-000006",
+"orc-000007"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000007": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000007": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: the gold chunk never reaches bge top 5 for a 5-word question after 3 tries",
+"dir": "w_r3_015"
+},
+"job-000008": {
+"accepted": [
+"qa-000008"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000009": {
+"accepted": [
+"qa-000009",
+"orc-000010"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000010": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000010": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries",
+"dir": "w_r3_015"
+},
+"job-000011": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000011": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries",
+"dir": "w_r3_015"
+},
+"job-000012": {
+"accepted": [
+"qa-000012",
+"orc-000012"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000013": {
+"accepted": [
+"qa-000013",
+"orc-000013"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000014": {
+"accepted": [
+"qa-000014",
+"orc-000014"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000016": {
+"accepted": [
+"qa-000016",
+"orc-000016",
+"orc-000017"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_015"
+},
+"job-000017": {
+"accepted": [
+"qa-000017",
+"orc-000018"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000019": {
+"accepted": [
+"qa-000019",
+"orc-000020",
+"orc-000021"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000020": {
+"accepted": [
+"qa-000020",
+"orc-000022"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000021": {
+"accepted": [
+"qa-000021"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000022": {
+"accepted": [
+"qa-000022",
+"orc-000023"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000023": {
+"accepted": [
+"qa-000023",
+"orc-000024"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000024": {
+"accepted": [
+"qa-000024",
+"orc-000025"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000025": {
+"accepted": [
+"qa-000025",
+"orc-000026"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000026": {
+"accepted": [
+"qa-000026",
+"orc-000027"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000027": {
+"accepted": [
+"qa-000027",
+"orc-000028",
+"orc-000029"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000028": {
+"accepted": [
+"qa-000028",
+"orc-000030"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000029": {
+"accepted": [
+"qa-000029",
+"orc-000031"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_016"
+},
+"job-000030": {
+"accepted": [
+"qa-000030",
+"orc-000032",
+"orc-000033"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000031": {
+"accepted": [
+"qa-000031",
+"orc-000034",
+"orc-000035"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000032": {
+"accepted": [
+"qa-000032",
+"orc-000036"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000033": {
+"accepted": [
+"qa-000033",
+"orc-000037"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000034": {
+"accepted": [
+"qa-000034",
+"orc-000038"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000035": {
+"accepted": [
+"qa-000035",
+"orc-000039",
+"orc-000040"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000037": {
+"accepted": [
+"qa-000037"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000038": {
+"accepted": [
+"qa-000038",
+"orc-000043"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000039": {
+"accepted": [
+"qa-000039",
+"orc-000044",
+"orc-000045"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000040": {
+"accepted": [
+"qa-000040",
+"orc-000046"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000041": {
+"accepted": [
+"qa-000041"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000042": {
+"accepted": [
+"qa-000042",
+"orc-000047"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_017"
+},
+"job-000043": {
+"accepted": [
+"qa-000043",
+"orc-000048"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000044": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000044": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times for telegraphic 5-word question on scoperto chunk",
+"dir": "w_r3_018"
+},
+"job-000045": {
+"accepted": [
+"qa-000045",
+"orc-000051"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000049": {
+"accepted": [
+"qa-000049",
+"orc-000055",
+"orc-000056"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000050": {
+"accepted": [
+"qa-000050",
+"orc-000057",
+"orc-000058"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000051": {
+"accepted": [
+"qa-000051",
+"orc-000059",
+"orc-000060"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000052": {
+"accepted": [
+"qa-000052",
+"orc-000061"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_018"
+},
+"job-000053": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000053": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times for telegraphic 5-word question",
+"dir": "w_r3_018"
+},
+"job-000054": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000054": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times for telegraphic 5-word question",
+"dir": "w_r3_018"
+},
+"job-000055": {
+"accepted": [
+"qa-000055",
+"orc-000064"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000056": {
+"accepted": [
+"qa-000056",
+"orc-000065"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000057": {
+"accepted": [
+"qa-000057",
+"orc-000066"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000058": {
+"accepted": [
+"qa-000058",
+"orc-000067"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000059": {
+"accepted": [
+"qa-000059",
+"orc-000068",
+"orc-000069"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000061": {
+"accepted": [
+"qa-000061",
+"orc-000071"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000062": {
+"accepted": [
+"qa-000062",
+"orc-000072"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000063": {
+"accepted": [
+"qa-000063",
+"orc-000073"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000064": {
+"accepted": [
+"qa-000064",
+"orc-000074",
+"orc-000075"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000065": {
+"accepted": [
+"qa-000065",
+"orc-000076"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000066": {
+"accepted": [
+"qa-000066",
+"orc-000077"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000067": {
+"accepted": [
+"qa-000067",
+"orc-000078"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_019"
+},
+"job-000068": {
+"accepted": [
+"qa-000068",
+"orc-000079"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000069": {
+"accepted": [
+"qa-000069",
+"orc-000080"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000070": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000070": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 rewordings",
+"dir": "w_r3_020"
+},
+"job-000071": {
+"accepted": [
+"qa-000071",
+"orc-000082"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000072": {
+"accepted": [
+"qa-000072",
+"orc-000083"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000073": {
+"accepted": [
+"qa-000073",
+"orc-000084",
+"orc-000085"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000074": {
+"accepted": [
+"qa-000074",
+"orc-000086"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000075": {
+"accepted": [
+"qa-000075",
+"orc-000087"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000076": {
+"accepted": [
+"qa-000076"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000077": {
+"accepted": [
+"qa-000077",
+"orc-000088"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000078": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000078": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk never in bge top 5 after 3 tries (5-word telegraphic)",
+"dir": "w_r3_020"
+},
+"job-000079": {
+"accepted": [
+"qa-000079",
+"orc-000090"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_020"
+},
+"job-000080": {
+"accepted": [
+"qa-000080",
+"orc-000091",
+"orc-000092"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000321": {
+"accepted": [
+"qa-000321",
+"orc-000261"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000322": {
+"accepted": [
+"qa-000322",
+"orc-000262"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000323": {
+"accepted": [
+"qa-000323",
+"orc-000263"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000324": {
+"accepted": [
+"qa-000324"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000325": {
+"accepted": [
+"qa-000325",
+"orc-000264"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000326": {
+"accepted": [
+"qa-000326",
+"orc-000265"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000327": {
+"accepted": [
+"qa-000327"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000328": {
+"accepted": [
+"qa-000328"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000329": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000329": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after 3 tries",
+"dir": "w_r3_021"
+},
+"job-000331": {
+"accepted": [
+"qa-000331"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000332": {
+"accepted": [
+"qa-000332"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_021"
+},
+"job-000333": {
+"accepted": [
+"qa-000333"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000334": {
+"accepted": [
+"qa-000334",
+"orc-000267",
+"orc-000268"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000335": {
+"accepted": [
+"qa-000335",
+"orc-000269"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000336": {
+"accepted": [
+"qa-000336",
+"orc-000270"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000337": {
+"accepted": [
+"qa-000337"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000338": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000338": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval: gold chunk not in bge top 5 after repeated rewording (near-duplicate villa isolata chunks)",
+"dir": "w_r3_022"
+},
+"job-000339": {
+"accepted": [
+"qa-000339",
+"orc-000272"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000340": {
+"accepted": [
+"qa-000340"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000341": {
+"accepted": [
+"qa-000341",
+"orc-000273"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000342": {
+"accepted": [
+"qa-000342",
+"orc-000274",
+"orc-000275"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000343": {
+"accepted": [
+"qa-000343",
+"orc-000276",
+"orc-000277"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000344": {
+"accepted": [
+"qa-000344",
+"orc-000278"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_022"
+},
+"job-000345": {
+"accepted": [
+"qa-000345",
+"orc-000279"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000346": {
+"accepted": [
+"qa-000346",
+"orc-000280"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000348": {
+"accepted": [
+"qa-000348"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000349": {
+"accepted": [
+"qa-000349",
+"orc-000282"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000350": {
+"accepted": [
+"qa-000350",
+"orc-000283"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000351": {
+"accepted": [
+"qa-000351"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000352": {
+"accepted": [
+"qa-000352"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000353": {
+"accepted": [
+"qa-000353",
+"orc-000284",
+"orc-000285"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000354": {
+"accepted": [
+"qa-000354"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000355": {
+"accepted": [
+"qa-000355"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000356": {
+"accepted": [
+"qa-000356",
+"orc-000286"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000357": {
+"accepted": [
+"qa-000357",
+"orc-000287"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_023"
+},
+"job-000358": {
+"accepted": [
+"qa-000358"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000359": {
+"accepted": [
+"qa-000359"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000360": {
+"accepted": [
+"qa-000360",
+"orc-000288"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000361": {
+"accepted": [
+"qa-000361"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000362": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000362": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times (chunk near-duplicate of other Furto sections)",
+"dir": "w_r3_024"
+},
+"job-000363": {
+"accepted": [
+"qa-000363"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000364": {
+"accepted": [
+"qa-000364",
+"orc-000289"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000365": {
+"accepted": [
+"qa-000365"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000366": {
+"accepted": [
+"qa-000366"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000367": {
+"accepted": [
+"qa-000367",
+"orc-000290"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000368": {
+"accepted": [
+"qa-000368",
+"orc-000291",
+"orc-000292"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000369": {
+"accepted": [
+"qa-000369"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_024"
+},
+"job-000370": {
+"accepted": [
+"qa-000370",
+"orc-000293"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000371": {
+"accepted": [
+"qa-000371"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000372": {
+"accepted": [
+"qa-000372"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000373": {
+"accepted": [
+"qa-000373"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000374": {
+"accepted": [
+"qa-000374"
+],
+"attempts": 4,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000375": {
+"accepted": [
+"qa-000375",
+"orc-000294"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000376": {
+"accepted": [
+"qa-000376",
+"orc-000295"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000377": {
+"accepted": [
+"qa-000377",
+"orc-000296"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000378": {
+"accepted": [
+"qa-000378",
+"orc-000297"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000379": {
+"accepted": [
+"qa-000379",
+"orc-000298"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000380": {
+"accepted": [
+"qa-000380",
+"orc-000299"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000381": {
+"accepted": [
+"qa-000381",
+"orc-000300",
+"orc-000301"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_025"
+},
+"job-000382": {
+"accepted": [
+"qa-000382",
+"orc-000302"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000383": {
+"accepted": [
+"qa-000383"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000384": {
+"accepted": [
+"qa-000384"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000385": {
+"accepted": [
+"qa-000385"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000386": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000386": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times, chunk too generic to retrieve",
+"dir": "w_r3_026"
+},
+"job-000387": {
+"accepted": [
+"qa-000387",
+"orc-000303",
+"orc-000304"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000388": {
+"accepted": [
+"qa-000388"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000389": {
+"accepted": [
+"qa-000389",
+"orc-000305",
+"orc-000306"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000390": {
+"accepted": [
+"qa-000390",
+"orc-000307"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000391": {
+"accepted": [
+"qa-000391",
+"orc-000308"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000392": {
+"accepted": [
+"qa-000392"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000393": {
+"accepted": [
+"qa-000393"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_026"
+},
+"job-000394": {
+"accepted": [
+"qa-000394",
+"orc-000309"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000396": {
+"accepted": [
+"qa-000396",
+"orc-000310"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000397": {
+"accepted": [
+"qa-000397"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000398": {
+"accepted": [
+"qa-000398"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000399": {
+"accepted": [
+"qa-000399"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000400": {
+"accepted": [
+"qa-000400",
+"orc-000311"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000401": {
+"accepted": [
+"qa-000401"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000402": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000402": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 times: gold chunk not in bge top 5",
+"dir": "w_r3_027"
+},
+"job-000403": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000403": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval pre-check failed 3 times: gold chunk not in bge top 5",
+"dir": "w_r3_027"
+},
+"job-000404": {
+"accepted": [
+"qa-000404",
+"orc-000314",
+"orc-000315"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000405": {
+"accepted": [
+"qa-000405"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000406": {
+"accepted": [
+"qa-000406",
+"orc-000316"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_027"
+},
+"job-000407": {
+"accepted": [
+"qa-000407",
+"orc-000317"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000408": {
+"accepted": [
+"qa-000408",
+"orc-000318",
+"orc-000319"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000409": {
+"accepted": [
+"qa-000409"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000413": {
+"accepted": [
+"qa-000413"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000414": {
+"accepted": [
+"qa-000414"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000415": {
+"accepted": [
+"qa-000415",
+"orc-000322"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000416": {
+"accepted": [
+"qa-000416",
+"orc-000323"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000417": {
+"accepted": [
+"qa-000417",
+"orc-000324"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000418": {
+"accepted": [
+"qa-000418"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000410": {
+"accepted": [
+"qa-000410",
+"orc-000320",
+"orc-000321"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000411": {
+"accepted": [
+"qa-000411"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000412": {
+"accepted": [
+"qa-000412"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_028"
+},
+"job-000419": {
+"accepted": [
+"qa-000419",
+"orc-000325",
+"orc-000326"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000420": {
+"accepted": [
+"qa-000420"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000422": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000422": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times on telegraphic 5-word question",
+"dir": "w_r3_029"
+},
+"job-000423": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000423": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times: table chunk with generic wording",
+"dir": "w_r3_029"
+},
+"job-000424": {
+"accepted": [
+"qa-000424"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000425": {
+"accepted": [
+"qa-000425"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000426": {
+"accepted": [
+"qa-000426",
+"orc-000331"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000427": {
+"accepted": [
+"qa-000427",
+"orc-000332"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000428": {
+"accepted": [
+"qa-000428"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000429": {
+"accepted": [
+"qa-000429",
+"orc-000333"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_029"
+},
+"job-000430": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000430": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times",
+"dir": "w_r3_029"
+},
+"job-000431": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000431": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 3 times",
+"dir": "w_r3_029"
+},
+"job-000432": {
+"accepted": [
+"qa-000432",
+"orc-000335"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000433": {
+"accepted": [
+"qa-000433",
+"orc-000336"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000434": {
+"accepted": [
+"qa-000434"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000435": {
+"accepted": [],
+"attempts": 5,
+"status": "skipped",
+"last_errors": {
+"qa-000435": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed 4 times, chunk is a garbled table",
+"dir": "w_r3_030"
+},
+"job-000436": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000436": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval failed 3 times, near-duplicate chunks across variants",
+"dir": "w_r3_030"
+},
+"job-000437": {
+"accepted": [
+"qa-000437",
+"orc-000337"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000438": {
+"accepted": [
+"qa-000438",
+"orc-000338",
+"orc-000339"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000439": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000439": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval failed 3 times, near-duplicate chunks across variants",
+"dir": "w_r3_030"
+},
+"job-000440": {
+"accepted": [
+"qa-000440"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000441": {
+"accepted": [
+"qa-000441",
+"orc-000341",
+"orc-000342"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000442": {
+"accepted": [
+"qa-000442",
+"orc-000343"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000443": {
+"accepted": [
+"qa-000443",
+"orc-000344"
+],
+"attempts": 3,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_030"
+},
+"job-000444": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000444": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries",
+"dir": "w_r3_031"
+},
+"job-000445": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000445": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries",
+"dir": "w_r3_031"
+},
+"job-000446": {
+"accepted": [
+"qa-000446",
+"orc-000347"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-000447": {
+"accepted": [
+"qa-000447",
+"orc-000348"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-000448": {
+"accepted": [],
+"attempts": 3,
+"status": "skipped",
+"last_errors": {
+"qa-000448": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries",
+"dir": "w_r3_031"
+},
+"job-000449": {
+"accepted": [
+"qa-000449",
+"orc-000349",
+"orc-000350"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-000450": {
+"accepted": [
+"qa-000450",
+"orc-000351"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-000451": {
+"accepted": [
+"qa-000451",
+"orc-000352"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-000452": {
+"accepted": [],
+"attempts": 4,
+"status": "skipped",
+"last_errors": {
+"qa-000452": [
+"retrieval: no gold chunk in bge top 5 (ranks [None]); reword with more distinctive terms (max 3 tries, then skip)"
+]
+},
+"reason": "retrieval check failed after 3 tries",
+"dir": "w_r3_031"
+},
+"job-001237": {
+"accepted": [
+"qa-000851",
+"orc-002101"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-001238": {
+"accepted": [
+"qa-000852",
+"orc-002102"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-001239": {
+"accepted": [
+"qa-000853"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_031"
+},
+"job-001240": {
+"accepted": [
+"qa-000854",
+"orc-002103"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001241": {
+"accepted": [
+"qa-000855",
+"orc-002104"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001242": {
+"accepted": [
+"qa-000856",
+"orc-002105",
+"orc-002106"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001243": {
+"accepted": [
+"qa-000857"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001244": {
+"accepted": [
+"qa-000858"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001245": {
+"accepted": [
+"qa-000859"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001246": {
+"accepted": [
+"qa-000860",
+"orc-002107",
+"orc-002108"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001247": {
+"accepted": [
+"qa-000861"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001248": {
+"accepted": [
+"qa-000862",
+"orc-002109",
+"orc-002110"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001249": {
+"accepted": [
+"qa-000863",
+"orc-002111",
+"orc-002112"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001250": {
+"accepted": [
+"qa-000864",
+"orc-002113"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-001251": {
+"accepted": [
+"qa-000865"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_r3_032"
+},
+"job-000312": {
+"accepted": [
+"qa-000312"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000313": {
+"accepted": [
+"qa-000313"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000314": {
+"accepted": [
+"qa-000314"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000315": {
+"accepted": [
+"qa-000315"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000316": {
+"accepted": [
+"qa-000316"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000317": {
+"accepted": [
+"qa-000317"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000318": {
+"accepted": [
+"qa-000318"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000319": {
+"accepted": [
+"qa-000319"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000320": {
+"accepted": [
+"qa-000320"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000745": {
+"accepted": [
+"qa-000745"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000746": {
+"accepted": [
+"qa-000746"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000747": {
+"accepted": [
+"qa-000747"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_005"
+},
+"job-000748": {
+"accepted": [
+"qa-000748"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000749": {
+"accepted": [
+"qa-000749"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000750": {
+"accepted": [
+"qa-000750"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000751": {
+"accepted": [
+"qa-000751"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000752": {
+"accepted": [
+"qa-000752"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000753": {
+"accepted": [
+"qa-000753"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000754": {
+"accepted": [
+"qa-000754"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000755": {
+"accepted": [
+"qa-000755"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000756": {
+"accepted": [
+"qa-000756"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000758": {
+"accepted": [
+"qa-000758"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000759": {
+"accepted": [
+"qa-000759"
+],
+"attempts": 2,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000760": {
+"accepted": [
+"qa-000760"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_006"
+},
+"job-000761": {
+"accepted": [
+"qa-000761"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000762": {
+"accepted": [
+"qa-000762"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000763": {
+"accepted": [
+"qa-000763"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000764": {
+"accepted": [
+"qa-000764"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000765": {
+"accepted": [
+"qa-000765"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000766": {
+"accepted": [
+"qa-000766"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000767": {
+"accepted": [
+"qa-000767"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000768": {
+"accepted": [
+"qa-000768"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000769": {
+"accepted": [
+"qa-000769"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000770": {
+"accepted": [
+"qa-000770"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000771": {
+"accepted": [
+"qa-000771"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+},
+"job-000773": {
+"accepted": [
+"qa-000773"
+],
+"attempts": 1,
+"status": "done",
+"last_errors": {},
+"dir": "w_sonnet_007"
+}
+}
