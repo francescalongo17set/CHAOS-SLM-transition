@@ -14,6 +14,7 @@ Features and required slots:
 - client_drafting: product, client_profile, message_goal
 - ibip_screening: product, client_profile
 feature none = out_of_scope or quick_reply (then complexity null, slot_status {}).
+Coverage and field (owner rule, 13 Nov 2026): a named field (franchigia, massimale, esclusioni, durata, rimborso...) is enough to fill BOTH the field and the coverage slot. Do not mark coverage missing when a field is named. Mark coverage missing only when neither a coverage nor a field is named.
 Insurer and product are linked: if product is resolved, insurer is present; if product is missing/ambiguous report only product, not insurer.
 Slot status: present = stated or resolvable from context; missing = not mentioned anywhere; ambiguous = mentioned but vague/unresolvable (e.g. "questa polizza" with no policy selected).
 client_profile: for drafting present = at least one concrete attribute (name/initial, age, situation); for IBIP screening present = at least two of age, investment horizon, risk attitude, goal; ambiguous = only a vague label or one IBIP attribute; missing = nothing.

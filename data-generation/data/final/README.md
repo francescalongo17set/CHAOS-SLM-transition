@@ -1,0 +1,4 @@
+# Package
+- `train/`, `validation/`, `test_package/`: `router.jsonl`, `qa.jsonl`, `manifest.json` (SHA-256, counts, balance, writer models, retrieval config). Keep `test_package/` separate from training.
+- `data_card.md`: labels, risks, deviations. `code/`: scripts and `requirements.txt` (conda env `navisio`, Python 3.11).
+- Run order (from `data/`, `python -I code/<script>.py`): extract, chunk, catalogue, embed, make_profiles, make_seeds, plan, replace_absent, write_batch (agents), make_replacements, postprocess (needs `retrieval_server.py` running), diversity, verify_prepare + verify, review_queues, package.
