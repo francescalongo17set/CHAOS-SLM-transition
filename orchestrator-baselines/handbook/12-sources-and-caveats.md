@@ -32,6 +32,9 @@ The fetch tool used for scouting refused every sub-link of a page already fetche
 | Nimble hosted pricing | Not found in any source. | Owner checks the console; default to the local fit check. |
 | Kev-0.8B language | Card tag lists English. The README does not discuss Italian. | Treat Italian zero-shot as an open empirical question. |
 | Laya full distribution field | Card shows `choice` and a confidence value, not the key for all probabilities. | Inspect the real result object. |
+| Kev-0.8B revision | README table: weights revision `9a45d25e`. The `v1.0` tag resolved on 12 Nov 2026 to Hub commit `bf75a6a8848ea6960ff2ed108d9ed44c2941174f`. | Unexplained; compare the adapter file hash with the GitHub release checksums. The run logs the full hash. |
+| Kev on Kaggle T4 | Smoke run: torch 2.8.0+cu128 works on a T4; `causal_conv1d` was not installed, so Transformers used its slower PyTorch path (README says it is correct but slower). | Latencies of the Kev-0.8B run are for that path; label them in the report. |
+| Kev disk size | `run.py` recorded the adapter only (65.5 MB); base model is about 1,747 MB (Hub API, not measured on Kaggle). | `run.json` of the 0.8B run corrected by hand; `run.py` now records both. |
 | T4 and bf16 | General knowledge (T4 has no native bf16), not from a source. | Verify with `torch.cuda.is_bf16_supported()` and measured speed in the session. |
 | Kaggle/Colab limits | General knowledge. | Verify in the session; log the device. |
 
