@@ -1,7 +1,7 @@
 # Plan P0 · Shared package and data audit
 
 Branch: `orchestrator/baselines` (no new branch; the pipeline branches start only after this is merged, chapter 07).
-Status: DRAFT for owner review. Nothing has been implemented.
+Status: **DONE** (12 Nov 2026), committed on `orchestrator/baselines`. 43 tests pass; audit has no unresolved DIFF.
 
 ## 1. Goal and scope
 
@@ -15,7 +15,7 @@ Build the model-independent code every pipeline imports (data loader, state seri
 
 ## 3. Open items
 
-**Resolved by the owner (see decisions log C-21 to C-27):** question language is English with one wording, so `questions.en.yaml` is written for real in step 4. Slot questions are 3-way and asked for the predicted feature. The loader still supports the other form via config but only the 3-way form is used.
+**Resolved by the owner (see decisions log C-21 to C-29):** question language is English with one wording, so `questions.en.yaml` is written for real in step 4. Slot questions are 3-way and asked for the predicted feature. The loader still supports the other form via config but only the 3-way form is used.
 
 **Still PENDING:**
 - **X-04** (confidence definition): deferred until after the runs. The dispatcher accepts `tau=None` only and raises on a non-None `tau`.
@@ -62,7 +62,7 @@ No step needs a GPU. The only step that may exceed its box is the tokenizer down
 3. Perfect-log and synthetic-log tests pass in `evaluate.py`.
 4. Validator rejects every malformed-log case in step 6.
 5. `common/` imports without torch or transformers (checked by importing it in a clean venv).
-6. Chapter 07 updated for the new layout and decisions C-21 to C-27 reflected (X-04, X-05 still pending).
+6. Chapter 07 updated for the new layout and decisions C-21 to C-29 reflected (X-04, X-05 still pending).
 7. Open questions listed in the PR description.
 
 ## 9. After P0

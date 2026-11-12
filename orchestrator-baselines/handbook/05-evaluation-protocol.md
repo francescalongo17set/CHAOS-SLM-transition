@@ -69,7 +69,7 @@ Rules:
 - Model loading and tokenizer loading are **not** inside the request time. Log load time separately per run.
 - Where the model needs several calls per row (for example one per question or per field), the request time is the sum, because the record is only complete at the end.
 - Report p50, p95, mean, and the number of requests.
-- Pending (X-03): in-process library call versus HTTP to a local server. Until decided, record which one you used in `env.latency_mode`.
+- Local models are timed with an **in-process library call** (C-24); record `latency_mode` in `run.json`.
 - Hosted APIs include network time. Report them in a separate row and mark the row **not comparable** with local runs.
 - Latency numbers are comparable only between runs on the **same GPU type**. Always log the GPU name; compare like with like and say so in the report.
 - Do not report the `latency_ms` returned by Kev's API as the latency metric: it is model time, not end-to-end. Log it as `usage_reported.latency_ms` if present.

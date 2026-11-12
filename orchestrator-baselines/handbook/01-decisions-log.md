@@ -53,7 +53,7 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | P-03 | Batch size 1 for latency; first 10 requests of each run are warm-up and excluded from latency statistics but still logged. |
 | P-04 | Run every pipeline on **validation and test**. Headline numbers use test; validation exists so thresholds and temperatures can be fitted later without touching test. |
 | P-05 | One run per configuration (models are deterministic, no sampling). Repeat only if latency variance looks suspicious. |
-| P-06 | Repo layout and branch names in chapter 07 (`orchestrator/baselines-kev` etc.; a branch named `orchestrator/baselines/kev` cannot coexist with `orchestrator/baselines` in git). |
+| P-06 | Repo layout and branch names in chapter 07 (`orchestrator/baselines-kev-0.8b` etc., see C-27; a branch named `orchestrator/baselines/kev` cannot coexist with `orchestrator/baselines` in git). |
 | P-07 | Prediction log schema in chapter 06. |
 | P-08 | Reference tokenizer for `input_tokens_ref`: the Qwen3.5 tokenizer (shared by Kev and Nimble). |
 | P-09 | On Colab/Kaggle T4 GPUs (no native bf16, to be verified), prefer fp16/fp32 paths where a model's docs allow it; record the dtype used. |

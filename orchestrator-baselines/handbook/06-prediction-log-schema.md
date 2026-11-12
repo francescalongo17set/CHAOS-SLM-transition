@@ -26,7 +26,7 @@ Path: `runs/<pipeline>/<run_id>/<split>.jsonl`, plus `runs/<pipeline>/<run_id>/r
       "insurer":  {"label": "present", "probs": {"present": 0.9, "missing": 0.05, "ambiguous": 0.05}, "option_order": [...]}
     }
   },
-  "slots_asked_for": "predicted_feature" | "gold_feature" | "all",   // pending X-02
+  "slots_asked_for": "predicted_feature",   // C-23; the validator also accepts "gold_feature" and "all" for later studies
   "needs_clarification": false,
 
   "temperature_applied": 2.41,          // null if the runtime reports none; "raw" if forced to 1.0
@@ -61,7 +61,7 @@ Rules:
   "python": "3.12.x", "libraries": {"torch": "...", "transformers": "...", "kev": "<git sha>", "laya": "..."},
   "platform": "kaggle|colab|local",
   "latency_mode": "in_process|http_local|http_hosted",
-  "question_config": "questions.<lang>.yaml (sha256 ...)",
+  "question_config": "questions.en.yaml (sha256 ...)",
   "state_template": "p-01",
   "data_manifest_sha256": {"test": "...", "validation": "..."},
   "load_time_s": 41.2,

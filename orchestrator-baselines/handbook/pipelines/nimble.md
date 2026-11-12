@@ -101,4 +101,4 @@ Notes:
 
 ## Stop-and-ask triggers
 
-Pending X-01, X-02, X-03, X-05 · hosted pricing unclear · hosted API lacks distributions · needing multi-GPU sharding · any step that needs paid compute · a prompt rejected for length on more than a few rows.
+Pending X-05 (quantization) · hosted pricing unclear · hosted API lacks distributions · needing multi-GPU sharding · any step that needs paid compute · a prompt rejected for length on more than a few rows.

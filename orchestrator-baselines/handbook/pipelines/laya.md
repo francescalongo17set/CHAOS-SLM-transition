@@ -67,7 +67,7 @@ pip install laya        # Python 3.10+
 # extras: laya[serve] (HTTP server), laya[onnx], laya[fast] (TileLang GPU fast path)
 ```
 
-HTTP alternative: `laya-serve` exposes `POST /v1/systemone` in the same shape as TypeSafe Jev (default `0.0.0.0:8000`, no auth unless `LAYA_API_KEY` is set; env `LAYA_DEVICE=cuda`, `LAYA_PRELOAD=1`). Which one is used for latency is pending (X-03).
+HTTP alternative: `laya-serve` exposes `POST /v1/systemone` in the same shape as TypeSafe Jev (default `0.0.0.0:8000`, no auth unless `LAYA_API_KEY` is set; env `LAYA_DEVICE=cuda`, `LAYA_PRELOAD=1`). Latency uses the in-process library call (C-24).
 
 Speed reference from the card (Tesla T4, multilingual): 32.8 ms for 1 question, 40.1 ms for 5, 72.3 ms for 10. Treat as a sanity check against your own measurements, not a target.
 
@@ -94,4 +94,4 @@ The card says the checkpoints ship over-confident and that refitting one tempera
 
 ## Stop-and-ask triggers
 
-Pending X-01, X-02, X-03 · distribution key not found · any row routed to the English checkpoint · over-budget rows beyond a handful · need to change `head_max_len`.
+Distribution key not found · any row routed to the English checkpoint · over-budget rows beyond a handful · need to change `head_max_len`.

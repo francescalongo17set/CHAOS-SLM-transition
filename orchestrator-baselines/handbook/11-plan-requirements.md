@@ -7,7 +7,7 @@ The next step after this handbook is one **implementation plan per pipeline**, p
 | Plan | Branch | Depends on |
 |---|---|---|
 | P0 · Shared package and data audit | `orchestrator/baselines` | Chapters 02–07 |
-| P1 · Kev | `orchestrator/baselines-kev` | P0 merged |
+| P1 · Kev | `orchestrator/baselines-kev-0.8b` (then `-4b`, `-9b`) | P0 merged |
 | P2 · Laya | `orchestrator/baselines-laya` | P0 merged |
 | P3 · Nimble | `orchestrator/baselines-nimble` | P0 merged |
 | P4 · Comparison | `orchestrator/baselines` | P1–P3 runs |
@@ -28,7 +28,7 @@ The next step after this handbook is one **implementation plan per pipeline**, p
 1. Data audit script and `audit_report.md` (chapter 02).
 2. Data loader (reads `router.jsonl` and `manifest.json`; checksum the manifest).
 3. State serializer (P-01) with golden tests.
-4. Question config loader (`questions.<lang>.yaml`; language pending X-01).
+4. Question config loader (`questions.en.yaml`, C-21).
 5. Dispatcher plus the oracle unit test over all three splits (chapter 04).
 6. Log writer and validator (chapter 06), including resume and flush behaviour.
 7. Reference token counter (P-08).

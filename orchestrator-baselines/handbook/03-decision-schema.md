@@ -32,7 +32,7 @@ Rules:
 - `available_docs` is copied verbatim, including `decoy_*` ids. Do **not** reorder or filter.
 - No `selected_doc_id`, no `resolved_slots`, no labels (C-07).
 - If the serialized state exceeds a model's token budget, **do not truncate silently**: log `truncated: true` and the number of tokens lost (chapter 06). Laya's default budget is the tight one (chapter 09).
-- Pending (X-01): whether keys and question text are Italian or English. The data itself stays Italian.
+- Keys and question text are in **English** (C-21). The data itself stays Italian.
 
 ## Question set
 
@@ -70,11 +70,11 @@ Which assistant feature does the request belong to? Use `none` for out-of-scope 
 
 Asked on **every** row so the full distribution is logged; **scored only** on rows where gold `scope_check` = `in_scope`.
 
-### Q4 · slot questions (one per required slot; type pending, X-02)
+### Q4 · slot questions (one per slot of the predicted feature; 3-way, C-22)
 
 For each slot, the question is whether the information is present in the state. Slot ids: `insurer`, `product`, `field`, `coverage`, `topic`, `date_reference`, `client_profile`, `message_goal`.
 
-Candidate form A (3-way choice, the shape used in `orchestrator_data.py`):
+Form (C-22): 3-way choice, the shape used in `orchestrator_data.py`:
 
 | Option id | Meaning |
 |---|---|
@@ -82,9 +82,9 @@ Candidate form A (3-way choice, the shape used in `orchestrator_data.py`):
 | `missing` | Not mentioned at all. |
 | `ambiguous` | Mentioned but vague or unresolvable (for example "that policy" with several candidates). |
 
-Candidate form B: 2-way yes/no on "is this slot present and unambiguous?".
+A 2-way yes/no form was considered and not chosen.
 
-Which slots are asked: pending (X-02): the slots of the **predicted** feature, of the **gold** feature, or both. Both variants can be produced from the same run if every slot question is asked for every row, at the cost of more calls; do not do this without the owner's decision.
+Which slots are asked (C-23, C-28, C-29): the slots of the **predicted** feature, from `slots.by_feature` in `questions.en.yaml`: `product_policy_analysis` and `comparison` ask `insurer`, `product`, `field`, `coverage`; `client_drafting` asks `product`, `client_profile`, `message_goal`; `ibip_screening` asks `product`, `client_profile`; `regulatory_consultation` asks `topic` only (`date_reference` is not asked, C-29); `none` asks nothing. The gold slot list omits `insurer` on 140 rows (C-28); only `needs_clarification` is scored.
 
 `needs_clarification` for a row is true iff at least one asked slot is `missing` or `ambiguous` (form A) / not present (form B). Scored against gold `labels.missing_info != []` (C-06).
 
@@ -92,7 +92,7 @@ Which slots are asked: pending (X-02): the slots of the **predicted** feature, o
 
 - Options appear in the order of the tables above (P-02). No shuffling, no permutation averaging.
 - Option descriptions are short (a phrase). Laya budgets only a few tens of tokens per option (chapter 09).
-- Pending (X-01): language and number of wordings. Until decided, agents implement the question set behind a **single configuration file** (`questions.<lang>.yaml`) so the wording can change without touching code.
+- Language and wording (C-21): English, one wording, in the single configuration file `common/questions.en.yaml`, so the wording can change without touching code.
 
 ## Output mapping
 
