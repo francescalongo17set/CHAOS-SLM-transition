@@ -19,15 +19,18 @@ Why `baselines-kev` and not `baselines/kev`: git stores branches as paths; a bra
 | 1 | the three pipeline branches | Pipeline-specific code and notebooks only. Pull shared changes from the base branch, never fork them. |
 | 2 | `orchestrator/baselines` | Merge results (run logs, reports) back; produce `comparison.md`. |
 
-## Proposed layout (P-06)
+## Layout (approved, C-27)
 
 ```
-experiments/baselines/
+orchestrator-baselines/
   handbook/                 # this folder
+  plans/                    # P0..P4 plans
   common/                   # shared package (no model-specific imports)
-    data.py  state.py  questions.py  dispatcher.py  logs.py  tokens.py  evaluate.py
-    questions.<lang>.yaml   # question and option text (pending X-01)
-  audit/                    # data audit script + audit_report.md
+    data.py  state.py  questions.py  dispatcher.py  logs.py  tokens.py  evaluate.py  report.py  compare.py
+    questions.en.yaml       # question and option text (C-21)
+    tests/                  # pytest; run from orchestrator-baselines/
+  audit/                    # audit.py, token_lengths.py, audit_report.md
+  requirements-common.txt   # pyyaml, tokenizers, huggingface_hub, pytest
   kev/    laya/    nimble/  # pipeline code, notebooks, requirements-*.txt
   runs/<pipeline>/<run_id>/ # <split>.jsonl + run.json + report.md + metrics.json
   reports/comparison.md
@@ -40,7 +43,7 @@ Rules:
 - Large artefacts (model weights, caches) are never committed. Run logs are small JSONL files and are committed.
 - Run logs are committed only after the shared validator passes.
 
-## Environments (X-07 pending)
+## Environments (C-26: one per pipeline)
 
 Upstream requirements differ and conflict:
 

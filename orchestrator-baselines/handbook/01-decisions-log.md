@@ -26,6 +26,15 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | C-18 | Coding agents stop and ask on ambiguity. |
 | C-19 | No deadline is set for this round. |
 | C-20 | No extra metrics "just in case". Keep the report lean. |
+| C-21 | (was X-01) Question and option text in **English, one wording**. The data stays Italian. |
+| C-22 | (was X-02a) Slot questions are **3-way** `present` / `missing` / `ambiguous`. |
+| C-23 | (was X-02b) Slot questions are asked for the slots of the **predicted** feature (errors cascade). |
+| C-24 | (was X-03) Latency for local models is measured with an **in-process library call**. Hosted runs stay marked not comparable. |
+| C-25 | (was X-06) Kev: run **all sizes that fit** (0.8B, then 4B, then 9B). |
+| C-26 | (was X-07) **One Python environment per pipeline** is acceptable. |
+| C-27 | Branches carry the Kev size: `orchestrator/baselines-kev-0.8b`, and `-4b` / `-9b` for larger runs. Code lives in `orchestrator-baselines/{common,audit,kev,laya,nimble,runs,reports}/`. Tokenizer plan in P0 approved. |
+| C-28 | Audit finding accepted (P0 step 1). `insurer` is absent from `required_slots` on 140 `product_policy_analysis` / `comparison` rows (`no_policy`, `ambiguous_product`; all gold route `clarification`). Slot questions ask all four slots for these features; only `needs_clarification` is scored (C-06); slot-level metrics, if ever added, skip `insurer` where gold lacks it. Chapter 02 amended. |
+| C-29 | (was P-12) Only `topic` is asked for `regulatory_consultation`; `date_reference` is not asked (gold requires it on only 97 of 389 regulatory rows). Known cost: about 20 gold `date_reference` clarification cases go undetected. |
 
 ## Delegated (author's choice, owner may override)
 
@@ -48,19 +57,17 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | P-07 | Prediction log schema in chapter 06. |
 | P-08 | Reference tokenizer for `input_tokens_ref`: the Qwen3.5 tokenizer (shared by Kev and Nimble). |
 | P-09 | On Colab/Kaggle T4 GPUs (no native bf16, to be verified), prefer fp16/fp32 paths where a model's docs allow it; record the dtype used. |
+| P-11 | State serializer detail: single-line JSON, default separators, `ensure_ascii=False`, keys in the order `available_docs`, `history`, `request` (`common/state.py`). |
 | P-10 | Kev escalation order: 0.8B → 4B → 9B, stopping when the model no longer fits the hardware; 27B is not attempted. |
 
 ## Pending (agents must stop and ask)
 
+X-04 is deferred by the owner until after the runs (logs store full distributions). X-05 is deferred until Nimble starts.
+
 | ID | Question | Why it matters |
 |---|---|---|
-| X-01 | **Language of the question and option text** (Italian or English), and a single wording or several. | Kev's card lists English only, Laya-multilingual covers 100+ languages, Nimble was trained on English-style data. The data itself is Italian. This can swing zero-shot results. |
-| X-02 | **Slot questions.** (a) Question type: 3-way `present/missing/ambiguous` or yes/no. (b) Asked for the **predicted** feature (errors cascade), the **gold** feature (oracle), or both. | Defines how `needs_clarification` is derived and how errors propagate. |
-| X-03 | **Latency measurement mode** for local models: in-process library call, or HTTP to a local server (both Kev and Laya ship Jev-compatible servers). | "Request sent to response received" reads naturally as HTTP; in-process excludes network and serialization. Hosted Nimble is always over the network and is not comparable. |
 | X-04 | **Confidence definition and override scope.** Which per-question statistic (max probability, margin, Kev-style normalized confidence), how the per-record confidence aggregates, and whether `refuse` / `quick_reply` outputs are exempt from the low-confidence → agentic override. | Chapter 04. The log stores full distributions, so this can be decided after the runs. |
 | X-05 | Is **quantization** allowed in the Nimble local fit check? | The Nimble README documents unquantized weights only. |
-| X-06 | Escalation rule for Kev: run all sizes that fit, or stop at the first size that clears some bar? | P-10 assumes "run all that fit". |
-| X-07 | Is it acceptable that each pipeline uses its own Python environment (separate notebook/venv)? | Upstream repos require different Python and torch versions. |
 
 ## Out of scope for round 1
 

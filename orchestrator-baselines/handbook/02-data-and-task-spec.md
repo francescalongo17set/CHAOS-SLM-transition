@@ -70,8 +70,8 @@ One JSON object per line. All rows are Italian (`language: "it"`), some code-mix
 
 | Feature | `required_slots` |
 |---|---|
-| `product_policy_analysis` | `insurer`, `product`, `field`, `coverage` |
-| `comparison` | `insurer`, `product`, `field`, `coverage` |
+| `product_policy_analysis` | `insurer`, `product`, `field`, `coverage` (on 140 `no_policy` / `ambiguous_product` rows, all gold route `clarification`, `insurer` is omitted: audit, C-28) |
+| `comparison` | same as `product_policy_analysis` |
 | `client_drafting` | `product`, `client_profile`, `message_goal` |
 | `ibip_screening` | `product`, `client_profile` |
 | `regulatory_consultation` | `topic`, and `date_reference` on some rows |
