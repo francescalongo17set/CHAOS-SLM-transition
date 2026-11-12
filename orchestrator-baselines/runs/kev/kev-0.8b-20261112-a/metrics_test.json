@@ -1,0 +1,296 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.389050669397599,
+   "ece": 0.10704542186346136,
+   "n": 444
+  },
+  "feature_classification": {
+   "brier": 0.5261004748967139,
+   "ece": 0.18051468861143263,
+   "n": 593
+  },
+  "scope_check": {
+   "brier": 0.42610185614737955,
+   "ece": 0.2707781137342598,
+   "n": 593
+  },
+  "slots (pooled, where gold slot status exists)": {
+   "brier": 0.8620872407620228,
+   "ece": 0.27532715866732044,
+   "n": 860
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.7274774774774775,
+  "macro_f1": 0.7263098907256934,
+  "n": 444,
+  "per_class": {
+   "complex": {
+    "f1": 0.7084337349397589,
+    "precision": 0.7277227722772277,
+    "recall": 0.6901408450704225,
+    "support": 213
+   },
+   "simple": {
+    "f1": 0.7441860465116279,
+    "precision": 0.7272727272727273,
+    "recall": 0.7619047619047619,
+    "support": 231
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 593,
+  "n": 593
+ },
+ "feature_classification": {
+  "accuracy": 0.6627318718381113,
+  "macro_f1": 0.6925402370325772,
+  "n": 593,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.8296296296296296,
+    "precision": 0.9032258064516129,
+    "recall": 0.7671232876712328,
+    "support": 73
+   },
+   "comparison": {
+    "f1": 0.75177304964539,
+    "precision": 0.8688524590163934,
+    "recall": 0.6625,
+    "support": 80
+   },
+   "ibip_screening": {
+    "f1": 0.8721804511278195,
+    "precision": 0.9830508474576272,
+    "recall": 0.7837837837837838,
+    "support": 74
+   },
+   "none": {
+    "f1": 0.6076555023923444,
+    "precision": 0.4721189591078067,
+    "recall": 0.8523489932885906,
+    "support": 149
+   },
+   "product_policy_analysis": {
+    "f1": 0.5606694560669456,
+    "precision": 0.6767676767676768,
+    "recall": 0.4785714285714286,
+    "support": 140
+   },
+   "regulatory_consultation": {
+    "f1": 0.5333333333333332,
+    "precision": 0.7441860465116279,
+    "recall": 0.4155844155844156,
+    "support": 77
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 430.97051061749704,
+  "median": 442.4060069999314,
+  "n": 583,
+  "n_warmup_excluded": 10,
+  "p50": 442.4060069999314,
+  "p95": 643.7336059999552,
+  "total": 251255.80769000077
+ },
+ "model_id": "jaredpalmer/kev-0.8b",
+ "model_revision": "v1.0:bf75a6a8848ea6960ff2ed108d9ed44c2941174f",
+ "n_error_rows": 0,
+ "n_rows": 593,
+ "n_truncated": 0,
+ "needs_clarification": {
+  "accuracy": 0.42342342342342343,
+  "macro_f1": 0.41540487162606976,
+  "n": 444,
+  "per_class": {
+   "False": {
+    "f1": 0.4838709677419355,
+    "precision": 0.7792207792207793,
+    "recall": 0.3508771929824561,
+    "support": 342
+   },
+   "True": {
+    "f1": 0.3469387755102041,
+    "precision": 0.23448275862068965,
+    "recall": 0.6666666666666666,
+    "support": 102
+   }
+  },
+  "positive_class": {
+   "f1": 0.3469387755102041,
+   "precision": 0.23448275862068965,
+   "recall": 0.6666666666666666,
+   "support": 102
+  }
+ },
+ "pipeline": "kev",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 95,
+   "recall": 0.12631578947368421
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 5,
+    "recall": 0.0
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 5,
+    "recall": 0.0
+   },
+   "jailbreak": {
+    "n_gold_refuse": 4,
+    "recall": 0.5
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 18,
+    "recall": 0.0
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 3,
+    "recall": 0.0
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 60,
+   "recall": 0.16666666666666666
+  },
+  "safety_leak": {
+   "n_gold_refuse": 35,
+   "recall": 0.05714285714285714
+  }
+ },
+ "route": {
+  "accuracy": 0.3305227655986509,
+  "macro_f1": 0.3293565310354744,
+  "n": 593,
+  "per_class": {
+   "agentic": {
+    "f1": 0.17272727272727276,
+    "precision": 0.3114754098360656,
+    "recall": 0.11949685534591195,
+    "support": 159
+   },
+   "clarification": {
+    "f1": 0.3300492610837439,
+    "precision": 0.22039473684210525,
+    "recall": 0.6568627450980392,
+    "support": 102
+   },
+   "lightweight": {
+    "f1": 0.37873754152823924,
+    "precision": 0.4830508474576271,
+    "recall": 0.3114754098360656,
+    "support": 183
+   },
+   "quick_reply": {
+    "f1": 0.543046357615894,
+    "precision": 0.422680412371134,
+    "recall": 0.7592592592592593,
+    "support": 54
+   },
+   "refuse": {
+    "f1": 0.22222222222222224,
+    "precision": 0.9230769230769231,
+    "recall": 0.12631578947368421,
+    "support": 95
+   }
+  }
+ },
+ "route_attribution": {
+  "feature_classification": 80,
+  "needs_clarification": 191,
+  "scope_check": 126
+ },
+ "run": {
+  "data_manifest_sha256": {
+   "test": "c1bbc8658aba45c4fb259bb6f126292893444f7e5f3faad07c950b79d1672c7f",
+   "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638"
+  },
+  "device": "Tesla T4",
+  "dtype": "float32",
+  "ended_at": "2026-11-12T21:35:44.195011+00:00",
+  "gpu_count": 2,
+  "latency_mode": "in_process",
+  "libraries": {
+   "kev": "2074cc44256200bb37540103fa4572901faa10f3",
+   "torch": "2.8.0+cu128"
+  },
+  "load_time_s": 8.0,
+  "model_id": "jaredpalmer/kev-0.8b",
+  "model_revision": "v1.0:bf75a6a8848ea6960ff2ed108d9ed44c2941174f",
+  "model_size": {
+   "disk_mb": 65.5,
+   "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
+   "params_total": 752917824,
+   "peak_gpu_mem_mb": 3217.3,
+   "peak_host_ram_mb": null
+  },
+  "n_error_rows": {
+   "test": 0,
+   "validation": 0
+  },
+  "n_rows": {
+   "test": 593,
+   "validation": 298
+  },
+  "notes": "fp32 eager path (LoadOptions defaults). Two calls per row (core, then predicted-feature slots); input_native sums len(enc['ids']) over the calls (state recomputed per call).",
+  "pipeline": "kev",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+  "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "run_id": "kev-0.8b-20261112-a",
+  "started_at": "2026-11-12T21:28:57.246474+00:00",
+  "state_template": "p-01",
+  "temperature_applied": 2.3510958125672174
+ },
+ "scope_check": {
+  "accuracy": 0.7875210792580101,
+  "macro_f1": 0.5528241544444207,
+  "n": 593,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.8932038834951456,
+    "precision": 0.8571428571428571,
+    "recall": 0.9324324324324325,
+    "support": 444
+   },
+   "out_of_scope": {
+    "f1": 0.22222222222222224,
+    "precision": 0.9230769230769231,
+    "recall": 0.12631578947368421,
+    "support": 95
+   },
+   "quick_reply": {
+    "f1": 0.543046357615894,
+    "precision": 0.422680412371134,
+    "recall": 0.7592592592592593,
+    "support": 54
+   }
+  }
+ },
+ "split": "test",
+ "tokens": {
+  "input_native": {
+   "mean": 552.2428330522765,
+   "median": 541,
+   "n": 593,
+   "p95": 836,
+   "total": 327480
+  },
+  "input_ref": {
+   "mean": 517.735244519393,
+   "median": 469,
+   "n": 593,
+   "p95": 738,
+   "total": 307017
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}
