@@ -1,0 +1,151 @@
+{"id": "r82679", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r48826", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r76309", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing", "message_goal": "present"}, "route": "clarification"}
+{"id": "r11740", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r30893", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r71481", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r50713", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "missing", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r48907", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "agentic"}
+{"id": "r09380", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r65159", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r93413", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r12386", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "ambiguous", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r74018", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r85801", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r16214", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r29848", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r25353", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r00201", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "missing", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r52475", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r99732", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r61765", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r30509", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"product": "ambiguous", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r40893", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r07257", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r13147", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r97095", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r73688", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r14302", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "missing", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r02744", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r90573", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r95515", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r69380", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r21129", "scope_check": "in_scope", "feature": "comparison", "complexity": "complex", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "agentic"}
+{"id": "r34119", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r05521", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r91749", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "ambiguous"}, "route": "clarification"}
+{"id": "r96696", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r51359", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r43282", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing", "message_goal": "present"}, "route": "clarification"}
+{"id": "r44226", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r79358", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r54392", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r91664", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r35795", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r69893", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r78838", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r99598", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r20906", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r25760", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r11824", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r17360", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "missing", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r50662", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r85096", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r56085", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present", "date_reference": "ambiguous"}, "route": "clarification"}
+{"id": "r02137", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r95792", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "ambiguous", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r74212", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r35523", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present"}, "route": "agentic"}
+{"id": "r97828", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing", "message_goal": "present"}, "route": "clarification"}
+{"id": "r74715", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r56707", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "ambiguous", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r43823", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r13360", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r33141", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r63599", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "agentic"}
+{"id": "r63788", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r37398", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"product": "missing", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r88457", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r29412", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "ambiguous", "client_profile": "present", "message_goal": "present"}, "route": "clarification"}
+{"id": "r95606", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "agentic"}
+{"id": "r77763", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r55196", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r10294", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r23595", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r33524", "scope_check": "in_scope", "feature": "comparison", "complexity": "complex", "slot_status": {"insurer": "present", "product": "present", "field": "ambiguous", "coverage": "missing"}, "route": "clarification"}
+{"id": "r20977", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r15827", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r39212", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r61398", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r03622", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r40922", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r36297", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r77370", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r70732", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r65127", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r80954", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r98031", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r16096", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r23300", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present"}, "route": "agentic"}
+{"id": "r19070", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r89197", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r59004", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r40750", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r23749", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r02323", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r31673", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present"}, "route": "agentic"}
+{"id": "r17352", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r52522", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r11591", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r40621", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r04259", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r57144", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r93013", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r64325", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r57022", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r31827", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r39141", "scope_check": "in_scope", "feature": "comparison", "complexity": "complex", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "agentic"}
+{"id": "r69891", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r10719", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r58410", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r56887", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r10305", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "missing"}, "route": "clarification"}
+{"id": "r70172", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r83956", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r16974", "scope_check": "in_scope", "feature": "comparison", "complexity": "complex", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "agentic"}
+{"id": "r79705", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r09558", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r13188", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r57480", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r58692", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r18684", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "complex", "slot_status": {"topic": "present"}, "route": "agentic"}
+{"id": "r60583", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r78802", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r29104", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r41195", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r83979", "scope_check": "in_scope", "feature": "product_policy_analysis", "complexity": "simple", "slot_status": {"insurer": "present", "product": "present", "field": "present", "coverage": "present"}, "route": "lightweight"}
+{"id": "r44614", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r60438", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r93347", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r48914", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r57755", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r50785", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r55843", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r71679", "scope_check": "in_scope", "feature": "comparison", "complexity": "simple", "slot_status": {"product": "missing", "field": "present", "coverage": "present"}, "route": "clarification"}
+{"id": "r30529", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r98648", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r88561", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r42053", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r24161", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous", "message_goal": "present"}, "route": "clarification"}
+{"id": "r10749", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r29914", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing", "message_goal": "present"}, "route": "clarification"}
+{"id": "r25634", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r06093", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r31494", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r51256", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r72144", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r42595", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r74226", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r64739", "scope_check": "in_scope", "feature": "comparison", "complexity": "complex", "slot_status": {"insurer": "present", "product": "present", "field": "ambiguous", "coverage": "present"}, "route": "clarification"}
+{"id": "r54323", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r18358", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}

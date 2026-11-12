@@ -1,0 +1,138 @@
+{"id": "r82276", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous", "message_goal": "present"}, "route": "clarification"}
+{"id": "r39329", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r91114", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r87616", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r53102", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present", "message_goal": "present"}, "route": "clarification"}
+{"id": "r69428", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r52475", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r47170", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r65994", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r75625", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r68260", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r18358", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r75014", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r39072", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r70115", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r73781", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r86775", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r02903", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r22819", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r18265", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r96771", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r31776", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r77844", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r26468", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r95215", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r40127", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r24279", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r46127", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r24274", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r57066", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r20977", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r76152", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r00133", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r77359", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r49742", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r65184", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r37737", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r68780", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r01171", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r78613", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r48305", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r74226", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r92450", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r44728", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r14240", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r81580", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r15219", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r50662", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r08296", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r00020", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r88659", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing"}, "route": "clarification"}
+{"id": "r91942", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r31754", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r80116", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r44797", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r38854", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r35730", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r81008", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r96020", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r32842", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r27839", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "ambiguous"}, "route": "clarification"}
+{"id": "r29877", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "ambiguous", "message_goal": "present"}, "route": "clarification"}
+{"id": "r17969", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r36375", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r18317", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r21070", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r61878", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r96106", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "missing", "message_goal": "present"}, "route": "clarification"}
+{"id": "r21511", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r10873", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r46384", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r16322", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r42933", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r98893", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r39679", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r65457", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r94285", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r23827", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r95449", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r81864", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r31494", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r22354", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r02752", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r51389", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r99017", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r05146", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r31335", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r05859", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r73164", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r80189", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r15040", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r22953", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r53009", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r96347", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r01450", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r03993", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r87787", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r40555", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r27969", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r76172", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r79564", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r66753", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r74415", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r77370", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r17683", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r08699", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r31358", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "ambiguous"}, "route": "clarification"}
+{"id": "r74506", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r03958", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r30155", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r90058", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r09315", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r39061", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r55058", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r06395", "scope_check": "in_scope", "feature": "client_drafting", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present", "message_goal": "present"}, "route": "agentic"}
+{"id": "r66779", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r31552", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r64180", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r56254", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "present"}, "route": "agentic"}
+{"id": "r25848", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r65460", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r37774", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r08274", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "ambiguous"}, "route": "clarification"}
+{"id": "r25110", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r58464", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r04552", "scope_check": "out_of_scope", "feature": "none", "complexity": null, "slot_status": {}, "route": "refuse"}
+{"id": "r37351", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r17724", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r16385", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r93012", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r22491", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r31424", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "simple", "slot_status": {"product": "present", "client_profile": "ambiguous"}, "route": "clarification"}
+{"id": "r79358", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}
+{"id": "r77709", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "missing", "client_profile": "present"}, "route": "clarification"}
+{"id": "r26356", "scope_check": "quick_reply", "feature": "none", "complexity": null, "slot_status": {}, "route": "quick_reply"}
+{"id": "r16974", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present"}, "route": "lightweight"}
+{"id": "r36568", "scope_check": "in_scope", "feature": "ibip_screening", "complexity": "complex", "slot_status": {"product": "ambiguous", "client_profile": "present"}, "route": "clarification"}
+{"id": "r89728", "scope_check": "in_scope", "feature": "regulatory_consultation", "complexity": "simple", "slot_status": {"topic": "present", "date_reference": "present"}, "route": "lightweight"}

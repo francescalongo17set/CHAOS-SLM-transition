@@ -1,0 +1,46 @@
+{
+  "status": "frozen at stage 6 (10 Nov 2026): bge beats e5 by >2 points on pilot hit@5 (all-gold 0.667 vs 0.444, any-gold 0.889 vs 0.778, n=9)",
+  "active": "bge",
+  "k": 5,
+  "similarity": "cosine (dot product of L2-normalised vectors), exact sort",
+  "models": {
+    "e5": {
+      "model": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "dim": 768,
+      "max_seq_length": 512,
+      "passage_prefix": "passage: ",
+      "query_prefix": "query: ",
+      "normalised": true
+    },
+    "bge": {
+      "model": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dim": 1024,
+      "max_seq_length": 1024,
+      "passage_prefix": "",
+      "query_prefix": "",
+      "normalised": true
+    },
+    "e5ctx": {
+      "model": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "dim": 768,
+      "max_seq_length": 512,
+      "passage_prefix": "passage: ",
+      "query_prefix": "query: ",
+      "normalised": true,
+      "doc_format": "'{product} - {section_path}\\n{text}' (stage 6 variant)"
+    },
+    "bgectx": {
+      "model": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dim": 1024,
+      "max_seq_length": 1024,
+      "passage_prefix": "",
+      "query_prefix": "",
+      "normalised": true,
+      "doc_format": "'{product} - {section_path}\\n{text}' (stage 6 variant)"
+    }
+  }
+}

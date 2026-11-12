@@ -1,0 +1,590 @@
+{
+ "folders": [
+  {
+   "folder": "pilot/stg",
+   "router": 311,
+   "qa": 12
+  },
+  {
+   "folder": "staging/trial/final",
+   "router": 452,
+   "qa": 30
+  },
+  {
+   "folder": "staging/bulk/final_b1",
+   "router": 23,
+   "qa": 53
+  },
+  {
+   "folder": "staging/bulk/final_b2",
+   "router": 1076,
+   "qa": 4
+  },
+  {
+   "folder": "staging/bulk/final_b3",
+   "router": 176,
+   "qa": 462
+  },
+  {
+   "folder": "staging/bulk/final_b4",
+   "router": 211,
+   "qa": 409
+  },
+  {
+   "folder": "staging/bulk/u_repl3",
+   "router": 0,
+   "qa": 15
+  },
+  {
+   "folder": "staging/bulk/h_001",
+   "router": 7,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_002",
+   "router": 1,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_005",
+   "router": 11,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_006",
+   "router": 9,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_007",
+   "router": 10,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_008",
+   "router": 6,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/h_009",
+   "router": 7,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/h_010",
+   "router": 7,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_011",
+   "router": 3,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_012",
+   "router": 7,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/h_013",
+   "router": 8,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_014",
+   "router": 10,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_015",
+   "router": 2,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_016",
+   "router": 7,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_017",
+   "router": 7,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_018",
+   "router": 6,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_019",
+   "router": 5,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/h_020",
+   "router": 6,
+   "qa": 12
+  },
+  {
+   "folder": "staging/bulk/h_021",
+   "router": 8,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_022",
+   "router": 4,
+   "qa": 6
+  },
+  {
+   "folder": "staging/bulk/h_023",
+   "router": 10,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_024",
+   "router": 4,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_025",
+   "router": 7,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_026",
+   "router": 8,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_027",
+   "router": 3,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/h_028",
+   "router": 5,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_029",
+   "router": 4,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_030",
+   "router": 2,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_031",
+   "router": 3,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_032",
+   "router": 7,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_033",
+   "router": 7,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_034",
+   "router": 3,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_035",
+   "router": 7,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/h_036",
+   "router": 3,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_037",
+   "router": 2,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/h_038",
+   "router": 6,
+   "qa": 12
+  },
+  {
+   "folder": "staging/bulk/h_039",
+   "router": 2,
+   "qa": 9
+  },
+  {
+   "folder": "staging/bulk/h_040",
+   "router": 6,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/r_h_001",
+   "router": 5,
+   "qa": 6
+  },
+  {
+   "folder": "staging/bulk/r_h_002",
+   "router": 1,
+   "qa": 5
+  },
+  {
+   "folder": "staging/bulk/r_h_003",
+   "router": 4,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/r_h_004",
+   "router": 3,
+   "qa": 7
+  },
+  {
+   "folder": "staging/bulk/r_h_005",
+   "router": 3,
+   "qa": 5
+  },
+  {
+   "folder": "staging/bulk/r_s_001",
+   "router": 9,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/r_s_002",
+   "router": 6,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/r_s_003",
+   "router": 6,
+   "qa": 7
+  },
+  {
+   "folder": "staging/bulk/r_s_004",
+   "router": 3,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/r_s_005",
+   "router": 3,
+   "qa": 6
+  },
+  {
+   "folder": "staging/bulk/r_s_006",
+   "router": 3,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/r_s_007",
+   "router": 0,
+   "qa": 3
+  },
+  {
+   "folder": "staging/bulk/u_001",
+   "router": 6,
+   "qa": 8
+  },
+  {
+   "folder": "staging/bulk/u_002",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/u_003",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/u_004",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/u_005",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/u_006",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/u_007",
+   "router": 0,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/v_006",
+   "router": 18,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/v_007",
+   "router": 17,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/v_008",
+   "router": 17,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/w_001",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/w_006",
+   "router": 15,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/w_008",
+   "router": 24,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/x_001",
+   "router": 10,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/x_003",
+   "router": 11,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/x_004",
+   "router": 9,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/x_005",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/x_006",
+   "router": 11,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_001",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_002",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_003",
+   "router": 10,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_004",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_005",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_006",
+   "router": 14,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_007",
+   "router": 23,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_008",
+   "router": 22,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_009",
+   "router": 24,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_010",
+   "router": 20,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_011",
+   "router": 22,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_012",
+   "router": 24,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_013",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_014",
+   "router": 14,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_015",
+   "router": 9,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_016",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/y_017",
+   "router": 4,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/z_001",
+   "router": 10,
+   "qa": 7
+  },
+  {
+   "folder": "staging/bulk/z_002",
+   "router": 8,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/z_003",
+   "router": 2,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/z_004",
+   "router": 9,
+   "qa": 11
+  },
+  {
+   "folder": "staging/bulk/z_005",
+   "router": 7,
+   "qa": 10
+  },
+  {
+   "folder": "staging/bulk/z_006",
+   "router": 2,
+   "qa": 12
+  },
+  {
+   "folder": "staging/bulk/z_007",
+   "router": 13,
+   "qa": 4
+  },
+  {
+   "folder": "staging/bulk/z_008",
+   "router": 12,
+   "qa": 0
+  },
+  {
+   "folder": "staging/bulk/z_009",
+   "router": 16,
+   "qa": 0
+  }
+ ],
+ "steps": {
+  "merge": {
+   "router": 3012,
+   "qa": 1493,
+   "held_comparison": 75
+  },
+  "retrieval": {
+   "answerable": 1195,
+   "hn_planned": 475,
+   "hn_ok": 421,
+   "miss": 4,
+   "hn_swapped": 31,
+   "hn_unmet": 23
+  },
+  "pairs": {
+   "pair_ids": 451,
+   "dropped_orphans": 1
+  },
+  "dedup": {
+   "exact_or_near_removed": 26,
+   "near_by_kind": {
+    "router": 6,
+    "qa": 3
+   },
+   "contamination": {
+    "router:edit_distance": 2
+   },
+   "edit_ratio": 0.92,
+   "contam_ratio": 0.9,
+   "ngram": 13
+  },
+  "isolation_violations_removed": 0
+ },
+ "final": {
+  "router": 2983,
+  "qa": 1485,
+  "router_by_split": {
+   "train": 2092,
+   "test": 593,
+   "validation": 298
+  },
+  "qa_by_split": {
+   "train": 842,
+   "test": 493,
+   "validation": 150
+  },
+  "target": {
+   "router": {
+    "train": 2100,
+    "validation": 300,
+    "test": 600
+   },
+   "qa": {
+    "train": 850,
+    "validation": 150,
+    "test": 500
+   }
+  },
+  "router_by_route": {
+   "lightweight": 923,
+   "refuse": 478,
+   "agentic": 806,
+   "clarification": 508,
+   "quick_reply": 268
+  },
+  "qa_by_behavior": {
+   "answer": 1188,
+   "absent": 297
+  }
+ },
+ "dropped_by_reason": {
+  "held_comparison_pending_owner_decision": 75,
+  "superseded_dropped_no_replacement": 4,
+  "stage9_blind_pass_drop": 2,
+  "retrieval_miss": 4,
+  "pair_partner_missing": 1,
+  "exact_duplicate": 17,
+  "near_duplicate": 9,
+  "contamination_edit_distance": 2,
+  "pair_partner_missing_after_dedup": 4
+ }
+}

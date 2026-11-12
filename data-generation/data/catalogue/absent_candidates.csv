@@ -1,0 +1,198 @@
+doc_id,topic,terms_searched,hits,expected_section,flagged_pages,confirmed,split,usable
+zurich_salute,sospensione del contratto o della garanzia,sospension; sospendere,2,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,riattivazione della polizza,riattivazion; riattivare,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,cessione del contratto,cessione del contratto; cessione della polizza; cedere il contratto,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,bonus e sconti per assenza di sinistri,bonus; sconto fedelta; sconti,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,mezzi di pagamento del premio,bonifico; carta di credito; assegno; contanti; addebito diretto; sdd,10,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,rateazione e frazionamento del premio,frazionamento; rateazione; rateale; pagamento rateale,1,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,interessi di mora,interessi di mora; mora,2,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,giorni di tolleranza per il pagamento,tolleranza,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,indicizzazione automatica del premio,indicizzazion; adeguamento automatico,5,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,polizza in valuta estera,valuta estera; dollari; sterline,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,coassicurazione,coassicurazion; coassicurat,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,penale per recesso anticipato,penale; penali,3,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,rimborso del premio non goduto,premio non goduto; rimborso del premio; restituzione del premio,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,duplicato della polizza,duplicato; copia della polizza; smarrimento della polizza,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,firma elettronica e firma digitale,firma elettronica; firma digitale; firma grafometrica; spid,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,numero massimo di sinistri per anno,numero massimo di sinistri; sinistri per anno; sinistri per periodo assicurativo,15,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,premio minimo,premio minimo; premio di minimo,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,esclusione per epidemie e pandemie,pandemi; epidemi,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,esclusione per terrorismo,terrorism; atti terroristici,5,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,esclusione per guerra,guerra; operazioni belliche,9,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,mediazione obbligatoria,mediazion,8,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,arbitrato,arbitrato; arbitro,7,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,trasferimento della polizza a un nuovo titolare,subentro; trasferimento del contratto; nuovo titolare,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,polizza collettiva o convenzione aziendale,polizza collettiva; convenzione aziendale; adesione collettiva,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,risoluzione per decesso del contraente,decesso del contraente; morte del contraente,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,proroga della copertura,proroga,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,periodo di osservazione,periodo di osservazione,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,comunicazioni in formato elettronico,posta elettronica ordinaria; comunicazioni elettroniche; sms,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,lingua del contratto,lingua del contratto; lingua inglese,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,gravidanza e parto,gravidanz; parto; maternit,47,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,fecondazione assistita,fecondazione; procreazione,2,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,vaccinazioni,vaccin,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,chirurgia estetica,chirurgia estetica; chirurgia plastica; estetic,25,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,protesi acustiche e apparecchi acustici,protesi acustich; apparecchi acustici,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,occhiali e lenti a contatto,occhial; lenti a contatto; lenti correttive,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,psicoterapia e sostegno psicologico,psicoterap; psicolog,14,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,trapianti di organi,trapiant,11,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,second opinion medica,second opinion; secondo parere,7,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,malattie rare,malattie rare; malattia rara,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,check-up pediatrico,pediatric; neonat,38,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,ticket sanitari,ticket,7,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,assistenza infermieristica domiciliare,infermier,10,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,indennità di convalescenza,convalescenz,29,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,lungodegenza e riabilitazione in struttura,lungodegenz; riabilitazion,3,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,cure termali,termal; terme,8,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,cure oncologiche e chemioterapia,oncolog; chemioterap; radioterap; tumor,27,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,ortodonzia,ortodonz,0,Sezione 2 - Protezione Salute,,false,train,true
+zurich_salute,sport pericolosi o professionistici,sport; paracadut; alpinismo; professionistic,22,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,copertura per patologie pregresse,pregresse; preesistent,5,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,limite di età per l'ingresso,eta massima di ingresso; limite di eta; limiti di eta; eta di ingresso,1,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,false
+zurich_salute,dipendenze da alcol o droghe,alcol; stupefacent; tossicodipendenz,16,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,copertura dei figli maggiorenni,figli maggiorenni; figli a carico; figli conviventi,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,cambio del piano o della forma di copertura,cambio di forma; cambio del piano; passaggio di forma,0,Sezione 1 - Norme comuni a tutte le garanzie,,false,train,true
+zurich_salute,cure all'estero,cure all estero; ricovero all estero; istituto di cura estero,1,Sezione 2 - Protezione Salute,,false,train,false
+zurich_salute,invio di una badante o assistente familiare,badante; assistente familiare,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,assistenza veterinaria per animali domestici,veterinar; animali domestici; animale domestico,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,rimpatrio della salma,salma,3,Sezione 3 - Assistenza,,false,validation,false
+zurich_salute,taxi sanitario,taxi,3,Sezione 3 - Assistenza,,false,validation,false
+zurich_salute,trasferimento in elicottero,elicottero; eliambulanza,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,servizio di interprete,interprete,2,Sezione 3 - Assistenza,,false,validation,false
+zurich_salute,anticipo della cauzione all'estero,cauzione,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,invio di un baby sitter,baby sitter; babysitter; baby-sitter,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,consegna della spesa a domicilio,consegna della spesa; spesa a domicilio,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,servizio di lavanderia o pulizie,lavanderia; colf; pulizie,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,sostegno psicologico telefonico,supporto psicologico; sostegno psicologico; assistenza psicologica,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,prenotazione di visite ed esami,prenotazione di visite; prenotazione delle visite; prenotazione di esami,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,assistenza ai familiari non autosufficienti,non autosufficien,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,invio di un fisioterapista a domicilio,fisioterapista a domicilio; fisioterapist,4,Sezione 3 - Assistenza,,false,validation,false
+zurich_salute,assistenza per smarrimento dei documenti,smarrimento dei documenti; perdita dei documenti,0,Sezione 3 - Assistenza,,false,validation,true
+zurich_salute,assistenza legale telefonica all'estero,segnalazione di un legale; legale all estero; consulenza legale telefonica,16,Sezione 3 - Assistenza,,false,validation,false
+generali_immagina_adesso,sospensione del contratto o della garanzia,sospension; sospendere,3,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,riattivazione della polizza,riattivazion; riattivare,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,cessione del contratto,cessione del contratto; cessione della polizza; cedere il contratto,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,bonus e sconti per assenza di sinistri,bonus; sconto fedelta; sconti,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,mezzi di pagamento del premio,bonifico; carta di credito; assegno; contanti; addebito diretto; sdd,5,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,rateazione e frazionamento del premio,frazionamento; rateazione; rateale; pagamento rateale,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,interessi di mora,interessi di mora; mora,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,giorni di tolleranza per il pagamento,tolleranza,4,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,indicizzazione automatica del premio,indicizzazion; adeguamento automatico,5,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,polizza in valuta estera,valuta estera; dollari; sterline,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,coassicurazione,coassicurazion; coassicurat,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,penale per recesso anticipato,penale; penali,6,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,rimborso del premio non goduto,premio non goduto; rimborso del premio; restituzione del premio,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,duplicato della polizza,duplicato; copia della polizza; smarrimento della polizza,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,firma elettronica e firma digitale,firma elettronica; firma digitale; firma grafometrica; spid,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,numero massimo di sinistri per anno,numero massimo di sinistri; sinistri per anno; sinistri per periodo assicurativo,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,premio minimo,premio minimo; premio di minimo,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,esclusione per epidemie e pandemie,pandemi; epidemi,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,esclusione per terrorismo,terrorism; atti terroristici,12,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,esclusione per guerra,guerra; operazioni belliche,9,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,mediazione obbligatoria,mediazion,4,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,arbitrato,arbitrato; arbitro,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,trasferimento della polizza a un nuovo titolare,subentro; trasferimento del contratto; nuovo titolare,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,polizza collettiva o convenzione aziendale,polizza collettiva; convenzione aziendale; adesione collettiva,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,risoluzione per decesso del contraente,decesso del contraente; morte del contraente,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,proroga della copertura,proroga,7,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,periodo di osservazione,periodo di osservazione,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,comunicazioni in formato elettronico,posta elettronica ordinaria; comunicazioni elettroniche; sms,2,Norme Comuni,2 40 117,false,train,false
+generali_immagina_adesso,lingua del contratto,lingua del contratto; lingua inglese,0,Norme Comuni,2 40 117,false,train,true
+generali_immagina_adesso,piscina e impianti sportivi,piscina; campo da tennis,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,giardino e alberi,giardin; alberi ad alto fusto,7,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,animali domestici,animali domestici; animale domestico; cane; gatto,1,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,opere d'arte e oggetti da collezione,opere d arte; collezion; quadri,69,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,biciclette e monopattini elettrici,monopattin; biciclett,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,affitti brevi e locazione turistica,affitti brevi; locazione turistica; airbnb; b&b,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,abitazione disabitata,disabitat; inabitat,2,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,muffa e umidità,muffa; umidita,4,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,danni da animali nocivi,roditori; insetti; animali nocivi,3,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,cantina e box auto,box auto; autorimessa; garage,2,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,ascensore e impianti condominiali,ascensore; montacarichi,3,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,pannelli solari e fotovoltaico,pannelli solari; fotovoltaic,12,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,domotica e dispositivi smart,domotic; smart home,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,danni da terremoto,terremot; sisma,30,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,danni da alluvione,alluvion; inondazion,47,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,furto di biciclette all'esterno,biciclette all esterno; furto di biciclett,0,In guardia - Furto Su misura,2 40 117,false,train,true
+generali_immagina_adesso,furto di veicoli,furto di veicol; autoveicol,0,In guardia - Furto Su misura,2 40 117,false,train,true
+generali_immagina_adesso,rapina fuori dall'abitazione con carte di credito,carte di credito; bancomat; prelievo,23,In guardia - Furto Su misura,2 40 117,false,train,false
+generali_immagina_adesso,copertura per ospiti e persone di servizio,ospiti; persone di servizio,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,lavori di ristrutturazione e appaltatori,appaltator; ristrutturazione edilizia,0,In solidità - Danni ai beni,2 40 117,false,train,true
+generali_immagina_adesso,beni in comproprietà,comproprieta; comproprietar,2,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,sinistri causati da minori,minori di; minorenni,1,In solidità - Danni ai beni,2 40 117,false,train,false
+generali_immagina_adesso,assistenza veterinaria per animali domestici,veterinar; animali domestici; animale domestico,4,Prevenzione e assistenza CASA,2 40 117,false,validation,false
+generali_immagina_adesso,servizio di interprete,interprete,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,invio di un'ambulanza,ambulanza,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,taxi in caso di emergenza,taxi,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,consulenza medica telefonica,consulenza medica; pediatra; medico di guardia,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,invio di un giardiniere,giardinier,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,assistenza informatica a domicilio,informatic; computer,25,Prevenzione e assistenza CASA,2 40 117,false,validation,false
+generali_immagina_adesso,invio di un baby sitter o pet sitter,baby sitter; babysitter; pet sitter,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,consegna della spesa a domicilio,consegna della spesa; spesa a domicilio,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,assistenza per smarrimento dei documenti,smarrimento dei documenti; perdita dei documenti,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,invio di un muratore o piastrellista,muratore; piastrellist; imbianchin,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+generali_immagina_adesso,invio di un tecnico per la caldaia,caldaia; termotecnic; climatizzat,7,Prevenzione e assistenza CASA,2 40 117,false,validation,false
+generali_immagina_adesso,consulenza legale telefonica,consulenza legale; assistenza legale,2,Prevenzione e assistenza CASA,2 40 117,false,validation,false
+generali_immagina_adesso,rientro anticipato per animali,rientro dell animale,0,Prevenzione e assistenza CASA,2 40 117,false,validation,true
+zurich_impresa,sospensione del contratto o della garanzia,sospension; sospendere,45,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,riattivazione della polizza,riattivazion; riattivare,3,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,cessione del contratto,cessione del contratto; cessione della polizza; cedere il contratto,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,bonus e sconti per assenza di sinistri,bonus; sconto fedelta; sconti,1,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,mezzi di pagamento del premio,bonifico; carta di credito; assegno; contanti; addebito diretto; sdd,11,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,rateazione e frazionamento del premio,frazionamento; rateazione; rateale; pagamento rateale,2,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,interessi di mora,interessi di mora; mora,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,giorni di tolleranza per il pagamento,tolleranza,10,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,indicizzazione automatica del premio,indicizzazion; adeguamento automatico,5,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,polizza in valuta estera,valuta estera; dollari; sterline,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,coassicurazione,coassicurazion; coassicurat,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,penale per recesso anticipato,penale; penali,77,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,rimborso del premio non goduto,premio non goduto; rimborso del premio; restituzione del premio,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,duplicato della polizza,duplicato; copia della polizza; smarrimento della polizza,4,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,firma elettronica e firma digitale,firma elettronica; firma digitale; firma grafometrica; spid,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,numero massimo di sinistri per anno,numero massimo di sinistri; sinistri per anno; sinistri per periodo assicurativo,3,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,premio minimo,premio minimo; premio di minimo,4,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,esclusione per epidemie e pandemie,pandemi; epidemi,8,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,esclusione per terrorismo,terrorism; atti terroristici,42,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,esclusione per guerra,guerra; operazioni belliche,38,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,mediazione obbligatoria,mediazion,10,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,arbitrato,arbitrato; arbitro,14,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,trasferimento della polizza a un nuovo titolare,subentro; trasferimento del contratto; nuovo titolare,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,polizza collettiva o convenzione aziendale,polizza collettiva; convenzione aziendale; adesione collettiva,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,risoluzione per decesso del contraente,decesso del contraente; morte del contraente,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,proroga della copertura,proroga,2,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,periodo di osservazione,periodo di osservazione,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,comunicazioni in formato elettronico,posta elettronica ordinaria; comunicazioni elettroniche; sms,0,Norme comuni a tutte le garanzie,,false,test,true
+zurich_impresa,lingua del contratto,lingua del contratto; lingua inglese,1,Norme comuni a tutte le garanzie,,false,test,false
+zurich_impresa,cyber risk e attacchi informatici,cyber; attacco informatico; attacchi informatici; hacker,33,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,merci in transito e trasporto,merci in transito; trasporto merci; merci trasportate,3,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,valuta estera e crediti insoluti,valuta estera; crediti insoluti; insolvenza dei clienti,0,Incendio e Danni ai beni,,false,test,true
+zurich_impresa,smart working e lavoro agile,smart working; lavoro agile,2,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,portavalori e trasporto di denaro,portavalori; trasporto di denaro; trasporto valori,6,Furto,,false,test,false
+zurich_impresa,inquinamento accidentale,inquinament,52,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,responsabilità degli amministratori,amministratori e dirigenti; d&o; responsabilita degli amministratori,0,Responsabilità Civile danni a terzi (R.C.T.),,false,test,true
+zurich_impresa,serre e coltivazioni agricole,serre; colture; agricol,22,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,veicoli dei dipendenti in parcheggio,veicoli dei dipendenti; auto dei dipendenti; parcheggio aziendale,0,Responsabilità Civile danni a terzi (R.C.T.),,false,test,true
+zurich_impresa,danni da interruzione di energia elettrica,interruzione di energia; black out; blackout; mancanza di energia,2,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,beni in leasing,leasing; locazione finanziaria,11,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,beni di terzi in uso o comodato,comodato; beni in uso,0,Incendio e Danni ai beni,,false,test,true
+zurich_impresa,"fiere, mostre ed esposizioni",fiere; mostre; esposizioni,35,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,lavoratori autonomi e collaboratori esterni,collaboratori esterni; lavoratori autonomi; stagisti; tirocinant,4,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,danni da terremoto,terremot; sisma,33,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,danni da alluvione e inondazione,alluvion; inondazion,77,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,perdita di dati e software,perdita di dati; ricostruzione dei dati; software,6,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,furto di merci a bordo di veicoli,a bordo di veicol; furto di merci in veicol,0,Furto,,false,test,true
+zurich_impresa,rapina in banca o agenzia,agenzia di banca; rapina in banca,0,Furto,,false,test,true
+zurich_impresa,danni da amianto,amianto; asbesto,12,Incendio e Danni ai beni,,false,test,false
+zurich_impresa,responsabilità per beni consegnati in deposito,beni in deposito; cose in consegna,4,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,danni all'immagine e reputazione,reputazione; immagine aziendale; danno di immagine,0,Responsabilità Civile danni a terzi (R.C.T.),,false,test,true
+zurich_impresa,sanzioni amministrative,sanzioni amministrative,6,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,danni da incendio doloso del contraente,incendio doloso,0,Incendio e Danni ai beni,,false,test,true
+zurich_impresa,rischi ambientali e bonifica,bonifica; ripristino ambientale,2,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,danni da droni,drone; droni; aeromobil,17,Responsabilità Civile danni a terzi (R.C.T.),,false,test,false
+zurich_impresa,assistenza informatica d'urgenza,assistenza informatica; pronto intervento informatico,0,Assistenza,,false,test,true
+zurich_impresa,invio di un medico in azienda,invio di un medico; medico in azienda,4,Assistenza,,false,test,false
+zurich_impresa,ritorno anticipato dei dipendenti,rientro anticipato; rimpatrio dei dipendenti,3,Assistenza,,false,test,false
+zurich_impresa,interprete per trasferte di lavoro,interprete,2,Assistenza,,false,test,false
+zurich_impresa,vigilanza e sorveglianza dopo il sinistro,sorveglianza; vigilanza,27,Assistenza,,false,test,false
+zurich_impresa,impresa di pulizie dopo un sinistro,impresa di pulizie; pulizie straordinarie,0,Assistenza,,false,test,true
+zurich_impresa,trasloco temporaneo dell'attività,trasloco; ricollocazione dell attivita,12,Assistenza,,false,test,false

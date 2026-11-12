@@ -1,0 +1,1 @@
+{"job_id": "job-000815", "id": "qa-000815", "attempt": 1, "errors": ["question: telegraphic QA uses exactly 5 words, has 7"], "written": {"kind": "qa", "qa_id": "qa-000815", "question": "Immagina Adesso: decesso del contraente, cosa succede?", "risposta": "Non indicato nei documenti.", "fonte": null, "gold_value": null, "gold_condition": null, "difficulty": "medium"}}

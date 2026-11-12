@@ -1,0 +1,34 @@
+split,field,chunks_a,chunks_b,chunk_pairs,doc_a,doc_b
+train,franchigia,25,105,2625,zurich_salute,generali_immagina_adesso
+train,massimale,32,100,3200,zurich_salute,generali_immagina_adesso
+train,carenza,13,4,52,zurich_salute,generali_immagina_adesso
+train,esclusioni,13,79,1027,zurich_salute,generali_immagina_adesso
+train,rimborso,58,142,8236,zurich_salute,generali_immagina_adesso
+train,decorrenza,7,6,42,zurich_salute,generali_immagina_adesso
+train,durata,33,25,825,zurich_salute,generali_immagina_adesso
+train,recesso e disdetta,11,11,121,zurich_salute,generali_immagina_adesso
+train,denuncia del sinistro,11,7,77,zurich_salute,generali_immagina_adesso
+train,assistenza,35,24,840,zurich_salute,generali_immagina_adesso
+train,pagamento del premio,6,11,66,zurich_salute,generali_immagina_adesso
+train,validità territoriale,16,16,256,zurich_salute,generali_immagina_adesso
+train,surrogazione,1,3,3,zurich_salute,generali_immagina_adesso
+train,tutela legale,24,2,48,zurich_salute,generali_immagina_adesso
+validation,massimale,4,5,20,zurich_salute,generali_immagina_adesso
+validation,esclusioni,2,14,28,zurich_salute,generali_immagina_adesso
+validation,rimborso,2,6,12,zurich_salute,generali_immagina_adesso
+validation,assistenza,30,45,1350,zurich_salute,generali_immagina_adesso
+validation,validità territoriale,12,3,36,zurich_salute,generali_immagina_adesso
+test,franchigia,125,105,13125,zurich_impresa,generali_immagina_adesso
+test,massimale,182,100,18200,zurich_impresa,generali_immagina_adesso
+test,carenza,3,4,12,zurich_impresa,generali_immagina_adesso
+test,esclusioni,153,79,12087,zurich_impresa,generali_immagina_adesso
+test,rimborso,246,142,34932,zurich_impresa,generali_immagina_adesso
+test,decorrenza,17,6,102,zurich_impresa,generali_immagina_adesso
+test,durata,43,25,1075,zurich_impresa,generali_immagina_adesso
+test,recesso e disdetta,20,11,220,zurich_impresa,generali_immagina_adesso
+test,denuncia del sinistro,29,7,203,zurich_impresa,generali_immagina_adesso
+test,assistenza,42,24,1008,zurich_impresa,generali_immagina_adesso
+test,pagamento del premio,13,11,143,zurich_impresa,generali_immagina_adesso
+test,validità territoriale,26,16,416,zurich_impresa,generali_immagina_adesso
+test,surrogazione,18,3,54,zurich_impresa,generali_immagina_adesso
+test,tutela legale,36,2,72,zurich_impresa,generali_immagina_adesso

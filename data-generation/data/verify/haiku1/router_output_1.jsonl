@@ -1,0 +1,14 @@
+{"id":"r46127","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r22819","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r42886","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r70982","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"missing"},"route":"clarification"}
+{"id":"r21275","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"missing"},"route":"clarification"}
+{"id":"r22375","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r41831","scope_check":"out_of_scope","feature":"none","complexity":null,"slot_status":{},"route":"refuse"}
+{"id":"r52764","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r62449","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"missing"},"route":"clarification"}
+{"id":"r97195","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"product":"ambiguous","field":"present","coverage":"missing"},"route":"clarification"}
+{"id":"r61065","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"product":"ambiguous","field":"present","coverage":"present"},"route":"clarification"}
+{"id":"r09473","scope_check":"in_scope","feature":"comparison","complexity":"complex","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"missing"},"route":"clarification"}
+{"id":"r42977","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}
+{"id":"r95339","scope_check":"in_scope","feature":"product_policy_analysis","complexity":"simple","slot_status":{"insurer":"present","product":"present","field":"present","coverage":"present"},"route":"lightweight"}

@@ -1,0 +1,7 @@
+# Stage 2: Chunk (code/chunk.py)
+
+- Sections: Salute and Impresa from a font-size ladder (>=24pt top section, 16pt heading, 12pt clause; bold headings in DIP/DIPA); Generali from the PDF outline, matched to lines on the page (11 of 255 entries not found on their page, inserted at the top of that page).
+- Front matter by explicit page ranges: Salute p1 cover, p2-3 DIP, p4-6 DIP aggiuntivo; Impresa p1, p2-4, p5-56; Generali p1-2, p3-DIPA start, DIPA to p18. Cover, "Frontespizio" and "Indice" sections are dropped (about 0.5% of text).
+- Settings as in book 15.3 (1,500 target, 1,800 soft maximum, 150-char overlap of whole sentences, tail under 300 merged, hard maximum 2,400). Additions: a chunk also closes before a sub-heading once it holds 600+ characters, so a chunk keeps one coverage; a short leading chunk is merged forward; a table header is repeated only when it is 500 chars or less; table rows over 2,200 chars are split at sentence boundaries.
+- Results: Salute 164 chunks (estimate 170), Generali 319 (320), Impresa 536 (560). All within 30%. Sizes 315 to 2,288 chars, none under 300 or over 2,400. Coverage of extracted text 99.2% / 99.6% / 99.5%, the rest being the dropped sections. No forbidden characters.
+- Held-out sections: Salute "Sezione 3 - Assistenza" pages 34-42, 32 chunks. Generali "Prevenzione e assistenza CASA" pages 35-53, 52 chunks. Both match the expected pages.

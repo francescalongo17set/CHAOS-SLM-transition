@@ -1,0 +1,220 @@
+{
+"r22819": "orc-000355",
+"r94083": "orc-000356",
+"r95339": "orc-000357",
+"r41831": "orc-000358",
+"r42886": "orc-000359",
+"r42977": "orc-000360",
+"r52764": "orc-000361",
+"r46127": "orc-002455",
+"r58692": "orc-000828",
+"r95515": "orc-000829",
+"r74018": "orc-000830",
+"r70982": "orc-000831",
+"r21275": "orc-000832",
+"r97195": "orc-000833",
+"r09473": "orc-000834",
+"r63186": "orc-000835",
+"r24262": "orc-000836",
+"r50785": "orc-000837",
+"r62449": "orc-000838",
+"r23749": "orc-000839",
+"r71575": "orc-002566",
+"r56887": "orc-002567",
+"r17352": "orc-002568",
+"r03958": "orc-002569",
+"r46398": "orc-002570",
+"r28641": "orc-002571",
+"r65042": "orc-002572",
+"r09361": "orc-002573",
+"r76886": "orc-002574",
+"r77763": "orc-002575",
+"r81497": "orc-002576",
+"r59004": "orc-002577",
+"r32633": "orc-002578",
+"r60438": "orc-002579",
+"r22375": "orc-002580",
+"r61065": "orc-002581",
+"r02028": "orc-002582",
+"r00482": "orc-002583",
+"r42200": "orc-000640",
+"r69249": "orc-000641",
+"r46002": "orc-000642",
+"r01344": "orc-000643",
+"q07257": "qa-000455",
+"q07257:evidence": [
+"generali_immagina_adesso_p085_c02",
+"generali_immagina_adesso_p078_c03",
+"generali_immagina_adesso_p136_c02",
+"generali_immagina_adesso_p068_c03",
+"generali_immagina_adesso_p079_c01"
+],
+"q86856": "qa-000456",
+"q86856:evidence": [
+"generali_immagina_adesso_p079_c01",
+"generali_immagina_adesso_p056_c01",
+"generali_immagina_adesso_p090_c01",
+"generali_immagina_adesso_p065_c03",
+"generali_immagina_adesso_p092_c01"
+],
+"q53193": "qa-000457",
+"q53193:evidence": [
+"generali_immagina_adesso_p005_c02",
+"generali_immagina_adesso_p060_c01",
+"generali_immagina_adesso_p005_c01",
+"generali_immagina_adesso_p004_c05",
+"generali_immagina_adesso_p140_c01"
+],
+"q43241": "qa-000458",
+"q43241:evidence": [
+"generali_immagina_adesso_p004_c01",
+"generali_immagina_adesso_p130_c01",
+"generali_immagina_adesso_p023_c02",
+"generali_immagina_adesso_p023_c01",
+"generali_immagina_adesso_p007_c05"
+],
+"q72747": "qa-000459",
+"q72747:evidence": [
+"generali_immagina_adesso_p007_c01",
+"generali_immagina_adesso_p056_c02",
+"generali_immagina_adesso_p069_c01",
+"generali_immagina_adesso_p038_c02",
+"generali_immagina_adesso_p051_c02"
+],
+"q13188": "qa-000460",
+"q13188:evidence": [
+"generali_immagina_adesso_p026_c01",
+"generali_immagina_adesso_p026_c03",
+"generali_immagina_adesso_p111_c02",
+"generali_immagina_adesso_p057_c01",
+"generali_immagina_adesso_p030_c01"
+],
+"q76388": "qa-000461",
+"q76388:evidence": [
+"generali_immagina_adesso_p125_c01",
+"generali_immagina_adesso_p113_c03",
+"generali_immagina_adesso_p108_c02",
+"generali_immagina_adesso_p097_c03",
+"generali_immagina_adesso_p108_c01"
+],
+"q74718": "qa-000462",
+"q74718:evidence": [
+"generali_immagina_adesso_p085_c01",
+"generali_immagina_adesso_p056_c03",
+"generali_immagina_adesso_p126_c02",
+"generali_immagina_adesso_p085_c02",
+"generali_immagina_adesso_p069_c01"
+],
+"q65587": "qa-000465",
+"q65587:evidence": [
+"generali_immagina_adesso_p129_c02",
+"generali_immagina_adesso_p112_c03",
+"generali_immagina_adesso_p107_c01",
+"generali_immagina_adesso_p132_c01",
+"generali_immagina_adesso_p129_c01"
+],
+"q41436": "qa-000463",
+"q41436:evidence": [
+"generali_immagina_adesso_p025_c01",
+"generali_immagina_adesso_p006_c04",
+"generali_immagina_adesso_p128_c03",
+"generali_immagina_adesso_p130_c03",
+"generali_immagina_adesso_p028_c02"
+],
+"q33141": "qa-000467",
+"q33141:evidence": [
+"generali_immagina_adesso_p078_c03",
+"generali_immagina_adesso_p079_c01",
+"generali_immagina_adesso_p085_c02",
+"generali_immagina_adesso_p076_c01",
+"generali_immagina_adesso_p130_c02"
+],
+"q04125": "qa-001139",
+"q04125:evidence": [
+"zurich_impresa_p161_c02",
+"zurich_impresa_p052_c02",
+"zurich_impresa_p133_c02",
+"zurich_impresa_p014_c04",
+"zurich_impresa_p163_c03"
+],
+"q37236": "qa-001138",
+"q37236:evidence": [
+"zurich_impresa_p054_c04",
+"zurich_impresa_p054_c03",
+"zurich_impresa_p074_c03",
+"zurich_impresa_p054_c01",
+"zurich_impresa_p180_c01"
+],
+"q67016": "qa-001137",
+"q67016:evidence": [
+"zurich_impresa_p077_c02",
+"zurich_impresa_p082_c02",
+"zurich_impresa_p127_c01",
+"zurich_impresa_p010_c01",
+"zurich_impresa_p036_c01"
+],
+"q65733": "qa-001141",
+"q65733:evidence": [
+"zurich_impresa_p102_c02",
+"zurich_impresa_p008_c01",
+"zurich_impresa_p055_c02",
+"zurich_impresa_p054_c04",
+"zurich_impresa_p105_c03"
+],
+"q64325": "qa-001142",
+"q64325:evidence": [
+"zurich_impresa_p049_c02",
+"zurich_impresa_p012_c02",
+"zurich_impresa_p135_c02",
+"zurich_impresa_p130_c02",
+"zurich_impresa_p049_c03"
+],
+"q54323": "qa-001140",
+"q54323:evidence": [
+"zurich_impresa_p138_c03",
+"zurich_impresa_p023_c04",
+"zurich_impresa_p052_c01",
+"zurich_impresa_p149_c01",
+"zurich_impresa_p023_c03"
+],
+"q25634": "qa-001145",
+"q25634:evidence": [
+"zurich_impresa_p078_c02",
+"zurich_impresa_p171_c01",
+"zurich_impresa_p015_c04",
+"zurich_impresa_p052_c03",
+"zurich_impresa_p170_c01"
+],
+"q57144": "qa-001144",
+"q57144:evidence": [
+"zurich_impresa_p055_c02",
+"zurich_impresa_p054_c03",
+"zurich_impresa_p098_c01",
+"zurich_impresa_p075_c01",
+"zurich_impresa_p098_c02"
+],
+"q25353": "qa-001146",
+"q25353:evidence": [
+"zurich_impresa_p055_c02",
+"zurich_impresa_p054_c03",
+"zurich_impresa_p054_c04",
+"zurich_impresa_p145_c01",
+"zurich_impresa_p180_c01"
+],
+"q15786": "qa-001147",
+"q15786:evidence": [
+"zurich_impresa_p052_c01",
+"zurich_impresa_p084_c02",
+"zurich_impresa_p149_c01",
+"zurich_impresa_p018_c02",
+"zurich_impresa_p018_c01"
+],
+"q54392": "qa-001148",
+"q54392:evidence": [
+"zurich_impresa_p176_c01",
+"zurich_impresa_p073_c03",
+"zurich_impresa_p177_c03",
+"zurich_impresa_p034_c02",
+"zurich_impresa_p002_c05"
+]
+}

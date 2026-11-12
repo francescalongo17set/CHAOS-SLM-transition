@@ -1,0 +1,1 @@
+{"job_id": "job-000982", "id": "orc-000722", "warnings": ["warn: comparison labelled complex but the query names fewer than 2 fields and no criterion"], "written": {"kind": "router", "query_id": "orc-000722", "query": "confronta assistenza e rimbrso di Zurich Salute e Generali Immagina Adesso", "history": [], "resolved_slots": {}}}

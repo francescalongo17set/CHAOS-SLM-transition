@@ -1,0 +1,12 @@
+id,field,recipe,blind
+orc-002626,feature,comparison,product_policy_analysis
+orc-002598:product,slot_status,missing,ambiguous
+orc-002613:coverage,slot_status,present,missing
+orc-002189:field,slot_status,present,ambiguous
+orc-002189:coverage,slot_status,present,ambiguous
+orc-002189,route,agentic,clarification
+orc-002563,feature,comparison,product_policy_analysis
+orc-002563,complexity,complex,simple
+orc-002563,route,agentic,lightweight
+orc-000643:field,slot_status,missing,present
+orc-000643,route,clarification,lightweight
