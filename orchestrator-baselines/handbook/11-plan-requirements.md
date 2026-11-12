@@ -45,6 +45,7 @@ Collect the three `metrics.json` files, produce `comparison.md`, flag non-compar
 
 ## Plan hygiene
 
+- Docs stay in sync (README rule 10): a plan's last step updates the decisions log, the affected chapters and the plan status, and searches the handbook for stale references.
 - Plans are short. No plan restates chapters; it links to them.
 - A plan that contradicts the decisions log is wrong. Update the log first (with the owner), then the plan.
 - Each step that depends on a number from the internet (a version, a limit, a memory figure) re-checks it in the session and records the result in the run notes.

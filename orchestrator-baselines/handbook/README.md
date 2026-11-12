@@ -38,6 +38,7 @@ We compare them on: accuracy / per-class precision and recall / macro-F1, token 
 7. **Log every number you report.** Reported metrics must be reproducible from the prediction logs (chapter 06) with the shared evaluation script.
 8. **Record the environment** (GPU name, library versions, model revision hash) in every run. Colab and Kaggle assign different GPUs on different days.
 9. **Mark facts from the internet as unverified until you checked them yourself.** Several upstream docs contradict each other (see chapter 12).
+10. **Keep the docs in sync with every decision and change.** When the owner resolves a `PENDING` item, or a step changes a name, path, layout, schema or behaviour, update in the same piece of work: (a) the [decisions log](01-decisions-log.md) first (it wins over chapters), (b) every chapter and pipeline file that mentions the item (search the handbook for the old ID, name or path), (c) the status line at the top of this README and the plan's status. Never leave a resolved item still marked pending, or a stale branch, file or option name. Before finishing, run a search for the old wording and report what you updated.
 
 ## Status tags used in this book
 
