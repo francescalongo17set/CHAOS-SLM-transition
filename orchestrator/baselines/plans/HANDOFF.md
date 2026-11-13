@@ -11,7 +11,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 | Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). **Merged (PR #5).** | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
 | Kev-9B | **DONE and validated** (Kaggle 2 x T4 layer split, bf16, C-33; both logs pass `validate_log` with 0 errors, 0 error rows). `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`. | branch `orchestrator/baselines-kev-9b`; logs `runs/kev/kev-9b-20261113-a/` (+ `-smoke/`); PR into `orchestrator/baselines` still to open |
 | P2 Laya | **DONE**, merged (PR #4) | [P2 plan](P2-laya.md), `runs/laya/` |
-| P3 Nimble | not started | [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
+| P3 Nimble | **DROPPED** (C-34) | no plan |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 
 The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are now on this base too (PR #3).
@@ -48,12 +48,12 @@ scope_check acc 0.855 · feature acc 0.815 · complexity acc 0.836 · needs_clar
 
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
 2. ~~Kev-9B run~~ done and validated (13 Nov, results above). **Remaining:** commit the run folders (`runs/kev/kev-9b-20261113-a/`, `-smoke/`) with the doc updates, push `orchestrator/baselines-kev-9b`, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
-3. **Nimble (P3)**: write the plan per [chapter 11](../handbook/11-plan-requirements.md) before code; it first needs X-05 (quantization) answered by the owner. Laya (P2) is done and merged (PR #4, see `P2-laya.md`).
+3. ~~Nimble~~ dropped (C-34). Laya (P2) is done and merged (PR #4, see `P2-laya.md`).
 4. **P4 comparison** when runs exist.
 
 ## Open items (owner)
 
 - ~~Kev-4B dtype~~ decided: bf16 on T4 (C-32); the report must label the dtype mix with the 0.8B fp32 run.
 - **`causal_conv1d`**: install it (needs compiling, may not work on the free tier) before any latency comparison between sizes, or label all Kev latencies as "fallback path". Default if unanswered: label.
-- **X-04** (confidence definition) and **X-05** (quantization for Nimble): still `PENDING`, deferred by the owner.
+- **X-04** (confidence definition): still `PENDING`, deferred by the owner. X-05 closed (C-34).
 - Not checked: Kev GitHub release checksums for the adapter (Hub hashes only, chapter 12).

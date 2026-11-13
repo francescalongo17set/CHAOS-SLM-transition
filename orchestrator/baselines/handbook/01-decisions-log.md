@@ -40,6 +40,8 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | C-32 | Kev-4B runs in **bf16 on a Kaggle T4** (13 Nov). fp32 (about 16 GB) does not fit one T4. Weights pinned to the model card's revision `139fdd94f1b6a6ad80cc15e08fcb99cac885a101` (Hub `main` has moved on to `6cfce5c2`). The report must state that 4B (bf16) and 0.8B (fp32) differ in dtype; per the Kev README bf16 flips about 1 answer in 300, so compare sizes with that caveat. |
 | C-33 | Kev-9B (13 Nov): the owner chose to **try a split over 2 x T4** (bf16, `kev/shard.py`, accelerate layer split, adapter merged on the CPU). Upstream Kev loads on one device and does not document multi-GPU, so this path is our own code and is **not covered by upstream tests**; the run is labelled as such. Weights pinned to the model card's revision `b5d8c18e44c60888d138b65cb6507ff0a5a448a0` (adapter sha256 `2b2a70cf…`). If it fails, report where (C-25). The README's "about 17 GB" was wrong: the card says 19.3 GB bf16 backbone, 21.9 GB resident. **Outcome (13 Nov): it worked**, run `kev-9b-20261113-a`, 16.3 GB peak over the two GPUs, 0 error rows. |
 
+| C-34 | (13 Nov 2026) **Nimble is dropped** (owner): not run, no plan P3. Reason to report: not attempted by owner decision, X-05 (quantization) is closed as moot. The round-1 comparison covers Kev (0.8B, 4B, 9B) and Laya only. |
+
 ## Delegated (author's choice, owner may override)
 
 | ID | Decision |
@@ -66,12 +68,11 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 
 ## Pending (agents must stop and ask)
 
-X-04 is deferred by the owner until after the runs (logs store full distributions). X-05 is deferred until Nimble starts.
+X-04 is deferred by the owner until after the runs (logs store full distributions). X-05 is closed (Nimble dropped, C-34).
 
 | ID | Question | Why it matters |
 |---|---|---|
 | X-04 | **Confidence definition and override scope.** Which per-question statistic (max probability, margin, Kev-style normalized confidence), how the per-record confidence aggregates, and whether `refuse` / `quick_reply` outputs are exempt from the low-confidence → agentic override. | Chapter 04. The log stores full distributions, so this can be decided after the runs. |
-| X-05 | Is **quantization** allowed in the Nimble local fit check? | The Nimble README documents unquantized weights only. |
 
 ## Out of scope for round 1
 

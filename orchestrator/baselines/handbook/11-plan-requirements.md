@@ -9,8 +9,8 @@ The next step after this handbook is one **implementation plan per pipeline**, p
 | P0 · Shared package and data audit | `orchestrator/baselines` | Chapters 02–07 |
 | P1 · Kev | `orchestrator/baselines-kev-0.8b` (then `-4b`, `-9b`) | P0 merged |
 | P2 · Laya | `orchestrator/baselines-laya` | P0 merged |
-| P3 · Nimble | `orchestrator/baselines-nimble` | P0 merged |
-| P4 · Comparison | `orchestrator/baselines` | P1–P3 runs |
+| ~~P3 · Nimble~~ | dropped (C-34) | |
+| P4 · Comparison | `orchestrator/baselines` | P1, P2 runs |
 
 ## Every plan must contain
 
