@@ -149,6 +149,7 @@ def main():
                        "peak_gpu_mem_mb": round(torch.cuda.max_memory_allocated() / 1e6, 1) if device == "cuda" else None,
                        "peak_host_ram_mb": None},
         "temperature_applied": temperature,
+        "weights_sha256": ck.weights_sha256(),
         "reference_tokenizer": f"{REF_TOKENIZER_ID}@{REF_TOKENIZER_REVISION}",
         "started_at": started, "ended_at": datetime.now(timezone.utc).isoformat(),
         "n_rows": len(rows), "n_error_rows": n_err,
