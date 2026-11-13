@@ -8,7 +8,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 |---|---|---|
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
-| Kev-4B | **prepared, run not done**: `--dtype bf16` in `kev/run.py` and `tokens_check.py`, `kev/kaggle_kev_4b.ipynb` (C-30) | branch `orchestrator/baselines-kev-4b` |
+| Kev-4B | **prepared, run not done**: `--dtype bf16` in `kev/run.py` and `tokens_check.py`, `kev/kaggle_kev_4b.ipynb` (C-32) | branch `orchestrator/baselines-kev-4b` |
 | Kev-9B | not started | `orchestrator/baselines-kev-9b` (C-27) |
 | P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
@@ -38,13 +38,13 @@ scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clar
 ## What to do next
 
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
-2. **Kev-4B**: code and notebook ready on `orchestrator/baselines-kev-4b` (C-30). Next: build the bundle, upload it as a private Kaggle Dataset, run `kev/kaggle_kev_4b.ipynb` on a T4, download and validate the logs. Then **Kev-9B** (likely does not fit; report where it fails, C-25).
+2. **Kev-4B**: code and notebook ready on `orchestrator/baselines-kev-4b` (C-32). Next: build the bundle, upload it as a private Kaggle Dataset, run `kev/kaggle_kev_4b.ipynb` on a T4, download and validate the logs. Then **Kev-9B** (likely does not fit; report where it fails, C-25).
 3. **Laya (P2)** and **Nimble (P3)**: write each plan per [chapter 11](../handbook/11-plan-requirements.md) before code. Nimble first needs X-05 (quantization) answered.
 4. **P4 comparison** when runs exist.
 
 ## Open items (owner)
 
-- ~~Kev-4B dtype~~ decided: bf16 on T4 (C-30); the report must label the dtype mix with the 0.8B fp32 run.
+- ~~Kev-4B dtype~~ decided: bf16 on T4 (C-32); the report must label the dtype mix with the 0.8B fp32 run.
 - **`causal_conv1d`**: install it (needs compiling, may not work on the free tier) before any latency comparison between sizes, or label all Kev latencies as "fallback path". Default if unanswered: label.
 - **X-04** (confidence definition) and **X-05** (quantization for Nimble): still `PENDING`, deferred by the owner.
 - Not checked: Kev GitHub release checksums for the adapter (Hub hashes only, chapter 12).

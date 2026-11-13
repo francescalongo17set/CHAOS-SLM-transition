@@ -71,7 +71,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "runs" / "kev"))
     ap.add_argument("--model", default="jaredpalmer/kev-0.8b@v1.0")
     ap.add_argument("--dtype", default="fp32", choices=["fp32", "bf16"],
-                    help="load dtype; fp32 is the exact path (0.8B run). bf16 for Kev-4B on a T4 (decision C-30)")
+                    help="load dtype; fp32 is the exact path (0.8B run). bf16 for Kev-4B on a T4 (decision C-32)")
     ap.add_argument("--kev-src", default=None, help="path of the upstream kev clone (for its git sha)")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--smoke", action="store_true")
