@@ -22,6 +22,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="jaredpalmer/kev-0.8b@v1.0")
     ap.add_argument("--dtype", default="fp32", choices=["fp32", "bf16"])
+    ap.add_argument("--shard", action="store_true", help="split the bf16 backbone over all GPUs (kev/shard.py)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
@@ -31,7 +32,12 @@ def main():
     from kev.model import admit
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    tok, model = Checkpoint(a.model).load(device, LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16))
+    if a.shard:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from shard import load_sharded
+        tok, model = load_sharded(Checkpoint(a.model))
+    else:
+        tok, model = Checkpoint(a.model).load(device, LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16))
     q = QuestionConfig()
     row = data.load_split("validation")[0]
     state = serialize_state(row.model_input)

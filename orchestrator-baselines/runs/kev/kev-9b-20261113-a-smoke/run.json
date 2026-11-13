@@ -1,0 +1,84 @@
+{
+  "run_id": "kev-9b-20261113-a-smoke",
+  "pipeline": "kev",
+  "model_id": "jaredpalmer/kev-9b",
+  "model_revision": "b5d8c18e44c60888d138b65cb6507ff0a5a448a0:b5d8c18e44c60888d138b65cb6507ff0a5a448a0",
+  "dtype": "bfloat16",
+  "device": "Tesla T4",
+  "gpu_count": 2,
+  "python": "3.13.16",
+  "libraries": {
+    "torch": "2.8.0+cu128",
+    "kev": "2074cc44256200bb37540103fa4572901faa10f3"
+  },
+  "platform": "kaggle",
+  "latency_mode": "in_process",
+  "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+  "state_template": "p-01",
+  "data_manifest_sha256": {
+    "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638"
+  },
+  "load_time_s": 208.0,
+  "model_size": {
+    "params_total": 7938782208,
+    "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
+    "disk_mb_adapter": 201.7,
+    "disk_mb_base": null,
+    "disk_mb": 201.7,
+    "peak_gpu_mem_mb": 16545.0,
+    "peak_gpu_mem_mb_per_device": [
+      13834.2,
+      2710.8
+    ],
+    "layer_split": {
+      "embed_tokens": "0",
+      "layers.0": "0",
+      "layers.1": "0",
+      "layers.2": "0",
+      "layers.3": "0",
+      "layers.4": "0",
+      "layers.5": "0",
+      "layers.6": "0",
+      "layers.7": "0",
+      "layers.8": "0",
+      "layers.9": "0",
+      "layers.10": "0",
+      "layers.11": "0",
+      "layers.12": "0",
+      "layers.13": "0",
+      "layers.14": "0",
+      "layers.15": "0",
+      "layers.16": "0",
+      "layers.17": "0",
+      "layers.18": "0",
+      "layers.19": "0",
+      "layers.20": "0",
+      "layers.21": "0",
+      "layers.22": "0",
+      "layers.23": "0",
+      "layers.24": "0",
+      "layers.25": "0",
+      "layers.26": "1",
+      "layers.27": "1",
+      "layers.28": "1",
+      "layers.29": "1",
+      "layers.30": "1",
+      "layers.31": "1",
+      "norm": "1",
+      "rotary_emb": "1"
+    },
+    "peak_host_ram_mb": null
+  },
+  "temperature_applied": 2.193649959389252,
+  "weights_sha256": "2b2a70cf4ef4440b6c22899e1f72c2f8ea5c6f65b19aa344539b4b8971d1f13d",
+  "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "started_at": "2026-11-13T11:22:05.704169+00:00",
+  "ended_at": "2026-11-13T11:24:25.096808+00:00",
+  "n_rows": {
+    "validation": 5
+  },
+  "n_error_rows": {
+    "validation": 0
+  },
+  "notes": "bf16 load split over 2 GPUs (kev/shard.py, accelerate), merged LoRA on CPU; NOT the fp32 exact path. Two calls per row (core, then predicted-feature slots); input_native sums len(enc['ids']) over the calls (state recomputed per call)."
+}
