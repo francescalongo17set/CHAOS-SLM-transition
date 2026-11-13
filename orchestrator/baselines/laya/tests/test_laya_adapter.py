@@ -1,4 +1,4 @@
-"""Adapter unit test on 5 rows, one per route, with a stand-in agent (no laya, no model, no GPU).
+"""Adapter unit test on 4 rows, one per route, with a stand-in agent (no laya, no model, no GPU).
 
 Run from orchestrator/baselines/:  pytest laya/tests
 """

@@ -77,13 +77,13 @@ def test_record_text_shows_ids_and_text():
 
 
 def test_one_row_per_route_log_validates(tmp_path):
-    """Five rows (one per gold route) through the fake model produce schema-valid lines."""
+    """Four rows (one per gold route, v2) through the fake model produce schema-valid lines."""
     q = QuestionConfig()
     seen, picked = set(), []
     for r in data.load_split("validation"):
         if r.support["expected_route"] not in seen:
             seen.add(r.support["expected_route"]); picked.append(r)
-    assert len(picked) == 5
+    assert len(picked) == 4
     meta = {"run_id": "t", "pipeline": "kev", "model_id": "m", "model_revision": "r", "split": "validation"}
     p = tmp_path / "validation.jsonl"
     with LogWriter(p) as w:
