@@ -45,6 +45,8 @@ State handling: an object or array state is converted to labelled text; delimite
 
 On Qwen3.5 bases (every current Kev) each question runs as its **own row**: state followed by that question. The server computes the state once and reuses its cache for every row. Therefore, for `input_tokens_native`, count the state once plus each question's own tokens if the runtime reuses the cache; confirm what `usage.input_tokens` counts by running one request with 1 and with 4 questions and comparing. Record the finding in `run.json.notes`.
 
+**Verified in the Kaggle smoke run (T4, 12 Nov 2026, kev@2074cc4):** the packed length `len(enc["ids"])` (what the API reports as `usage.input_tokens`) is the state once plus every question's own tokens (1 question 228, 2 questions 377, 4 questions 491, state fixed at 117). Our pipeline makes two calls per row (core questions, then the slots of the predicted feature), so `input_tokens_native` is the sum of both calls and counts the state twice. Also observed: the first request of a process took about 102 s (kernel compilation, inside the 10 warm-up rows), and `causal_conv1d` was not installed, so Transformers used its slower PyTorch fallback; latencies from this run are for that path and must be labelled so in the report. The `v1.0` tag resolved to Hub commit `bf75a6a8…`, while the README table lists `9a45d25e` as the weights revision (unverified why; check the weights hash).
+
 Questions are isolated: one question's answer cannot see another's. Options **within** a question can influence each other, and option order can change an answer (README, Limitations). We use a fixed order in round 1 (P-02).
 
 ## Install and run

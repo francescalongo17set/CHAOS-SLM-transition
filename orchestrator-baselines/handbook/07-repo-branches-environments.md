@@ -63,7 +63,8 @@ Facts below are from general knowledge and must be re-checked in the actual sess
 - T4 does not have native bf16 (to be verified with `torch.cuda.is_bf16_supported()` and measured speed). Kev's server defaults to bf16 on GPUs; Kev provides `KEV_DTYPE=fp32`. Nimble's README requires a bf16-capable GPU for CUDA.
 - Sessions disconnect and quotas run out. Every pipeline must **write results incrementally** (append one line per request and flush) and be **resumable** (skip `query_id`s already present).
 - Free-tier RAM and disk limits matter for downloading and merging a 9B model. Check them early (chapter 10).
-- Notebooks must pull code from the branch (git clone), run, and save logs to persistent storage (Kaggle output / Drive); a run that exists only in a closed session does not exist.
+- Notebooks get the project code and data either from the branch (git clone, needs a token if the repo is private) or, as in the Kev notebook, from a private Kaggle Dataset built with `kev/make_bundle.py` (`dist/kev-bundle/`, git-ignored; rebuild and upload a new Dataset version after any code change). They run, and save logs to persistent storage (Kaggle output / Drive); a run that exists only in a closed session does not exist. Upstream model repos are still cloned from GitHub, pinned to a commit.
+- The root `.gitignore` ignores `runs/` in general; `orchestrator-baselines/runs/` is excepted so validated logs can be committed.
 
 ## Definition of done per pipeline
 
