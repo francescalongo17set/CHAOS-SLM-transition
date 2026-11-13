@@ -1,6 +1,6 @@
 # Orchestrator Fine-tuning Handbook (round 2)
 
-> **Status: DRAFT v0.1, 13 Nov 2026.** Guideline book for round 2 of the orchestrator work: fine-tuning **Laya-multilingual**, **Kev-0.8B** and **Kev-4B** on the Italian router dataset, then measuring each against its own zero-shot run from round 1 (the baselines handbook, `orchestrator/baselines/handbook/`). Shared data step and Kev-0.8B code written, not yet run on a GPU (plan `plans/FT-P2-kev-0.8b.md`).  Written for teammates (read top to bottom) and coding agents (read the "Agent rules" first, then only the chapters named in your task).
+> **Status: DRAFT v0.1, 13 Nov 2026.** Guideline book for round 2 of the orchestrator work: fine-tuning **Laya-multilingual**, **Kev-0.8B** and **Kev-4B** on the Italian router dataset, then measuring each against its own zero-shot run from round 1 (the baselines handbook, `orchestrator/baselines/handbook/`). Shared data step and Kev-0.8B code done; Kev-0.8B run reported finished, files to be verified (see `plans/HANDOFF.md`). Laya and Kev-4B not started.  Written for teammates (read top to bottom) and coding agents (read the "Agent rules" first, then only the chapters named in your task).
 
 ## What this round is
 
@@ -24,6 +24,7 @@ Round-1 results to compare against (route accuracy / macro-F1, test): Laya 0.265
 | 08 | [Plan requirements](08-plan-requirements.md) | Generating an implementation plan from this book. |
 | 09 | [Verify in session](09-verify-in-session.md) | Checks that must pass before a fact here is relied on. |
 | 10 | [Sources and caveats](10-sources-and-caveats.md) | Where each fact comes from, what is unverified. |
+| — | [Handoff](../plans/HANDOFF.md) | Always, after the README: current state, what to verify, what is left. |
 
 The baselines handbook stays authoritative for everything not changed here (state template, questions, dispatcher, log schema, evaluation definitions). Read it first if you have not.
 
