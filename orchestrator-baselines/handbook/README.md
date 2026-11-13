@@ -1,6 +1,6 @@
 # Orchestrator Baselines Handbook
 
-> **Status: DRAFT v0.2, 13 Nov 2026** (decisions C-21 to C-31 added; shared package P0 built, see `../plans/P0-shared-package.md`; Laya pipeline code ready, runs pending, see `../plans/P2-laya.md`; only X-04 and X-05 still pending). Guideline book for the first experiment round of the orchestrator: three open decision models (**Kev**, **Laya**, **Nimble**) run **zero-shot** on the Italian router dataset. Written for two audiences: teammates (read top to bottom) and coding agents (read the "Agent rules" below first, then only the chapters named in your task).
+> **Status: DRAFT v0.2, 13 Nov 2026** (decisions C-21 to C-31 added; shared package P0 built, see `../plans/P0-shared-package.md`; Laya runs done (results in `../runs/laya/`), see `../plans/P2-laya.md`; only X-04 and X-05 still pending). Guideline book for the first experiment round of the orchestrator: three open decision models (**Kev**, **Laya**, **Nimble**) run **zero-shot** on the Italian router dataset. Written for two audiences: teammates (read top to bottom) and coding agents (read the "Agent rules" below first, then only the chapters named in your task).
 
 ## What this round is
 

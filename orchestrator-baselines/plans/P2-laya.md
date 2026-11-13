@@ -1,7 +1,7 @@
 # Plan P2 · Laya
 
 Branch: `orchestrator/baselines-laya` (from `orchestrator/baselines`, P0 merged).
-Status: **approved; code done (steps 0 and 2), Kaggle runs pending (steps 1, 3-6)** (13 Nov 2026). Decisions C-30, C-31.
+Status: **DONE** (13 Nov 2026): all steps run on a Kaggle T4; results in `runs/laya/laya-multilingual-a/` (test route accuracy 0.265, 0 errors, 0 truncated). Decisions C-30, C-31.
 
 ## 1. Goal and scope
 
