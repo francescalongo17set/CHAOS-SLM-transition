@@ -1,0 +1,253 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.6990166838738737,
+   "ece": 0.32605315315315314,
+   "n": 444
+  },
+  "feature_classification": {
+   "brier": 1.017473147116358,
+   "ece": 0.4090409780775717,
+   "n": 593
+  },
+  "scope_check": {
+   "brier": 0.4893959090556497,
+   "ece": 0.11718937605396296,
+   "n": 593
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.5225225225225225,
+  "macro_f1": 0.37803620985859654,
+  "n": 444,
+  "per_class": {
+   "complex": {
+    "f1": 0.07826086956521738,
+    "precision": 0.5294117647058824,
+    "recall": 0.04225352112676056,
+    "support": 213
+   },
+   "simple": {
+    "f1": 0.6778115501519757,
+    "precision": 0.522248243559719,
+    "recall": 0.9653679653679653,
+    "support": 231
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 593,
+  "n": 593
+ },
+ "feature_classification": {
+  "accuracy": 0.3372681281618887,
+  "macro_f1": 0.34931598234494093,
+  "n": 593,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.6521739130434783,
+    "precision": 0.6923076923076923,
+    "recall": 0.6164383561643836,
+    "support": 73
+   },
+   "comparison": {
+    "f1": 0.2291666666666667,
+    "precision": 0.6875,
+    "recall": 0.1375,
+    "support": 80
+   },
+   "ibip_screening": {
+    "f1": 0.2732919254658386,
+    "precision": 0.25287356321839083,
+    "recall": 0.2972972972972973,
+    "support": 74
+   },
+   "none": {
+    "f1": 0.42477876106194684,
+    "precision": 0.6233766233766234,
+    "recall": 0.3221476510067114,
+    "support": 149
+   },
+   "product_policy_analysis": {
+    "f1": 0.2977346278317152,
+    "precision": 0.27218934911242604,
+    "recall": 0.32857142857142857,
+    "support": 140
+   },
+   "regulatory_consultation": {
+    "f1": 0.21875000000000003,
+    "precision": 0.1564245810055866,
+    "recall": 0.36363636363636365,
+    "support": 77
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 32.485469168096,
+  "median": 31.72908199996982,
+  "n": 583,
+  "n_warmup_excluded": 10,
+  "p50": 31.72908199996982,
+  "p95": 37.472521000040615,
+  "total": 18939.02852499997
+ },
+ "model_id": "convaiinnovations/laya/multilingual",
+ "model_revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+ "n_error_rows": 0,
+ "n_rows": 593,
+ "n_truncated": 0,
+ "pipeline": "laya",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 95,
+   "recall": 0.4105263157894737
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 5,
+    "recall": 0.8
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 5,
+    "recall": 0.6
+   },
+   "jailbreak": {
+    "n_gold_refuse": 4,
+    "recall": 1.0
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 18,
+    "recall": 0.3888888888888889
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 3,
+    "recall": 0.6666666666666666
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 60,
+   "recall": 0.31666666666666665
+  },
+  "safety_leak": {
+   "n_gold_refuse": 35,
+   "recall": 0.5714285714285714
+  }
+ },
+ "route": {
+  "accuracy": 0.4148397976391231,
+  "macro_f1": 0.4211282833436103,
+  "n": 593,
+  "per_class": {
+   "agentic": {
+    "f1": 0.3049853372434017,
+    "precision": 0.5306122448979592,
+    "recall": 0.2139917695473251,
+    "support": 243
+   },
+   "lightweight": {
+    "f1": 0.5086206896551724,
+    "precision": 0.44866920152091255,
+    "recall": 0.5870646766169154,
+    "support": 201
+   },
+   "quick_reply": {
+    "f1": 0.5563909774436091,
+    "precision": 0.46835443037974683,
+    "recall": 0.6851851851851852,
+    "support": 54
+   },
+   "refuse": {
+    "f1": 0.31451612903225806,
+    "precision": 0.2549019607843137,
+    "recall": 0.4105263157894737,
+    "support": 95
+   }
+  }
+ },
+ "route_attribution": {
+  "complexity_estimation": 19,
+  "feature_classification": 120,
+  "scope_check": 208
+ },
+ "run": {
+  "data_manifest_sha256": {
+   "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f",
+   "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+  },
+  "device": "Tesla T4",
+  "dtype": "fp16",
+  "ended_at": "2026-11-13T21:52:41+00:00",
+  "gpu_count": 2,
+  "head_max_len": 256,
+  "latency_mode": "in_process",
+  "libraries": {
+   "laya": "0.4.31",
+   "torch": "2.11.0+cu130",
+   "transformers": "5.20.2"
+  },
+  "load_time_s": 8.1,
+  "max_len": 1024,
+  "model_id": "convaiinnovations/laya/multilingual",
+  "model_revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+  "model_size": {
+   "disk_mb": 678.2,
+   "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+   "params_total": 321908995,
+   "peak_gpu_mem_mb": 1532.0,
+   "peak_host_ram_mb": 2958.6
+  },
+  "notes": "v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null.",
+  "pipeline": "laya",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "run_id": "laya-v2-a",
+  "started_at": "2026-11-13T21:52:08+00:00",
+  "state_template": "p-01"
+ },
+ "scope_check": {
+  "accuracy": 0.6492411467116358,
+  "macro_f1": 0.5462029899433015,
+  "n": 593,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.7677018633540372,
+    "precision": 0.8559556786703602,
+    "recall": 0.6959459459459459,
+    "support": 444
+   },
+   "out_of_scope": {
+    "f1": 0.31451612903225806,
+    "precision": 0.2549019607843137,
+    "recall": 0.4105263157894737,
+    "support": 95
+   },
+   "quick_reply": {
+    "f1": 0.5563909774436091,
+    "precision": 0.46835443037974683,
+    "recall": 0.6851851851851852,
+    "support": 54
+   }
+  }
+ },
+ "split": "test",
+ "tokens": {
+  "input_native": {
+   "mean": 550.5564924114672,
+   "median": 526,
+   "n": 593,
+   "p95": 727,
+   "total": 326480
+  },
+  "input_ref": {
+   "mean": 389.29848229342326,
+   "median": 381,
+   "n": 593,
+   "p95": 446,
+   "total": 230854
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}

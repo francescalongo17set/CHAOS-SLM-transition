@@ -1,0 +1,15 @@
+{
+  "1_questions": {
+    "len_ids": 228,
+    "state_tokens": 117
+  },
+  "2_questions": {
+    "len_ids": 377,
+    "state_tokens": 117
+  },
+  "3_questions": {
+    "len_ids": 420,
+    "state_tokens": 117
+  },
+  "note": "len_ids grows with each extra question by that question's own tokens while state_tokens stays fixed => len_ids = state once + all question rows."
+}

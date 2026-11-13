@@ -1,0 +1,265 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.38905065081629814,
+   "ece": 0.10704540494862978,
+   "n": 444
+  },
+  "feature_classification": {
+   "brier": 0.5261004238850998,
+   "ece": 0.18051467712773844,
+   "n": 593
+  },
+  "scope_check": {
+   "brier": 0.42610187788168624,
+   "ece": 0.2707781427324723,
+   "n": 593
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.7274774774774775,
+  "macro_f1": 0.7263098907256934,
+  "n": 444,
+  "per_class": {
+   "complex": {
+    "f1": 0.7084337349397589,
+    "precision": 0.7277227722772277,
+    "recall": 0.6901408450704225,
+    "support": 213
+   },
+   "simple": {
+    "f1": 0.7441860465116279,
+    "precision": 0.7272727272727273,
+    "recall": 0.7619047619047619,
+    "support": 231
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 593,
+  "n": 593
+ },
+ "feature_classification": {
+  "accuracy": 0.6627318718381113,
+  "macro_f1": 0.6925402370325772,
+  "n": 593,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.8296296296296296,
+    "precision": 0.9032258064516129,
+    "recall": 0.7671232876712328,
+    "support": 73
+   },
+   "comparison": {
+    "f1": 0.75177304964539,
+    "precision": 0.8688524590163934,
+    "recall": 0.6625,
+    "support": 80
+   },
+   "ibip_screening": {
+    "f1": 0.8721804511278195,
+    "precision": 0.9830508474576272,
+    "recall": 0.7837837837837838,
+    "support": 74
+   },
+   "none": {
+    "f1": 0.6076555023923444,
+    "precision": 0.4721189591078067,
+    "recall": 0.8523489932885906,
+    "support": 149
+   },
+   "product_policy_analysis": {
+    "f1": 0.5606694560669456,
+    "precision": 0.6767676767676768,
+    "recall": 0.4785714285714286,
+    "support": 140
+   },
+   "regulatory_consultation": {
+    "f1": 0.5333333333333332,
+    "precision": 0.7441860465116279,
+    "recall": 0.4155844155844156,
+    "support": 77
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 286.1271697958822,
+  "median": 283.01611499989576,
+  "n": 583,
+  "n_warmup_excluded": 10,
+  "p50": 283.01611499989576,
+  "p95": 311.5916560000187,
+  "total": 166812.1399909993
+ },
+ "model_id": "jaredpalmer/kev-0.8b",
+ "model_revision": "9a45d25eb2ab761841196625383fa1dff0e56c1e:9a45d25eb2ab761841196625383fa1dff0e56c1e",
+ "n_error_rows": 0,
+ "n_rows": 593,
+ "n_truncated": 0,
+ "pipeline": "kev",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 95,
+   "recall": 0.12631578947368421
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 5,
+    "recall": 0.0
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 5,
+    "recall": 0.0
+   },
+   "jailbreak": {
+    "n_gold_refuse": 4,
+    "recall": 0.5
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 18,
+    "recall": 0.0
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 3,
+    "recall": 0.0
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 60,
+   "recall": 0.16666666666666666
+  },
+  "safety_leak": {
+   "n_gold_refuse": 35,
+   "recall": 0.05714285714285714
+  }
+ },
+ "route": {
+  "accuracy": 0.654300168634064,
+  "macro_f1": 0.5502756758430832,
+  "n": 593,
+  "per_class": {
+   "agentic": {
+    "f1": 0.7707509881422925,
+    "precision": 0.7414448669201521,
+    "recall": 0.8024691358024691,
+    "support": 243
+   },
+   "lightweight": {
+    "f1": 0.665083135391924,
+    "precision": 0.6363636363636364,
+    "recall": 0.6965174129353234,
+    "support": 201
+   },
+   "quick_reply": {
+    "f1": 0.543046357615894,
+    "precision": 0.422680412371134,
+    "recall": 0.7592592592592593,
+    "support": 54
+   },
+   "refuse": {
+    "f1": 0.22222222222222224,
+    "precision": 0.9230769230769231,
+    "recall": 0.12631578947368421,
+    "support": 95
+   }
+  }
+ },
+ "route_attribution": {
+  "complexity_estimation": 30,
+  "feature_classification": 49,
+  "scope_check": 126
+ },
+ "run": {
+  "data_manifest_sha256": {
+   "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f",
+   "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+  },
+  "device": "Tesla T4",
+  "dtype": "float32",
+  "ended_at": "2026-11-13T22:40:47.888645+00:00",
+  "gpu_count": 2,
+  "latency_mode": "in_process",
+  "libraries": {
+   "kev": "2074cc44256200bb37540103fa4572901faa10f3",
+   "torch": "2.8.0+cu128"
+  },
+  "load_time_s": 7.6,
+  "model_id": "jaredpalmer/kev-0.8b",
+  "model_revision": "9a45d25eb2ab761841196625383fa1dff0e56c1e:9a45d25eb2ab761841196625383fa1dff0e56c1e",
+  "model_size": {
+   "disk_mb": 1835.4,
+   "disk_mb_adapter": 65.5,
+   "disk_mb_base": 1769.9,
+   "layer_split": null,
+   "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
+   "params_total": 752917824,
+   "peak_gpu_mem_mb": 3217.3,
+   "peak_gpu_mem_mb_per_device": null,
+   "peak_host_ram_mb": null
+  },
+  "n_error_rows": {
+   "test": 0,
+   "validation": 0
+  },
+  "n_rows": {
+   "test": 593,
+   "validation": 298
+  },
+  "notes": "fp32 eager path (LoadOptions defaults). v2: one call per row (scope, feature, complexity; no slot questions). input_native is len(enc['ids']) of that call.",
+  "pipeline": "kev",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "run_id": "kev-0.8b-v2-20261113-a",
+  "started_at": "2026-11-13T22:36:10.786119+00:00",
+  "state_template": "p-01",
+  "temperature_applied": 2.3510958125672174,
+  "weights_sha256": "9b908623acb162118575f4e7a94524f9c139c335be4bfb74d6cfceca01e1885a"
+ },
+ "scope_check": {
+  "accuracy": 0.7875210792580101,
+  "macro_f1": 0.5528241544444207,
+  "n": 593,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.8932038834951456,
+    "precision": 0.8571428571428571,
+    "recall": 0.9324324324324325,
+    "support": 444
+   },
+   "out_of_scope": {
+    "f1": 0.22222222222222224,
+    "precision": 0.9230769230769231,
+    "recall": 0.12631578947368421,
+    "support": 95
+   },
+   "quick_reply": {
+    "f1": 0.543046357615894,
+    "precision": 0.422680412371134,
+    "recall": 0.7592592592592593,
+    "support": 54
+   }
+  }
+ },
+ "split": "test",
+ "tokens": {
+  "input_native": {
+   "mean": 381.29848229342326,
+   "median": 373,
+   "n": 593,
+   "p95": 438,
+   "total": 226110
+  },
+  "input_ref": {
+   "mean": 389.29848229342326,
+   "median": 381,
+   "n": 593,
+   "p95": 446,
+   "total": 230854
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}
