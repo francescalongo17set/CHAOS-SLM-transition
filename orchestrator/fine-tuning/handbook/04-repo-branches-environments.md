@@ -51,7 +51,7 @@ Same as round 1.
 
 | Pipeline | Environment |
 |---|---|
-| Kev | Upstream `kev` pinned at the commit used in round 1 (`2074cc4`, recorded in `kev/adapter.py`), `flash-linear-attention==0.5.2`, Python 3.12+, Kaggle T4. `causal_conv1d` is not installed (slow fallback path), so latency stays labelled "fallback". |
+| Kev | Upstream `kev` pinned at the commit used in round 1 (`2074cc4`, recorded in `kev/adapter.py`), `flash-linear-attention==0.5.2`, Python 3.12+, Kaggle T4. The `causal_conv1d` kernel is installed from the official prebuilt wheel `causal_conv1d-1.7.0+cu12torch2.8cxx11abiTRUE-cp313-cp313-linux_x86_64.whl` (FT-C-25; no compiler on Kaggle, so no source build). Latency is labelled "kernel" and is not comparable with round 1, which ran the fallback. |
 | Laya | `laya==0.4.31` (the round-1 version), `USE_TF=0`, Kaggle T4. |
 | Shared (`common/`, tests) | `pyyaml`, `tokenizers`, `huggingface_hub`, `pytest`. Runs on a laptop, no GPU. |
 

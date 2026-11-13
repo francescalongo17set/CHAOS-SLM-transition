@@ -22,7 +22,7 @@ Kev-0.8B is compared with its own zero-shot run; comparing it with zero-shot 4B 
 
 ## Environment
 
-See chapter 04: upstream `kev` pinned at the round-1 commit `2074cc4`, `flash-linear-attention==0.5.2`, Python 3.12+, Kaggle T4, `causal_conv1d` not installed (latency labelled "fallback").
+See chapter 04: upstream `kev` pinned at the round-1 commit `2074cc4`, `flash-linear-attention==0.5.2`, Python 3.12+, Kaggle T4, `causal_conv1d` kernel from the prebuilt wheel (FT-C-25; latency labelled "kernel", not comparable with round 1).
 
 ## What trains *(upstream)*
 

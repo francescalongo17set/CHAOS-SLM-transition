@@ -24,6 +24,7 @@ None of the upstream facts in chapters 05 and 06 has been run. The owner decided
 
 5. Things the upstream docs read for the spec did **not** show: Kev's learning-rate and epoch choices for the released 4B (taken from the checkpoint meta at run time), the full CLI list of Laya (no argparse was found), Laya's `collate_items` signature.
 6. Kaggle free-tier GPU session length and weekly quota, per account. Re-check; the figures change. Note the values in the run notes.
+8. Kev only (FT-C-25): the prebuilt `causal_conv1d` wheel installs in the Kaggle venv and passes the notebook's GPU check (`causal_conv1d kernel OK`, T4 sm_75). Not yet run anywhere. Record the printed wheel sha256 and whether the kernel or the fallback was active in the run notes; if the check fails the run continues on the fallback and must say so.
 7. Whether the runners can produce both raw and calibrated probabilities for the ECE pair (FT-C-15), and how.
 
 ## What to do on failure

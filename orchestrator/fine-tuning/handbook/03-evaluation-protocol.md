@@ -52,8 +52,8 @@ Latency and tokens are comparable with the zero-shot runs only on the same hardw
 | Model | Evaluate on |
 |---|---|
 | Laya | Kaggle T4, fp16 (as `laya-multilingual-a`). Fine-tuned weights are saved as fp16 by `save_checkpoint`. |
-| Kev-0.8B | Kaggle T4, fp32, in-process (as `kev-0.8b-20261112-a`), `causal_conv1d` fallback path. |
-| Kev-4B | Kaggle T4, bf16, in-process (as `kev-4b-20261113-a`), `causal_conv1d` fallback path. |
+| Kev-0.8B | Kaggle T4, fp32, in-process (as `kev-0.8b-20261112-a`), `causal_conv1d` kernel (FT-C-25; round 1 used the fallback, so latency differs). |
+| Kev-4B | Kaggle T4, bf16, in-process (as `kev-4b-20261113-a`), `causal_conv1d` kernel (FT-C-25; round 1 used the fallback, so latency differs). |
 
 Any deviation is labelled in the report. Peak GPU memory during **training** is recorded separately in `train_report.json`; it is not part of the evaluation table.
 

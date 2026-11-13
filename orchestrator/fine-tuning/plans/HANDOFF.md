@@ -8,7 +8,7 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 |---|---|---|
 | FT-P0 shared data step | **DONE**, 9 tests pass locally, committed | `common/` (`audit_train.py`, `build_data.py`, `split.py`, `checks.py`, `tests/`), `data/manifest.json`. Audit matched chapter 02 exactly. |
 | FT-P2 Kev-0.8B code | **DONE**, 8 unit tests + format-parity test pass locally | `kev/` (`train_kev.py`, `calibrate_kev.py`, `run_ft.py`, `make_bundle_ft.py`, `kaggle_kev_ft.ipynb`), [plan](FT-P2-kev-0.8b.md) |
-| Kev-0.8B run `kev-0.8b-ft-a` | **Reported finished by the owner (13 Nov). Not yet verified by an agent**: the run files were being added to the repo when this was written; no metric, temperature or time is recorded in these docs. | expected in `runs/kev/kev-0.8b-ft-a/` |
+| Kev-0.8B run `kev-0.8b-ft-a` | **NOT RUN YET (owner corrected, 13 Nov).** Only C0 and C1 (smoke) have run; the earlier note that the run was finished was wrong. No full training, calibration, validation or test exists. | will be `runs/kev/kev-0.8b-ft-a/`; today `runs/kev/` holds only the C1 scratch folders |
 | FT-P1 Laya | not started; no code. Folders `laya/`, `data/laya/` exist; Laya JSONL is already generated | [chapter 05](../handbook/pipelines/laya.md) |
 | FT-P3 Kev-4B | not started. Allowed now: C0 and C1 of 0.8B are done (FT-P-02) | [chapter 06](../handbook/pipelines/kev.md) |
 | FT-P4 comparison | not started | `common/compare.py` in baselines; the shared bootstrap script (chapter 07 test 7) is not written |
@@ -19,6 +19,7 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 - Released 0.8B meta: base `Qwen/Qwen3.5-0.8B-Base` at `dc7cdfe2…`, lora 16, head_dim 256, `option_isolation` false, `weights_dtype` fp32, temperature 2.351. Released args: lr 2e-5, batch 4, accum 2, checkpointing 1, dtype bf16 (autocast over fp32 weights), `lora_targets` all.
 - **fp32 with `--checkpointing 0` ran out of memory** on the first forward (14.5 GB). 0.8B now defaults to checkpointing 1 (chapter 06 table updated).
 - C1 smoke passed: warm start loaded 372 LoRA tensors + head, one step trained, `base_revision` equal to the released one, 5-row reload evaluation with 0 validator problems.
+- **Changed 13 Nov (FT-C-25), not yet run:** notebook cell 4 now installs the prebuilt `causal_conv1d` v1.7.0 wheel (no compiler on Kaggle) with a GPU check and automatic fallback, and `STAGES` is `["c0", "c1", "c2"]` so the next session runs the pilot. The 1-step smoke took 301 s for 10 records (first step, fallback path), so the 2 h box (FT-C-13) is unconfirmed: read the c2 projection before c3 and stop and ask if it exceeds the box. The `runs/kev/` folder holds only the C1 scratch outputs, no real run yet.
 - Not verified anywhere: `calibrate_kev.py`, the fine-tuned validation/test evaluation, `make_report.py` on a fine-tuned run. Check the first output of each.
 
 ## What the next agent does first (verify before relying on anything)

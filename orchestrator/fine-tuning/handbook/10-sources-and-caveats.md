@@ -26,7 +26,7 @@ Not read for this handbook: the upstream sources themselves, the data card, the 
 
 - **Not like-for-like across models.** Fine-tuned Kev-0.8B against zero-shot Kev-4B or Kev-9B is context only (chapter 03).
 - **Dtype mix inherited from round 1.** 0.8B runs fp32, 4B runs bf16 on a T4 without native bf16 (baselines C-32). Part of any size effect may be a precision effect; the report says so.
-- **Latency** is comparable with zero-shot only on the same hardware, dtype and `causal_conv1d` fallback path.
+- **Latency is not comparable for Kev.** Round 1 ran the `causal_conv1d` fallback; fine-tuned Kev runs the kernel (FT-C-25), which is faster and numerically slightly different. Compare accuracy and macro-F1 only; do not report a latency change as an effect of fine-tuning.
 - **Single run, one wording per model.** No variance across seeds; the bootstrap measures sampling noise over the test rows only, not training-seed noise. Do not read the interval as training reliability.
 - **Test labels were synthetic and not hand-checked in round 1** (`verified: false`). A score of 100% is not expected. The owner chose not to carry a "draft, unreviewed" label on fine-tuning reports (FT-C-21); keep this caveat in the sources chapter of any report, since it does not go away.
 - **Laya fine-tuned weights are saved as fp16** by `save_checkpoint`, while loading is fp32 on CPU; the evaluation runs fp16 on the T4, as in round 1.
