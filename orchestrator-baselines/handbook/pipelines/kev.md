@@ -10,7 +10,7 @@ A family of Jev-style decision models: a LoRA adapter (rank 16) plus a small **p
 |---|---|---|
 | Kev-0.8B | Qwen3.5-0.8B-Base | Runs on an L4 or "any 4 GB GPU". Validated context 8,192 tokens. Shipped temperature 2.35. **Start here (C-05).** |
 | Kev-4B | Qwen3.5-4B-Base | Listed for L40S/H100 or a 32 GB Mac. Shipped temperature 2.41. |
-| Kev-9B | Qwen3.5-9B-Base | Needs about 17 GB GPU memory (README). Shipped temperature 2.19. |
+| Kev-9B | Qwen3.5-9B-Base | Needs about 22 GB resident in bf16 (card: 19.3 GB backbone, 21.9 GB resident); we try a 2 x T4 layer split (C-33). Shipped temperature 2.19. |
 | Kev-27B | Qwen3.8-27B (full weights, 51 GB) | Needs an 80 GB GPU. **Not attempted.** |
 
 The Kev-0.8B Hugging Face card lists English only. Expect weak zero-shot Italian; that is a result to report, not a bug.
@@ -72,7 +72,7 @@ Environment variables of interest: `KEV_TEMPERATURE=1.0` (raw probabilities inst
 - T4 lacks native bf16. For Kev-0.8B, serving in fp32 (`KEV_DTYPE=fp32`) is the documented exact path; 0.8B in fp32 is small enough for 16 GB. Record which dtype produced the numbers. The README says bf16 serving differs from the fp32 evaluation path by at most about 0.03 in probability and flips the top answer on about 1 in 300 questions.
 - `flash-linear-attention` must be installed on CUDA for the Qwen3.5 models (README).
 - Kev-4B: bf16 weights are about 8.4 GB; fp32 would be about 16 GB and will not fit one T4. **Decided (C-32): bf16 on a T4.** Run with `kev/kaggle_kev_4b.ipynb` (`--dtype bf16`, revision `139fdd94…`); `run.json` logs the dtype. Check the adapter sha256 against the model card (`90e81735…`) and `head.pt` (`dd633435…`).
-- Kev-9B: about 17 GB of GPU memory per the README; does not fit one 16 GB T4. A Kaggle T4×2 might, but multi-GPU is not documented for `kev.serve`. If it does not fit, report it as not run (C-25: run all sizes that fit).
+- Kev-9B: about 22 GB resident (model card), does not fit one 16 GB T4. **Decided (C-33): try a layer split over Kaggle 2 x T4** with `kev/shard.py` (`--shard`, notebook `kev/kaggle_kev_9b.ipynb`, revision `b5d8c18e…`). Our own code, not tested upstream; on failure report OOM text and per-GPU memory (C-25).
 
 ## Calibration state
 

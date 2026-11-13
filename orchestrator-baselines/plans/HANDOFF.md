@@ -9,7 +9,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
 | Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). Not yet merged to the base. | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
-| Kev-9B | not started | `orchestrator/baselines-kev-9b` (C-27) |
+| Kev-9B | **prepared, run not done**: `--shard` (`kev/shard.py`, untested on GPU), `kev/kaggle_kev_9b.ipynb`, C-33 | branch `orchestrator/baselines-kev-9b` (made from the 4B branch; PR #5 pending) |
 | P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 

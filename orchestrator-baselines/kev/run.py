@@ -72,11 +72,15 @@ def main():
     ap.add_argument("--model", default="jaredpalmer/kev-0.8b@v1.0")
     ap.add_argument("--dtype", default="fp32", choices=["fp32", "bf16"],
                     help="load dtype; fp32 is the exact path (0.8B run). bf16 for Kev-4B on a T4 (decision C-32)")
+    ap.add_argument("--shard", action="store_true",
+                    help="split the bf16 backbone over all visible GPUs (Kev-9B on 2 x T4; kev/shard.py). Implies bf16")
     ap.add_argument("--kev-src", default=None, help="path of the upstream kev clone (for its git sha)")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--smoke", action="store_true")
     ap.add_argument("--platform", default="local")
     a = ap.parse_args()
+    if a.shard:
+        a.dtype = "bf16"
 
     import torch
     from kev.checkpoint import Checkpoint, LoadOptions
@@ -89,9 +93,17 @@ def main():
     t = time.perf_counter()
     ck = Checkpoint(a.model)
     opts = LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16)   # None = fp32 exact path
-    tok, model = ck.load(device, opts)
+    if a.shard:
+        from shard import load_sharded
+        tok, model = load_sharded(ck)
+    else:
+        tok, model = ck.load(device, opts)
     load_time = time.perf_counter() - t
-    sync = torch.cuda.synchronize if device == "cuda" else None
+    if a.shard:
+        from shard import sync_all
+        sync = sync_all
+    else:
+        sync = torch.cuda.synchronize if device == "cuda" else None
     scorer = KevScorer(tok, model, device, sync=sync)
     qconfig = QuestionConfig()
     ref = RefTokenizer()
@@ -149,14 +161,16 @@ def main():
                        "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
                        "disk_mb_adapter": dir_mb(ck.path), "disk_mb_base": base_mb(ck),
                        "disk_mb": dir_mb(ck.path) + (base_mb(ck) or 0),
-                       "peak_gpu_mem_mb": round(torch.cuda.max_memory_allocated() / 1e6, 1) if device == "cuda" else None,
+                       "peak_gpu_mem_mb": (round(sum(__import__("shard").peak_mem_mb()), 1) if a.shard else round(torch.cuda.max_memory_allocated() / 1e6, 1)) if device == "cuda" else None,
+                       "peak_gpu_mem_mb_per_device": __import__("shard").peak_mem_mb() if a.shard else None,
+                       "layer_split": getattr(model, "shard_map", None) if a.shard else None,
                        "peak_host_ram_mb": None},
         "temperature_applied": temperature,
         "weights_sha256": ck.weights_sha256(),
         "reference_tokenizer": f"{REF_TOKENIZER_ID}@{REF_TOKENIZER_REVISION}",
         "started_at": started, "ended_at": datetime.now(timezone.utc).isoformat(),
         "n_rows": len(rows), "n_error_rows": n_err,
-        "notes": f"{'fp32 eager path (LoadOptions defaults)' if a.dtype == 'fp32' else 'bf16 load (LoadOptions(dtype=bfloat16)), eager, merged LoRA; NOT the fp32 exact path'}. Two calls per row (core, then predicted-feature slots); "
+        "notes": f"{'fp32 eager path (LoadOptions defaults)' if a.dtype == 'fp32' else ('bf16 load split over %d GPUs (kev/shard.py, accelerate), merged LoRA on CPU; NOT the fp32 exact path' % torch.cuda.device_count() if a.shard else 'bf16 load (LoadOptions(dtype=bfloat16)), eager, merged LoRA; NOT the fp32 exact path')}. Two calls per row (core, then predicted-feature slots); "
                  "input_native sums len(enc['ids']) over the calls (state recomputed per call).",
     }
     rj = out_dir / "run.json"
