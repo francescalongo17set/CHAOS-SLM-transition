@@ -1,7 +1,9 @@
 # Plan P1 · Kev-0.8B
 
 Branch: `orchestrator/baselines-kev-0.8b` (created from `orchestrator/baselines` at d56311c). Larger sizes later on `-4b` / `-9b` (C-27).
+
 Status: **Kev-0.8B DONE, validated** (code and logs on branch `orchestrator/baselines-kev-0.8b`; this plan is also on the base branch for reference) (12 Nov 2026; run `kev-0.8b-20261112-a`, logs in `runs/kev/`, commit 2ef76ac; test route accuracy 0.331, see `report_test.md`). 4B and 9B not started. History: Code and Kaggle notebook written (`kev/adapter.py`, `run.py`, `tokens_check.py`, `make_report.py`, `kaggle_kev_0.8b.ipynb`, `tests/test_adapter.py`). Platform: Kaggle (owner). **Smoke test PASSED on a Kaggle T4** (5 rows, 0 validator problems; token finding in chapter 08); full validation and test runs completed afterwards, validator clean. Revision question resolved 13 Nov (weights identical in all three commits, chapter 12; notebook now pins `9a45d25e…`, `run.json` records `weights_sha256`). Still open: decide whether to install `causal_conv1d` before any latency comparison. Adapter tests are written but skip locally without `pydantic` + upstream `kev` on the path (they run inside the notebook's venv).
+
 Defaults taken for §3 questions 1-2 (owner has not objected; override any time): in-process = `Checkpoint.load` with upstream `LoadOptions()` defaults, which are already **fp32, eager, no CUDA graphs, no fused kernels** (the path every upstream reported number uses), then `admit` + `model.probs` per row; two calls per row (core questions, then predicted-feature slots).
 
 ## 1. Goal and scope

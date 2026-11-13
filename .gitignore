@@ -36,6 +36,8 @@ venv/
 *.ckpt
 wandb/
 runs/
+!orchestrator-baselines/runs/
+
 outputs/
 checkpoints/
 .cache/
