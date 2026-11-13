@@ -10,7 +10,8 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
 | Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). Not yet merged to the base. | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
 | Kev-9B | **smoke PASSED on Kaggle 2 x T4 (owner, 13 Nov); full validation + test run IN PROGRESS (remote)**. `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`, C-33. Logs not in the repo yet. | branch `orchestrator/baselines-kev-9b` (PR #5 with 4B is merged) |
-| P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
+| P2 Laya | **DONE**, merged (PR #4) | [P2 plan](P2-laya.md), `runs/laya/` |
+| P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 
 The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are now on this base too (PR #3).
@@ -48,7 +49,7 @@ scope_check acc 0.801 · feature acc 0.801 · complexity acc 0.822 · needs_clar
    3. Write the results section here (as for 4B), update the README status line, commit and push the branch, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
    4. Report honestly: the split loader is our own code (C-33), not covered by upstream tests, and 9B is bf16 like 4B (not the fp32 exact path); latency is in the fallback path and across two GPUs (cross-GPU copies), so it is **not comparable** with the 0.8B/4B latencies.
    If the run died, ask the owner for the error text and the per-GPU memory, report 9B as not run and where it broke (C-25), and do not retry with another approach (e.g. quantization) without asking: it would change the model.
-3. **Laya (P2)** and **Nimble (P3)**: write each plan per [chapter 11](../handbook/11-plan-requirements.md) before code. Nimble first needs X-05 (quantization) answered.
+3. **Nimble (P3)**: write the plan per [chapter 11](../handbook/11-plan-requirements.md) before code; it first needs X-05 (quantization) answered by the owner. Laya (P2) is done and merged (PR #4, see `P2-laya.md`).
 4. **P4 comparison** when runs exist.
 
 ## Open items (owner)
