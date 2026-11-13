@@ -4,7 +4,7 @@ Branch: `orchestrator/ft-laya`. Run id `laya-ft-multilingual-a`. Priority 1 (FT-
 
 ## Environment
 
-`laya==0.4.31` (the round-1 version), `USE_TF=0`, Kaggle T4. Training uses fp16 autocast with `GradScaler` on CUDA (module default). `laya.train.finetune` is single-process; the upstream Kaggle 2×T4 notebook wraps it in `torchrun` and DDP. **First run on one T4, no DDP**; DDP only if the time box requires it (and then ask).
+`laya==0.4.31` (the round-1 version), `USE_TF=0`, Kaggle T4. Training uses fp16 autocast with `GradScaler` on CUDA (module default). `laya.train.finetune` is single-process; the upstream Kaggle 2×T4 notebook wraps it in `torchrun` and DDP. **First run on one T4, no DDP**; DDP only if the run cannot fit one Kaggle session (and then ask).
 
 ## Starting checkpoint
 
@@ -50,10 +50,10 @@ A second configuration (learning rate or epochs) is allowed **once**, chosen on 
 | B0 | Read `laya/train.py` and `laya/common.py` at the installed version; answer the Laya items of chapter 09. | Notes in `train_report.json`. |
 | B1 | Smoke: 64 items, 1 epoch, save, reload with `laya.load(<dir>)`, predict 1 row. | Loss finite; reload works; the config is the multilingual one (`max_len` 1024, `head_max_len` 256). |
 | B2 | Pilot: 1 epoch on all train, calibrate, score 50 validation rows. | No OOM; epoch time recorded; temperatures stored. |
-| B3 | Full run (4 epochs, per-epoch checkpoints). One second configuration allowed. | Sanity check (FT-C-12): best-epoch development route macro-F1 above the zero-shot **0.254**, else stop and report. |
+| B3 | Full run (4 epochs, per-epoch checkpoints). One second configuration allowed. | Sanity check (FT-C-12): best-epoch development route macro-F1 above the zero-shot **0.395** (v2, FT-C-12), else stop and report. |
 | B4 | Evaluate (chapter 03): validation, then test once. | `validate_log` clean; 0 error rows; oracle 593/593; `truncated` count 0. |
 
-**Time box (FT-C-13): 2 h on a Kaggle T4 for B2 and B3 together.** If the pilot projects more, stop and ask. The output folder (about 650 MB) is **not committed**: store its sha256 in `run.json` and upload it to a private Kaggle Dataset (FT-P-06).
+**No time box for Laya (owner, 14 Nov 2026; FT-C-13 amended).** The pilot still projects B2 + B3 and records it; a run that cannot finish inside one Kaggle session or the weekly quota still needs a stop and ask. The output folder (about 650 MB) is **not committed**: store its sha256 in `run.json` and upload it to a private Kaggle Dataset (FT-P-06).
 
 ## Round-1 behaviours to keep
 
@@ -69,4 +69,4 @@ A second configuration (learning rate or epochs) is allowed **once**, chosen on 
 
 ## Stop-and-ask triggers
 
-Any `skipped` item · collapse to a prior · sanity check failed · pilot projects beyond the 2 h box · a need to change `head_max_len` or move to DDP · any item of chapter 09 that fails.
+Any `skipped` item · collapse to a prior · sanity check failed · pilot projects beyond one Kaggle session or the weekly quota · a need to change `head_max_len` or move to DDP · any item of chapter 09 that fails.
