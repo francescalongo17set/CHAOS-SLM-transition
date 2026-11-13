@@ -1,0 +1,44 @@
+{
+  "run_id": "kev-0.8b-20261112-a-smoke",
+  "pipeline": "kev",
+  "model_id": "jaredpalmer/kev-0.8b",
+  "model_revision": "v1.0:bf75a6a8848ea6960ff2ed108d9ed44c2941174f",
+  "dtype": "float32",
+  "device": "Tesla T4",
+  "gpu_count": 2,
+  "python": "3.13.16",
+  "libraries": {
+    "torch": "2.8.0+cu128",
+    "kev": "2074cc44256200bb37540103fa4572901faa10f3"
+  },
+  "platform": "kaggle",
+  "latency_mode": "in_process",
+  "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+  "state_template": "p-01",
+  "data_manifest_sha256": {
+    "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638"
+  },
+  "load_time_s": 26.8,
+  "model_size": {
+    "params_total": 752917824,
+    "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
+    "disk_mb": 1812.4,
+    "peak_gpu_mem_mb": 3465.2,
+    "peak_host_ram_mb": null,
+    "disk_mb_adapter": 65.5,
+    "disk_mb_base": 1746.9,
+    "disk_note": "corrected by hand after the run: base = model.safetensors size from the Hub API (Qwen/Qwen3.5-0.8B-Base), run.py recorded only the adapter"
+  },
+  "temperature_applied": 2.3510958125672174,
+  "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "started_at": "2026-11-12T21:26:43.423559+00:00",
+  "ended_at": "2026-11-12T21:28:25.544105+00:00",
+  "n_rows": {
+    "validation": 5
+  },
+  "n_error_rows": {
+    "validation": 0
+  },
+  "notes": "fp32 eager path (LoadOptions defaults). Two calls per row (core, then predicted-feature slots); input_native sums len(enc['ids']) over the calls (state recomputed per call). Kaggle T4, torch 2.8.0+cu128. causal_conv1d not installed: Transformers used its slower PyTorch fallback, so latencies are for that path. First request of the process took ~102 s (kernel compilation, inside the 10 warm-up rows). Token finding: len(enc['ids']) = state once + each question's own tokens (1q 228, 2q 377, 4q 491; state 117). Hub tag v1.0 resolved to bf75a6a8848ea6960ff2ed108d9ed44c2941174f; README table lists 9a45d25e as weights revision (unchecked). load_time_s and peak_gpu_mem_mb are from the last process of the run (test split), warm HF cache. Revision check (13 Nov, Hub API): adapter_model.safetensors sha256 9b908623... and head.pt sha256 f400bd12... are identical in commits 9a45d25e (model card's weights revision), bf75a6a8 (main, 'weights unchanged', what the run loaded) and 788ddbdd (where tag v1.0 points on 13 Nov), so the weights are the card's. weights_sha256 added by hand from the Hub metadata.",
+  "weights_sha256": "9b908623acb162118575f4e7a94524f9c139c335be4bfb74d6cfceca01e1885a"
+}
