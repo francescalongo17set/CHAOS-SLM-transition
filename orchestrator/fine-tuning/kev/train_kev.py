@@ -131,6 +131,10 @@ def main():
         if dropped and not a.allow_drop:
             print(f"BLOCKED: {len(dropped)} records exceed Kev's training context (e.g. {dropped[:5]}); zero drops allowed")
             return 2
+    if (out / "checkpoint").exists():                      # kev.train refuses to overwrite a run
+        print(f"BLOCKED: {out / 'checkpoint'} already exists (an earlier or failed run). Scratch runs (smoke, pilot) are cleared by "
+              "the notebook; a full run needs a new run id.")
+        return 2
     out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     log = out / "train.log"
