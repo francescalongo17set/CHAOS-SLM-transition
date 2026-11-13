@@ -1,0 +1,7 @@
+gold\pred,regulatory_consultation,product_policy_analysis,comparison,ibip_screening,client_drafting,none,<error>
+regulatory_consultation,32,3,0,0,1,41,0
+product_policy_analysis,3,67,0,0,0,70,0
+comparison,0,15,53,0,0,12,0
+ibip_screening,0,1,4,58,2,9,0
+client_drafting,0,5,1,1,56,10,0
+none,8,8,3,0,3,127,0

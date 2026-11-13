@@ -30,7 +30,7 @@ WARMUP = 10  # P-03
 
 
 def smoke_rows(rows):
-    """First row of each gold route (5 routes)."""
+    """First row of each gold route (4 routes)."""
     seen, out = set(), []
     for r in rows:
         route = r.support["expected_route"]
@@ -170,8 +170,8 @@ def main():
         "reference_tokenizer": f"{REF_TOKENIZER_ID}@{REF_TOKENIZER_REVISION}",
         "started_at": started, "ended_at": datetime.now(timezone.utc).isoformat(),
         "n_rows": len(rows), "n_error_rows": n_err,
-        "notes": f"{'fp32 eager path (LoadOptions defaults)' if a.dtype == 'fp32' else ('bf16 load split over %d GPUs (kev/shard.py, accelerate), merged LoRA on CPU; NOT the fp32 exact path' % torch.cuda.device_count() if a.shard else 'bf16 load (LoadOptions(dtype=bfloat16)), eager, merged LoRA; NOT the fp32 exact path')}. Two calls per row (core, then predicted-feature slots); "
-                 "input_native sums len(enc['ids']) over the calls (state recomputed per call).",
+        "notes": f"{'fp32 eager path (LoadOptions defaults)' if a.dtype == 'fp32' else ('bf16 load split over %d GPUs (kev/shard.py, accelerate), merged LoRA on CPU; NOT the fp32 exact path' % torch.cuda.device_count() if a.shard else 'bf16 load (LoadOptions(dtype=bfloat16)), eager, merged LoRA; NOT the fp32 exact path')}. v2: one call per row (scope, feature, complexity; no slot questions). "
+                 "input_native is len(enc['ids']) of that call.",
     }
     rj = out_dir / "run.json"
     if rj.exists():                                 # second split of the same run: keep both manifests, earliest start

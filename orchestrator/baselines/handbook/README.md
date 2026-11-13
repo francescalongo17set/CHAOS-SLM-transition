@@ -4,7 +4,9 @@
 
 ## What this round is
 
-The orchestrator reads one user request (plus conversation history and the list of available documents) and outputs a record: `scope_check`, `feature_classification`, `complexity_estimation`, `missing_info`, `confidence`. A deterministic **dispatcher** then turns the record into one of five routes (`lightweight`, `agentic`, `clarification`, `refuse`, `quick_reply`).
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`.
+
+The orchestrator reads one user request (plus conversation history and the list of available documents) and outputs a record: `scope_check`, `feature_classification`, `complexity_estimation`, `confidence`. A deterministic **dispatcher** then turns the record into one of four routes (`lightweight`, `agentic`, `refuse`, `quick_reply`). (v1 also had `missing_info` and a fifth route, `clarification`; see C-35.)
 
 Round 1 answers one question: **how do three ready-made decision models behave on our data, with no training of our own?** The best performer is fine-tuned in a later round (out of scope here).
 

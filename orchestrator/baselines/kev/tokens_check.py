@@ -1,5 +1,5 @@
 """P1 step 4: what does the packed length (`len(enc["ids"])`, the number the API reports as usage.input_tokens)
-count? Runs one row with 1 and with 4 questions and prints/saves both. Finding goes into run.json.notes by hand.
+count? Runs one row with 1, 2 and 3 questions and prints/saves both. Finding goes into run.json.notes by hand.
 
   python kev/tokens_check.py --out runs/kev/<run_id>-smoke/tokens_check.json
 """
@@ -10,7 +10,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-sys.path.append(str(HERE.parent))
+sys.path.append(str(HERE.parents[2]))   # repo / bundle root: holds `orchestrator/` (appended: upstream `kev` must win the name)
 
 from orchestrator.baselines.kev.adapter import build_request          # noqa: E402
 from orchestrator.baselines.common import data                    # noqa: E402
@@ -41,9 +41,9 @@ def main():
     q = QuestionConfig()
     row = data.load_split("validation")[0]
     state = serialize_state(row.model_input)
-    qs = [q.scope_check(), q.feature_classification(), q.complexity_estimation(), q.slot_question("product")]
+    qs = [q.scope_check(), q.feature_classification(), q.complexity_estimation()]
     res = {}
-    for n in (1, 2, 4):
+    for n in (1, 2, 3):
         rec, _ = to_record(build_request(state, qs[:n]))
         enc = admit(model, tok, rec)
         res[f"{n}_questions"] = {"len_ids": len(enc["ids"]), "state_tokens": enc["state_tokens"]}

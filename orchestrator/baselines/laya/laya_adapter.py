@@ -37,29 +37,22 @@ def to_answer(laya_answer, question):
 
 
 def predict_row(agent, qcfg, state_text):
-    """Two calls (C-23): core questions, then the slot questions of the predicted feature.
+    """v2: one predict() call with the three fixed questions (no slot questions).
 
-    Returns (core questions, slot questions, result 1, result 2 or None).
+    Returns (questions, result).
     """
-    core = qcfg.questions_for("none")  # the 3 fixed questions; `none` asks no slots
-    res_a = agent.predict(state_text, to_laya(core))
-    feature = res_a["answers"]["feature_classification"]["choice"]
-    slot_qs = [qcfg.slot_question(s) for s in qcfg.slots_for_feature(feature)]
-    res_b = agent.predict(state_text, to_laya(slot_qs)) if slot_qs else None
-    return core, slot_qs, res_a, res_b
+    core = qcfg.questions()
+    return core, agent.predict(state_text, to_laya(core))
 
 
-def make_record(row, meta, core, slot_qs, res_a, res_b, latency_ms, is_warmup, input_ref):
-    answers = {q.qid: to_answer(res_a["answers"][q.qid], q) for q in core}
-    answers["slots"] = {q.qid.split(":", 1)[1]: to_answer(res_b["answers"][q.qid], q) for q in slot_qs}
-    usage = {"call_1": res_a["usage"]}
-    if res_b is not None:
-        usage["call_2"] = res_b["usage"]
-    dropped = max(u["state_tokens_dropped"] for u in usage.values())
+def make_record(row, meta, core, res, latency_ms, is_warmup, input_ref):
+    answers = {q.qid: to_answer(res["answers"][q.qid], q) for q in core}
+    usage = {"call_1": res["usage"]}
+    dropped = res["usage"]["state_tokens_dropped"]
     return build_record(
         row, meta, answers,
         latency_ms=latency_ms, is_warmup=is_warmup,
-        tokens={"input_native": sum(u["input_tokens"] for u in usage.values()),
+        tokens={"input_native": res["usage"]["input_tokens"],
                 "input_ref": input_ref, "output_native": None, "usage_reported": usage},
         truncated=dropped > 0, tokens_dropped=dropped)
 

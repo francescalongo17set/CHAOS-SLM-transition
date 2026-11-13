@@ -11,7 +11,6 @@ Call sequence (verified against kev@2074cc4, serve.py / model.py / api.py):
 """
 import time
 
-from orchestrator.baselines.common.questions import CANONICAL_OPTIONS
 from orchestrator.baselines.common.state import serialize_state
 
 CORE_IDS = ("scope_check", "feature_classification", "complexity_estimation")
@@ -50,29 +49,19 @@ class KevScorer:
         return [q.tolist() for q in ps], {"tokens": len(enc["ids"]), "state_tokens": enc["state_tokens"]}
 
     def predict(self, row, qconfig):
-        """-> (answers, stats). Two calls: core questions, then the slot questions of the PREDICTED feature (C-23).
-        Questions are isolated in Kev (each its own row), so asking the slots in a second call gives the same
-        probabilities as asking them in the first; the second call is made so the cascade and the token/latency
-        accounting match what a real orchestrator would do. Time = the sum of the calls (chapter 05)."""
+        """-> (answers, stats). v2: ONE call with the three fixed questions (no slot questions).
+        Time = the call (chapter 05)."""
         state = serialize_state(row.model_input)
         self._sync(); t0 = time.perf_counter()
-        core = [qconfig.scope_check(), qconfig.feature_classification(), qconfig.complexity_estimation()]
+        core = qconfig.questions()
         ps, s1 = self._call(state, core)
         answers = {q.qid: probs_to_answer(q.option_ids, p) for q, p in zip(core, ps)}
-        feature = answers["feature_classification"]["label"]
-        slot_qs = [qconfig.slot_question(s) for s in qconfig.slots_for_feature(feature)]
-        slots, usage = {}, [s1]
-        if slot_qs:
-            ps2, s2 = self._call(state, slot_qs)
-            usage.append(s2)
-            slots = {q.qid.split(":", 1)[1]: probs_to_answer(CANONICAL_OPTIONS["slots"], p) for q, p in zip(slot_qs, ps2)}
         self._sync()
         latency_ms = (time.perf_counter() - t0) * 1000.0
-        answers["slots"] = slots
         return answers, {
             "latency_ms": latency_ms,
-            "questions": core + slot_qs,
+            "questions": core,
             "state_text": state,
-            "input_native": sum(u["tokens"] for u in usage),     # state recomputed per call, question rows once each
-            "usage_reported": {"input_tokens": [u["tokens"] for u in usage], "state_tokens": s1["state_tokens"]},
+            "input_native": s1["tokens"],
+            "usage_reported": {"input_tokens": [s1["tokens"]], "state_tokens": s1["state_tokens"]},
         }

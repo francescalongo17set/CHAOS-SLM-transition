@@ -7,7 +7,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-DEFAULT_DATA_DIR = Path(__file__).resolve().parents[3] / "data-generation" / "data" / "final"
+DEFAULT_DATA_DIR = Path(__file__).resolve().parents[3] / "data-generation" / "data" / "final_v2"
 SPLITS = ("train", "validation", "test")
 EXPECTED_COUNTS = {"train": 2092, "validation": 298, "test": 593}
 

@@ -1,0 +1,63 @@
+{
+  "seed": 20261113,
+  "question_config_sha256": "193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66",
+  "source_manifests_sha256": {
+    "train": "6c6d5c72f7625a3e5a8e2f61d62c1d317f9c2237e4389a73b44190fa7f6aad33",
+    "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638",
+    "test": "c1bbc8658aba45c4fb259bb6f126292893444f7e5f3faad07c950b79d1672c7f"
+  },
+  "counts": {
+    "train": 1899,
+    "calibration": 193,
+    "development": 298
+  },
+  "route_counts": {
+    "train": {
+      "agentic": 517,
+      "clarification": 327,
+      "lightweight": 585,
+      "quick_reply": 168,
+      "refuse": 302
+    },
+    "calibration": {
+      "agentic": 48,
+      "clarification": 29,
+      "lightweight": 63,
+      "quick_reply": 20,
+      "refuse": 33
+    },
+    "development": {
+      "agentic": 82,
+      "clarification": 50,
+      "lightweight": 92,
+      "quick_reply": 26,
+      "refuse": 48
+    }
+  },
+  "files": {
+    "kev/train.jsonl": {
+      "rows": 1899,
+      "sha256": "234f80e9d45910e194926d1c12904461757ff0c38155c8c10a994106ebfa72df"
+    },
+    "laya/train.jsonl": {
+      "rows": 1899,
+      "sha256": "52f9b23ee461340f0d09c53b7ab33ccd810151dd06c68299641c9923bdeb851f"
+    },
+    "kev/calibration.jsonl": {
+      "rows": 193,
+      "sha256": "bba08fb0c865bd1a1833818fe99cbf6a5c58c39f4a913c191017ffd2f852d857"
+    },
+    "laya/calibration.jsonl": {
+      "rows": 193,
+      "sha256": "e335a03c6f9d3a758224e32b4bf0bf72c1c794781bd98cfb8e892ac4a01c0498"
+    },
+    "kev/development.jsonl": {
+      "rows": 298,
+      "sha256": "fe56eeeae555ad300bd87457e32710c7a38df85facd6f0e549a563434d577ff0"
+    },
+    "laya/development.jsonl": {
+      "rows": 298,
+      "sha256": "44f98c9c744a4d2f798c4a0c540800270791a7aaba72276ac1c64f1e970eb84d"
+    }
+  }
+}

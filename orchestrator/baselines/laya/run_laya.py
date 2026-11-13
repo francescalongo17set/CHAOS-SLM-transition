@@ -1,7 +1,7 @@
 """Laya runs (plan P2, handbook chapter 09). Resumable; one log line per row (chapter 06).
 
 From orchestrator/baselines/:
-    python laya/run_laya.py --run-id laya-a-smoke --smoke                       # 5 rows, one per route
+    python laya/run_laya.py --run-id laya-a-smoke --smoke                       # 4 rows, one per route
     python laya/run_laya.py --run-id laya-a-pilot --split validation --limit 50  # pilot
     python laya/run_laya.py --run-id laya-a                                     # full validation + test
 
@@ -87,8 +87,7 @@ def run_meta(agent, revision, load_s, disk, qcfg, splits, run_id):
             "peak_host_ram_mb": round(rss / (2**20 if sys.platform == "darwin" else 2**10), 1)},
         "max_len": agent.cfg.get("max_len"), "head_max_len": agent.cfg.get("head_max_len"),
         "started_at": now(), "ended_at": None,
-        "notes": ("Two predict() calls per row (C-23): scope/feature/complexity, then the slots of the "
-                  "predicted feature; latency_ms and input_native are the sum of both. input_native is "
+        "notes": ("v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is "
                   "Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's "
                   "temperatures inside predict() and does not report them, so temperature_applied is null."),
     }
@@ -116,10 +115,10 @@ def run_split(agent, qcfg, ref, meta, split, rows, run_dir):
             st = state.serialize_state(row.model_input)
             t0 = time.perf_counter()
             try:
-                core, slot_qs, ra, rb = A.predict_row(agent, qcfg, st)
+                core, res = A.predict_row(agent, qcfg, st)
                 ms = (time.perf_counter() - t0) * 1000  # results are CPU floats: GPU work is done
-                rec = A.make_record(row, rmeta, core, slot_qs, ra, rb, ms, i < WARMUP,
-                                    ref.count_ref(st, core + slot_qs))
+                rec = A.make_record(row, rmeta, core, res, ms, i < WARMUP,
+                                    ref.count_ref(st, core))
             except Exception as e:  # noqa: BLE001  chapter 06: log failed rows, never drop them
                 rec = A.error_record(row, rmeta, f"{type(e).__name__}: {e}",
                                      (time.perf_counter() - t0) * 1000, i < WARMUP)
@@ -133,7 +132,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-id", required=True, help="stable id; rerun with it to resume")
     ap.add_argument("--split", nargs="+", default=["validation", "test"], choices=["validation", "test"])
-    ap.add_argument("--smoke", action="store_true", help="5 validation rows, one per route")
+    ap.add_argument("--smoke", action="store_true", help="4 validation rows, one per route")
     ap.add_argument("--limit", type=int, help="first N rows of each split (pilot)")
     ap.add_argument("--out", default=str(ROOT / "runs" / "laya"))
     ap.add_argument("--device", default=None, help="passed to laya.load (default: laya's choice)")

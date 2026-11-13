@@ -1,5 +1,7 @@
 # 03 · Decision schema: state, questions, options
 
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`.
+
 All three models share the same interface idea (Jev-style): one **state** (text) plus a set of **typed questions**, each answered with a probability distribution over closed options. No text generation. This chapter defines the canonical, model-independent version; each pipeline chapter maps it to the model's own API.
 
 ## Vocabulary
@@ -70,23 +72,9 @@ Which assistant feature does the request belong to? Use `none` for out-of-scope 
 
 Asked on **every** row so the full distribution is logged; **scored only** on rows where gold `scope_check` = `in_scope`.
 
-### Q4 · slot questions (one per slot of the predicted feature; 3-way, C-22)
+### Q4 · slot questions (v1 only, removed in v2)
 
-For each slot, the question is whether the information is present in the state. Slot ids: `insurer`, `product`, `field`, `coverage`, `topic`, `date_reference`, `client_profile`, `message_goal`.
-
-Form (C-22): 3-way choice, the shape used in `orchestrator_data.py`:
-
-| Option id | Meaning |
-|---|---|
-| `present` | Clearly stated, or resolvable from the history. |
-| `missing` | Not mentioned at all. |
-| `ambiguous` | Mentioned but vague or unresolvable (for example "that policy" with several candidates). |
-
-A 2-way yes/no form was considered and not chosen.
-
-Which slots are asked (C-23, C-28, C-29): the slots of the **predicted** feature, from `slots.by_feature` in `questions.en.yaml`: `product_policy_analysis` and `comparison` ask `insurer`, `product`, `field`, `coverage`; `client_drafting` asks `product`, `client_profile`, `message_goal`; `ibip_screening` asks `product`, `client_profile`; `regulatory_consultation` asks `topic` only (`date_reference` is not asked, C-29); `none` asks nothing. The gold slot list omits `insurer` on 140 rows (C-28); only `needs_clarification` is scored.
-
-`needs_clarification` for a row is true iff at least one asked slot is `missing` or `ambiguous` (form A) / not present (form B). Scored against gold `labels.missing_info != []` (C-06).
+v1 asked one 3-way slot question (`present` / `missing` / `ambiguous`) per slot of the predicted feature and derived `needs_clarification` from them (C-22, C-23, C-28, C-29). **v2 does not ask them** (C-35, C-37): the orchestrator answers Q1 to Q3 in one call, and missing information is handled downstream. The v1 wording was removed from `questions.en.yaml`; it is in git history.
 
 ## Option order and wording
 
@@ -102,9 +90,7 @@ The canonical record the pipeline builds per row (probabilities are stored, labe
 {
   "scope_check":            {"label": "...", "probs": {"in_scope": 0.9, "out_of_scope": 0.08, "quick_reply": 0.02}},
   "feature_classification": {"label": "...", "probs": {...6 options...}},
-  "complexity_estimation":  {"label": "...", "probs": {"simple": 0.7, "complex": 0.3}},
-  "slots": {"product": {"label": "missing", "probs": {...}}, "...": {...}},
-  "needs_clarification": true
+  "complexity_estimation":  {"label": "...", "probs": {"simple": 0.7, "complex": 0.3}}
 }
 ```
 

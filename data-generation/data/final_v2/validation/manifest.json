@@ -1,0 +1,136 @@
+{
+ "split": "validation",
+ "release_status": "draft_unreviewed",
+ "verified_share": 0.0,
+ "seed": 20261110,
+ "counts": {
+  "router": 298,
+  "qa": 150
+ },
+ "router_route_balance": {
+  "lightweight": 101,
+  "agentic": 123,
+  "refuse": 48,
+  "quick_reply": 26
+ },
+ "router_feature_balance": {
+  "product_policy_analysis": 71,
+  "client_drafting": 37,
+  "none": 74,
+  "comparison": 40,
+  "regulatory_consultation": 39,
+  "ibip_screening": 37
+ },
+ "qa_behavior_balance": {
+  "answer": 120,
+  "absent": 30
+ },
+ "qa_type_balance": {
+  "conditional": 38,
+  "single_value": 60,
+  "multi_fact": 22,
+  "absent": 30
+ },
+ "writer_models": {
+  "claude-sonnet-5-5": 242,
+  "claude-haiku-5-5": 206
+ },
+ "validator_version": "validate.py 0.2",
+ "writer_card": "writer_card.md (v3)",
+ "retrieval_config": {
+  "status": "frozen at stage 6 (10 Nov 2026): bge beats e5 by >2 points on pilot hit@5 (all-gold 0.667 vs 0.444, any-gold 0.889 vs 0.778, n=9)",
+  "active": "bge",
+  "k": 5,
+  "similarity": "cosine (dot product of L2-normalised vectors), exact sort",
+  "models": {
+   "e5": {
+    "model": "intfloat/multilingual-e5-base",
+    "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+    "dim": 768,
+    "max_seq_length": 512,
+    "passage_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalised": true
+   },
+   "bge": {
+    "model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dim": 1024,
+    "max_seq_length": 1024,
+    "passage_prefix": "",
+    "query_prefix": "",
+    "normalised": true
+   },
+   "e5ctx": {
+    "model": "intfloat/multilingual-e5-base",
+    "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+    "dim": 768,
+    "max_seq_length": 512,
+    "passage_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalised": true,
+    "doc_format": "'{product} - {section_path}\\n{text}' (stage 6 variant)"
+   },
+   "bgectx": {
+    "model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "dim": 1024,
+    "max_seq_length": 1024,
+    "passage_prefix": "",
+    "query_prefix": "",
+    "normalised": true,
+    "doc_format": "'{product} - {section_path}\\n{text}' (stage 6 variant)"
+   }
+  }
+ },
+ "cap_levels": {
+  "zurich_salute|train": {
+   "cap_level": 3,
+   "qa_cap": 5,
+   "value_chunks": 59,
+   "demand_value": 208,
+   "label": "3: QA cap 5"
+  },
+  "generali_immagina_adesso|train": {
+   "cap_level": 1,
+   "qa_cap": 3,
+   "value_chunks": 145,
+   "demand_value": 344,
+   "label": "1: base cap, 100% of capacity"
+  },
+  "zurich_salute|validation": {
+   "cap_level": 2,
+   "qa_cap": 4,
+   "value_chunks": 13,
+   "demand_value": 49,
+   "label": "2: QA cap 4"
+  },
+  "generali_immagina_adesso|validation": {
+   "cap_level": 2,
+   "qa_cap": 4,
+   "value_chunks": 42,
+   "demand_value": 49,
+   "label": "2: QA cap 4"
+  },
+  "zurich_impresa|test": {
+   "cap_level": 1,
+   "qa_cap": 2,
+   "value_chunks": 165,
+   "demand_value": 325,
+   "label": "1: base cap, 100% of capacity"
+  }
+ },
+ "files": {
+  "router.jsonl": "c6e080a17f7d355a076c21b263d1b5a706a10c07e29b2685bee8c12781fbb0ca",
+  "qa.jsonl": "e444b19395609b7247ef6d3eb955fda14eb389773223e0fb867890ef210dbbd2"
+ },
+ "dataset_version": "v2",
+ "derived_from": {
+  "dir": "final",
+  "router_sha256": "b0bb6d853b067f4568e800da6149dfdf40a5d6cb662adb388c07217d1234d08f"
+ },
+ "v2_clarification_rows_moved": {
+  "agentic": 41,
+  "lightweight": 9
+ }
+}

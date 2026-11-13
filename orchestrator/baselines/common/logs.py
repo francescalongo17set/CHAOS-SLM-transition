@@ -1,17 +1,16 @@
-"""Prediction log writer and validator (chapter 06, P-07)."""
+"""Prediction log writer and validator (chapter 06, P-07). v2: no slot answers, no needs_clarification."""
 import json
 import math
 import os
 from pathlib import Path
 
 from . import data
-from .questions import CANONICAL_OPTIONS, QuestionConfig
+from .questions import CANONICAL_OPTIONS, QuestionConfig  # noqa: F401
 
 PIPELINES = {"kev", "laya", "nimble"}
-SLOTS_ASKED = {"predicted_feature", "gold_feature", "all"}
 CORE = ("scope_check", "feature_classification", "complexity_estimation")
 REQUIRED_KEYS = ("run_id", "pipeline", "model_id", "model_revision", "split", "query_id",
-                 "answers", "slots_asked_for", "needs_clarification", "temperature_applied",
+                 "answers", "temperature_applied",
                  "latency_ms", "is_warmup", "tokens", "truncated", "tokens_dropped", "error")
 
 
@@ -115,8 +114,6 @@ def validate_log(path, split, data_dir=None, qconfig=None):
             errs.append(f"{qid}: split {rec['split']!r} != {split!r}")
         if rec["pipeline"] not in PIPELINES:
             errs.append(f"{qid}: bad pipeline {rec['pipeline']!r}")
-        if rec["slots_asked_for"] not in SLOTS_ASKED:
-            errs.append(f"{qid}: bad slots_asked_for {rec['slots_asked_for']!r}")
         if rec["pair_id"] != rows[qid].pair_id if "pair_id" in rec else False:
             errs.append(f"{qid}: pair_id differs from data")
         if rec["error"] is not None:
@@ -134,35 +131,19 @@ def validate_log(path, split, data_dir=None, qconfig=None):
                 errs.append(f"{qid}: answers.{k} missing")
             else:
                 _check_answer(k, a[k], CANONICAL_OPTIONS[k], errs, qid)
-        slots = a.get("slots")
-        if not isinstance(slots, dict):
-            errs.append(f"{qid}: answers.slots missing")
-            continue
-        for s, ans in slots.items():
-            _check_answer(f"slot:{s}", ans, CANONICAL_OPTIONS["slots"], errs, qid)
-        if rec["slots_asked_for"] == "predicted_feature" and "feature_classification" in a \
-                and a["feature_classification"].get("label") in CANONICAL_OPTIONS["feature_classification"]:
-            want = qconfig.slots_for_feature(a["feature_classification"]["label"])
-            if sorted(slots) != sorted(want):
-                errs.append(f"{qid}: slots {sorted(slots)} != predicted-feature slots {sorted(want)}")
-        nc = any(v.get("label") != "present" for v in slots.values())
-        if rec["needs_clarification"] != nc:
-            errs.append(f"{qid}: needs_clarification {rec['needs_clarification']} inconsistent with slots")
     gaps = sorted(set(rows) - seen)
     if gaps:
         errs.append(f"{len(gaps)} query_ids missing from log, e.g. {gaps[:5]}")
     return errs
 
 
-def build_record(row, run_meta, answers, slots_asked_for="predicted_feature", **kw):
-    """Convenience for pipelines and tests: assemble a schema-conformant line."""
-    slots = answers.get("slots", {})
+def build_record(row, run_meta, answers, **kw):
+    """Convenience for pipelines and tests: assemble a schema-conformant line (v2: three answers, no slots)."""
     rec = {
         "run_id": run_meta["run_id"], "pipeline": run_meta["pipeline"],
         "model_id": run_meta["model_id"], "model_revision": run_meta["model_revision"],
         "split": run_meta["split"], "query_id": row.query_id, "pair_id": row.pair_id,
-        "answers": answers, "slots_asked_for": slots_asked_for,
-        "needs_clarification": any(v["label"] != "present" for v in slots.values()),
+        "answers": answers,
         "temperature_applied": None, "latency_ms": 0.0, "is_warmup": False,
         "tokens": {"input_native": None, "input_ref": None, "output_native": None, "usage_reported": None},
         "truncated": False, "tokens_dropped": 0, "error": None,

@@ -20,20 +20,16 @@ def test_perfect_log_gives_100(tmp_path, split):
     p = tmp_path / "p.jsonl"
     _dump(p, make_log(split, perfect=True))
     M = evaluate.evaluate(p, split, out_dir=tmp_path)
-    for k in ("scope_check", "feature_classification", "complexity_estimation", "needs_clarification", "route"):
+    for k in ("scope_check", "feature_classification", "complexity_estimation", "route"):
         assert M[k]["accuracy"] == 1.0, k
         assert M[k]["macro_f1"] == 1.0, k
         for c, v in M[k]["per_class"].items():
             if v["support"]:
                 assert v["precision"] == v["recall"] == v["f1"] == 1.0, (k, c)
-    assert M["needs_clarification"]["positive_class"]["f1"] == 1.0
     assert M["refuse_recall"]["all"]["recall"] == 1.0
     assert M["refuse_recall"]["safety_leak"]["recall"] == 1.0
     for k, v in M["calibration"].items():
-        if k.startswith("slots"):
-            assert v["ece"] < 0.05  # oracle's C-29 workaround mislabels a few slots on purpose
-        else:
-            assert v["ece"] == 0.0 and v["brier"] == 0.0, k
+        assert v["ece"] == 0.0 and v["brier"] == 0.0, k
     assert M["route_attribution"] == {}
     assert M["dispatcher_oracle"]["matches"] == M["dispatcher_oracle"]["n"]
     assert (tmp_path / f"metrics_{split}.json").exists()

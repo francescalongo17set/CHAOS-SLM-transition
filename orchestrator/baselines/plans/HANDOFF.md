@@ -1,5 +1,7 @@
 # Handoff · where the baselines round stands
 
+> **v2 (13 Nov 2026, branch `orchestrator/v2-no-clarification`):** missing information moves to the agent (C-35). Dataset `data-generation/data/final_v2/` (4 routes, built by `data-generation/data/code/make_v2.py`), shared code and both Kaggle notebooks (Kev-0.8B, Laya) are updated; 47 tests pass. **Both v2 baseline runs are done and in `runs/`:** `runs/kev/kev-0.8b-v2-20261113-a/` and `runs/laya/laya-v2-a/` (plus `-smoke/`, Laya `-pilot/`), 0 error rows, oracle 593/593. Report: [`runs/RUNS_REPORT_v2.md`](../runs/RUNS_REPORT_v2.md) (v2 only, and v1 + v2 side by side; Kev-4B/9B left out on purpose). Not done: `audit/audit.py` still audits v1 (`final/`), and the fine-tuning code (still v1). The v1 numbers below are history; v1 and v2 **route** metrics are not comparable.
+
 Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync). This file says what is done, where it lives, and what to do next.
 
 ## State
@@ -16,7 +18,18 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 
 The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are now on this base too (PR #3).
 
-## Kev-0.8B first results (test, 593 rows; one run, one wording, T4)
+## v2 results (test, 593 rows; Kev-0.8B fp32 and Laya fp16, one run each, one call per row)
+
+| | Kev-0.8B v2 | Laya v2 |
+|---|---|---|
+| route acc (4 routes) / macro-F1 | **0.654** / 0.550 | 0.415 / 0.421 |
+| scope / feature / complexity acc | 0.788 / 0.663 / 0.727 | 0.649 / 0.337 / 0.523 |
+| refuse recall (safety-leak) | 0.126 (0.057) | 0.411 (0.571) |
+| mean latency | 286 ms | 32.5 ms |
+
+**Checked on the logs: the scope, feature and complexity labels are identical to v1 on all 593 test rows, for both models.** So those metrics repeat v1; what changes is the route (clarification removed) and the cost (one call, mean latency down 34% / 44%, Kev input tokens down 31%). The route accuracy rise (Kev 0.331 to 0.654, Laya 0.265 to 0.415) comes from dropping the weak clarification question, not from a better model. Kev wrong routes go wrong first at `scope_check` (126 of 205) because it almost never refuses. The Kev temperature (2.351) is the v1 value, not re-fitted for v2. Detail: [`runs/RUNS_REPORT_v2.md`](../runs/RUNS_REPORT_v2.md).
+
+## Kev-0.8B first results (v1; test, 593 rows; one run, one wording, T4)
 
 scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clarification acc 0.423 · **route acc 0.331 (macro-F1 0.329)** · refuse recall 0.126 (safety-leak slice 0.057) · ECE 0.27 on scope_check. Most wrong routes go wrong first at `needs_clarification` (191 of 397), then `scope_check` (126), then feature (80): Kev over-predicts `ambiguous`/`missing` for slots. Mean latency 431 ms (slow `causal_conv1d` fallback), 552 native input tokens, 3.2 GB peak GPU, 753M parameters. Full detail: `report_test.md` on the Kev branch. Do not rank models on small gaps (chapter 05).
 
@@ -49,7 +62,8 @@ scope_check acc 0.855 · feature acc 0.815 · complexity acc 0.836 · needs_clar
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
 2. ~~Kev-9B run~~ done and validated (13 Nov, results above). **Remaining:** commit the run folders (`runs/kev/kev-9b-20261113-a/`, `-smoke/`) with the doc updates, push `orchestrator/baselines-kev-9b`, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
 3. ~~Nimble~~ dropped (C-34). Laya (P2) is done and merged (PR #4, see `P2-laya.md`).
-4. **P4 comparison** when runs exist.
+4. **P4 comparison** when runs exist (`common/compare.py`). The v2 runs exist now.
+5. v2 follow-ups: decide whether to re-fit the Kev temperature for the v2 question set; update `audit/audit.py` for `final_v2/`; fine-tuning code is still v1.
 
 ## Open items (owner)
 

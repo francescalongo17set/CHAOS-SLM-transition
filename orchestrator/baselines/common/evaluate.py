@@ -1,4 +1,4 @@
-"""Evaluation (chapter 05). Reads a validated prediction log + ground truth, computes every number.
+"""Evaluation (chapter 05), v2: four routes, no needs_clarification, no slot calibration. Reads a validated prediction log + ground truth, computes every number.
 Pure standard library. Pipelines never compute metrics themselves (rule 7)."""
 import csv
 import json
@@ -105,13 +105,6 @@ def evaluate(log_path, split, data_dir=None, run_json=None, out_dir=None):
         M[name] = prf(g, p, labels)
         cm[name] = confusion(g, p, labels)
 
-    gold_nc = [bool(rows[q].labels["missing_info"]) for q in ins]
-    pred_nc = [(recs[q]["needs_clarification"] if recs[q]["error"] is None else None) for q in ins]
-    M["needs_clarification"] = prf(gold_nc, pred_nc, [True, False])
-    M["needs_clarification"]["positive_class"] = M["needs_clarification"]["per_class"][True]
-    M["needs_clarification"]["per_class"] = {str(k): v for k, v in M["needs_clarification"]["per_class"].items()}
-    cm["needs_clarification"] = confusion([str(x) for x in gold_nc], [str(x) for x in pred_nc], ["True", "False"])
-
     # end-to-end route (tau=None) and attribution
     pred_route, attrib = {}, Counter()
     for q in ids:
@@ -121,7 +114,7 @@ def evaluate(log_path, split, data_dir=None, run_json=None, out_dir=None):
             continue
         a = r["answers"]
         pred_route[q] = dispatch(a["scope_check"]["label"], a["feature_classification"]["label"],
-                                 a["complexity_estimation"]["label"], r["needs_clarification"])
+                                 a["complexity_estimation"]["label"])
     gold_route = [rows[q].support["expected_route"] for q in ids]
     M["route"] = prf(gold_route, [pred_route[q] for q in ids], list(ROUTES))
     cm["route"] = confusion(gold_route, [pred_route[q] for q in ids], list(ROUTES))
@@ -138,8 +131,6 @@ def evaluate(log_path, split, data_dir=None, run_json=None, out_dir=None):
             first = "scope_check"
         elif a["feature_classification"]["label"] != lab["feature"]:
             first = "feature_classification"
-        elif lab["scope_check"] == "in_scope" and r["needs_clarification"] != bool(lab["missing_info"]):
-            first = "needs_clarification"
         elif lab["scope_check"] == "in_scope" and a["complexity_estimation"]["label"] != lab["complexity"]:
             first = "complexity_estimation"
         attrib[first] += 1
@@ -175,15 +166,6 @@ def evaluate(log_path, split, data_dir=None, run_json=None, out_dir=None):
     ]:
         items = [(recs[q]["answers"][name]["probs"], gfn(rows[q])) for q in qs if ok(q)]
         cal[name] = ece_brier(items, CANONICAL_OPTIONS[name])
-    sl = []
-    for q in ids:
-        if not ok(q):
-            continue
-        for s, ans in recs[q]["answers"]["slots"].items():
-            g = rows[q].support["slot_status"].get(s)
-            if g is not None:
-                sl.append((ans["probs"], g))
-    cal["slots (pooled, where gold slot status exists)"] = ece_brier(sl, CANONICAL_OPTIONS["slots"])
     M["calibration"] = cal
 
     # tokens, latency

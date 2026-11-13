@@ -1,5 +1,7 @@
 # 04 · Dispatcher and confidence
 
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`.
+
 The dispatcher is **deterministic code**, not a model. It reads the orchestrator record and returns a route.
 
 ## Rule table (C-14)
@@ -10,15 +12,14 @@ Evaluated top to bottom; first match wins.
 |---|---|---|
 | 1 | `scope_check == out_of_scope` | `refuse` |
 | 2 | `scope_check == quick_reply` | `quick_reply` |
-| 3 | `needs_clarification` (any required slot `missing` or `ambiguous`) | `clarification` |
-| 4 | `feature in {ibip_screening, client_drafting}` **or** `complexity == complex` | `agentic` |
-| 5 | otherwise | `lightweight` |
+| 3 | `feature in {ibip_screening, client_drafting}` **or** `complexity == complex` | `agentic` |
+| 4 | otherwise | `lightweight` |
 
-Why clarification precedes agentic: in the sample, an IBIP or complex row with a missing slot has `expected_route = clarification`. Why IBIP and client drafting always go to agentic: they are the sensitive features (owner decision, C-14); in the sample a *simple* IBIP or drafting row has `expected_route = agentic`.
+v1 had a rule between 2 and 3: `needs_clarification` (any required slot `missing` or `ambiguous`) → `clarification`. It is removed in v2 (C-35): the agent gathers missing information. IBIP and client drafting always go to `agentic` because they are the sensitive features (C-14). The 94 v2 rows that were `clarification` in v1 but are simple and not sensitive are `lightweight` (C-36).
 
 ## Mandatory unit test (the dispatcher is not trusted until this passes)
 
-For every row of train, validation and test, build the record from the **gold** labels and `support.slot_status`, run the dispatcher with the confidence override disabled, and compare with `support.expected_route`.
+For every row of train, validation and test, build the record from the **gold** labels (`scope_check`, `feature`, `complexity`; v2 does not use `slot_status`), run the dispatcher with the confidence override disabled, and compare with `support.expected_route`.
 
 - 100% match → proceed.
 - Any mismatch → **stop**, list the mismatching `query_id`s with gold fields and expected route, and ask the owner. The rule table or the data is wrong; do not patch either silently.

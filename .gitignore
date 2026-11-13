@@ -37,6 +37,9 @@ venv/
 wandb/
 runs/
 !orchestrator/baselines/runs/
+!orchestrator/fine-tuning/runs/
+orchestrator/fine-tuning/data/*
+!orchestrator/fine-tuning/data/manifest.json
 
 outputs/
 checkpoints/
@@ -58,3 +61,5 @@ data-generation/data/index/*.npy
 
 # Kaggle bundle (kev/make_bundle.py)
 orchestrator/baselines/dist/
+
+orchestrator/fine-tuning/dist/
