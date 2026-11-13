@@ -22,13 +22,13 @@ Why `baselines-kev-0.8b` and not `baselines/kev` (C-27): git stores branches as 
 ## Layout (approved, C-27)
 
 ```
-orchestrator-baselines/
+orchestrator/baselines/
   handbook/                 # this folder
   plans/                    # P0..P4 plans
   common/                   # shared package (no model-specific imports)
     data.py  state.py  questions.py  dispatcher.py  logs.py  tokens.py  evaluate.py  report.py  compare.py
     questions.en.yaml       # question and option text (C-21)
-    tests/                  # pytest; run from orchestrator-baselines/
+    tests/                  # pytest; run from orchestrator/baselines/
   audit/                    # audit.py, token_lengths.py, audit_report.md
   requirements-common.txt   # pyyaml, tokenizers, huggingface_hub, pytest
   kev/    laya/    nimble/  # pipeline code, notebooks, requirements-*.txt
@@ -64,7 +64,7 @@ Facts below are from general knowledge and must be re-checked in the actual sess
 - Sessions disconnect and quotas run out. Every pipeline must **write results incrementally** (append one line per request and flush) and be **resumable** (skip `query_id`s already present).
 - Free-tier RAM and disk limits matter for downloading and merging a 9B model. Check them early (chapter 10).
 - Notebooks get the project code and data either from the branch (git clone, needs a token if the repo is private) or, as in the Kev notebook, from a private Kaggle Dataset built with `kev/make_bundle.py` (`dist/kev-bundle/`, git-ignored; rebuild and upload a new Dataset version after any code change). They run, and save logs to persistent storage (Kaggle output / Drive); a run that exists only in a closed session does not exist. Upstream model repos are still cloned from GitHub, pinned to a commit.
-- The root `.gitignore` ignores `runs/` in general; `orchestrator-baselines/runs/` is excepted so validated logs can be committed.
+- The root `.gitignore` ignores `runs/` in general; `orchestrator/baselines/runs/` is excepted so validated logs can be committed.
 
 ## Definition of done per pipeline
 

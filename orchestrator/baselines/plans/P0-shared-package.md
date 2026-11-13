@@ -23,11 +23,11 @@ Build the model-independent code every pipeline imports (data loader, state seri
 
 **PROPOSED, adopted (review these):**
 - **P-01** state template, **P-02** fixed option order, **P-04** validation + test, **P-07** log schema, **P-08** Qwen3.5 reference tokenizer.
-- **Layout (approved, C-27):** the handbook now lives at `orchestrator-baselines/handbook/`, so code goes in `orchestrator-baselines/{common,audit,kev,laya,nimble,runs,reports}/` instead of `experiments/baselines/`. Chapter 07 should be updated to match once approved.
+- **Layout (approved, C-27):** the handbook now lives at `orchestrator/baselines/handbook/`, so code goes in `orchestrator/baselines/{common,audit,kev,laya,nimble,runs,reports}/` instead of `experiments/baselines/`. Chapter 07 should be updated to match once approved.
 
 ## 4. Steps
 
-Each step ends with a check that can fail. Tests use `pytest` in `orchestrator-baselines/common/tests/`.
+Each step ends with a check that can fail. Tests use `pytest` in `orchestrator/baselines/common/tests/`.
 
 | # | Step | Files | Check |
 |---|---|---|---|
@@ -53,7 +53,7 @@ No step needs a GPU. The only step that may exceed its box is the tokenizer down
 
 ## 7. Outputs (committed on `orchestrator/baselines`)
 
-`orchestrator-baselines/common/`, `audit/audit_report.md`, golden test files, this plan. Large artefacts (tokenizer cache) are git-ignored. One commit per step; merge after the definition of done below.
+`orchestrator/baselines/common/`, `audit/audit_report.md`, golden test files, this plan. Large artefacts (tokenizer cache) are git-ignored. One commit per step; merge after the definition of done below.
 
 ## 8. Definition of done
 

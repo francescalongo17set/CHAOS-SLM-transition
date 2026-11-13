@@ -1,6 +1,6 @@
 """Laya runs (plan P2, handbook chapter 09). Resumable; one log line per row (chapter 06).
 
-From orchestrator-baselines/:
+From orchestrator/baselines/:
     python laya/run_laya.py --run-id laya-a-smoke --smoke                       # 5 rows, one per route
     python laya/run_laya.py --run-id laya-a-pilot --split validation --limit 50  # pilot
     python laya/run_laya.py --run-id laya-a                                     # full validation + test
@@ -20,13 +20,13 @@ import sys
 import time
 from pathlib import Path
 
-from orchestrator.baselines.common import data
-
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
-sys.path[:0] = [str(HERE), str(ROOT)]
+ROOT = HERE.parent                      # orchestrator/baselines/
+REPO = ROOT.parents[1]                  # repo root (bundle root on Kaggle)
+sys.path[:0] = [str(HERE), str(REPO)]
 os.environ.setdefault("USE_TF", "0")  # chapter 09: laya.load() can hang with TensorFlow installed
 
+from orchestrator.baselines.common import data  # noqa: E402
 import laya  # noqa: E402  (the installed library: laya/ here has no __init__.py)
 import torch  # noqa: E402
 import transformers  # noqa: E402

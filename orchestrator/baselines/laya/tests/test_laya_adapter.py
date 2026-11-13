@@ -1,6 +1,6 @@
 """Adapter unit test on 5 rows, one per route, with a stand-in agent (no laya, no model, no GPU).
 
-Run from orchestrator-baselines/:  pytest laya/tests
+Run from orchestrator/baselines/:  pytest laya/tests
 """
 import hashlib
 import sys

@@ -1,17 +1,17 @@
 """Build the Kaggle Dataset folder (no git clone needed on Kaggle).
 
-  python kev/make_bundle.py            # -> orchestrator-baselines/dist/kev-bundle/
+  python kev/make_bundle.py            # -> orchestrator/baselines/dist/kev-bundle/
 
-Layout is the repo layout, because common/data.py finds the data at ../data-generation/data/final:
-  kev-bundle/orchestrator-baselines/{common,kev,audit,requirements-common.txt,pytest.ini}
+Layout is the repo layout, because common/data.py finds the data at <repo>/data-generation/data/final:
+  kev-bundle/orchestrator/baselines/{common,kev,audit,requirements-common.txt,pytest.ini}
   kev-bundle/data-generation/data/final/{train,validation,test}/{router.jsonl,manifest.json}
 Upload the folder as a PRIVATE Kaggle Dataset (the data is synthetic but not ours to publish).
 """
 import shutil
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]          # orchestrator-baselines/
-REPO = ROOT.parent
+ROOT = Path(__file__).resolve().parents[1]          # orchestrator/baselines/
+REPO = ROOT.parents[1]                              # repo root
 OUT = ROOT / "dist" / "kev-bundle"
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".pytest_cache", "*.ipynb_checkpoints")
 
@@ -19,7 +19,7 @@ IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".pytest_cache", "*.ipyn
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
-    ob = OUT / "orchestrator-baselines"
+    ob = OUT / "orchestrator" / "baselines"
     for d in ("common", "kev", "audit"):
         shutil.copytree(ROOT / d, ob / d, ignore=IGNORE)
     for f in ("requirements-common.txt", "pytest.ini"):

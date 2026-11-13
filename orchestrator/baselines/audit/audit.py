@@ -12,7 +12,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-DEFAULT_DATA = HERE.parent.parent / "data-generation" / "data" / "final"
+DEFAULT_DATA = HERE.parents[2] / "data-generation" / "data" / "final"
 EXPECTED = {"train": 2092, "validation": 298, "test": 593}
 SCOPE = {"in_scope", "out_of_scope", "quick_reply"}
 FEATURES = {"regulatory_consultation", "product_policy_analysis", "comparison",

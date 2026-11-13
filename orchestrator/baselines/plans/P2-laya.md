@@ -20,14 +20,14 @@ Run `laya-multilingual` zero-shot on validation and test and produce the shared 
 
 - **PENDING X-04:** not touched; the dispatcher runs with `tau=None`.
 - **PROPOSED, adopted:** P-01 state, P-02 option order, P-03 batch 1 and 10 warm-up rows, P-04 validation + test, P-07 log schema, P-08 reference tokenizer, P-09 dtype (Laya's own default is used and recorded).
-- **Owner answers (13 Nov 2026):** follow the handbook (smoke test, pilot, full runs); keep `laya/` without `__init__.py`; add a `.gitignore` exception for `orchestrator-baselines/runs/`; write this plan.
+- **Owner answers (13 Nov 2026):** follow the handbook (smoke test, pilot, full runs); keep `laya/` without `__init__.py`; add a `.gitignore` exception for `orchestrator/baselines/runs/`; write this plan.
 - **Assumptions:** section 9, approved by the owner (13 Nov 2026).
 
 ## 4. Steps
 
 | # | Step (chapter 09) | Files | Command | Check that can fail |
 |---|---|---|---|---|
-| 0 | `.gitignore` exception so run logs can be committed (chapter 07). | root `.gitignore` (`!orchestrator-baselines/runs/`) | `git check-ignore orchestrator-baselines/runs/laya/x.jsonl` | Prints nothing. |
+| 0 | `.gitignore` exception so run logs can be committed (chapter 07). | root `.gitignore` (`!orchestrator/baselines/runs/`) | `git check-ignore orchestrator/baselines/runs/laya/x.jsonl` | Prints nothing. |
 | 1 | **Smoke test.** Install, load the multilingual checkpoint, answer one question from the card on a short Italian string, print the whole result object. | `laya/laya_kaggle.ipynb` (first cells), `laya/requirements-laya.txt` | Kaggle cells | `answers[qid]["probabilities"]` exists and holds every option; the loaded checkpoint is `multilingual`. Otherwise stop and ask. |
 | 2 | **Adapter.** Canonical question config → Laya `questions`; result → canonical `answers` with full distributions; uses `common.logs.build_record`. Unit test on 5 rows, one per route. | `laya/laya_adapter.py`, `laya/tests/test_laya_adapter.py` | `pytest laya/tests` | Each built line passes the shared validator's per-row checks. |
 | 3 | **Budget check.** Count validation and test rows whose state exceeds the multilingual budget, with Laya's own tokenizer. | notebook cell | Kaggle cell | Count printed. More than a handful of rows → stop and ask (chapter 09). |
@@ -45,7 +45,7 @@ Logs are appended per row and resumable (`LogWriter`). A failed row is logged wi
 
 ## 7. Outputs
 
-Code in `orchestrator-baselines/laya/`. Results in `orchestrator-baselines/runs/laya/<run_id>/`, committed after the validator passes.
+Code in `orchestrator/baselines/laya/`. Results in `orchestrator/baselines/runs/laya/<run_id>/`, committed after the validator passes.
 
 ## 8. Definition of done (chapter 07)
 
@@ -66,7 +66,7 @@ Code in `orchestrator-baselines/laya/`. Results in `orchestrator-baselines/runs/
 ## 10. Where the handbook does not match reality (reported, not edited)
 
 1. **`.gitignore` vs chapter 07:** the root `.gitignore` ignores `runs/`, but run logs are meant to be committed (fixed by step 0).
-2. **Layout vs library name (chapter 07, C-27):** a package `orchestrator-baselines/laya/` would hide the installed `laya` library. The folder is kept without `__init__.py` and with distinct module names.
+2. **Layout vs library name (chapter 07, C-27):** a package `orchestrator/baselines/laya/` would hide the installed `laya` library. The folder is kept without `__init__.py` and with distinct module names.
 3. **Distribution key (chapter 09, chapter 12):** the `laya` 0.4.31 source returns it as `answers[qid]["probabilities"]`; to be confirmed by the smoke test.
 4. **Token accounting (chapter 09):** the chapter says all questions share one pass, so the state counts once. In the source each question is its own sequence that contains the state, so the state is processed once per question. Laya's `usage.input_tokens` reports the real total.
 5. **Per-route row ids:** chapters 09 and 08 refer to "`query_id`s from the audit" for one row per route; `audit/audit_report.md` does not list them, and the P0 golden files do not exist in `common/tests/`.

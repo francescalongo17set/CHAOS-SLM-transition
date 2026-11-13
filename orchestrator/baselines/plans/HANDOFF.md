@@ -32,11 +32,11 @@ scope_check acc 0.855 · feature acc 0.815 · complexity acc 0.836 · needs_clar
 
 1. `python kev/make_bundle.py` builds `dist/kev-bundle/` (code + data, 3.4 MB, git-ignored). Upload it as a **private** Kaggle Dataset; after any code change upload a new version. No git clone of this repo on Kaggle.
 2. Notebook `kev/kaggle_kev_0.8b.ipynb`: attach the Dataset, GPU T4 x2, Internet on. Stages `smoke` (5 rows, asserts) → `validation` → `test` → report, stop at first failure. About 10 minutes in total. *Save Version → Save & Run All* keeps `/kaggle/working/runs/...`.
-3. Download `runs/<pipeline>/<run_id>/`, validate with `common.logs.validate_log`, commit under `orchestrator-baselines/runs/` (the root `.gitignore` excepts it on the Kev branch; this branch's `.gitignore` needs the same exception line when runs are merged).
+3. Download `runs/<pipeline>/<run_id>/`, validate with `common.logs.validate_log`, commit under `orchestrator/baselines/runs/` (the root `.gitignore` excepts it on the Kev branch; this branch's `.gitignore` needs the same exception line when runs are merged).
 
 ## Lessons that will save time
 
-- Upstream names collide: `orchestrator-baselines/kev/` has no `__init__.py` and scripts add `common` with `sys.path.append`, so `import kev` is always upstream Kev. Keep it that way for Laya/Nimble.
+- Upstream names collide: `orchestrator/baselines/kev/` has no `__init__.py` and scripts add `common` with `sys.path.append`, so `import kev` is always upstream Kev. Keep it that way for Laya/Nimble.
 - Heavy installs go in `/tmp` (own `uv` venv, Python 3.12+, kev's locked deps, `flash-linear-attention==0.5.2`). Kev needs the venv; `common/` needs only `pyyaml`, `tokenizers`, `huggingface_hub`, `pytest`.
 - First request in a process is slow (kernel compile, about 100 s); the 10 warm-up rows absorb it (P-03).
 - Hub **tags move**; pin commits and log `weights_sha256` (Kev: `9a45d25eb2ab761841196625383fa1dff0e56c1e`, chapter 12).

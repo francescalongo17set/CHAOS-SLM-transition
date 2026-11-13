@@ -49,7 +49,7 @@ README/package mismatch, an unexpected 422, or a state above the 8,192-token val
 
 ## 7. Outputs
 
-`orchestrator-baselines/kev/*`, `runs/kev/<run_id>/*`, this plan. Weights and caches are git-ignored. Logs committed only after the validator passes.
+`orchestrator/baselines/kev/*`, `runs/kev/<run_id>/*`, this plan. Weights and caches are git-ignored. Logs committed only after the validator passes.
 
 ## 8. Definition of done
 

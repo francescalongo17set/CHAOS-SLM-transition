@@ -1,5 +1,5 @@
 """Audit item 6: token length of the serialized state (reference tokenizer).
-Run from orchestrator-baselines/ with the common/ venv: python -m audit.token_lengths"""
+Run from orchestrator/baselines/ with the common/ venv: python -m audit.token_lengths"""
 import json
 import statistics
 from pathlib import Path

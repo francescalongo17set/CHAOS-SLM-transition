@@ -16,9 +16,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent                      # orchestrator-baselines/
-sys.path.insert(0, str(HERE))           # `adapter`
-sys.path.append(str(ROOT))              # `common` (appended: upstream `kev` must win the name)
+ROOT = HERE.parent                      # orchestrator/baselines/
+REPO = ROOT.parents[1]                  # repo root (bundle root on Kaggle): holds `orchestrator/` and `data-generation/`
+sys.path.append(str(REPO))              # `orchestrator.baselines.*` (appended: upstream `kev` must win the name)
 
 from orchestrator.baselines.kev.adapter import KevScorer           # noqa: E402
 from orchestrator.baselines.common import data                 # noqa: E402
