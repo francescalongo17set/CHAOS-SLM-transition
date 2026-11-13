@@ -1,6 +1,6 @@
 # Orchestrator Baselines Handbook
 
-> **Status: DRAFT v0.3, 12 Nov 2026** (decisions C-21 to C-29 added; shared package P0 built, see `../plans/P0-shared-package.md`; **Kev-0.8B run done on a Kaggle T4; code and logs are on branch `orchestrator/baselines-kev-0.8b`, not yet merged here; start from `../plans/HANDOFF.md`**; Kev-4B/9B, Laya, Nimble not started; only X-04 and X-05 still pending). Guideline book for the first experiment round of the orchestrator: three open decision models (**Kev**, **Laya**, **Nimble**) run **zero-shot** on the Italian router dataset. Written for two audiences: teammates (read top to bottom) and coding agents (read the "Agent rules" below first, then only the chapters named in your task).
+> **Status: DRAFT v0.3, 13 Nov 2026** (decisions C-21 to C-30 added; shared package P0 built, see `../plans/P0-shared-package.md`; **Kev-0.8B run done on a Kaggle T4; code and logs merged into this base (PR #3); **Kev-4B (bf16, T4, C-30) prepared on branch `orchestrator/baselines-kev-4b`, run not done yet**; start from `../plans/HANDOFF.md`**; Kev-9B, Laya, Nimble not started; only X-04 and X-05 still pending). Guideline book for the first experiment round of the orchestrator: three open decision models (**Kev**, **Laya**, **Nimble**) run **zero-shot** on the Italian router dataset. Written for two audiences: teammates (read top to bottom) and coding agents (read the "Agent rules" below first, then only the chapters named in your task).
 
 ## What this round is
 

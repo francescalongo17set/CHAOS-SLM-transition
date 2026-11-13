@@ -35,6 +35,7 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | C-27 | Branches carry the Kev size: `orchestrator/baselines-kev-0.8b`, and `-4b` / `-9b` for larger runs. Code lives in `orchestrator-baselines/{common,audit,kev,laya,nimble,runs,reports}/`. Tokenizer plan in P0 approved. |
 | C-28 | Audit finding accepted (P0 step 1). `insurer` is absent from `required_slots` on 140 `product_policy_analysis` / `comparison` rows (`no_policy`, `ambiguous_product`; all gold route `clarification`). Slot questions ask all four slots for these features; only `needs_clarification` is scored (C-06); slot-level metrics, if ever added, skip `insurer` where gold lacks it. Chapter 02 amended. |
 | C-29 | (was P-12) Only `topic` is asked for `regulatory_consultation`; `date_reference` is not asked (gold requires it on only 97 of 389 regulatory rows). Known cost: about 20 gold `date_reference` clarification cases go undetected. |
+| C-30 | Kev-4B runs in **bf16 on a Kaggle T4** (13 Nov). fp32 (about 16 GB) does not fit one T4. Weights pinned to the model card's revision `139fdd94f1b6a6ad80cc15e08fcb99cac885a101` (Hub `main` has moved on to `6cfce5c2`). The report must state that 4B (bf16) and 0.8B (fp32) differ in dtype; per the Kev README bf16 flips about 1 answer in 300, so compare sizes with that caveat. |
 
 ## Delegated (author's choice, owner may override)
 

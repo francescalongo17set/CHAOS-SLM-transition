@@ -1,18 +1,19 @@
 # Handoff · where the baselines round stands
 
-Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync). This file says what is done, where it lives, and what to do next.
+Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync). This file says what is done, where it lives, and what to do next.
 
 ## State
 
 | Piece | Status | Where |
 |---|---|---|
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
-| P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Not merged into this branch.** | branch `orchestrator/baselines-kev-0.8b` (pushed): code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
-| Kev-4B, Kev-9B | not started | would use `orchestrator/baselines-kev-4b` / `-9b` (C-27) |
+| P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
+| Kev-4B | **prepared, run not done**: `--dtype bf16` in `kev/run.py` and `tokens_check.py`, `kev/kaggle_kev_4b.ipynb` (C-30) | branch `orchestrator/baselines-kev-4b` |
+| Kev-9B | not started | `orchestrator/baselines-kev-9b` (C-27) |
 | P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 
-The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are only on the Kev branch.
+The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are now on this base too (PR #3).
 
 ## Kev-0.8B first results (test, 593 rows; one run, one wording, T4)
 
@@ -36,14 +37,14 @@ scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clar
 
 ## What to do next
 
-1. **Merge `orchestrator/baselines-kev-0.8b` into `orchestrator/baselines`** (chapter 07 wants shared code on the base before the other pipelines start; Laya and Nimble will reuse `kev/make_bundle.py` and the notebook pattern). Expect a trivial conflict on the README status line and `.gitignore`: keep the Kev-branch versions. Needs the owner's OK; open a PR and put the open items below in its description.
-2. **Kev-4B (and 9B)**: needs an owner decision first (below), then a new branch, a copy of the notebook with `MODEL=jaredpalmer/kev-4b@<commit>` (look up the commit and weights hash, tags move), and `--run-id kev-4b-...`.
+1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
+2. **Kev-4B**: code and notebook ready on `orchestrator/baselines-kev-4b` (C-30). Next: build the bundle, upload it as a private Kaggle Dataset, run `kev/kaggle_kev_4b.ipynb` on a T4, download and validate the logs. Then **Kev-9B** (likely does not fit; report where it fails, C-25).
 3. **Laya (P2)** and **Nimble (P3)**: write each plan per [chapter 11](../handbook/11-plan-requirements.md) before code. Nimble first needs X-05 (quantization) answered.
 4. **P4 comparison** when runs exist.
 
 ## Open items (owner)
 
-- **Kev-4B dtype.** fp32 4B is about 16 GB and will not fit one T4; bf16 is about 8.4 GB but a T4 has no native bf16 (README says bf16 flips about 1 answer in 300). Options: bf16 on the T4, or another Kaggle GPU. Round 1 so far used fp32 for 0.8B; mixing dtypes across sizes must be stated in the report.
+- ~~Kev-4B dtype~~ decided: bf16 on T4 (C-30); the report must label the dtype mix with the 0.8B fp32 run.
 - **`causal_conv1d`**: install it (needs compiling, may not work on the free tier) before any latency comparison between sizes, or label all Kev latencies as "fallback path". Default if unanswered: label.
 - **X-04** (confidence definition) and **X-05** (quantization for Nimble): still `PENDING`, deferred by the owner.
 - Not checked: Kev GitHub release checksums for the adapter (Hub hashes only, chapter 12).

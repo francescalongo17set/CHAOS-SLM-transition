@@ -70,6 +70,8 @@ def main():
     ap.add_argument("--run-id", required=True)
     ap.add_argument("--out", default=str(ROOT / "runs" / "kev"))
     ap.add_argument("--model", default="jaredpalmer/kev-0.8b@v1.0")
+    ap.add_argument("--dtype", default="fp32", choices=["fp32", "bf16"],
+                    help="load dtype; fp32 is the exact path (0.8B run). bf16 for Kev-4B on a T4 (decision C-30)")
     ap.add_argument("--kev-src", default=None, help="path of the upstream kev clone (for its git sha)")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--smoke", action="store_true")
@@ -86,7 +88,8 @@ def main():
 
     t = time.perf_counter()
     ck = Checkpoint(a.model)
-    tok, model = ck.load(device, LoadOptions())     # fp32 exact path
+    opts = LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16)   # None = fp32 exact path
+    tok, model = ck.load(device, opts)
     load_time = time.perf_counter() - t
     sync = torch.cuda.synchronize if device == "cuda" else None
     scorer = KevScorer(tok, model, device, sync=sync)
@@ -153,7 +156,7 @@ def main():
         "reference_tokenizer": f"{REF_TOKENIZER_ID}@{REF_TOKENIZER_REVISION}",
         "started_at": started, "ended_at": datetime.now(timezone.utc).isoformat(),
         "n_rows": len(rows), "n_error_rows": n_err,
-        "notes": "fp32 eager path (LoadOptions defaults). Two calls per row (core, then predicted-feature slots); "
+        "notes": f"{'fp32 eager path (LoadOptions defaults)' if a.dtype == 'fp32' else 'bf16 load (LoadOptions(dtype=bfloat16)), eager, merged LoRA; NOT the fp32 exact path'}. Two calls per row (core, then predicted-feature slots); "
                  "input_native sums len(enc['ids']) over the calls (state recomputed per call).",
     }
     rj = out_dir / "run.json"
