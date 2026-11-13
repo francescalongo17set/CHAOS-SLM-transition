@@ -1,9 +1,10 @@
 import json
 import copy
+from orchestrator.baselines.common import data, dispatcher, questions
 import pytest
 import yaml
 
-from common import data, state, dispatcher, questions
+from orchestrator.baselines.common import state
 
 FORBIDDEN = {"labels", "support", "resolved_slots", "selected_doc_id"}
 

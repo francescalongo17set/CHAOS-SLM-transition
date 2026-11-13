@@ -8,8 +8,8 @@ the smoke test confirms them on the real model.
 This folder has no __init__.py on purpose: a package named `laya` here would hide the
 installed `laya` library.
 """
-from common.dispatcher import ROUTES
-from common.logs import build_record
+from orchestrator.baselines.common.dispatcher import ROUTES
+from orchestrator.baselines.common.logs import build_record
 
 
 def route_rows(rows):

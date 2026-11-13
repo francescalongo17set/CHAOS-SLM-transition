@@ -11,8 +11,8 @@ Call sequence (verified against kev@2074cc4, serve.py / model.py / api.py):
 """
 import time
 
-from common.questions import CANONICAL_OPTIONS
-from common.state import serialize_state
+from orchestrator.baselines.common.questions import CANONICAL_OPTIONS
+from orchestrator.baselines.common.state import serialize_state
 
 CORE_IDS = ("scope_check", "feature_classification", "complexity_estimation")
 

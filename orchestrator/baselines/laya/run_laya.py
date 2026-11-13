@@ -20,6 +20,8 @@ import sys
 import time
 from pathlib import Path
 
+from orchestrator.baselines.common import data
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path[:0] = [str(HERE), str(ROOT)]
@@ -30,13 +32,13 @@ import torch  # noqa: E402
 import transformers  # noqa: E402
 from huggingface_hub import HfApi  # noqa: E402
 
-import laya_adapter as A  # noqa: E402
-from common import data, state  # noqa: E402
-from common.evaluate import evaluate  # noqa: E402
-from common.logs import LogWriter, read_log, validate_log  # noqa: E402
-from common.questions import QuestionConfig  # noqa: E402
-from common.report import write_report  # noqa: E402
-from common.tokens import RefTokenizer  # noqa: E402
+import orchestrator.baselines.laya.laya_adapter as A  # noqa: E402
+from orchestrator.baselines.common import state  # noqa: E402
+from orchestrator.baselines.common.evaluate import evaluate  # noqa: E402
+from orchestrator.baselines.common.logs import LogWriter, read_log, validate_log  # noqa: E402
+from orchestrator.baselines.common.questions import QuestionConfig  # noqa: E402
+from orchestrator.baselines.common.report import write_report  # noqa: E402
+from orchestrator.baselines.common.tokens import RefTokenizer  # noqa: E402
 
 MODEL_REPO, SUBFOLDER = "convaiinnovations/laya", "multilingual"  # C-05, chapter 09
 WARMUP = 10  # P-03

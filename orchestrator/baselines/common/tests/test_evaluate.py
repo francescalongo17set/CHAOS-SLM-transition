@@ -1,9 +1,10 @@
 import json
 import math
+from orchestrator.baselines.common import evaluate
 import pytest
 
-from common import evaluate, report
-from common.tests.helpers import make_log
+from orchestrator.baselines.common import report
+from orchestrator.baselines.common.tests.helpers import make_log
 
 SPLITS = ["validation", "test"]
 

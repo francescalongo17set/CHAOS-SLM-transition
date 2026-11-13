@@ -8,8 +8,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from common.evaluate import evaluate   # noqa: E402
-from common.report import write_report  # noqa: E402
+from orchestrator.baselines.common.evaluate import evaluate   # noqa: E402
+from orchestrator.baselines.common.report import write_report  # noqa: E402
 
 
 def main():

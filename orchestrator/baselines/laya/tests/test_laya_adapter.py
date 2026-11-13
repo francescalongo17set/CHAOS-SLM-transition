@@ -6,15 +6,16 @@ import hashlib
 import sys
 from pathlib import Path
 
+from orchestrator.baselines.common import data
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # laya/ (flat modules, no package)
 
-import laya_adapter as A  # noqa: E402
-from common import data, state  # noqa: E402
-from common.dispatcher import ROUTES  # noqa: E402
-from common.logs import LogWriter, validate_log  # noqa: E402
-from common.questions import QuestionConfig  # noqa: E402
+import orchestrator.baselines.laya.laya_adapter as A  # noqa: E402
+from orchestrator.baselines.common import state  # noqa: E402
+from orchestrator.baselines.common.dispatcher import ROUTES  # noqa: E402
+from orchestrator.baselines.common.logs import LogWriter, validate_log  # noqa: E402
+from orchestrator.baselines.common.questions import QuestionConfig  # noqa: E402
 
 META = {"run_id": "laya-test", "pipeline": "laya", "model_id": "stand-in",
         "model_revision": "none", "split": "validation"}

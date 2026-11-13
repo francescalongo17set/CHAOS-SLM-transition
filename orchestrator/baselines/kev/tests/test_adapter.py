@@ -9,10 +9,10 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 pytest.importorskip("kev.api")
 
-from adapter import KevScorer, build_request, probs_to_answer  # noqa: E402
-from common import data  # noqa: E402
-from common.logs import LogWriter, build_record, validate_log  # noqa: E402
-from common.questions import QuestionConfig  # noqa: E402
+from orchestrator.baselines.kev.adapter import KevScorer, build_request, probs_to_answer  # noqa: E402
+from orchestrator.baselines.common import data  # noqa: E402
+from orchestrator.baselines.common.logs import LogWriter, build_record, validate_log  # noqa: E402
+from orchestrator.baselines.common.questions import QuestionConfig  # noqa: E402
 
 
 class T:  # tensor stand-in

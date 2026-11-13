@@ -20,11 +20,11 @@ ROOT = HERE.parent                      # orchestrator-baselines/
 sys.path.insert(0, str(HERE))           # `adapter`
 sys.path.append(str(ROOT))              # `common` (appended: upstream `kev` must win the name)
 
-from adapter import KevScorer           # noqa: E402
-from common import data                 # noqa: E402
-from common.logs import LogWriter, build_record, validate_log   # noqa: E402
-from common.questions import QuestionConfig                     # noqa: E402
-from common.tokens import RefTokenizer, REF_TOKENIZER_ID, REF_TOKENIZER_REVISION  # noqa: E402
+from orchestrator.baselines.kev.adapter import KevScorer           # noqa: E402
+from orchestrator.baselines.common import data                 # noqa: E402
+from orchestrator.baselines.common.logs import LogWriter, build_record, validate_log   # noqa: E402
+from orchestrator.baselines.common.questions import QuestionConfig                     # noqa: E402
+from orchestrator.baselines.common.tokens import RefTokenizer, REF_TOKENIZER_ID, REF_TOKENIZER_REVISION  # noqa: E402
 
 WARMUP = 10  # P-03
 
@@ -94,13 +94,13 @@ def main():
     ck = Checkpoint(a.model)
     opts = LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16)   # None = fp32 exact path
     if a.shard:
-        from shard import load_sharded
+        from orchestrator.baselines.kev.shard import load_sharded
         tok, model = load_sharded(ck)
     else:
         tok, model = ck.load(device, opts)
     load_time = time.perf_counter() - t
     if a.shard:
-        from shard import sync_all
+        from orchestrator.baselines.kev.shard import sync_all
         sync = sync_all
     else:
         sync = torch.cuda.synchronize if device == "cuda" else None

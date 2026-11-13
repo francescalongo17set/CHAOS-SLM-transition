@@ -1,9 +1,9 @@
 """Test helpers: perfect (gold) and seeded-random logs."""
 import random
 
-from common import data
-from common.logs import build_record
-from common.questions import CANONICAL_OPTIONS, QuestionConfig
+from orchestrator.baselines.common import data
+from orchestrator.baselines.common.logs import build_record
+from orchestrator.baselines.common.questions import CANONICAL_OPTIONS, QuestionConfig
 
 META = {"run_id": "test", "pipeline": "kev", "model_id": "m", "model_revision": "r", "split": "test"}
 

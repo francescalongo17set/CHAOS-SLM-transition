@@ -1,8 +1,9 @@
 """Mandatory dispatcher oracle (chapter 04): gold fields -> route == support.expected_route,
 on every row of train, validation and test. Any mismatch is reported with query_ids."""
+from orchestrator.baselines.common import data
 import pytest
 
-from common import data, dispatcher
+from orchestrator.baselines.common import dispatcher
 
 
 @pytest.mark.parametrize("split", data.SPLITS)

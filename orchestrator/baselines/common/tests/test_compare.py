@@ -1,6 +1,7 @@
 import json
-from common import compare, evaluate
-from common.tests.helpers import make_log
+from orchestrator.baselines.common import evaluate
+from orchestrator.baselines.common.tests.helpers import make_log
+from orchestrator.baselines.common import compare
 
 
 def _metrics(tmp_path, pipeline, device, mode):

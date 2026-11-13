@@ -12,10 +12,10 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.append(str(HERE.parent))
 
-from adapter import build_request          # noqa: E402
-from common import data                    # noqa: E402
-from common.questions import QuestionConfig   # noqa: E402
-from common.state import serialize_state   # noqa: E402
+from orchestrator.baselines.kev.adapter import build_request          # noqa: E402
+from orchestrator.baselines.common import data                    # noqa: E402
+from orchestrator.baselines.common.questions import QuestionConfig   # noqa: E402
+from orchestrator.baselines.common.state import serialize_state   # noqa: E402
 
 
 def main():
@@ -34,7 +34,7 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     if a.shard:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from shard import load_sharded
+        from orchestrator.baselines.kev.shard import load_sharded
         tok, model = load_sharded(Checkpoint(a.model))
     else:
         tok, model = Checkpoint(a.model).load(device, LoadOptions() if a.dtype == "fp32" else LoadOptions(dtype=torch.bfloat16))

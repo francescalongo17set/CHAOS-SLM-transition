@@ -1,10 +1,11 @@
 import json
+from orchestrator.baselines.common import data, logs
 import pytest
 
-from common import data, logs, tokens
-from common.questions import QuestionConfig
-from common.state import serialize_state
-from common.tests.helpers import make_log
+from orchestrator.baselines.common import tokens
+from orchestrator.baselines.common.questions import QuestionConfig
+from orchestrator.baselines.common.state import serialize_state
+from orchestrator.baselines.common.tests.helpers import make_log
 
 
 def _dump(path, recs):
