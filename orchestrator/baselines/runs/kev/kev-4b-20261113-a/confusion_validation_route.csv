@@ -1,0 +1,6 @@
+gold\pred,lightweight,agentic,clarification,refuse,quick_reply,<error>
+lightweight,6,0,53,33,0,0
+agentic,1,25,44,12,0,0
+clarification,2,6,33,9,0,0
+refuse,1,1,1,45,0,0
+quick_reply,2,2,1,0,21,0
