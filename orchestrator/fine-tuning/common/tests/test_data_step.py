@@ -95,13 +95,14 @@ def test_state_format():                          # 6
 def test_manifest_prefix(tmp_path):                # a one-format bundle must verify without the other format's files
     import json, shutil
     data_dir = HERE.parent / "data"
+    fmt = next(p for p in ("kev/", "laya/") if (data_dir / p).is_dir())    # the format this bundle ships (the repo has both: kev)
     for rel in json.loads((data_dir / "manifest.json").read_text())["files"]:
-        if rel.startswith("kev/"):
+        if rel.startswith(fmt):
             (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(data_dir / rel, tmp_path / rel)
     shutil.copy2(data_dir / "manifest.json", tmp_path / "manifest.json")
-    checks.check_manifest(tmp_path, prefix="kev/")
+    checks.check_manifest(tmp_path, prefix=fmt)
     with pytest.raises(FileNotFoundError):
-        checks.check_manifest(tmp_path)            # no prefix: the missing laya files are noticed
+        checks.check_manifest(tmp_path)            # no prefix: the other format's missing files are noticed
     with pytest.raises(AssertionError):
         checks.check_manifest(tmp_path, prefix="nope/")
