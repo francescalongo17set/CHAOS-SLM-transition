@@ -22,12 +22,14 @@ Single source of truth for round 2. If a chapter and this log disagree, this log
 | FT-C-14 | **Evaluation discipline:** validation first, then **test once per model** after the configuration is frozen. The comparison with zero-shot **shows paired-bootstrap 95% intervals on route accuracy** (same rows, fine-tuned minus zero-shot). There is **no decision rule** such as "interval must exclude zero" and no "scope and feature must not fall" clause. |
 | FT-C-15 | **ECE is reported both raw (T=1) and calibrated, side by side.** |
 | FT-C-16 | All round-1 axes carry over: quality metrics, per-route tables, refusal slices, tokens, latency, model size. Latency is comparable with zero-shot only on the same hardware and dtype. |
-| FT-C-17 | **Branches:** base `orchestrator/fine-tuning` (shared data step and this handbook), then `orchestrator/fine-tuning-laya`, `orchestrator/fine-tuning-kev-0.8b`, `orchestrator/fine-tuning-kev-4b`. The shared step is merged into the base **before** the three branches start. |
+| FT-C-17 | **Branches:** base `orchestrator/ft` (shared data step and this handbook), then `orchestrator/ft-laya`, `orchestrator/ft-kev-0.8b`, `orchestrator/ft-kev-4b`. The shared step is merged into the base **before** the three branches start. |
 | FT-C-18 | At least **two Kaggle accounts** are available. |
 | FT-C-19 | Decision IDs in this log are prefixed `FT-`. |
 | FT-C-20 | X-04 (confidence definition, τ) stays deferred. Logs keep full probability distributions, as in round 1. |
 | FT-C-21 | Fine-tuning reports do **not** carry a "draft, unreviewed" label for the test set. |
 | FT-C-22 | Coding agents stop and ask on ambiguity. |
+| FT-C-23 | **Branch naming:** the existing branch `orchestrator/ft` is the base (13 Nov 2026); pipeline branches are `orchestrator/ft-laya`, `orchestrator/ft-kev-0.8b`, `orchestrator/ft-kev-4b`. Supersedes the `orchestrator/fine-tuning*` names in the first draft. The folder path `orchestrator/fine-tuning/` is unchanged. |
+| FT-C-24 | **`date_reference`-only rows are label errors in `expected_route`.** When the only non-present slot of a row is `date_reference` (never asked, baselines C-29), gold `clarification` is a flaw in the label, not in our data build. Such rows (train 14, validation 4, test 2) are **kept unchanged** (rule 2) and reported as suspected label errors: ids in `02-training-data.md`. Training is unaffected, since the trained targets are per-question labels, none of which is wrong; only `expected_route` is. Chapter 07 test 2 excludes exactly these rows. |
 
 ## Delegated (author's choice, owner may override)
 

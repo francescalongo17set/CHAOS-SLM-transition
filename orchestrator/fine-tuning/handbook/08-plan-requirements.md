@@ -6,11 +6,11 @@ The next step after this handbook is one **implementation plan per branch**. A p
 
 | Plan | Branch | Depends on | Reuses |
 |---|---|---|---|
-| FT-P0 · Shared data step | `orchestrator/fine-tuning` | baselines P0 (shared package) merged | `common.data`, `common.state`, `common.questions`, `common.dispatcher` |
-| FT-P1 · Laya fine-tuning | `orchestrator/fine-tuning-laya` | FT-P0 merged | baselines P2 plan and `laya/run_laya.py` |
-| FT-P2 · Kev-0.8B fine-tuning | `orchestrator/fine-tuning-kev-0.8b` | FT-P0 merged | baselines P1 plan, `kev/run.py`, `kev/make_bundle.py`, `kev/kaggle_kev_0.8b.ipynb` |
-| FT-P3 · Kev-4B fine-tuning | `orchestrator/fine-tuning-kev-4b` | FT-P0 merged; FT-P2 steps C0 and C1 done (FT-P-02) | same as FT-P2 plus `--dtype bf16` handling |
-| FT-P4 · Comparison | `orchestrator/fine-tuning` | FT-P1 to FT-P3 runs | `common/compare.py` |
+| FT-P0 · Shared data step | `orchestrator/ft` | baselines P0 (shared package) merged | `common.data`, `common.state`, `common.questions`, `common.dispatcher` |
+| FT-P1 · Laya fine-tuning | `orchestrator/ft-laya` | FT-P0 merged | baselines P2 plan and `laya/run_laya.py` |
+| FT-P2 · Kev-0.8B fine-tuning | `orchestrator/ft-kev-0.8b` | FT-P0 merged | baselines P1 plan, `kev/run.py`, `kev/make_bundle.py`, `kev/kaggle_kev_0.8b.ipynb` |
+| FT-P3 · Kev-4B fine-tuning | `orchestrator/ft-kev-4b` | FT-P0 merged; FT-P2 steps C0 and C1 done (FT-P-02) | same as FT-P2 plus `--dtype bf16` handling |
+| FT-P4 · Comparison | `orchestrator/ft` | FT-P1 to FT-P3 runs | `common/compare.py` |
 
 FT-P1 and FT-P2 start first and run in parallel on the two accounts; FT-P3 starts when an account is free (FT-P-01).
 
@@ -33,7 +33,7 @@ FT-P1 and FT-P2 start first and run in parallel on the two accounts; FT-P3 start
 4. `split.py`: group-disjoint calibration partition (union-find on `bundle_id` and `pair_id`, stratified by `expected_route`, seed `20261113`).
 5. `checks.py`: the leakage assertions and counts versus `data/manifest.json`.
 6. The seven tests of chapter 07.
-7. Commit `data/manifest.json`; merge into `orchestrator/fine-tuning`.
+7. Commit `data/manifest.json`; merge into `orchestrator/ft`.
 
 ## FT-P1 to FT-P3 minimum steps
 

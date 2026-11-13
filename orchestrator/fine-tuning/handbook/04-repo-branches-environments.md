@@ -3,19 +3,19 @@
 ## Branch model (FT-C-17)
 
 ```
-orchestrator/fine-tuning                 ← base: shared data step + this handbook
-  ├── orchestrator/fine-tuning-laya      ← Laya-multilingual
-  ├── orchestrator/fine-tuning-kev-0.8b  ← Kev-0.8B
-  └── orchestrator/fine-tuning-kev-4b    ← Kev-4B
+orchestrator/ft                 ← base: shared data step + this handbook
+  ├── orchestrator/ft-laya      ← Laya-multilingual
+  ├── orchestrator/ft-kev-0.8b  ← Kev-0.8B
+  └── orchestrator/ft-kev-4b    ← Kev-4B
 ```
 
-The three pipeline branches are independent and can run in parallel. The shared step (chapter 02) is merged into `orchestrator/fine-tuning` **first**, otherwise three branches invent three data builders. The baselines package on `orchestrator/baselines` is imported, never edited on these branches.
+The three pipeline branches are independent and can run in parallel. The shared step (chapter 02) is merged into `orchestrator/ft` **first**, otherwise three branches invent three data builders. The baselines package on `orchestrator/baselines` is imported, never edited on these branches.
 
 | Stage | Branch | Content |
 |---|---|---|
-| 0 | `orchestrator/fine-tuning` | Data builder, splitter, checks, tests (chapters 02 and 07), `data/manifest.json`, this handbook. |
+| 0 | `orchestrator/ft` | Data builder, splitter, checks, tests (chapters 02 and 07), `data/manifest.json`, this handbook. |
 | 1 | the three pipeline branches | Pipeline code, notebooks, runs. Pull shared changes from the base; never fork them. |
-| 2 | `orchestrator/fine-tuning` | Merge run logs and reports back; produce the comparison. |
+| 2 | `orchestrator/ft` | Merge run logs and reports back; produce the comparison. |
 
 ## Layout
 

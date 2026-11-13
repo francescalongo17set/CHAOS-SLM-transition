@@ -1,6 +1,6 @@
 # 05 · Pipeline: Laya (multilingual)
 
-Branch: `orchestrator/fine-tuning-laya`. Run id `laya-ft-multilingual-a`. Priority 1 (FT-C-03). Read first: chapters 01 to 04. Facts marked *(upstream)* come from the Laya source read on 13 Nov 2026 (`laya` `main`, `laya.train`); nothing here has been run. Items in chapter 09 must be checked before they are relied on.
+Branch: `orchestrator/ft-laya`. Run id `laya-ft-multilingual-a`. Priority 1 (FT-C-03). Read first: chapters 01 to 04. Facts marked *(upstream)* come from the Laya source read on 13 Nov 2026 (`laya` `main`, `laya.train`); nothing here has been run. Items in chapter 09 must be checked before they are relied on.
 
 ## Environment
 

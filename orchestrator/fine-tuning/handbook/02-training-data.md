@@ -1,6 +1,6 @@
 # 02 · Training data and splits (shared data step)
 
-This chapter is the **shared step** every fine-tuning branch depends on. It lives on the base branch `orchestrator/fine-tuning` and is merged before the three pipeline branches start (chapter 04). Facts marked *(repo)* were computed on the train split on 13 Nov 2026 and must be re-checked by the audit step below.
+This chapter is the **shared step** every fine-tuning branch depends on. It lives on the base branch `orchestrator/ft` and is merged before the three pipeline branches start (chapter 04). Facts marked *(repo)* were computed on the train split on 13 Nov 2026 and must be re-checked by the audit step below.
 
 ## What must stay identical to round 1
 
@@ -29,6 +29,8 @@ Groups: `support.bundle_id` has 805 groups (493 singletons, 185 of size 2, 110 o
 | `date_reference` is never asked (baselines C-29). 68 train regulatory rows carry it in `slot_status`; ignore it. | Matches evaluation. |
 | Feature `none` has no slot questions (`by_feature.none = []`). | |
 | Slot questions are built from the **gold** feature at train time (teacher forcing). At evaluation they come from the predicted feature; the cascade stays in the evaluation. | Baselines C-23. |
+
+**Suspected label errors (FT-C-24).** 14 train rows (validation 4, test 2) have `date_reference` as their only non-present slot, so gold `expected_route` is `clarification` while no asked slot is missing. The flaw is in `expected_route`; the rows are not edited or dropped. Training targets are per-question labels and stay correct. The same rows can never be routed to clarification at evaluation (baselines C-29), which is part of the known cost there. Train ids: orc-000898, 001075, 001076, 001077, 001120, 001127, 001128, 001129, 001395, 001397, 001405, 001406, 001407, 001408.
 
 Known train/eval asymmetry (not a bug): complexity is trained only on in_scope rows but asked on every row at evaluation and scored only on in_scope rows. The dispatcher returns `refuse` or `quick_reply` before it reads complexity, so the asymmetry cannot change a route.
 

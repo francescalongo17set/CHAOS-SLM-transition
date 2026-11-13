@@ -1,6 +1,6 @@
 # 06 · Pipeline: Kev (0.8B and 4B)
 
-Branches: `orchestrator/fine-tuning-kev-0.8b` (priority 2) and `orchestrator/fine-tuning-kev-4b` (priority 3), FT-C-03. Read first: chapters 01 to 04. Facts marked *(upstream)* come from the Kev source read on 13 Nov 2026 (`kev` `main`: `train.py`, `data.py`, calibration scripts); nothing here has been run. Everything applies to both sizes unless the table below says otherwise.
+Branches: `orchestrator/ft-kev-0.8b` (priority 2) and `orchestrator/ft-kev-4b` (priority 3), FT-C-03. Read first: chapters 01 to 04. Facts marked *(upstream)* come from the Kev source read on 13 Nov 2026 (`kev` `main`: `train.py`, `data.py`, calibration scripts); nothing here has been run. Everything applies to both sizes unless the table below says otherwise.
 
 ## Per-size parameters
 

@@ -1,6 +1,6 @@
 # Orchestrator Fine-tuning Handbook (round 2)
 
-> **Status: DRAFT v0.1, 13 Nov 2026.** Guideline book for round 2 of the orchestrator work: fine-tuning **Laya-multilingual**, **Kev-0.8B** and **Kev-4B** on the Italian router dataset, then measuring each against its own zero-shot run from round 1 (the baselines handbook, `orchestrator/baselines/handbook/`). Nothing in this book has been run yet. Written for teammates (read top to bottom) and coding agents (read the "Agent rules" first, then only the chapters named in your task).
+> **Status: DRAFT v0.1, 13 Nov 2026.** Guideline book for round 2 of the orchestrator work: fine-tuning **Laya-multilingual**, **Kev-0.8B** and **Kev-4B** on the Italian router dataset, then measuring each against its own zero-shot run from round 1 (the baselines handbook, `orchestrator/baselines/handbook/`). Shared data step and Kev-0.8B code written, not yet run on a GPU (plan `plans/FT-P2-kev-0.8b.md`).  Written for teammates (read top to bottom) and coding agents (read the "Agent rules" first, then only the chapters named in your task).
 
 ## What this round is
 
