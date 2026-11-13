@@ -53,17 +53,16 @@ def test_probs_to_answer():
 
 
 @pytest.mark.parametrize("fi", range(6))
-def test_predict_slots_follow_predicted_feature(fi):
+def test_predict_is_one_call_with_three_questions(fi):
     q = QuestionConfig()
     row = data.load_split("validation")[0]
     model = FakeModel(fi)
     ans, st = KevScorer(None, model, "cpu").predict(row, q)
-    feat = ans["feature_classification"]["label"]
-    assert feat == FEATURES[fi]
-    assert sorted(ans["slots"]) == sorted(q.slots_for_feature(feat))
-    assert model.calls == ([3] if feat == "none" else [3, len(q.slots_for_feature(feat))])
-    assert st["input_native"] == sum(100 + 10 * n for n in model.calls)
-    for a in (ans["scope_check"], ans["feature_classification"], ans["complexity_estimation"], *ans["slots"].values()):
+    assert ans["feature_classification"]["label"] == FEATURES[fi]
+    assert set(ans) == {"scope_check", "feature_classification", "complexity_estimation"}   # v2: no slots
+    assert model.calls == [3]
+    assert st["input_native"] == 100 + 10 * 3
+    for a in ans.values():
         assert abs(sum(a["probs"].values()) - 1) < 1e-3
         assert list(a["probs"]) == a["option_order"]
 

@@ -1,6 +1,7 @@
 """Question config loader (P0 step 4). Wording lives in questions.<lang>.yaml (C-21).
 
 Option ids and order are fixed here and checked against the file (chapter 03, P-02).
+v2: no slot questions.
 """
 import hashlib
 from dataclasses import dataclass
@@ -15,10 +16,7 @@ CANONICAL_OPTIONS = {
     "feature_classification": ["regulatory_consultation", "product_policy_analysis",
                                "comparison", "ibip_screening", "client_drafting", "none"],
     "complexity_estimation": ["simple", "complex"],
-    "slots": ["present", "missing", "ambiguous"],
 }
-SLOT_IDS = ["insurer", "product", "field", "coverage", "topic", "date_reference",
-            "client_profile", "message_goal"]
 
 
 @dataclass(frozen=True)
@@ -49,18 +47,6 @@ class QuestionConfig:
             for o in cfg[key]["options"]:
                 if not str(o.get("text", "")).strip():
                     raise ValueError(f"{path.name}: empty text for {key}.{o['id']}")
-        desc = cfg["slots"].get("descriptions", {})
-        if set(desc) != set(SLOT_IDS):
-            raise ValueError(f"{path.name}: slot descriptions must cover exactly {SLOT_IDS}")
-        by = cfg["slots"]["by_feature"]
-        for f, slots in by.items():
-            for s in slots:
-                if s not in SLOT_IDS:
-                    raise ValueError(f"{path.name}: unknown slot {s!r} for feature {f!r}")
-        if set(by) != set(CANONICAL_OPTIONS["feature_classification"]):
-            raise ValueError(f"{path.name}: by_feature must cover every feature option")
-        if "{slot_description}" not in cfg["slots"]["instructions"]:
-            raise ValueError(f"{path.name}: slots.instructions needs {{slot_description}}")
 
     def _q(self, qid, key, instructions):
         sec = self._cfg[key]
@@ -77,16 +63,6 @@ class QuestionConfig:
         return self._q("complexity_estimation", "complexity_estimation",
                        self._cfg["complexity_estimation"]["instructions"].strip())
 
-    def slot_question(self, slot):
-        s = self._cfg["slots"]
-        ins = s["instructions"].strip().format(slot_description=s["descriptions"][slot])
-        return self._q(f"slot:{slot}", "slots", ins)
-
-    def slots_for_feature(self, feature):
-        return list(self._cfg["slots"]["by_feature"][feature])
-
-    def questions_for(self, predicted_feature):
-        """Fixed questions plus slot questions of the predicted feature (C-23)."""
-        qs = [self.scope_check(), self.feature_classification(), self.complexity_estimation()]
-        qs += [self.slot_question(s) for s in self.slots_for_feature(predicted_feature)]
-        return qs
+    def questions(self):
+        """The three fixed questions, asked once per row (v2: no slot questions)."""
+        return [self.scope_check(), self.feature_classification(), self.complexity_estimation()]

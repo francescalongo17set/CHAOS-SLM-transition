@@ -66,15 +66,6 @@ def test_rejects_reordered_options(tmp_path, good):
     assert any("option_order" in e for e in mutate(tmp_path, good, f))
 
 
-def test_rejects_wrong_slots_for_predicted_feature(tmp_path, good):
-    def f(r):
-        for x in r:
-            if x["answers"]["slots"]:
-                x["answers"]["slots"].pop(next(iter(x["answers"]["slots"])))
-                break
-    assert any("predicted-feature slots" in e for e in mutate(tmp_path, good, f))
-
-
 def test_error_row_is_accepted_but_row_present(tmp_path, good):
     def f(r):
         r[0]["error"] = "oom"
@@ -118,6 +109,6 @@ def tok():
 def test_ref_tokenizer_stable(tok):
     r = data.load_split("validation")[0]
     s = serialize_state(r.model_input)
-    qs = QuestionConfig().questions_for("comparison")
+    qs = QuestionConfig().questions()
     a, b = tok.count_ref(s, qs), tok.count_ref(s, qs)
     assert a == b > tok.count_state(s) > 0

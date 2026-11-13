@@ -55,10 +55,7 @@ def test_questions_default_loads():
     q = questions.QuestionConfig()
     assert q.scope_check().option_ids == questions.CANONICAL_OPTIONS["scope_check"]
     assert len(q.sha256) == 64
-    qs = q.questions_for("ibip_screening")
-    assert [x.qid for x in qs] == ["scope_check", "feature_classification",
-                                   "complexity_estimation", "slot:product", "slot:client_profile"]
-    assert q.questions_for("none")[-1].qid == "complexity_estimation"
+    assert [x.qid for x in q.questions()] == ["scope_check", "feature_classification", "complexity_estimation"]
 
 
 def _write(tmp_path, mutate):
@@ -83,21 +80,15 @@ def test_questions_reject_reordered_option(tmp_path):
         questions.QuestionConfig(_write(tmp_path, m))
 
 
-def test_questions_reject_unknown_slot(tmp_path):
-    p = _write(tmp_path, lambda c: c["slots"]["by_feature"].__setitem__("comparison", ["bogus"]))
-    with pytest.raises(ValueError):
-        questions.QuestionConfig(p)
-
-
 ROUTE_CASES = [
-    (("out_of_scope", "none", None, False), "refuse"),
-    (("out_of_scope", "none", None, True), "refuse"),
-    (("quick_reply", "none", None, False), "quick_reply"),
-    (("in_scope", "ibip_screening", "complex", True), "clarification"),
-    (("in_scope", "ibip_screening", "simple", False), "agentic"),
-    (("in_scope", "client_drafting", "simple", False), "agentic"),
-    (("in_scope", "comparison", "complex", False), "agentic"),
-    (("in_scope", "comparison", "simple", False), "lightweight"),
+    (("out_of_scope", "none", None), "refuse"),
+    (("quick_reply", "none", None), "quick_reply"),
+    (("in_scope", "ibip_screening", "complex"), "agentic"),
+    (("in_scope", "ibip_screening", "simple"), "agentic"),
+    (("in_scope", "client_drafting", "simple"), "agentic"),
+    (("in_scope", "comparison", "complex"), "agentic"),
+    (("in_scope", "comparison", "simple"), "lightweight"),
+    (("in_scope", "product_policy_analysis", "simple"), "lightweight"),
 ]
 
 
@@ -108,8 +99,16 @@ def test_dispatch_rules(args, expected):
 
 def test_dispatch_rejects_tau():
     with pytest.raises(NotImplementedError):
-        dispatcher.dispatch("in_scope", "comparison", "simple", False, tau=0.5)
+        dispatcher.dispatch("in_scope", "comparison", "simple", tau=0.5)
 
 
-def test_regulatory_asks_only_topic():
-    assert questions.QuestionConfig().slots_for_feature("regulatory_consultation") == ["topic"]
+def test_no_clarification_route():
+    assert "clarification" not in dispatcher.ROUTES
+    assert len(dispatcher.ROUTES) == 4
+
+
+def test_v2_missing_info_is_kept_but_never_routes():
+    rows = data.load_split("test")
+    withmi = [r for r in rows if r.labels.get("missing_info")]
+    assert withmi and all(r.support["expected_route_v1"] == "clarification" for r in withmi)
+    assert all(r.support["expected_route"] != "clarification" for r in rows)

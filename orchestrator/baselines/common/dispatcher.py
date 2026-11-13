@@ -1,10 +1,13 @@
-"""Deterministic dispatcher (chapter 04, C-14). Rule table, first match wins."""
+"""Deterministic dispatcher, v2 (no clarification route). Rule table, first match wins.
+
+v2 (owner decision 13 Nov, option B): missing information is handled by the agent / response path,
+so the orchestrator no longer decides it and a missing slot never changes the route."""
 
 SENSITIVE_FEATURES = {"ibip_screening", "client_drafting"}
-ROUTES = ("lightweight", "agentic", "clarification", "refuse", "quick_reply")
+ROUTES = ("lightweight", "agentic", "refuse", "quick_reply")
 
 
-def dispatch(scope_check, feature, complexity, needs_clarification, tau=None, confidence=None):
+def dispatch(scope_check, feature, complexity, tau=None, confidence=None):
     """Return the route for one orchestrator record.
 
     tau / confidence: the low-confidence -> agentic override is NOT implemented in
@@ -16,19 +19,15 @@ def dispatch(scope_check, feature, complexity, needs_clarification, tau=None, co
         return "refuse"
     if scope_check == "quick_reply":
         return "quick_reply"
-    if needs_clarification:
-        return "clarification"
     if feature in SENSITIVE_FEATURES or complexity == "complex":
         return "agentic"
     return "lightweight"
 
 
 def gold_record(row):
-    """Orchestrator record built from gold labels + support.slot_status (oracle test)."""
-    lab, sup = row.labels, row.support
-    needs = any(v != "present" for v in (sup.get("slot_status") or {}).values())
-    return {"scope_check": lab["scope_check"], "feature": lab["feature"],
-            "complexity": lab.get("complexity"), "needs_clarification": needs}
+    """Orchestrator record built from gold labels (oracle test)."""
+    lab = row.labels
+    return {"scope_check": lab["scope_check"], "feature": lab["feature"], "complexity": lab.get("complexity")}
 
 
 def dispatch_gold(row):

@@ -1,5 +1,7 @@
 # 02 · Data and task spec
 
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`.
+
 > Everything here was observed on a sample of the **test** split shared in chat (rows `orc-002401` to `orc-003087`). The agent's first task is to **verify each statement against the real files** and report any difference (see "Data audit" at the end). `manifest.json` is the authority on split construction.
 
 ## Files
@@ -35,7 +37,7 @@ One JSON object per line. All rows are Italian (`language: "it"`), some code-mix
   "support": {
     "required_slots": [...], "filled_slots": [...],
     "slot_status": { "<slot>": "present" | "missing" | "ambiguous" },
-    "expected_route": "lightweight" | "agentic" | "clarification" | "refuse" | "quick_reply",
+    "expected_route": "lightweight" | "agentic" | "refuse" | "quick_reply",   // v2; v1 also had "clarification" (kept as support.expected_route_v1 in v2)
     "context_scenario": "self_contained" | "slot_clarified" | "follow_up" | "no_policy" | "ambiguous_product",
     "context_dependency": true | false,
     "noise_tags": ["typos_abbreviations", "code_mixed", "long_preamble", "telegraphic",
@@ -61,10 +63,10 @@ One JSON object per line. All rows are Italian (`language: "it"`), some code-mix
 | `scope_check` | `in_scope`, `out_of_scope`, `quick_reply` | all rows |
 | `feature_classification` (`labels.feature`) | `regulatory_consultation`, `product_policy_analysis`, `comparison`, `ibip_screening`, `client_drafting`, `none` | all rows (`none` for `out_of_scope` and `quick_reply`) |
 | `complexity_estimation` (`labels.complexity`) | `simple`, `complex` | rows where gold `scope_check` = `in_scope` |
-| `needs_clarification` (derived, C-06) | `true` iff `labels.missing_info` is non-empty | rows where gold `scope_check` = `in_scope` |
-| route (derived by the dispatcher, chapter 04) | `lightweight`, `agentic`, `clarification`, `refuse`, `quick_reply` | all rows |
+| ~~`needs_clarification`~~ (v1 only, C-06) | not scored in v2 (C-35); `labels.missing_info` is kept as metadata | n/a |
+| route (derived by the dispatcher, chapter 04) | `lightweight`, `agentic`, `refuse`, `quick_reply` (v2; v1 added `clarification`) | all rows |
 
-`needs_clarification` is the scored form of `missing_info`. In the sample, a slot listed in `labels.missing_info` has status `missing` **or** `ambiguous` in `support.slot_status`, and every row with a non-empty `missing_info` has `expected_route = clarification`. Verify on the full data.
+**v1 only:** `needs_clarification` was the scored form of `missing_info`; v2 does not score it (C-35, C-36). The rest of this paragraph describes v1. In the sample, a slot listed in `labels.missing_info` has status `missing` **or** `ambiguous` in `support.slot_status`, and every row with a non-empty `missing_info` has `expected_route = clarification`. Verify on the full data.
 
 ## Slots per feature (observed in the sample)
 

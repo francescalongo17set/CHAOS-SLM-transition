@@ -1,5 +1,7 @@
 # 05 · Evaluation protocol
 
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`. Calibration is reported for the three questions only (no slot pool); route attribution has no `needs_clarification` entry.
+
 One shared script computes every number from the prediction logs (chapter 06) and the ground truth. Pipelines never compute metrics themselves.
 
 ## Splits
@@ -17,10 +19,10 @@ One shared script computes every number from the prediction logs (chapter 06) an
 | `scope_check` | all rows |
 | `feature_classification` | all rows |
 | `complexity_estimation` | rows with gold `scope_check == in_scope` |
-| `needs_clarification` | rows with gold `scope_check == in_scope` (gold = `labels.missing_info` non-empty) |
+| ~~`needs_clarification`~~ | v1 only. Not scored in v2 (C-35). |
 | route (end-to-end) | all rows |
 
-Complexity and slot questions are still *asked* for every row so probabilities are logged; they are simply not scored where the gold has no label.
+Complexity is still *asked* for every row so probabilities are logged; they are simply not scored where the gold has no label.
 
 ## Quality metrics (C-09, C-06)
 
@@ -33,8 +35,8 @@ For each scored output:
 
 Specifics:
 
-- `needs_clarification` is binary; report P/R/F1 of the positive class (needs clarification) and accuracy.
-- **Route (end-to-end):** the dispatcher run on the model's *predicted* record with `tau=None` versus `support.expected_route`. Report the same metrics on the 5 routes, plus the per-route breakdown (L-02b).
+- v1 only: `needs_clarification` (binary). Not part of v2.
+- **Route (end-to-end):** the dispatcher run on the model's *predicted* record with `tau=None` versus `support.expected_route`. Report the same metrics on the 4 routes (v2; v1 had 5), plus the per-route breakdown (L-02b).
 - **Dispatcher oracle:** the dispatcher run on *gold* fields versus `expected_route` must be 100% (chapter 04). Report it as a sanity line, not as a model result.
 - **Route attribution** (small table, no extra metric): for each wrong route, which earlier field was the first one wrong. It tells the owner where the errors enter.
 

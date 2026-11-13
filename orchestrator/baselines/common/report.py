@@ -25,8 +25,6 @@ def render(M):
          "## Quality", ""]
     for k in ("scope_check", "feature_classification", "complexity_estimation"):
         L += _quality(k + (" (gold in_scope rows)" if k == "complexity_estimation" else ""), M[k])
-    nc = M["needs_clarification"]
-    L += _quality("needs_clarification (gold in_scope rows; positive = needs clarification)", nc)
     L += _quality("route, end-to-end (tau=None)", M["route"])
     L += ["### Route attribution (first wrong field for each wrong route)", "", "| first wrong | n |", "|---|---|"]
     L += [f"| {k} | {v} |" for k, v in sorted(M["route_attribution"].items(), key=lambda kv: -kv[1])] + [""]

@@ -1,5 +1,7 @@
 # 06 · Prediction log schema (PROPOSED, P-07)
 
+> **v2 (13 Nov 2026, C-35 to C-37):** the orchestrator no longer decides missing information. Dataset v2 (`data-generation/data/final_v2/`) has 4 routes; the model answers 3 questions in one call per row. Round-1 (v1) text below is kept where it still describes the v1 runs in `../runs/`.
+
 Every pipeline writes the **same** JSONL, one line per request. The shared evaluation script reads only this file and `router.jsonl`. This is what makes three independently built pipelines comparable.
 
 Path: `runs/<pipeline>/<run_id>/<split>.jsonl`, plus `runs/<pipeline>/<run_id>/run.json` (run-level metadata, below).
@@ -21,13 +23,9 @@ Path: `runs/<pipeline>/<run_id>/<split>.jsonl`, plus `runs/<pipeline>/<run_id>/r
                                "probs": {"in_scope": 0.93, "out_of_scope": 0.05, "quick_reply": 0.02},
                                "option_order": ["in_scope", "out_of_scope", "quick_reply"]},
     "feature_classification": {"label": "product_policy_analysis", "probs": {...}, "option_order": [...]},
-    "complexity_estimation":  {"label": "simple", "probs": {...}, "option_order": [...]},
-    "slots": {
-      "insurer":  {"label": "present", "probs": {"present": 0.9, "missing": 0.05, "ambiguous": 0.05}, "option_order": [...]}
-    }
+    "complexity_estimation":  {"label": "simple", "probs": {...}, "option_order": [...]}
   },
-  "slots_asked_for": "predicted_feature",   // C-23; the validator also accepts "gold_feature" and "all" for later studies
-  "needs_clarification": false,
+  // v1 also had answers.slots, "slots_asked_for" and "needs_clarification"; v2 logs do not (C-37)
 
   "temperature_applied": 2.41,          // null if the runtime reports none; "raw" if forced to 1.0
   "latency_ms": 312.4,                  // wall clock, request sent to full response (chapter 05)

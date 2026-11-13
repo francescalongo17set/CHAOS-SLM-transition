@@ -41,9 +41,9 @@ def main():
     q = QuestionConfig()
     row = data.load_split("validation")[0]
     state = serialize_state(row.model_input)
-    qs = [q.scope_check(), q.feature_classification(), q.complexity_estimation(), q.slot_question("product")]
+    qs = [q.scope_check(), q.feature_classification(), q.complexity_estimation()]
     res = {}
-    for n in (1, 2, 4):
+    for n in (1, 2, 3):
         rec, _ = to_record(build_request(state, qs[:n]))
         enc = admit(model, tok, rec)
         res[f"{n}_questions"] = {"len_ids": len(enc["ids"]), "state_tokens": enc["state_tokens"]}

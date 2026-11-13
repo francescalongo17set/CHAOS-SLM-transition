@@ -32,8 +32,6 @@ def build(runs, dropped=None):
             ("feature macro-F1", lambda m: m["feature_classification"]["macro_f1"]),
             ("complexity accuracy", lambda m: m["complexity_estimation"]["accuracy"]),
             ("complexity macro-F1", lambda m: m["complexity_estimation"]["macro_f1"]),
-            ("needs_clarification accuracy", lambda m: m["needs_clarification"]["accuracy"]),
-            ("needs_clarification F1 (positive)", lambda m: m["needs_clarification"]["positive_class"]["f1"]),
             ("route accuracy (tau=None)", lambda m: m["route"]["accuracy"]),
             ("route macro-F1", lambda m: m["route"]["macro_f1"]),
             ("refuse recall (all)", lambda m: m["refuse_recall"]["all"]["recall"]),

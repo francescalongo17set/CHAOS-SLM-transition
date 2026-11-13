@@ -46,12 +46,12 @@ class StandIn:
 
 def _record(agent, row, q):
     st = state.serialize_state(row.model_input)
-    core, slot_qs, ra, rb = A.predict_row(agent, q, st)
-    return A.make_record(row, META, core, slot_qs, ra, rb, 1.0, False, 99)
+    core, res = A.predict_row(agent, q, st)
+    return A.make_record(row, META, core, res, 1.0, False, 99)
 
 
 @pytest.fixture(scope="module")
-def five():
+def five():  # one row per route (4 in v2)
     return A.route_rows(data.load_split("validation"))
 
 
@@ -59,7 +59,7 @@ def test_route_rows_one_per_route(five):
     assert [r.support["expected_route"] for r in five] == list(ROUTES)
 
 
-def test_five_lines_pass_the_shared_validator(five, tmp_path):
+def test_routes_lines_pass_the_shared_validator(five, tmp_path):
     q = QuestionConfig()
     log = tmp_path / "validation.jsonl"
     with LogWriter(log) as w:
@@ -71,16 +71,15 @@ def test_five_lines_pass_the_shared_validator(five, tmp_path):
     assert len(errs) == 1 and "missing from log" in errs[0], errs
 
 
-def test_two_calls_slots_of_predicted_feature(five):
+def test_one_call_three_questions(five):
     q = QuestionConfig()
     for r in five:
         agent = StandIn()
         rec = _record(agent, r, q)
+        assert len(agent.calls) == 1
         assert agent.calls[0] == ["scope_check", "feature_classification", "complexity_estimation"]
-        want = q.slots_for_feature(rec["answers"]["feature_classification"]["label"])
-        assert sorted(rec["answers"]["slots"]) == sorted(want)
-        assert len(agent.calls) == (2 if want else 1)
-        assert rec["tokens"]["input_native"] == sum(40 * len(c) for c in agent.calls)
+        assert set(rec["answers"]) == {"scope_check", "feature_classification", "complexity_estimation"}
+        assert rec["tokens"]["input_native"] == 40 * 3
         assert rec["temperature_applied"] is None
 
 

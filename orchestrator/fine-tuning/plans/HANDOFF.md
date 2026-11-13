@@ -1,5 +1,7 @@
 # Handoff · where the fine-tuning round stands
 
+> **Heads-up (13 Nov 2026):** the baselines moved to dataset v2 (no `clarification` route, no slot questions; `orchestrator/baselines/handbook/01-decisions-log.md` C-35 to C-37). The fine-tuning code and plans here are still on v1 (`final/`, 5 routes, slots). Decide whether to rebuild the data step for v2 before running more fine-tuning.
+
 Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync, test touched once per model). This file says what is done, where it lives, and what to do next. Branch: `orchestrator/ft` (FT-C-23).
 
 ## State

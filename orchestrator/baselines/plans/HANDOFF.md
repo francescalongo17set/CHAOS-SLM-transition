@@ -1,5 +1,7 @@
 # Handoff · where the baselines round stands
 
+> **v2 in progress (13 Nov 2026, branch `orchestrator/v2-no-clarification`):** missing information moves to the agent (C-35). Dataset `data-generation/data/final_v2/` (4 routes, built by `data-generation/data/code/make_v2.py`), shared code and both Kaggle notebooks (Kev-0.8B, Laya) are updated; 47 tests pass. The two v2 baseline runs (`kev-0.8b-v2-*`, `laya-v2-a`) were started on Kaggle; copy results to `runs/` and add them to the report when done. Not yet done: `audit/audit.py` still audits v1 (`final/`), Kev-4B/9B v2 reruns, and the fine-tuning code (still v1). The v1 numbers below are history and are not comparable with v2.
+
 Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync). This file says what is done, where it lives, and what to do next.
 
 ## State

@@ -1,5 +1,7 @@
 # Plan P2 · Laya
 
+> **v2 update (13 Nov 2026):** this plan describes the v1 run. v2 (decisions C-35 to C-37 in `handbook/01-decisions-log.md`) drops the slot questions and the `clarification` route; one model call per row, 4 routes. The v2 notebooks are `laya/laya_kaggle.ipynb`; run ids `laya-v2-a`.
+
 Branch: `orchestrator/baselines-laya` (from `orchestrator/baselines`, P0 merged).
 Status: **DONE** (13 Nov 2026): all steps run on a Kaggle T4; results in `runs/laya/laya-multilingual-a/` (test route accuracy 0.265, 0 errors, 0 truncated). Decisions C-30, C-31.
 
