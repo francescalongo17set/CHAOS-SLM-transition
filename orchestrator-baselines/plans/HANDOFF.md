@@ -8,7 +8,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 |---|---|---|
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
-| Kev-4B | **prepared, run not done**: `--dtype bf16` in `kev/run.py` and `tokens_check.py`, `kev/kaggle_kev_4b.ipynb` (C-32) | branch `orchestrator/baselines-kev-4b` |
+| Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). Not yet merged to the base. | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
 | Kev-9B | not started | `orchestrator/baselines-kev-9b` (C-27) |
 | P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
@@ -18,6 +18,10 @@ The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Ke
 ## Kev-0.8B first results (test, 593 rows; one run, one wording, T4)
 
 scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clarification acc 0.423 · **route acc 0.331 (macro-F1 0.329)** · refuse recall 0.126 (safety-leak slice 0.057) · ECE 0.27 on scope_check. Most wrong routes go wrong first at `needs_clarification` (191 of 397), then `scope_check` (126), then feature (80): Kev over-predicts `ambiguous`/`missing` for slots. Mean latency 431 ms (slow `causal_conv1d` fallback), 552 native input tokens, 3.2 GB peak GPU, 753M parameters. Full detail: `report_test.md` on the Kev branch. Do not rank models on small gaps (chapter 05).
+
+## Kev-4B first results (test, 593 rows; one run, bf16, T4; run `kev-4b-20261113-a`)
+
+scope_check acc 0.801 · feature acc 0.801 · complexity acc 0.822 · needs_clarification acc 0.383 · **route acc 0.423 (macro-F1 0.471)** · refuse recall 0.789 (safety-leak slice 0.771; prompt-injection 0.556 on 18 rows) · ECE 0.150 on scope_check. Still most wrong routes go wrong first at `needs_clarification` (183 of 397), then `scope_check` (118): clarification over-flagged (precision 0.233), `lightweight` recall 0.044. Mean latency 3640 ms (bf16 on a T4 without native bf16, plus the `causal_conv1d` fallback: **not comparable** with the 0.8B fp32 431 ms), 605 native input tokens, 8.9 GB peak GPU, 4.21B parameters. Adapter sha256 matches the model card. The dtype differs from the 0.8B run (C-32). Detail: `runs/kev/kev-4b-20261113-a/report_test.md`.
 
 ## How a pipeline run works (Kev, reuse the pattern)
 
@@ -38,7 +42,7 @@ scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clar
 ## What to do next
 
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
-2. **Kev-4B**: code and notebook ready on `orchestrator/baselines-kev-4b` (C-32). Next: build the bundle, upload it as a private Kaggle Dataset, run `kev/kaggle_kev_4b.ipynb` on a T4, download and validate the logs. Then **Kev-9B** (likely does not fit; report where it fails, C-25).
+2. **Kev-4B** is run (see the results below). Next: merge `orchestrator/baselines-kev-4b` (PR), then **Kev-9B** (likely does not fit one T4; report where it fails, C-25).
 3. **Laya (P2)** and **Nimble (P3)**: write each plan per [chapter 11](../handbook/11-plan-requirements.md) before code. Nimble first needs X-05 (quantization) answered.
 4. **P4 comparison** when runs exist.
 
