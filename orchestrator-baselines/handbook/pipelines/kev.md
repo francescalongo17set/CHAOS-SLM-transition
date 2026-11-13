@@ -71,7 +71,7 @@ Environment variables of interest: `KEV_TEMPERATURE=1.0` (raw probabilities inst
 
 - T4 lacks native bf16. For Kev-0.8B, serving in fp32 (`KEV_DTYPE=fp32`) is the documented exact path; 0.8B in fp32 is small enough for 16 GB. Record which dtype produced the numbers. The README says bf16 serving differs from the fp32 evaluation path by at most about 0.03 in probability and flips the top answer on about 1 in 300 questions.
 - `flash-linear-attention` must be installed on CUDA for the Qwen3.5 models (README).
-- Kev-4B: bf16 weights are about 8.4 GB; fp32 would be about 16 GB and will not fit one T4. Decide dtype before running, and log it.
+- Kev-4B: bf16 weights are about 8.4 GB; fp32 would be about 16 GB and will not fit one T4. **Decided (C-32): bf16 on a T4.** Run with `kev/kaggle_kev_4b.ipynb` (`--dtype bf16`, revision `139fdd94…`); `run.json` logs the dtype. Check the adapter sha256 against the model card (`90e81735…`) and `head.pt` (`dd633435…`).
 - Kev-9B: about 17 GB of GPU memory per the README; does not fit one 16 GB T4. A Kaggle T4×2 might, but multi-GPU is not documented for `kev.serve`. If it does not fit, report it as not run (C-25: run all sizes that fit).
 
 ## Calibration state

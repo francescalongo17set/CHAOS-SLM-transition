@@ -37,6 +37,7 @@ Single source of truth for what is decided. If a chapter and this log disagree, 
 | C-29 | (was P-12) Only `topic` is asked for `regulatory_consultation`; `date_reference` is not asked (gold requires it on only 97 of 389 regulatory rows). Known cost: about 20 gold `date_reference` clarification cases go undetected. |
 | C-30 | (13 Nov 2026) Laya (plan `plans/P2-laya.md`): follows chapter 09 as written (smoke test, budget check, pilot, full runs) on a Kaggle T4. Two `predict` calls per row (core questions, then the slots of the predicted feature, C-23), latency and tokens summed. `temperature_applied: null`. The `laya/` folder has no `__init__.py`, because a package of that name would hide the installed `laya` library. |
 | C-31 | (13 Nov 2026) The root `.gitignore` ignores `runs/`; an exception for `orchestrator-baselines/runs/` lets run logs be committed (chapter 07). |
+| C-32 | Kev-4B runs in **bf16 on a Kaggle T4** (13 Nov). fp32 (about 16 GB) does not fit one T4. Weights pinned to the model card's revision `139fdd94f1b6a6ad80cc15e08fcb99cac885a101` (Hub `main` has moved on to `6cfce5c2`). The report must state that 4B (bf16) and 0.8B (fp32) differ in dtype; per the Kev README bf16 flips about 1 answer in 300, so compare sizes with that caveat. |
 
 ## Delegated (author's choice, owner may override)
 
