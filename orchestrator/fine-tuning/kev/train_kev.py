@@ -22,10 +22,10 @@ LR_CAP = 5e-5       # kev_modal.py MAX_DELTA_LR: released deltas used 2e-5..4e-5
 SIZES = {
     # 0.8b: checkpointing 0 ran out of memory on a T4 in the c1 smoke (13 Nov 2026, fp32, first forward); the released run used 1 too
     "0.8b": {"init_from": "jaredpalmer/kev-0.8b@9a45d25eb2ab761841196625383fa1dff0e56c1e", "dtype": "fp32", "weights_dtype": "fp32",
-             "checkpointing": 1, "sanity_macro_f1": 0.357, "box_hours": 2},
+             "checkpointing": 1, "sanity_macro_f1": 0.596, "box_hours": 2},
     # 4B revision: baselines C-32 gives the short hash 139fdd94; resolve it to the full commit in session before use (chapter 09)
     "4b": {"init_from": "jaredpalmer/kev-4b@139fdd94", "dtype": "bf16", "weights_dtype": "bf16",
-           "checkpointing": 1, "sanity_macro_f1": 0.483, "box_hours": 3},
+           "checkpointing": 1, "sanity_macro_f1": None, "box_hours": 3},
 }
 ARCH_KEYS = ("base", "base_revision", "lora", "head_dim", "option_isolation", "special_embeddings", "weights_dtype", "weights")
 

@@ -13,10 +13,10 @@ Branches: `orchestrator/ft-kev-0.8b` (priority 2) and `orchestrator/ft-kev-4b` (
 | `--checkpointing` | **1** (0 ran out of memory on a T4 in the first smoke, 13 Nov 2026: fp32, first forward, 14.5 GB) | 1 |
 | Released temperature (stale after fine-tuning) | 2.351 | 2.406 |
 | Round-1 inference | 431 ms per row (two calls), 3.2 GB peak GPU | 3.64 s per row, 8.9 GB peak GPU |
-| Training time per epoch on about 1,880 records (estimate, to be measured) | about 30 to 60 min | about 3 h |
+| Training time per epoch on about 1,903 records (estimate, to be measured) | about 30 to 60 min | about 3 h |
 | Hardware | one Kaggle T4, free | one Kaggle T4, free (FT-C-08: no paid exception) |
 | Time box (FT-C-13) | 2 h | 3 h |
-| Sanity check (FT-C-12) | development route macro-F1 above **0.357** | development route macro-F1 above **0.483** |
+| Sanity check (FT-C-12) | development route macro-F1 above **0.596** (v2) | **no v2 zero-shot value yet**: run Kev-4B zero-shot on v2 first |
 
 Kev-0.8B is compared with its own zero-shot run; comparing it with zero-shot 4B or 9B is context, not a like-for-like gain.
 
@@ -72,7 +72,7 @@ The temperature is stored in `head.pt` (`meta.temperature`, `extra.temperature_f
 
 **0.8B.** Memory: fp32 weights about 3 GB plus LoRA, Adam states and activations at batch 1; expected well inside 16 GB (round-1 inference peak 3.2 GB). Time: round-1 inference was 0.43 s per row for two calls; one training record is about one call-equivalent and forward plus backward is about 3 to 4× a forward, so **expect about 30 to 60 min per epoch**. Residual risk: capacity (weakest Kev, English-only card, weak Italian zero-shot). A smaller gain than the 4B is a result, not a failure.
 
-**4B.** Memory: bf16 backbone about 8.4 GB plus LoRA, optimizer states and checkpointed activations; expected to fit a 16 GB T4 at batch 1 (round-1 inference peak 8.9 GB). Time: round-1 inference took 3.6 s per row for two calls on this path; one training record is about one call-equivalent, and forward plus backward plus recompute is about 4× a forward, so **expect about 3 h per epoch** on about 1,880 records, **at the edge of the 3 h box**. The pilot (C2) measures it. If the projection exceeds the box, **stop and ask**. A paid run is not an option (FT-C-08); the owner may widen the box or choose another route. Re-check Kaggle's session and weekly GPU limits in session.
+**4B.** Memory: bf16 backbone about 8.4 GB plus LoRA, optimizer states and checkpointed activations; expected to fit a 16 GB T4 at batch 1 (round-1 inference peak 8.9 GB). Time: round-1 inference took 3.6 s per row for two calls on this path; one training record is about one call-equivalent, and forward plus backward plus recompute is about 4× a forward, so **expect about 3 h per epoch** on about 1,903 records, **at the edge of the 3 h box**. The pilot (C2) measures it. If the projection exceeds the box, **stop and ask**. A paid run is not an option (FT-C-08); the owner may widen the box or choose another route. Re-check Kaggle's session and weekly GPU limits in session.
 
 ## Steps and checks (once per size, 0.8B first)
 
@@ -81,7 +81,7 @@ The temperature is stored in `head.pt` (`meta.temperature`, `extra.temperature_f
 | C0 | Read `kev/train.py` and `kev/data.py` at the pinned sha; answer the Kev items of chapter 09. | Written in `run.json` notes. |
 | C1 | Smoke: 32 records, `--max_steps 1`, reload with `kev/run.py --model <dir>`. | Loss finite; checkpoint loads; `base_revision` equals the pinned one (4B: `139fdd94`; 0.8B: the commit recorded in the table). |
 | C2 | Pilot: 300 records, 1 epoch; log step time and peak memory; project the full run. | Projection inside the time box, else stop and ask. |
-| C3 | Full run, then calibration. | Sanity check (FT-C-12): development route macro-F1 above the size's zero-shot (0.8B: 0.357; 4B: 0.483), else stop and report. |
+| C3 | Full run, then calibration. | Sanity check (FT-C-12): development route macro-F1 above the size's zero-shot (0.8B: 0.596; 4B: not yet measured on v2), else stop and report. |
 | C4 | Evaluate (chapter 03): validation, then test once. | `validate_log` clean; 0 error rows; oracle 593/593. |
 
 **Time box (FT-C-13):** C2 and C3 together (pilot, full run, calibration) must fit 2 h for 0.8B and 3 h for 4B. C4 is separate.

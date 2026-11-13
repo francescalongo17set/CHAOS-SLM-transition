@@ -12,16 +12,16 @@ The round-1 protocol (baselines chapters 05 and 06) is **unchanged**. This chapt
 
 Logs go under `orchestrator/fine-tuning/runs/{laya,kev}/<run_id>/`. Kev-9B (`kev-9b-20261113-a`) is reference only: it is not fine-tuned.
 
-Zero-shot values (route accuracy / macro-F1):
+Zero-shot values on dataset v2 (route accuracy / macro-F1, 4 routes; baselines `RUNS_REPORT_v2.md`). Kev-4B and Kev-9B have no v2 run yet:
 
 | | Validation | Test |
 |---|---|---|
-| Laya | 0.238 / 0.254 | 0.265 / 0.281 |
-| Kev-0.8B | 0.349 / 0.357 | 0.331 / 0.329 |
-| Kev-4B | 0.436 / 0.483 | 0.423 / 0.471 |
-| Kev-9B (reference) | 0.473 / 0.534 | 0.567 / 0.617 |
+| Laya | 0.393 / 0.395 | 0.415 / 0.421 |
+| Kev-0.8B | 0.678 / 0.596 | 0.654 / 0.550 |
+| Kev-4B | not run on v2 | not run on v2 |
+| Kev-9B (reference) | not run on v2 | not run on v2 |
 
-Known weak spots to watch (round 1): clarification precision about 0.24; Kev-4B `lightweight` recall 0.044; prompt-injection refusal (Kev-4B 0.556 on 18 rows); Laya feature accuracy 0.337.
+Known weak spots to watch (round 1, v1 data; clarification no longer exists in v2): Kev-4B `lightweight` recall 0.044; prompt-injection refusal (Kev-4B 0.556 on 18 rows); Laya feature accuracy 0.337.
 
 ## Discipline (FT-C-14)
 
@@ -32,7 +32,7 @@ Known weak spots to watch (round 1): clarification precision about 0.24; Kev-4B 
 ## Metrics
 
 - **Primary:** route accuracy and route macro-F1.
-- **Secondary:** scope, feature and complexity accuracy; `needs_clarification` precision and recall; `lightweight` recall; refuse recall overall, on the safety-leak slice (35 test rows) and on prompt injection (18 test rows).
+- **Secondary:** scope, feature and complexity accuracy; `lightweight` recall; refuse recall overall, on the safety-leak slice (35 test rows) and on prompt injection (18 test rows).
 - **Carried over from round 1 (FT-C-16):** per-class precision/recall/F1 and macro-F1 per output, the per-route breakdown, the "first wrong field" attribution table, tokens (`input_tokens_native`, `input_tokens_ref`), latency, model size (parameters, disk, peak GPU memory).
 - **ECE (FT-C-15):** reported **both** raw (temperature 1) and calibrated (the fitted temperature), side by side, per question, as in round 1 (10 equal-width bins on `p_max`, baselines L-02c). The raw and calibrated distributions must both be reproducible from the log: store the fitted temperature in `run.json` and log `temperature_applied`; if the runtime only returns calibrated probabilities, store logits so raw can be recomputed (baselines chapter 06 rule on logits).
 - **Do not add other metrics.** Baselines C-20 still holds.

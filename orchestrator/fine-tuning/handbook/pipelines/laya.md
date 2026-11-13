@@ -28,7 +28,7 @@ The whole model (encoder at `encoder_lr`, decision head at `head_lr`) unless `fr
 | `seed` | 0 | |
 | `amp` | on (CUDA) | |
 
-A second configuration (learning rate or epochs) is allowed **once**, chosen on development. Volume: about 1,880 rows give about 10,000 question items per epoch (3 core plus about 2.5 slot questions), about 160 updates per epoch, about 640 updates for 4 epochs. Upstream's "4 to 6 minutes" for its 6,000-decision notebook is an unmeasured estimate; the pilot measures ours.
+A second configuration (learning rate or epochs) is allowed **once**, chosen on development. Volume: about 1,903 rows give about 5,500 question items per epoch (v2: at most 3 per row, complexity only on in_scope rows), about 160 updates per epoch, about 640 updates for 4 epochs. Upstream's "4 to 6 minutes" for its 6,000-decision notebook is an unmeasured estimate; the pilot measures ours.
 
 ## Training script: use the building blocks, not `finetune()`
 

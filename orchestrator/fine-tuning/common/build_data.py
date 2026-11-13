@@ -27,7 +27,7 @@ SEED = 20261113
 class Example:
     query_id: str
     state: str                  # serialize_state(row.model_input), a string
-    questions: list             # list[Question], order: scope, feature, complexity (if labelled), slot:<n>
+    questions: list             # list[Question], order: scope, feature, complexity (if labelled); v2: no slot questions
     labels: dict                # qid -> option id (gold)
 
 
@@ -38,12 +38,6 @@ def build_example(row, qc):
     if "complexity" in row.labels:                       # in_scope rows only
         qs.append(qc.complexity_estimation())
         labels["complexity_estimation"] = row.labels["complexity"]
-    status = row.support["slot_status"]
-    for slot in qc.slots_for_feature(feature):           # date_reference is not in by_feature (C-29)
-        if slot in status:                               # no gold for a slot without status: skip (C-28)
-            q = qc.slot_question(slot)
-            qs.append(q)
-            labels[q.qid] = status[slot]
     ex = Example(row.query_id, serialize_state(row.model_input), qs, labels)
     for q in ex.questions:                               # label validity
         assert ex.labels[q.qid] in q.option_ids, (row.query_id, q.qid, ex.labels[q.qid])

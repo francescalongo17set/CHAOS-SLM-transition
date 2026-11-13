@@ -19,39 +19,25 @@ EXS = build_data.build_examples(ROWS, QC)
 BY = {r.query_id: r for r in ROWS}
 
 
-def test_question_parity():                       # 1: built questions == what the eval adapter sends
+def test_question_parity():                       # 1: built questions == what the eval adapter sends (v2: 3 fixed questions)
+    ref = {q.qid: q for q in QC.questions()}
     for ex in EXS:
-        row = BY[ex.query_id]
-        feature = row.labels["feature"]
-        ref = {q.qid: q for q in QC.questions_for(feature)}      # evaluation builder, gold feature
         for q in ex.questions:
             assert q == ref[q.qid], (ex.query_id, q.qid)
         assert [q.qid for q in ex.questions] == [k for k in ref if k in ex.labels]
+        assert not any(q.qid.startswith("slot:") for q in ex.questions)      # v2: no slot questions
 
 
-def date_only(row):
-    """True if the only non-present slot is date_reference (never asked, C-29): gold route is a suspected label error (FT-C-24)."""
-    bad = {k for k, v in row.support["slot_status"].items() if v != "present"}
-    return bad == {"date_reference"}
-
-
-def test_dispatcher_on_training_labels():         # 2: built labels -> dispatcher -> expected_route
-    mismatched = []
+def test_dispatcher_on_training_labels():         # 2: built labels -> dispatcher -> expected_route (v2: all rows agree)
     for ex in EXS:
         row = BY[ex.query_id]
-        status = [ex.labels[q.qid] for q in ex.questions if q.qid.startswith("slot:")]
-        need = any(v != "present" for v in status)                # from the BUILT labels only
         got = dispatcher.dispatch(ex.labels["scope_check"], ex.labels["feature_classification"],
-                                  ex.labels.get("complexity_estimation"), need)
-        if got != row.support["expected_route"]:
-            mismatched.append(ex.query_id)
-    # every mismatch is a date_reference-only row, and every such row mismatches (FT-C-24); nothing else may differ
-    assert sorted(mismatched) == sorted(r.query_id for r in ROWS if date_only(r)), len(mismatched)
-    assert len(mismatched) == 14
+                                  ex.labels.get("complexity_estimation"))
+        assert got == row.support["expected_route"], ex.query_id
+    assert {r.support["expected_route"] for r in ROWS} == set(dispatcher.ROUTES)
 
 
 def test_rule_table():                            # 3
-    n_insurer_skipped = 0
     for ex in EXS:
         row = BY[ex.query_id]
         ids = [q.qid for q in ex.questions]
@@ -59,14 +45,6 @@ def test_rule_table():                            # 3
             assert "complexity_estimation" not in ids
         else:
             assert "complexity_estimation" in ids
-        assert "slot:date_reference" not in ids
-        for slot in QC.slots_for_feature(row.labels["feature"]):
-            if slot not in row.support["slot_status"]:
-                assert f"slot:{slot}" not in ids
-                n_insurer_skipped += slot == "insurer"
-        if row.labels["feature"] == "none":
-            assert not any(i.startswith("slot:") for i in ids)
-    assert n_insurer_skipped == 100
 
 
 def test_split_on_real_data():                    # 4

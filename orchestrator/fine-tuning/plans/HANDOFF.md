@@ -1,6 +1,6 @@
 # Handoff · where the fine-tuning round stands
 
-> **Heads-up (13 Nov 2026):** the baselines moved to dataset v2 (no `clarification` route, no slot questions; `orchestrator/baselines/handbook/01-decisions-log.md` C-35 to C-37). The fine-tuning code and plans here are still on v1 (`final/`, 5 routes, slots). Decide whether to rebuild the data step for v2 before running more fine-tuning.
+> **Aligned with dataset v2 (14 Nov 2026, FT-C-26).** `orchestrator/ft` was fast-forwarded to `main` (v2 merged). The data step now reads `final_v2/`, builds 3-question examples (no slot questions), uses the 4-route dispatcher, and `data/manifest.json` was regenerated (train 1,903 / calibration 189 / development 298). Zero-shot reference values are the v2 ones (Kev-0.8B 0.596 dev macro-F1; Kev-4B has no v2 run yet). The earlier C1 smoke run (`kev-0.8b-ft-a-c1`) was trained on v1 and is **stale**; the Kaggle bundle must be rebuilt (`make_bundle_ft.py`) and re-uploaded before any run.
 
 Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync, test touched once per model). This file says what is done, where it lives, and what to do next. Branch: `orchestrator/ft` (FT-C-23).
 
@@ -28,7 +28,7 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 
 1. Look at `runs/kev/kev-0.8b-ft-a/`: `train_report.json`, `run.json`, `calibration/temperature.json`, `validation.jsonl`, `metrics_validation.json`, `report_validation.md`, and `test.jsonl` / `metrics_test.json` if test was run.
 2. Validate every log: `common.logs.validate_log` clean, 0 error rows, dispatcher oracle 593/593 (chapter 03). `run.json` must hold: `finetuned_from`, `train_run_id`, `adapter_sha256`, `head_sha256`, `temperature_fit`, `training`. Missing or null: report, do not fill by hand.
-3. Check the sanity check (FT-C-12): validation route macro-F1 above 0.357. If the notebook asserted it, say so; if not, compute it from `metrics_validation.json`.
+3. Check the sanity check (FT-C-12): validation route macro-F1 above 0.596 (v2 zero-shot). If the notebook asserted it, say so; if not, compute it from `metrics_validation.json`.
 4. Check that test was run **once** (FT-C-14) and after validation was reviewed. If it was run more than once or the configuration changed after validation, stop and ask the owner.
 5. Fill the results table below from the files, never from memory. Then sync docs (rule 10).
 
@@ -36,7 +36,7 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 
 | | Validation (route acc / macro-F1) | Test (route acc / macro-F1) | Zero-shot test | Temperature fitted | Train wall time |
 |---|---|---|---|---|---|
-| `kev-0.8b-ft-a` | | | 0.331 / 0.329 | | |
+| `kev-0.8b-ft-a` | | | 0.654 / 0.550 (v2) | | |
 
 Also record: peak GPU memory in training, step time, records seen, the notebook stages that ran, Kaggle session length and weekly quota (chapter 09 item 6), the adapter and `head.pt` sha256 and the private Kaggle Dataset name that holds the checkpoint.
 
