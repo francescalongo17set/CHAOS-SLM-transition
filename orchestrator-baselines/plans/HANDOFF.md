@@ -9,7 +9,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
 | Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). **Merged (PR #5).** | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
-| Kev-9B | **smoke PASSED on Kaggle 2 x T4 (owner, 13 Nov); full validation + test run IN PROGRESS (remote)**. `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`, C-33. Logs not in the repo yet. | branch `orchestrator/baselines-kev-9b` (PR #5 with 4B is merged) |
+| Kev-9B | **DONE and validated** (Kaggle 2 x T4 layer split, bf16, C-33; both logs pass `validate_log` with 0 errors, 0 error rows). `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`. | branch `orchestrator/baselines-kev-9b`; logs `runs/kev/kev-9b-20261113-a/` (+ `-smoke/`); PR into `orchestrator/baselines` still to open |
 | P2 Laya | **DONE**, merged (PR #4) | [P2 plan](P2-laya.md), `runs/laya/` |
 | P3 Nimble | not started | [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
@@ -23,6 +23,10 @@ scope_check acc 0.788 · feature acc 0.663 · complexity acc 0.727 · needs_clar
 ## Kev-4B first results (test, 593 rows; one run, bf16, T4; run `kev-4b-20261113-a`)
 
 scope_check acc 0.801 · feature acc 0.801 · complexity acc 0.822 · needs_clarification acc 0.383 · **route acc 0.423 (macro-F1 0.471)** · refuse recall 0.789 (safety-leak slice 0.771; prompt-injection 0.556 on 18 rows) · ECE 0.150 on scope_check. Still most wrong routes go wrong first at `needs_clarification` (183 of 397), then `scope_check` (118): clarification over-flagged (precision 0.233), `lightweight` recall 0.044. Mean latency 3640 ms (bf16 on a T4 without native bf16, plus the `causal_conv1d` fallback: **not comparable** with the 0.8B fp32 431 ms), 605 native input tokens, 8.9 GB peak GPU, 4.21B parameters. Adapter sha256 matches the model card. The dtype differs from the 0.8B run (C-32). Detail: `runs/kev/kev-4b-20261113-a/report_test.md`.
+
+## Kev-9B first results (test, 593 rows; one run, bf16, 2 x T4 layer split; run `kev-9b-20261113-a`)
+
+scope_check acc 0.855 · feature acc 0.815 · complexity acc 0.836 · needs_clarification acc 0.559 · **route acc 0.567 (macro-F1 0.617)** (validation: 0.473 / 0.534) · refuse recall 0.779 (safety-leak slice 0.629; prompt-injection 0.333 on 18 rows) · ECE 0.137 on scope_check. Wrong routes still go wrong first at `needs_clarification` (138 of 257), then `scope_check` (86), feature (30): clarification over-flagged (precision 0.310, recall 0.647), `lightweight` recall 0.344. Mean latency 5669 ms (bf16 + `causal_conv1d` fallback + cross-GPU copies: **not comparable** with 0.8B/4B), 589 native input tokens, 16.3 GB peak GPU (13.6 GB on GPU 0, 2.7 GB on GPU 1; layers 0-25 on GPU 0, 26-31 on GPU 1), 7.94B parameters, load 116 s. Checks: adapter sha256 matches the model card, `n_error_rows` 0, dispatcher oracle 593/593. Caveats: the split loader is our own code (C-33), not covered by upstream tests; 9B is bf16 like 4B (not the fp32 exact path); `run.json` `model_revision` is logged as `b5d8c18e…:b5d8c18e…` (same hash twice, cosmetic; the hash equals the pinned revision); `disk_mb_base` is null. Do not rank on small gaps (chapter 05), but 9B is ahead of 4B on every route-level number here (route acc 0.567 vs 0.423), still far from usable. Detail: `runs/kev/kev-9b-20261113-a/report_test.md`.
 
 ## How a pipeline run works (Kev, reuse the pattern)
 
@@ -43,12 +47,7 @@ scope_check acc 0.801 · feature acc 0.801 · complexity acc 0.822 · needs_clar
 ## What to do next
 
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
-2. **Kev-9B, pick up here.** The owner started the full run (validation then test) of `kev/kaggle_kev_9b.ipynb` on Kaggle T4 x2 on 13 Nov; it was still running when this was written, and its results are unknown. The smoke stage passed, so the 2-GPU layer split loads and scores (the smoke logs were not shown to the agent: ask the owner for them, or look at `kev-9b-20261113-a-smoke/`). When the owner hands over the run folder `runs/kev/kev-9b-20261113-a/`:
-   1. Put it under `orchestrator-baselines/runs/kev/` and validate both logs: `common.logs.validate_log(path, split)` (needs `pyyaml tokenizers huggingface_hub`; a throwaway venv works, `python -I`).
-   2. Check `run.json`: `weights_sha256` must equal the model card's adapter sha256 `2b2a70cf4ef4440b6c22899e1f72c2f8ea5c6f65b19aa344539b4b8971d1f13d`; `dtype` bfloat16; `n_error_rows` 0; read `layer_split` and `peak_gpu_mem_mb_per_device` (new fields from `--shard`).
-   3. Write the results section here (as for 4B), update the README status line, commit and push the branch, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
-   4. Report honestly: the split loader is our own code (C-33), not covered by upstream tests, and 9B is bf16 like 4B (not the fp32 exact path); latency is in the fallback path and across two GPUs (cross-GPU copies), so it is **not comparable** with the 0.8B/4B latencies.
-   If the run died, ask the owner for the error text and the per-GPU memory, report 9B as not run and where it broke (C-25), and do not retry with another approach (e.g. quantization) without asking: it would change the model.
+2. ~~Kev-9B run~~ done and validated (13 Nov, results above). **Remaining:** commit the run folders (`runs/kev/kev-9b-20261113-a/`, `-smoke/`) with the doc updates, push `orchestrator/baselines-kev-9b`, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
 3. **Nimble (P3)**: write the plan per [chapter 11](../handbook/11-plan-requirements.md) before code; it first needs X-05 (quantization) answered by the owner. Laya (P2) is done and merged (PR #4, see `P2-laya.md`).
 4. **P4 comparison** when runs exist.
 
