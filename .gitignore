@@ -36,6 +36,8 @@ venv/
 *.ckpt
 wandb/
 runs/
+# Orchestrator run logs are committed (handbook chapter 07).
+!orchestrator-baselines/runs/
 outputs/
 checkpoints/
 .cache/
