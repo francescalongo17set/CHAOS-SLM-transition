@@ -1,0 +1,36 @@
+{
+ "run_id": "laya-multilingual-a",
+ "pipeline": "laya",
+ "model_id": "convaiinnovations/laya/multilingual",
+ "model_revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+ "dtype": "fp16",
+ "device": "Tesla T4",
+ "gpu_count": 2,
+ "python": "3.13.16",
+ "libraries": {
+  "laya": "0.4.31",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.20.2"
+ },
+ "platform": "kaggle",
+ "latency_mode": "in_process",
+ "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+ "state_template": "p-01",
+ "data_manifest_sha256": {
+  "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638",
+  "test": "c1bbc8658aba45c4fb259bb6f126292893444f7e5f3faad07c950b79d1672c7f"
+ },
+ "load_time_s": 8.05,
+ "model_size": {
+  "params_total": 321908995,
+  "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+  "disk_mb": 678.2,
+  "peak_gpu_mem_mb": 1532.3,
+  "peak_host_ram_mb": 2953.1
+ },
+ "max_len": 1024,
+ "head_max_len": 256,
+ "started_at": "2026-11-13T09:11:24+00:00",
+ "ended_at": "2026-11-13T09:12:21+00:00",
+ "notes": "Two predict() calls per row (C-23): scope/feature/complexity, then the slots of the predicted feature; latency_ms and input_native are the sum of both. input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null."
+}

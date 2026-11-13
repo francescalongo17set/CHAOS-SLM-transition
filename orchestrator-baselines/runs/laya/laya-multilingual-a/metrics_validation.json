@@ -1,0 +1,289 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.7235144039285711,
+   "ece": 0.3292767857142859,
+   "n": 224
+  },
+  "feature_classification": {
+   "brier": 0.8667429169463089,
+   "ece": 0.32043523489932885,
+   "n": 298
+  },
+  "scope_check": {
+   "brier": 0.5216709585906042,
+   "ece": 0.13462919463087258,
+   "n": 298
+  },
+  "slots (pooled, where gold slot status exists)": {
+   "brier": 0.9991248304221637,
+   "ece": 0.4049055408970977,
+   "n": 379
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.5223214285714286,
+  "macro_f1": 0.39424267697829,
+  "n": 224,
+  "per_class": {
+   "complex": {
+    "f1": 0.11570247933884299,
+    "precision": 0.5833333333333334,
+    "recall": 0.06422018348623854,
+    "support": 109
+   },
+   "simple": {
+    "f1": 0.672782874617737,
+    "precision": 0.5188679245283019,
+    "recall": 0.9565217391304348,
+    "support": 115
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 298,
+  "n": 298
+ },
+ "feature_classification": {
+  "accuracy": 0.40604026845637586,
+  "macro_f1": 0.39642555634654125,
+  "n": 298,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.75,
+    "precision": 0.7714285714285715,
+    "recall": 0.7297297297297297,
+    "support": 37
+   },
+   "comparison": {
+    "f1": 0.37735849056603776,
+    "precision": 0.7692307692307693,
+    "recall": 0.25,
+    "support": 40
+   },
+   "ibip_screening": {
+    "f1": 0.06779661016949154,
+    "precision": 0.09090909090909091,
+    "recall": 0.05405405405405406,
+    "support": 37
+   },
+   "none": {
+    "f1": 0.504201680672269,
+    "precision": 0.6666666666666666,
+    "recall": 0.40540540540540543,
+    "support": 74
+   },
+   "product_policy_analysis": {
+    "f1": 0.4352941176470589,
+    "precision": 0.37373737373737376,
+    "recall": 0.5211267605633803,
+    "support": 71
+   },
+   "regulatory_consultation": {
+    "f1": 0.24390243902439027,
+    "precision": 0.17857142857142858,
+    "recall": 0.38461538461538464,
+    "support": 39
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 57.80932671180494,
+  "median": 60.54989149998846,
+  "n": 288,
+  "n_warmup_excluded": 10,
+  "p50": 60.54989149998846,
+  "p95": 69.79311700001745,
+  "total": 16649.086092999823
+ },
+ "model_id": "convaiinnovations/laya/multilingual",
+ "model_revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+ "n_error_rows": 0,
+ "n_rows": 298,
+ "n_truncated": 0,
+ "needs_clarification": {
+  "accuracy": 0.3080357142857143,
+  "macro_f1": 0.3073593073593074,
+  "n": 224,
+  "per_class": {
+   "False": {
+    "f1": 0.28571428571428575,
+    "precision": 0.7209302325581395,
+    "recall": 0.1781609195402299,
+    "support": 174
+   },
+   "True": {
+    "f1": 0.32900432900432897,
+    "precision": 0.20994475138121546,
+    "recall": 0.76,
+    "support": 50
+   }
+  },
+  "positive_class": {
+   "f1": 0.32900432900432897,
+   "precision": 0.20994475138121546,
+   "recall": 0.76,
+   "support": 50
+  }
+ },
+ "pipeline": "laya",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 48,
+   "recall": 0.2916666666666667
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 2,
+    "recall": 0.5
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 3,
+    "recall": 0.6666666666666666
+   },
+   "jailbreak": {
+    "n_gold_refuse": 2,
+    "recall": 0.5
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 9,
+    "recall": 0.2222222222222222
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 2,
+    "recall": 0.0
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 30,
+   "recall": 0.26666666666666666
+  },
+  "safety_leak": {
+   "n_gold_refuse": 18,
+   "recall": 0.3333333333333333
+  }
+ },
+ "route": {
+  "accuracy": 0.23825503355704697,
+  "macro_f1": 0.2541539816055697,
+  "n": 298,
+  "per_class": {
+   "agentic": {
+    "f1": 0.06666666666666667,
+    "precision": 0.375,
+    "recall": 0.036585365853658534,
+    "support": 82
+   },
+   "clarification": {
+    "f1": 0.2694300518134715,
+    "precision": 0.18181818181818182,
+    "recall": 0.52,
+    "support": 50
+   },
+   "lightweight": {
+    "f1": 0.14634146341463417,
+    "precision": 0.2903225806451613,
+    "recall": 0.09782608695652174,
+    "support": 92
+   },
+   "quick_reply": {
+    "f1": 0.5588235294117647,
+    "precision": 0.4523809523809524,
+    "recall": 0.7307692307692307,
+    "support": 26
+   },
+   "refuse": {
+    "f1": 0.22950819672131148,
+    "precision": 0.1891891891891892,
+    "recall": 0.2916666666666667,
+    "support": 48
+   }
+  }
+ },
+ "route_attribution": {
+  "feature_classification": 60,
+  "needs_clarification": 52,
+  "scope_check": 115
+ },
+ "run": {
+  "data_manifest_sha256": {
+   "test": "c1bbc8658aba45c4fb259bb6f126292893444f7e5f3faad07c950b79d1672c7f",
+   "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638"
+  },
+  "device": "Tesla T4",
+  "dtype": "fp16",
+  "ended_at": "2026-11-13T09:11:44+00:00",
+  "gpu_count": 2,
+  "head_max_len": 256,
+  "latency_mode": "in_process",
+  "libraries": {
+   "laya": "0.4.31",
+   "torch": "2.11.0+cu130",
+   "transformers": "5.20.2"
+  },
+  "load_time_s": 8.05,
+  "max_len": 1024,
+  "model_id": "convaiinnovations/laya/multilingual",
+  "model_revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+  "model_size": {
+   "disk_mb": 678.2,
+   "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+   "params_total": 321908995,
+   "peak_gpu_mem_mb": 1532.3,
+   "peak_host_ram_mb": 2953.1
+  },
+  "notes": "Two predict() calls per row (C-23): scope/feature/complexity, then the slots of the predicted feature; latency_ms and input_native are the sum of both. input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null.",
+  "pipeline": "laya",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+  "run_id": "laya-multilingual-a",
+  "started_at": "2026-11-13T09:11:24+00:00",
+  "state_template": "p-01"
+ },
+ "scope_check": {
+  "accuracy": 0.6140939597315436,
+  "macro_f1": 0.5090826607635706,
+  "n": 298,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.7389162561576356,
+    "precision": 0.8241758241758241,
+    "recall": 0.6696428571428571,
+    "support": 224
+   },
+   "out_of_scope": {
+    "f1": 0.22950819672131148,
+    "precision": 0.1891891891891892,
+    "recall": 0.2916666666666667,
+    "support": 48
+   },
+   "quick_reply": {
+    "f1": 0.5588235294117647,
+    "precision": 0.4523809523809524,
+    "recall": 0.7307692307692307,
+    "support": 26
+   }
+  }
+ },
+ "split": "validation",
+ "tokens": {
+  "input_native": {
+   "mean": 941.6879194630873,
+   "median": 954.5,
+   "n": 298,
+   "p95": 1527,
+   "total": 280623
+  },
+  "input_ref": {
+   "mean": 567.3557046979865,
+   "median": 587.0,
+   "n": 298,
+   "p95": 744,
+   "total": 169072
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}

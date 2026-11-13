@@ -1,0 +1,2 @@
+-r ../requirements-common.txt
+laya==0.4.31
