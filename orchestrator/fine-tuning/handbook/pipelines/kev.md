@@ -10,7 +10,7 @@ Branches: `orchestrator/ft-kev-0.8b` (priority 2) and `orchestrator/ft-kev-4b` (
 | `--init_from` | `jaredpalmer/kev-0.8b` at a **pinned commit** (round 1 loaded Hub tag `v1.0` as commit `bf75a6a8`; the card's weights revision is `9a45d25e`, adapter and head hashes identical). Pin the commit; tags move. | `jaredpalmer/kev-4b@139fdd94` (baselines C-32) |
 | Base | Qwen3.5-0.8B-Base (revision from the checkpoint meta) | Qwen3.5-4B-Base (revision from the checkpoint meta) |
 | Training dtype | `--dtype fp32 --weights_dtype fp32` (the exact path the model was built for) | `--dtype bf16 --weights_dtype bf16` (fp32 does not fit one T4, baselines C-32) |
-| `--checkpointing` | 0 first; 1 only if the pilot runs out of memory | 1 |
+| `--checkpointing` | **1** (0 ran out of memory on a T4 in the first smoke, 13 Nov 2026: fp32, first forward, 14.5 GB) | 1 |
 | Released temperature (stale after fine-tuning) | 2.351 | 2.406 |
 | Round-1 inference | 431 ms per row (two calls), 3.2 GB peak GPU | 3.64 s per row, 8.9 GB peak GPU |
 | Training time per epoch on about 1,880 records (estimate, to be measured) | about 30 to 60 min | about 3 h |

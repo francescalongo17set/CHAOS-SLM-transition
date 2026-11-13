@@ -10,7 +10,7 @@ import train_kev as T   # noqa: E402
 
 META = {"base": "Qwen/Qwen3.5-0.8B-Base", "base_revision": "abc123", "lora": 16, "head_dim": 256, "option_isolation": True,
         "special_embeddings": False, "weights_dtype": "fp32", "weights": "lora", "temperature": 2.351,
-        "extra_args": {"lr": 2e-4, "lora_targets": "all", "batch": 1, "accum": 8, "checkpointing": 0}}
+        "extra_args": {"lr": 2e-4, "lora_targets": "all", "batch": 1, "accum": 8, "checkpointing": 1}}
 CFG = T.SIZES["0.8b"]
 
 
@@ -32,7 +32,7 @@ def test_lr_is_capped_and_defaults_are_explicit():
     assert float(flag(cmd, "--lr")) == 5e-5 and s["meta_lr"] == 2e-4
     low = {**META, "extra_args": {**META["extra_args"], "lr": 3e-5}}
     assert float(flag(T.build_command(low, CFG, "d", "o")[0], "--lr")) == 3e-5
-    for k, v in (("--epochs", "1"), ("--batch", "1"), ("--accum", "8"), ("--p_none_pair", "0.25"), ("--seed", "0"), ("--checkpointing", "0")):
+    for k, v in (("--epochs", "1"), ("--batch", "1"), ("--accum", "8"), ("--p_none_pair", "0.25"), ("--seed", "0"), ("--checkpointing", "1")):
         assert flag(cmd, k) == v
     assert "--replay" not in cmd and "--label_smoothing" not in cmd and "--focal_gamma" not in cmd and "--brier_w" not in cmd
 

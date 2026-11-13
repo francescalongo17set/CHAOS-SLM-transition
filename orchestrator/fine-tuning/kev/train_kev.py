@@ -11,6 +11,7 @@ with --meta-json (tests). Writes <out>/train_report.json; the checkpoint goes to
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -19,8 +20,9 @@ from pathlib import Path
 
 LR_CAP = 5e-5       # kev_modal.py MAX_DELTA_LR: released deltas used 2e-5..4e-5, kev.train's default 2e-4 is for scratch training
 SIZES = {
+    # 0.8b: checkpointing 0 ran out of memory on a T4 in the c1 smoke (13 Nov 2026, fp32, first forward); the released run used 1 too
     "0.8b": {"init_from": "jaredpalmer/kev-0.8b@9a45d25eb2ab761841196625383fa1dff0e56c1e", "dtype": "fp32", "weights_dtype": "fp32",
-             "checkpointing": 0, "sanity_macro_f1": 0.357, "box_hours": 2},
+             "checkpointing": 1, "sanity_macro_f1": 0.357, "box_hours": 2},
     # 4B revision: baselines C-32 gives the short hash 139fdd94; resolve it to the full commit in session before use (chapter 09)
     "4b": {"init_from": "jaredpalmer/kev-4b@139fdd94", "dtype": "bf16", "weights_dtype": "bf16",
            "checkpointing": 1, "sanity_macro_f1": 0.483, "box_hours": 3},
@@ -134,7 +136,8 @@ def main():
     log = out / "train.log"
     dropped_msg = None
     with open(log, "w", encoding="utf-8") as lf:
-        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        env = {**os.environ, "PYTORCH_CUDA_ALLOC_CONF": os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")}
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=env)
         for line in p.stdout:
             print(line, end="", flush=True); lf.write(line)
             if re.match(r"dropped \d+ of", line):
