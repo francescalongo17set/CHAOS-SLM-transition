@@ -1,0 +1,30 @@
+{
+ "_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+ "train": {
+  "min": 30,
+  "median": 71,
+  "p95": 144,
+  "max": 220,
+  "gt512": 0,
+  "gt768": 0,
+  "gt1024": 0
+ },
+ "validation": {
+  "min": 32,
+  "median": 69,
+  "p95": 142,
+  "max": 182,
+  "gt512": 0,
+  "gt768": 0,
+  "gt1024": 0
+ },
+ "test": {
+  "min": 33,
+  "median": 69,
+  "p95": 134,
+  "max": 200,
+  "gt512": 0,
+  "gt768": 0,
+  "gt1024": 0
+ }
+}
