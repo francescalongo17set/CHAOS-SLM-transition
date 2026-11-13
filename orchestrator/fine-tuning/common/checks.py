@@ -29,12 +29,15 @@ def check_partitions(parts, test_ids):
         assert abs(ca.get(route, 0) - t) <= t * TOLERANCE + 1e-9, f"calibration {route}: {ca.get(route, 0)} vs target {t:.1f}"
 
 
-def check_manifest(data_dir):
-    """Counts and sha256 of every written file equal the committed manifest."""
+def check_manifest(data_dir, prefix=""):
+    """Counts and sha256 of every file under `prefix` (e.g. "kev/", for a bundle that ships one format) equal the manifest.
+    Files of the manifest outside the prefix are not looked at; at least one file must match."""
     import hashlib
     d = Path(data_dir)
     m = json.loads((d / "manifest.json").read_text(encoding="utf-8"))
-    for rel, info in m["files"].items():
+    todo = {rel: info for rel, info in m["files"].items() if rel.startswith(prefix)}
+    assert todo, f"no manifest entry starts with {prefix!r}"
+    for rel, info in todo.items():
         p = d / rel
         assert hashlib.sha256(p.read_bytes()).hexdigest() == info["sha256"], f"{rel}: hash differs from manifest"
         assert sum(1 for _ in open(p, encoding="utf-8")) == info["rows"], f"{rel}: row count differs"

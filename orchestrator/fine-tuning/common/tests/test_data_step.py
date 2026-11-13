@@ -112,3 +112,18 @@ def test_state_format():                          # 6
         s = serialize_state(row.model_input)
         assert ex.state == s and isinstance(build_data.to_kev_record(ex)["state"], str)
         assert build_data.to_kev_record(ex)["state"] == build_data.to_laya_record(ex)["state"] == s
+
+
+def test_manifest_prefix(tmp_path):                # a one-format bundle must verify without the other format's files
+    import json, shutil
+    data_dir = HERE.parent / "data"
+    for rel in json.loads((data_dir / "manifest.json").read_text())["files"]:
+        if rel.startswith("kev/"):
+            (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(data_dir / rel, tmp_path / rel)
+    shutil.copy2(data_dir / "manifest.json", tmp_path / "manifest.json")
+    checks.check_manifest(tmp_path, prefix="kev/")
+    with pytest.raises(FileNotFoundError):
+        checks.check_manifest(tmp_path)            # no prefix: the missing laya files are noticed
+    with pytest.raises(AssertionError):
+        checks.check_manifest(tmp_path, prefix="nope/")
