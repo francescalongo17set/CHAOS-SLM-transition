@@ -9,7 +9,7 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
 | Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). Not yet merged to the base. | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
-| Kev-9B | **prepared, run not done**: `--shard` (`kev/shard.py`, untested on GPU), `kev/kaggle_kev_9b.ipynb`, C-33 | branch `orchestrator/baselines-kev-9b` (made from the 4B branch; PR #5 pending) |
+| Kev-9B | **smoke PASSED on Kaggle 2 x T4 (owner, 13 Nov); full validation + test run IN PROGRESS (remote)**. `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`, C-33. Logs not in the repo yet. | branch `orchestrator/baselines-kev-9b` (PR #5 with 4B is merged) |
 | P2 Laya, P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 
@@ -42,7 +42,12 @@ scope_check acc 0.801 · feature acc 0.801 · complexity acc 0.822 · needs_clar
 ## What to do next
 
 1. ~~Merge the Kev-0.8B branch~~ done (PR #3).
-2. **Kev-4B** is run (see the results below). Next: merge `orchestrator/baselines-kev-4b` (PR), then **Kev-9B** (likely does not fit one T4; report where it fails, C-25).
+2. **Kev-9B, pick up here.** The owner started the full run (validation then test) of `kev/kaggle_kev_9b.ipynb` on Kaggle T4 x2 on 13 Nov; it was still running when this was written, and its results are unknown. The smoke stage passed, so the 2-GPU layer split loads and scores (the smoke logs were not shown to the agent: ask the owner for them, or look at `kev-9b-20261113-a-smoke/`). When the owner hands over the run folder `runs/kev/kev-9b-20261113-a/`:
+   1. Put it under `orchestrator-baselines/runs/kev/` and validate both logs: `common.logs.validate_log(path, split)` (needs `pyyaml tokenizers huggingface_hub`; a throwaway venv works, `python -I`).
+   2. Check `run.json`: `weights_sha256` must equal the model card's adapter sha256 `2b2a70cf4ef4440b6c22899e1f72c2f8ea5c6f65b19aa344539b4b8971d1f13d`; `dtype` bfloat16; `n_error_rows` 0; read `layer_split` and `peak_gpu_mem_mb_per_device` (new fields from `--shard`).
+   3. Write the results section here (as for 4B), update the README status line, commit and push the branch, open a PR into `orchestrator/baselines` (same pattern as PR #3 and #5).
+   4. Report honestly: the split loader is our own code (C-33), not covered by upstream tests, and 9B is bf16 like 4B (not the fp32 exact path); latency is in the fallback path and across two GPUs (cross-GPU copies), so it is **not comparable** with the 0.8B/4B latencies.
+   If the run died, ask the owner for the error text and the per-GPU memory, report 9B as not run and where it broke (C-25), and do not retry with another approach (e.g. quantization) without asking: it would change the model.
 3. **Laya (P2)** and **Nimble (P3)**: write each plan per [chapter 11](../handbook/11-plan-requirements.md) before code. Nimble first needs X-05 (quantization) answered.
 4. **P4 comparison** when runs exist.
 
