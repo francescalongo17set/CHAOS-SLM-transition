@@ -8,10 +8,10 @@ Updated 13 Nov 2026 (after merge of PR #3). Read the [handbook README](../handbo
 |---|---|---|
 | P0 shared package + audit | **DONE**, on `orchestrator/baselines`, 43 tests pass | `common/`, `audit/`, [P0 plan](P0-shared-package.md) |
 | P1 Kev-0.8B | **DONE and validated** (Kaggle T4, fp32, in-process). **Merged (PR #3).** | `orchestrator/baselines`: code in `kev/`, logs in `runs/kev/kev-0.8b-20261112-a/`, [P1 plan](P1-kev-0.8b.md) |
-| Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). Not yet merged to the base. | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
+| Kev-4B | **DONE and validated** (Kaggle T4, bf16, C-32; `--dtype bf16` in `kev/run.py`, `kev/kaggle_kev_4b.ipynb`). **Merged (PR #5).** | branch `orchestrator/baselines-kev-4b`; logs `runs/kev/kev-4b-20261113-a/` |
 | Kev-9B | **smoke PASSED on Kaggle 2 x T4 (owner, 13 Nov); full validation + test run IN PROGRESS (remote)**. `--shard` (`kev/shard.py`), `kev/kaggle_kev_9b.ipynb`, C-33. Logs not in the repo yet. | branch `orchestrator/baselines-kev-9b` (PR #5 with 4B is merged) |
 | P2 Laya | **DONE**, merged (PR #4) | [P2 plan](P2-laya.md), `runs/laya/` |
-| P3 Nimble | not started | [laya.md](../handbook/pipelines/laya.md), [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
+| P3 Nimble | not started | [nimble.md](../handbook/pipelines/nimble.md); no plan written yet |
 | P4 comparison | not started | `common/compare.py` exists and tolerates missing pipelines |
 
 The docs in `handbook/` and `plans/P1-kev-0.8b.md` were brought over from the Kev branch so they are current here. The Kev code, notebook and run logs are now on this base too (PR #3).
