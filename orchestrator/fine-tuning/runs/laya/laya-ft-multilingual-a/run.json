@@ -17,20 +17,20 @@
   "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
   "state_template": "p-01",
   "data_manifest_sha256": {
-    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+    "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f"
   },
-  "load_time_s": 16.6,
+  "load_time_s": 16.63,
   "model_size": {
     "params_total": 321908995,
     "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
     "disk_mb": 678.2,
-    "peak_gpu_mem_mb": 1532.0,
-    "peak_host_ram_mb": 2888.3
+    "peak_gpu_mem_mb": 1529.5,
+    "peak_host_ram_mb": 2890.0
   },
   "max_len": 1024,
   "head_max_len": 256,
-  "started_at": "2026-11-14T00:55:53+00:00",
-  "ended_at": "2026-11-14T00:56:07+00:00",
+  "started_at": "2026-11-14T01:05:07+00:00",
+  "ended_at": "2026-11-14T01:05:31+00:00",
   "notes": "v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null. Fine-tuned checkpoint evaluated by baselines/laya/run_laya.py code unchanged (run_split, run_meta) through fine-tuning/laya/run_ft_laya.py. Probabilities as logged are calibrated with temperature_fit.temperature (per question type; the per-bucket map is empty); raw (T=1) probabilities are recoverable offline as softmax(T * log p), up to the 4-decimal rounding of predict(). temperature_applied stays null per row.",
   "finetuned_from": {
     "model": "convaiinnovations/laya/multilingual",
