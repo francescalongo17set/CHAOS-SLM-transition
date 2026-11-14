@@ -1,0 +1,394 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.1700710807811316,
+   "ece": 0.01916280575096607,
+   "n": 224
+  },
+  "feature_classification": {
+   "brier": 0.18588132060379337,
+   "ece": 0.05757276093799799,
+   "n": 298
+  },
+  "scope_check": {
+   "brier": 0.10171338674821287,
+   "ece": 0.016461252666159762,
+   "n": 298
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.8883928571428571,
+  "macro_f1": 0.8882837592515013,
+  "n": 224,
+  "per_class": {
+   "complex": {
+    "f1": 0.8847926267281107,
+    "precision": 0.8888888888888888,
+    "recall": 0.8807339449541285,
+    "support": 109
+   },
+   "simple": {
+    "f1": 0.8917748917748919,
+    "precision": 0.8879310344827587,
+    "recall": 0.8956521739130435,
+    "support": 115
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 298,
+  "n": 298
+ },
+ "feature_classification": {
+  "accuracy": 0.8758389261744967,
+  "macro_f1": 0.8801564261792162,
+  "n": 298,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.8405797101449275,
+    "precision": 0.90625,
+    "recall": 0.7837837837837838,
+    "support": 37
+   },
+   "comparison": {
+    "f1": 0.935064935064935,
+    "precision": 0.972972972972973,
+    "recall": 0.9,
+    "support": 40
+   },
+   "ibip_screening": {
+    "f1": 0.9599999999999999,
+    "precision": 0.9473684210526315,
+    "recall": 0.972972972972973,
+    "support": 37
+   },
+   "none": {
+    "f1": 0.8299319727891157,
+    "precision": 0.8356164383561644,
+    "recall": 0.8243243243243243,
+    "support": 74
+   },
+   "product_policy_analysis": {
+    "f1": 0.9014084507042254,
+    "precision": 0.9014084507042254,
+    "recall": 0.9014084507042254,
+    "support": 71
+   },
+   "regulatory_consultation": {
+    "f1": 0.813953488372093,
+    "precision": 0.7446808510638298,
+    "recall": 0.8974358974358975,
+    "support": 39
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 279.41912859378704,
+  "median": 276.44863099999384,
+  "n": 288,
+  "n_warmup_excluded": 10,
+  "p50": 276.44863099999384,
+  "p95": 306.5480810000736,
+  "total": 80472.70903501066
+ },
+ "model_id": "/kaggle/working/runs/kev/kev-0.8b-ft-a/checkpoint",
+ "model_revision": "checkpoint",
+ "n_error_rows": 0,
+ "n_rows": 298,
+ "n_truncated": 0,
+ "pipeline": "kev",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 48,
+   "recall": 0.7916666666666666
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 2,
+    "recall": 0.5
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 3,
+    "recall": 0.0
+   },
+   "jailbreak": {
+    "n_gold_refuse": 2,
+    "recall": 1.0
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 9,
+    "recall": 0.6666666666666666
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 2,
+    "recall": 1.0
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 30,
+   "recall": 0.9
+  },
+  "safety_leak": {
+   "n_gold_refuse": 18,
+   "recall": 0.6111111111111112
+  }
+ },
+ "route": {
+  "accuracy": 0.889261744966443,
+  "macro_f1": 0.8892594786729857,
+  "n": 298,
+  "per_class": {
+   "agentic": {
+    "f1": 0.9249999999999999,
+    "precision": 0.9487179487179487,
+    "recall": 0.9024390243902439,
+    "support": 123
+   },
+   "lightweight": {
+    "f1": 0.8720379146919431,
+    "precision": 0.8363636363636363,
+    "recall": 0.9108910891089109,
+    "support": 101
+   },
+   "quick_reply": {
+    "f1": 0.9600000000000001,
+    "precision": 1.0,
+    "recall": 0.9230769230769231,
+    "support": 26
+   },
+   "refuse": {
+    "f1": 0.7999999999999999,
+    "precision": 0.8085106382978723,
+    "recall": 0.7916666666666666,
+    "support": 48
+   }
+  }
+ },
+ "route_attribution": {
+  "complexity_estimation": 3,
+  "feature_classification": 9,
+  "scope_check": 21
+ },
+ "run": {
+  "adapter_sha256": "bc80ff99bd46f1dcd5fb19474c6cdf7de31456b745d559b5855c821758c9f52b",
+  "data_manifest_sha256": {
+   "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+  },
+  "device": "Tesla T4",
+  "dtype": "float32",
+  "ended_at": "2026-11-14T01:02:07.300180+00:00",
+  "finetuned_from": {
+   "base": "Qwen/Qwen3.5-0.8B-Base",
+   "base_revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+   "init_from": "jaredpalmer/kev-0.8b@9a45d25eb2ab761841196625383fa1dff0e56c1e",
+   "released_resolved": "/tmp/hf/hub/models--jaredpalmer--kev-0.8b/snapshots/9a45d25eb2ab761841196625383fa1dff0e56c1e",
+   "released_weights_sha256": "9b908623acb162118575f4e7a94524f9c139c335be4bfb74d6cfceca01e1885a"
+  },
+  "gpu_count": 2,
+  "head_sha256": "0f054e2e98f2bc030de5e75d684abcab1bd7c930df92c53ea46113a73bc120e6",
+  "latency_mode": "in_process",
+  "libraries": {
+   "kev": "2074cc44256200bb37540103fa4572901faa10f3",
+   "torch": "2.8.0+cu128"
+  },
+  "load_time_s": 7.6,
+  "model_id": "/kaggle/working/runs/kev/kev-0.8b-ft-a/checkpoint",
+  "model_revision": "checkpoint",
+  "model_size": {
+   "disk_mb": 1835.4,
+   "disk_mb_adapter": 65.5,
+   "disk_mb_base": 1769.9,
+   "layer_split": null,
+   "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
+   "params_total": 752917824,
+   "peak_gpu_mem_mb": 3465.4,
+   "peak_gpu_mem_mb_per_device": null,
+   "peak_host_ram_mb": null
+  },
+  "n_error_rows": {
+   "validation": 0
+  },
+  "n_rows": {
+   "validation": 298
+  },
+  "notes": "fp32 eager path (LoadOptions defaults). v2: one call per row (scope, feature, complexity; no slot questions). input_native is len(enc['ids']) of that call. Fine-tuned 0.8b checkpoint (kev-0.8b-ft-a); evaluated by baselines/kev/run.py unchanged, fields above added by fine-tuning/kev/run_ft.py. Raw (T=1) probabilities are recoverable offline as softmax(T * log p) with T = temperature_applied (head divides logits by T, kev/model.py PointerHead).",
+  "pipeline": "kev",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+  "run_id": "kev-0.8b-ft-a",
+  "started_at": "2026-11-14T01:00:22.328450+00:00",
+  "state_template": "p-01",
+  "temperature_applied": 1.319507910772894,
+  "temperature_fit": {
+   "method": "min NLL, micro, kev.metrics.fit_temperature (81-point grid 0.25..4)",
+   "n_questions": 514,
+   "n_records": 189,
+   "previous": 1.0,
+   "reason": "fit on our calibration partition (FT-C-07)",
+   "rows": "calibration.jsonl",
+   "value": 1.319507910772894
+  },
+  "train_run_id": "kev-0.8b-ft-a",
+  "training": {
+   "command": [
+    "/tmp/work/venv/bin/python",
+    "-m",
+    "kev.train",
+    "--data",
+    "data/kev/train.jsonl",
+    "--init_from",
+    "jaredpalmer/kev-0.8b@9a45d25eb2ab761841196625383fa1dff0e56c1e",
+    "--out",
+    "/kaggle/working/runs/kev/kev-0.8b-ft-a/checkpoint",
+    "--device",
+    "cuda",
+    "--dtype",
+    "fp32",
+    "--weights_dtype",
+    "fp32",
+    "--checkpointing",
+    "1",
+    "--base",
+    "Qwen/Qwen3.5-0.8B-Base",
+    "--lora",
+    "16",
+    "--head_dim",
+    "256",
+    "--lora_targets",
+    "all",
+    "--option_isolation",
+    "0",
+    "--special_embeddings",
+    "0",
+    "--lr",
+    "2e-05",
+    "--epochs",
+    "1",
+    "--batch",
+    "1",
+    "--accum",
+    "8",
+    "--p_none_pair",
+    "0.25",
+    "--seed",
+    "0",
+    "--base_revision",
+    "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68"
+   ],
+   "epochs": 1,
+   "limit": 0,
+   "peak_device_bytes": 3776134656,
+   "records_seen": 2877,
+   "seed": 0,
+   "summary": {
+    "differs_from_released": {
+     "accum": [
+      2,
+      8
+     ],
+     "batch": [
+      4,
+      1
+     ]
+    },
+    "lr": 2e-05,
+    "lr_cap": 5e-05,
+    "meta_lr": 2e-05,
+    "released_args": {
+     "accum": 2,
+     "anchor": "",
+     "anchor_sources": "",
+     "anchor_w": 0.0,
+     "base": "Qwen/Qwen3.5-0.8B-Base",
+     "base_revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+     "batch": 4,
+     "brier_w": 0.0,
+     "checkpointing": 1,
+     "data": "evals/round15/joint/train.jsonl",
+     "device": "cuda",
+     "dtype": "bf16",
+     "epochs": 1,
+     "focal_gamma": 0.0,
+     "head_dim": 256,
+     "head_lr": 0.0,
+     "holdout": "",
+     "init_from": "jaredpalmer/kev-0.8b",
+     "label_smoothing": 0.0,
+     "lora": 16,
+     "lora_placement": "full",
+     "lora_targets": "all",
+     "lr": 2e-05,
+     "max_state": 7552,
+     "n_per_source": 1000,
+     "option_isolation": 0,
+     "ord_w": 0.0,
+     "out": "/runs/r15-08b/00-trial-0/checkpoint",
+     "p_distract": 0.15,
+     "p_none": 0.1,
+     "p_none_distract": 0.12,
+     "p_none_pair": 0.25,
+     "perm_frac": 0.3,
+     "perm_kl": 0.0,
+     "public_frac": 1.0,
+     "replay": 6000,
+     "seed": 1,
+     "special_embeddings": 0,
+     "suite": "/root/evals/v7/decision-v7",
+     "synthetic_repeat": 1,
+     "train_sources": "",
+     "weight_decay": 0.01,
+     "weights_dtype": "fp32"
+    }
+   },
+   "wall_seconds": 3405.7
+  },
+  "weights_sha256": "bc80ff99bd46f1dcd5fb19474c6cdf7de31456b745d559b5855c821758c9f52b"
+ },
+ "scope_check": {
+  "accuracy": 0.9295302013422819,
+  "macro_f1": 0.9044789356984478,
+  "n": 298,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.9534368070953437,
+    "precision": 0.947136563876652,
+    "recall": 0.9598214285714286,
+    "support": 224
+   },
+   "out_of_scope": {
+    "f1": 0.7999999999999999,
+    "precision": 0.8085106382978723,
+    "recall": 0.7916666666666666,
+    "support": 48
+   },
+   "quick_reply": {
+    "f1": 0.9600000000000001,
+    "precision": 1.0,
+    "recall": 0.9230769230769231,
+    "support": 26
+   }
+  }
+ },
+ "split": "validation",
+ "tokens": {
+  "input_native": {
+   "mean": 384.43624161073825,
+   "median": 373.5,
+   "n": 298,
+   "p95": 446,
+   "total": 114562
+  },
+  "input_ref": {
+   "mean": 392.43624161073825,
+   "median": 381.5,
+   "n": 298,
+   "p95": 454,
+   "total": 116946
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}

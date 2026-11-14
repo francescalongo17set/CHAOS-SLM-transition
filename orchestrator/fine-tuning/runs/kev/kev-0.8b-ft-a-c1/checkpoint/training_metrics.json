@@ -1,15 +1,15 @@
 {
-  "wall_seconds": 301.63426423072815,
-  "records_seen": 10,
+  "wall_seconds": 298.30031418800354,
+  "records_seen": 16,
   "requested_records": 32,
   "truncated_records": 0,
   "rejected_records": 0,
   "optimizer_steps": 1,
-  "forward_tokens": 5777,
+  "forward_tokens": 5380,
   "step_seconds": [
-    301.634
+    298.3
   ],
-  "optimizer_seconds": 0.08806133270263672,
+  "optimizer_seconds": 0.08429837226867676,
   "resume_seconds": [],
   "resume_write_seconds": [],
   "world_size": 1,
@@ -19,15 +19,15 @@
     {
       "epoch": 0,
       "steps": 1,
-      "mean": 24.23909,
-      "max": 24.23909,
+      "mean": 13.8407,
+      "max": 13.8407,
       "clipped_steps": 1
     }
   ],
   "weights": "lora",
-  "peak_device_bytes": 4099905024,
+  "peak_device_bytes": 3900023808,
   "device": "cuda",
   "dtype": "fp32",
   "batch": 1,
-  "peak_rss_bytes": 5983260672
+  "peak_rss_bytes": 5977661440
 }

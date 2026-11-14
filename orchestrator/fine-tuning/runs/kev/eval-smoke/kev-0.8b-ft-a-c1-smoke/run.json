@@ -13,35 +13,35 @@
   },
   "platform": "kaggle",
   "latency_mode": "in_process",
-  "question_config": "questions.en.yaml (sha256 193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66)",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
   "state_template": "p-01",
   "data_manifest_sha256": {
-    "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638"
+    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
   },
-  "load_time_s": 8.2,
+  "load_time_s": 8.3,
   "model_size": {
     "params_total": 752917824,
     "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
     "disk_mb_adapter": 65.4,
     "disk_mb_base": 1769.9,
     "disk_mb": 1835.3,
-    "peak_gpu_mem_mb": 3465.2,
+    "peak_gpu_mem_mb": 3465.4,
     "peak_gpu_mem_mb_per_device": null,
     "layer_split": null,
     "peak_host_ram_mb": null
   },
   "temperature_applied": 1.0,
-  "weights_sha256": "17789dfe0478ae5f8acec284770422e92ca037f03e7938c09a3477b5f4a70bb0",
+  "weights_sha256": "1fdf88e480ada649a7498666417b1fc87e7aaf2eddb8f3ee413fc35564f959ad",
   "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
-  "started_at": "2026-11-13T16:29:31.811654+00:00",
-  "ended_at": "2026-11-13T16:30:18.171806+00:00",
+  "started_at": "2026-11-13T23:30:03.036952+00:00",
+  "ended_at": "2026-11-13T23:30:46.419648+00:00",
   "n_rows": {
-    "validation": 5
+    "validation": 4
   },
   "n_error_rows": {
     "validation": 0
   },
-  "notes": "fp32 eager path (LoadOptions defaults). Two calls per row (core, then predicted-feature slots); input_native sums len(enc['ids']) over the calls (state recomputed per call). Fine-tuned 0.8b checkpoint (kev-0.8b-ft-a-c1); evaluated by baselines/kev/run.py unchanged, fields above added by fine-tuning/kev/run_ft.py. Raw (T=1) probabilities are recoverable offline as softmax(T * log p) with T = temperature_applied (head divides logits by T, kev/model.py PointerHead).",
+  "notes": "fp32 eager path (LoadOptions defaults). v2: one call per row (scope, feature, complexity; no slot questions). input_native is len(enc['ids']) of that call. Fine-tuned 0.8b checkpoint (kev-0.8b-ft-a-c1); evaluated by baselines/kev/run.py unchanged, fields above added by fine-tuning/kev/run_ft.py. Raw (T=1) probabilities are recoverable offline as softmax(T * log p) with T = temperature_applied (head divides logits by T, kev/model.py PointerHead).",
   "finetuned_from": {
     "init_from": "jaredpalmer/kev-0.8b@9a45d25eb2ab761841196625383fa1dff0e56c1e",
     "released_resolved": "/tmp/hf/hub/models--jaredpalmer--kev-0.8b/snapshots/9a45d25eb2ab761841196625383fa1dff0e56c1e",
@@ -50,8 +50,8 @@
     "base_revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68"
   },
   "train_run_id": "kev-0.8b-ft-a-c1",
-  "adapter_sha256": "17789dfe0478ae5f8acec284770422e92ca037f03e7938c09a3477b5f4a70bb0",
-  "head_sha256": "cffe773c177722c48652233aa395fe04a91cb4c1e03d7324dcf6f636b33ebb96",
+  "adapter_sha256": "1fdf88e480ada649a7498666417b1fc87e7aaf2eddb8f3ee413fc35564f959ad",
+  "head_sha256": "1fb375b3a09658f409b2b2c6b1543db497b24df7eba38f7c8bd84a852cb5711b",
   "training": {
     "command": [
       "/tmp/work/venv/bin/python",
@@ -160,11 +160,11 @@
         ]
       }
     },
-    "wall_seconds": 340.5,
+    "wall_seconds": 334.1,
     "epochs": 1,
     "seed": 0,
     "limit": 32,
-    "peak_device_bytes": 4099905024,
-    "records_seen": 10
+    "peak_device_bytes": 3900023808,
+    "records_seen": 16
   }
 }
