@@ -1,0 +1,107 @@
+{
+  "run_id": "laya-ft-multilingual-a-b1",
+  "pipeline": "laya",
+  "model_id": "convaiinnovations/laya/multilingual fine-tuned (laya-ft-multilingual-a-b1)",
+  "model_revision": "ft:a61d75fc57dc2d51",
+  "dtype": "fp16",
+  "device": "Tesla T4",
+  "gpu_count": 2,
+  "python": "3.13.16",
+  "libraries": {
+    "laya": "0.4.31",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "platform": "kaggle",
+  "latency_mode": "in_process",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "state_template": "p-01",
+  "data_manifest_sha256": {
+    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+  },
+  "load_time_s": 8.21,
+  "model_size": {
+    "params_total": 321908995,
+    "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+    "disk_mb": 678.2,
+    "peak_gpu_mem_mb": 1514.1,
+    "peak_host_ram_mb": 2875.3
+  },
+  "max_len": 1024,
+  "head_max_len": 256,
+  "started_at": "2026-11-13T23:52:34+00:00",
+  "ended_at": "2026-11-13T23:52:35+00:00",
+  "notes": "v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null. | validation: 4 rows, 0 errors, 0 truncated; latency_ms median 51.48191600000018 over 4 rows; input_native mean 624.25. Fine-tuned checkpoint evaluated by baselines/laya/run_laya.py code unchanged (run_split, run_meta) through fine-tuning/laya/run_ft_laya.py. Probabilities as logged are calibrated with temperature_fit.temperature (per question type; the per-bucket map is empty); raw (T=1) probabilities are recoverable offline as softmax(T * log p), up to the 4-decimal rounding of predict(). temperature_applied stays null per row.",
+  "finetuned_from": {
+    "model": "convaiinnovations/laya/multilingual",
+    "revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78"
+  },
+  "train_run_id": "laya-ft-multilingual-a-b1",
+  "weights_sha256": "a61d75fc57dc2d512a0986cbda859e8378c7502232d8882f559f45887abe4fcd",
+  "kaggle_dataset": null,
+  "epoch_selected": 1,
+  "temperature_fit": {
+    "temperature": [
+      3.7201128005981445,
+      1.0,
+      1.0
+    ],
+    "temperature_by_options": {},
+    "temperature_clamped": {},
+    "n_by_bucket": {
+      "choice:3-5": 189,
+      "choice:6-10": 189,
+      "choice:2": 136
+    },
+    "calibration_items": 514
+  },
+  "training": {
+    "config": {
+      "epochs": 1,
+      "micro_batch": 8,
+      "grad_accum": 8,
+      "encoder_lr": 2.5e-05,
+      "head_lr": 0.0001,
+      "min_lr": 1e-06,
+      "loss": "rlcd",
+      "shuffle_options": [],
+      "label_smoothing": 0.0,
+      "seed": 0,
+      "amp": true
+    },
+    "limits": {
+      "train_rows": 64,
+      "dev_rows": 40
+    },
+    "items": {
+      "train": 189,
+      "calibration": 514,
+      "development": 120
+    },
+    "epoch_mean_loss": [
+      1.1618198323994875
+    ],
+    "epochs": [
+      {
+        "epoch": 0,
+        "mean_loss": null,
+        "route_macro_f1": 0.2972222222222222,
+        "route_accuracy": 0.425,
+        "n": 40
+      },
+      {
+        "epoch": 1,
+        "mean_loss": 1.1618198323994875,
+        "train_seconds": 7.7,
+        "save_seconds": 1.2,
+        "score_seconds": 2.7,
+        "route_macro_f1": 0.2972222222222222,
+        "route_accuracy": 0.425,
+        "n": 40
+      }
+    ],
+    "train_wall_seconds": 11.7,
+    "peak_gpu_mem_mb": 3279.4,
+    "sanity": null
+  }
+}
