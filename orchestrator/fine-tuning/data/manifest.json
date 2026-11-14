@@ -1,63 +1,60 @@
 {
   "seed": 20261113,
-  "question_config_sha256": "193e1c623dacdd703cf57a7ca9b260a0f6d31d98d07b29778462f9d8e5bf4b66",
+  "question_config_sha256": "eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753",
   "source_manifests_sha256": {
-    "train": "6c6d5c72f7625a3e5a8e2f61d62c1d317f9c2237e4389a73b44190fa7f6aad33",
-    "validation": "04485fd6ac4a3368b8af3974754465c91ba8323192edf65700f193c8e70f1638",
-    "test": "c1bbc8658aba45c4fb259bb6f126292893444f7e5f3faad07c950b79d1672c7f"
+    "train": "de32cdf490cb81603b649b4cc386faecece528f76a54baa3cbacd59a6b8f63fa",
+    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c",
+    "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f"
   },
   "counts": {
-    "train": 1899,
-    "calibration": 193,
+    "train": 1903,
+    "calibration": 189,
     "development": 298
   },
   "route_counts": {
     "train": {
-      "agentic": 517,
-      "clarification": 327,
-      "lightweight": 585,
+      "agentic": 785,
+      "lightweight": 648,
       "quick_reply": 168,
       "refuse": 302
     },
     "calibration": {
-      "agentic": 48,
-      "clarification": 29,
-      "lightweight": 63,
+      "agentic": 69,
+      "lightweight": 67,
       "quick_reply": 20,
       "refuse": 33
     },
     "development": {
-      "agentic": 82,
-      "clarification": 50,
-      "lightweight": 92,
+      "agentic": 123,
+      "lightweight": 101,
       "quick_reply": 26,
       "refuse": 48
     }
   },
   "files": {
     "kev/train.jsonl": {
-      "rows": 1899,
-      "sha256": "234f80e9d45910e194926d1c12904461757ff0c38155c8c10a994106ebfa72df"
+      "rows": 1903,
+      "sha256": "7cc39370fccf359444bdea19e15fb9aef92623bc45a4d129fee3591f1a87873f"
     },
     "laya/train.jsonl": {
-      "rows": 1899,
-      "sha256": "52f9b23ee461340f0d09c53b7ab33ccd810151dd06c68299641c9923bdeb851f"
+      "rows": 1903,
+      "sha256": "2123cb01c47cac1d78deebf32401d148a72caf808b35cc0002754e89586c1c1f"
     },
     "kev/calibration.jsonl": {
-      "rows": 193,
-      "sha256": "bba08fb0c865bd1a1833818fe99cbf6a5c58c39f4a913c191017ffd2f852d857"
+      "rows": 189,
+      "sha256": "cc98415c50b0e1fff9216767c06f49860059deded1dd6846a2f9dc6a8ce4f78e"
     },
     "laya/calibration.jsonl": {
-      "rows": 193,
-      "sha256": "e335a03c6f9d3a758224e32b4bf0bf72c1c794781bd98cfb8e892ac4a01c0498"
+      "rows": 189,
+      "sha256": "7c7eac21354bd10f3195a1552aba827b39fc09846ddafd4f8e45a4fd0074abe9"
     },
     "kev/development.jsonl": {
       "rows": 298,
-      "sha256": "fe56eeeae555ad300bd87457e32710c7a38df85facd6f0e549a563434d577ff0"
+      "sha256": "34826cea99c11a60265414fc0f35e95485b9d909623daf5fdf74dcb8dc0f85d7"
     },
     "laya/development.jsonl": {
       "rows": 298,
-      "sha256": "44f98c9c744a4d2f798c4a0c540800270791a7aaba72276ac1c64f1e970eb84d"
+      "sha256": "a1ef20b267434ccc6282e10609adafabf16eca4eddab2f5e64c273c772d0364e"
     }
   }
 }

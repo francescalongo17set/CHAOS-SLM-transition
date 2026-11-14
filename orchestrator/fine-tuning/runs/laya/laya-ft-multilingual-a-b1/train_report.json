@@ -1,0 +1,103 @@
+{
+  "run_note": "FT-P1 train_laya.py",
+  "model": "convaiinnovations/laya/multilingual",
+  "revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78",
+  "laya_version": "0.4.31",
+  "torch_version": "2.11.0+cu130",
+  "device": "Tesla T4",
+  "config": {
+    "epochs": 1,
+    "micro_batch": 8,
+    "grad_accum": 8,
+    "encoder_lr": 2.5e-05,
+    "head_lr": 0.0001,
+    "min_lr": 1e-06,
+    "loss": "rlcd",
+    "shuffle_options": [],
+    "label_smoothing": 0.0,
+    "seed": 0,
+    "amp": true
+  },
+  "limits": {
+    "train_rows": 64,
+    "dev_rows": 40
+  },
+  "items": {
+    "train": 189,
+    "calibration": 514,
+    "development": 120
+  },
+  "skipped": {
+    "train": {},
+    "calibration": {},
+    "development": {}
+  },
+  "max_len": 1024,
+  "head_max_len": 256,
+  "epoch_mean_loss": [
+    1.1618198323994875
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "mean_loss": null,
+      "route_macro_f1": 0.2972222222222222,
+      "route_accuracy": 0.425,
+      "n": 40
+    },
+    {
+      "epoch": 1,
+      "mean_loss": 1.1618198323994875,
+      "train_seconds": 7.7,
+      "save_seconds": 1.2,
+      "score_seconds": 2.7,
+      "route_macro_f1": 0.2972222222222222,
+      "route_accuracy": 0.425,
+      "n": 40
+    }
+  ],
+  "epoch_selected": 1,
+  "temperature": [
+    3.7201128005981445,
+    1.0,
+    1.0
+  ],
+  "temperature_by_options": {},
+  "temperature_clamped": {},
+  "n_by_bucket": {
+    "choice:3-5": 189,
+    "choice:6-10": 189,
+    "choice:2": 136
+  },
+  "calibration": {
+    "choice": {
+      "items": 514,
+      "temperature": 3.7201128005981445,
+      "issues": [],
+      "accuracy": 0.5038910505836576,
+      "mean_confidence": 0.5006482942020035
+    },
+    "score": {
+      "items": 0,
+      "temperature": 1.0,
+      "issues": []
+    },
+    "noul": {
+      "items": 0,
+      "temperature": 1.0,
+      "issues": []
+    }
+  },
+  "collapse_stats": {
+    "n": 514.0,
+    "mean_logit_range": 4.45533521287868,
+    "mean_ce": 1.6083787283518893,
+    "mean_ln_k": 1.2462028770399372
+  },
+  "weights_sha256": "a61d75fc57dc2d512a0986cbda859e8378c7502232d8882f559f45887abe4fcd",
+  "train_wall_seconds": 11.7,
+  "total_wall_seconds": 69.4,
+  "peak_gpu_mem_mb": 3279.4,
+  "sanity": null,
+  "note": "development route macro-F1 from argmax of fp32 logits + v2 dispatcher; the selected epoch is calibrated and scored from its fp16 checkpoint, the weights the harness loads."
+}

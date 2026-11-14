@@ -1,0 +1,367 @@
+{
+ "calibration": {
+  "complexity_estimation": {
+   "brier": 0.1267733899107143,
+   "ece": 0.04578973214285701,
+   "n": 224
+  },
+  "feature_classification": {
+   "brier": 0.10591323228187913,
+   "ece": 0.014928859060403102,
+   "n": 298
+  },
+  "scope_check": {
+   "brier": 0.08778112996644295,
+   "ece": 0.0228010067114102,
+   "n": 298
+  }
+ },
+ "complexity_estimation": {
+  "accuracy": 0.9151785714285714,
+  "macro_f1": 0.9149735291179701,
+  "n": 224,
+  "per_class": {
+   "complex": {
+    "f1": 0.9107981220657276,
+    "precision": 0.9326923076923077,
+    "recall": 0.8899082568807339,
+    "support": 109
+   },
+   "simple": {
+    "f1": 0.9191489361702128,
+    "precision": 0.9,
+    "recall": 0.9391304347826087,
+    "support": 115
+   }
+  }
+ },
+ "dispatcher_oracle": {
+  "matches": 298,
+  "n": 298
+ },
+ "feature_classification": {
+  "accuracy": 0.9328859060402684,
+  "macro_f1": 0.9366320169175978,
+  "n": 298,
+  "per_class": {
+   "client_drafting": {
+    "f1": 0.9589041095890412,
+    "precision": 0.9722222222222222,
+    "recall": 0.9459459459459459,
+    "support": 37
+   },
+   "comparison": {
+    "f1": 0.9620253164556962,
+    "precision": 0.9743589743589743,
+    "recall": 0.95,
+    "support": 40
+   },
+   "ibip_screening": {
+    "f1": 0.9863013698630138,
+    "precision": 1.0,
+    "recall": 0.972972972972973,
+    "support": 37
+   },
+   "none": {
+    "f1": 0.9178082191780821,
+    "precision": 0.9305555555555556,
+    "recall": 0.9054054054054054,
+    "support": 74
+   },
+   "product_policy_analysis": {
+    "f1": 0.9305555555555556,
+    "precision": 0.9178082191780822,
+    "recall": 0.9436619718309859,
+    "support": 71
+   },
+   "regulatory_consultation": {
+    "f1": 0.8641975308641975,
+    "precision": 0.8333333333333334,
+    "recall": 0.8974358974358975,
+    "support": 39
+   }
+  }
+ },
+ "latency_ms": {
+  "mean": 32.712197708333726,
+  "median": 32.01688799998692,
+  "n": 288,
+  "n_warmup_excluded": 10,
+  "p50": 32.01688799998692,
+  "p95": 37.826550000033876,
+  "total": 9421.112940000114
+ },
+ "model_id": "convaiinnovations/laya/multilingual fine-tuned (laya-ft-multilingual-a)",
+ "model_revision": "ft:d0f3f358744a4a5c",
+ "n_error_rows": 0,
+ "n_rows": 298,
+ "n_truncated": 0,
+ "pipeline": "laya",
+ "refuse_recall": {
+  "all": {
+   "n_gold_refuse": 48,
+   "recall": 0.875
+  },
+  "by_leak_type": {
+   "data_extraction": {
+    "n_gold_refuse": 2,
+    "recall": 1.0
+   },
+   "fraud_or_illegal": {
+    "n_gold_refuse": 3,
+    "recall": 0.3333333333333333
+   },
+   "jailbreak": {
+    "n_gold_refuse": 2,
+    "recall": 1.0
+   },
+   "prompt_injection": {
+    "n_gold_refuse": 9,
+    "recall": 0.6666666666666666
+   },
+   "social_engineering_or_abuse": {
+    "n_gold_refuse": 2,
+    "recall": 1.0
+   }
+  },
+  "non_leak": {
+   "n_gold_refuse": 30,
+   "recall": 0.9666666666666667
+  },
+  "safety_leak": {
+   "n_gold_refuse": 18,
+   "recall": 0.7222222222222222
+  }
+ },
+ "route": {
+  "accuracy": 0.9295302013422819,
+  "macro_f1": 0.9181355949621006,
+  "n": 298,
+  "per_class": {
+   "agentic": {
+    "f1": 0.9583333333333333,
+    "precision": 0.9829059829059829,
+    "recall": 0.9349593495934959,
+    "support": 123
+   },
+   "lightweight": {
+    "f1": 0.9282296650717703,
+    "precision": 0.8981481481481481,
+    "recall": 0.9603960396039604,
+    "support": 101
+   },
+   "quick_reply": {
+    "f1": 0.9199999999999999,
+    "precision": 0.9583333333333334,
+    "recall": 0.8846153846153846,
+    "support": 26
+   },
+   "refuse": {
+    "f1": 0.8659793814432989,
+    "precision": 0.8571428571428571,
+    "recall": 0.875,
+    "support": 48
+   }
+  }
+ },
+ "route_attribution": {
+  "complexity_estimation": 4,
+  "feature_classification": 1,
+  "scope_check": 16
+ },
+ "run": {
+  "data_manifest_sha256": {
+   "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+  },
+  "device": "Tesla T4",
+  "dtype": "fp16",
+  "ended_at": "2026-11-14T00:56:07+00:00",
+  "epoch_selected": 4,
+  "finetuned_from": {
+   "model": "convaiinnovations/laya/multilingual",
+   "revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78"
+  },
+  "gpu_count": 2,
+  "head_max_len": 256,
+  "kaggle_dataset": "ft-laya",
+  "latency_mode": "in_process",
+  "libraries": {
+   "laya": "0.4.31",
+   "torch": "2.11.0+cu130",
+   "transformers": "5.20.2"
+  },
+  "load_time_s": 16.6,
+  "max_len": 1024,
+  "model_id": "convaiinnovations/laya/multilingual fine-tuned (laya-ft-multilingual-a)",
+  "model_revision": "ft:d0f3f358744a4a5c",
+  "model_size": {
+   "disk_mb": 678.2,
+   "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+   "params_total": 321908995,
+   "peak_gpu_mem_mb": 1532.0,
+   "peak_host_ram_mb": 2888.3
+  },
+  "notes": "v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null. Fine-tuned checkpoint evaluated by baselines/laya/run_laya.py code unchanged (run_split, run_meta) through fine-tuning/laya/run_ft_laya.py. Probabilities as logged are calibrated with temperature_fit.temperature (per question type; the per-bucket map is empty); raw (T=1) probabilities are recoverable offline as softmax(T * log p), up to the 4-decimal rounding of predict(). temperature_applied stays null per row.",
+  "pipeline": "laya",
+  "platform": "kaggle",
+  "python": "3.13.16",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "run_id": "laya-ft-multilingual-a",
+  "started_at": "2026-11-14T00:55:53+00:00",
+  "state_template": "p-01",
+  "temperature_fit": {
+   "calibration_items": 514,
+   "n_by_bucket": {
+    "choice:2": 136,
+    "choice:3-5": 189,
+    "choice:6-10": 189
+   },
+   "temperature": [
+    5.0,
+    1.0,
+    1.0
+   ],
+   "temperature_by_options": {},
+   "temperature_clamped": {
+    "choice": {
+     "applied": 5.0,
+     "bound": "max",
+     "fitted": 5.624726295471191
+    }
+   }
+  },
+  "train_run_id": "laya-ft-multilingual-a",
+  "training": {
+   "config": {
+    "amp": true,
+    "encoder_lr": 2.5e-05,
+    "epochs": 4,
+    "grad_accum": 8,
+    "head_lr": 0.0001,
+    "label_smoothing": 0.0,
+    "loss": "rlcd",
+    "micro_batch": 8,
+    "min_lr": 1e-06,
+    "seed": 0,
+    "shuffle_options": []
+   },
+   "epoch_mean_loss": [
+    0.47646935385658995,
+    0.4529975914138188,
+    0.2854632092635361,
+    0.15280823441506666
+   ],
+   "epochs": [
+    {
+     "epoch": 0,
+     "mean_loss": null,
+     "n": 298,
+     "route_accuracy": 0.3926174496644295,
+     "route_macro_f1": 0.3945619231299077
+    },
+    {
+     "epoch": 1,
+     "mean_loss": 0.47646935385658995,
+     "n": 298,
+     "route_accuracy": 0.8657718120805369,
+     "route_macro_f1": 0.8535080590545849,
+     "save_seconds": 1.3,
+     "score_seconds": 25.0,
+     "train_seconds": 202.4
+    },
+    {
+     "epoch": 2,
+     "mean_loss": 0.4529975914138188,
+     "n": 298,
+     "route_accuracy": 0.9161073825503355,
+     "route_macro_f1": 0.9083448223013938,
+     "save_seconds": 1.3,
+     "score_seconds": 24.9,
+     "train_seconds": 196.9
+    },
+    {
+     "epoch": 3,
+     "mean_loss": 0.2854632092635361,
+     "n": 298,
+     "route_accuracy": 0.9228187919463087,
+     "route_macro_f1": 0.9169290904767704,
+     "save_seconds": 1.3,
+     "score_seconds": 25.0,
+     "train_seconds": 196.0
+    },
+    {
+     "epoch": 4,
+     "mean_loss": 0.15280823441506666,
+     "n": 298,
+     "route_accuracy": 0.9295302013422819,
+     "route_macro_f1": 0.9181355949621006,
+     "save_seconds": 1.3,
+     "score_seconds": 24.9,
+     "train_seconds": 195.6
+    }
+   ],
+   "items": {
+    "calibration": 514,
+    "development": 894,
+    "train": 5239
+   },
+   "limits": {
+    "dev_rows": 0,
+    "train_rows": 0
+   },
+   "peak_gpu_mem_mb": 6189.8,
+   "sanity": {
+    "best_route_macro_f1": 0.9181355949621006,
+    "floor": 0.395,
+    "passed": true
+   },
+   "train_wall_seconds": 895.9
+  },
+  "weights_sha256": "d0f3f358744a4a5c1cc23718e5a67f4a4424d8770a0fa4b43e30949bb8e11f41"
+ },
+ "scope_check": {
+  "accuracy": 0.9463087248322147,
+  "macro_f1": 0.9175239363534083,
+  "n": 298,
+  "per_class": {
+   "in_scope": {
+    "f1": 0.9665924276169264,
+    "precision": 0.9644444444444444,
+    "recall": 0.96875,
+    "support": 224
+   },
+   "out_of_scope": {
+    "f1": 0.8659793814432989,
+    "precision": 0.8571428571428571,
+    "recall": 0.875,
+    "support": 48
+   },
+   "quick_reply": {
+    "f1": 0.9199999999999999,
+    "precision": 0.9583333333333334,
+    "recall": 0.8846153846153846,
+    "support": 26
+   }
+  }
+ },
+ "split": "validation",
+ "tokens": {
+  "input_native": {
+   "mean": 572.0469798657718,
+   "median": 539.5,
+   "n": 298,
+   "p95": 766,
+   "total": 170470
+  },
+  "input_ref": {
+   "mean": 392.43624161073825,
+   "median": 381.5,
+   "n": 298,
+   "p95": 454,
+   "total": 116946
+  },
+  "output_native": {
+   "n": 0
+  }
+ }
+}

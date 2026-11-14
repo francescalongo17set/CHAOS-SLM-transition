@@ -4,11 +4,11 @@
 
 ## What this round is
 
-Round 1 ran three decision models zero-shot. Round 2 trains three of them on `data-generation/data/final/train/router.jsonl` and scores them with the **unchanged round-1 harness**, so the change from zero-shot is a like-for-like measurement. Nimble was dropped in round 1 (baselines C-34); Kev-9B is not fine-tuned for now (too expensive, FT-C-02).
+Round 1 ran three decision models zero-shot. Round 2 trains three of them on `data-generation/data/final_v2/train/router.jsonl` (dataset v2: 4 routes, no clarification, no slot questions; baselines C-35 to C-37) and scores them with the **unchanged round-1 harness**, so the change from zero-shot is a like-for-like measurement. Nimble was dropped in round 1 (baselines C-34); Kev-9B is not fine-tuned for now (too expensive, FT-C-02).
 
 The three fine-tunings are **independent branches that can work in parallel**. They share one data step (chapter 02) that must be built and merged first.
 
-Round-1 results to compare against (route accuracy / macro-F1, test): Laya 0.265 / 0.281 · Kev-0.8B 0.331 / 0.329 · Kev-4B 0.423 / 0.471. Validation: Laya 0.238 / 0.254 · Kev-0.8B 0.349 / 0.357 · Kev-4B 0.436 / 0.483. Kev-9B (0.567 / 0.617 on test) is reference only.
+Zero-shot results to compare against are the **v2 re-runs** (route accuracy / macro-F1, 4 routes, test): Laya 0.415 / 0.421 · Kev-0.8B 0.654 / 0.550. Validation: Laya 0.393 / 0.395 · Kev-0.8B 0.678 / 0.596. Kev-4B and Kev-9B have **no v2 zero-shot run yet**: run them before fine-tuning Kev-4B. The v1 numbers (5 routes) are not comparable and are kept only in `orchestrator/baselines/runs/RUNS_REPORT.md`.
 
 ## Reading order
 

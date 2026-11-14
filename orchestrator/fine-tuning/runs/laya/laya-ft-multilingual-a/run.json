@@ -1,0 +1,150 @@
+{
+  "run_id": "laya-ft-multilingual-a",
+  "pipeline": "laya",
+  "model_id": "convaiinnovations/laya/multilingual fine-tuned (laya-ft-multilingual-a)",
+  "model_revision": "ft:d0f3f358744a4a5c",
+  "dtype": "fp16",
+  "device": "Tesla T4",
+  "gpu_count": 2,
+  "python": "3.13.16",
+  "libraries": {
+    "laya": "0.4.31",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "platform": "kaggle",
+  "latency_mode": "in_process",
+  "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
+  "state_template": "p-01",
+  "data_manifest_sha256": {
+    "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f"
+  },
+  "load_time_s": 16.63,
+  "model_size": {
+    "params_total": 321908995,
+    "params_method": "sum of numel over agent.model.parameters() (encoder + decision head)",
+    "disk_mb": 678.2,
+    "peak_gpu_mem_mb": 1529.5,
+    "peak_host_ram_mb": 2890.0
+  },
+  "max_len": 1024,
+  "head_max_len": 256,
+  "started_at": "2026-11-14T01:05:07+00:00",
+  "ended_at": "2026-11-14T01:05:31+00:00",
+  "notes": "v2: one predict() call per row (scope, feature, complexity; no slot questions); input_native is Laya's usage.input_tokens. Probabilities as shipped: Laya applies the checkpoint's temperatures inside predict() and does not report them, so temperature_applied is null. Fine-tuned checkpoint evaluated by baselines/laya/run_laya.py code unchanged (run_split, run_meta) through fine-tuning/laya/run_ft_laya.py. Probabilities as logged are calibrated with temperature_fit.temperature (per question type; the per-bucket map is empty); raw (T=1) probabilities are recoverable offline as softmax(T * log p), up to the 4-decimal rounding of predict(). temperature_applied stays null per row.",
+  "finetuned_from": {
+    "model": "convaiinnovations/laya/multilingual",
+    "revision": "85cc74ddae6109077ebe2853a9b3077fb6606a78"
+  },
+  "train_run_id": "laya-ft-multilingual-a",
+  "weights_sha256": "d0f3f358744a4a5c1cc23718e5a67f4a4424d8770a0fa4b43e30949bb8e11f41",
+  "kaggle_dataset": "ft-laya",
+  "epoch_selected": 4,
+  "temperature_fit": {
+    "temperature": [
+      5.0,
+      1.0,
+      1.0
+    ],
+    "temperature_by_options": {},
+    "temperature_clamped": {
+      "choice": {
+        "fitted": 5.624726295471191,
+        "applied": 5.0,
+        "bound": "max"
+      }
+    },
+    "n_by_bucket": {
+      "choice:3-5": 189,
+      "choice:6-10": 189,
+      "choice:2": 136
+    },
+    "calibration_items": 514
+  },
+  "training": {
+    "config": {
+      "epochs": 4,
+      "micro_batch": 8,
+      "grad_accum": 8,
+      "encoder_lr": 2.5e-05,
+      "head_lr": 0.0001,
+      "min_lr": 1e-06,
+      "loss": "rlcd",
+      "shuffle_options": [],
+      "label_smoothing": 0.0,
+      "seed": 0,
+      "amp": true
+    },
+    "limits": {
+      "train_rows": 0,
+      "dev_rows": 0
+    },
+    "items": {
+      "train": 5239,
+      "calibration": 514,
+      "development": 894
+    },
+    "epoch_mean_loss": [
+      0.47646935385658995,
+      0.4529975914138188,
+      0.2854632092635361,
+      0.15280823441506666
+    ],
+    "epochs": [
+      {
+        "epoch": 0,
+        "mean_loss": null,
+        "route_macro_f1": 0.3945619231299077,
+        "route_accuracy": 0.3926174496644295,
+        "n": 298
+      },
+      {
+        "epoch": 1,
+        "mean_loss": 0.47646935385658995,
+        "train_seconds": 202.4,
+        "save_seconds": 1.3,
+        "score_seconds": 25.0,
+        "route_macro_f1": 0.8535080590545849,
+        "route_accuracy": 0.8657718120805369,
+        "n": 298
+      },
+      {
+        "epoch": 2,
+        "mean_loss": 0.4529975914138188,
+        "train_seconds": 196.9,
+        "save_seconds": 1.3,
+        "score_seconds": 24.9,
+        "route_macro_f1": 0.9083448223013938,
+        "route_accuracy": 0.9161073825503355,
+        "n": 298
+      },
+      {
+        "epoch": 3,
+        "mean_loss": 0.2854632092635361,
+        "train_seconds": 196.0,
+        "save_seconds": 1.3,
+        "score_seconds": 25.0,
+        "route_macro_f1": 0.9169290904767704,
+        "route_accuracy": 0.9228187919463087,
+        "n": 298
+      },
+      {
+        "epoch": 4,
+        "mean_loss": 0.15280823441506666,
+        "train_seconds": 195.6,
+        "save_seconds": 1.3,
+        "score_seconds": 24.9,
+        "route_macro_f1": 0.9181355949621006,
+        "route_accuracy": 0.9295302013422819,
+        "n": 298
+      }
+    ],
+    "train_wall_seconds": 895.9,
+    "peak_gpu_mem_mb": 6189.8,
+    "sanity": {
+      "floor": 0.395,
+      "best_route_macro_f1": 0.9181355949621006,
+      "passed": true
+    }
+  }
+}

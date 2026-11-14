@@ -1,0 +1,2 @@
+{"epoch": 0, "mean_loss": null, "route_macro_f1": 0.2972222222222222, "route_accuracy": 0.425, "n": 40}
+{"epoch": 1, "mean_loss": 1.1618198323994875, "train_seconds": 7.7, "save_seconds": 1.2, "score_seconds": 2.7, "route_macro_f1": 0.2972222222222222, "route_accuracy": 0.425, "n": 40}

@@ -18,7 +18,7 @@ Not read for this handbook: the upstream sources themselves, the data card, the 
 | Topic | Why |
 |---|---|
 | Kaggle quotas and session limits | Figures change; per account. |
-| Time estimates (0.8B 30 to 60 min per epoch, 4B about 3 h per epoch, Laya about 10,000 items per epoch) | Estimates, not measurements; the pilot measures them. |
+| Time estimates (0.8B 30 to 60 min per epoch, 4B about 3 h per epoch, Laya about 5,500 items per epoch) | Estimates, not measurements; the pilot measures them. |
 | `kev` and `laya` interfaces (`kev.train` flags, `laya.train` functions) | Read from `main` on one day; pin the exact sha and version in the run. |
 | Hub revisions (tags move) | Pin commits and log `weights_sha256`. |
 
@@ -31,7 +31,7 @@ Not read for this handbook: the upstream sources themselves, the data card, the 
 - **Test labels were synthetic and not hand-checked in round 1** (`verified: false`). A score of 100% is not expected. The owner chose not to carry a "draft, unreviewed" label on fine-tuning reports (FT-C-21); keep this caveat in the sources chapter of any report, since it does not go away.
 - **Laya fine-tuned weights are saved as fp16** by `save_checkpoint`, while loading is fp32 on CPU; the evaluation runs fp16 on the T4, as in round 1.
 - **Kev-0.8B English-only card.** Italian zero-shot was weak; a small gain after fine-tuning is a result, not a failure.
-- **Class imbalance** is untreated in the first run (FT-C-10). The known weak spots (clarification precision, `lightweight` recall) may persist.
+- **Class imbalance** is untreated in the first run (FT-C-10). The known weak spots (`lightweight` recall) may persist.
 - **Prompt-injection refusal** is judged on 18 test rows; per-slice numbers move a lot between runs.
 
 ## Related project references

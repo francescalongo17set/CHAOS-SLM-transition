@@ -13,8 +13,8 @@ Latency from fine-tuned runs is comparable with zero-shot only on the same hardw
 ## Tests to write (`common/tests`, no GPU needed)
 
 1. **Question parity:** for every train row, the built question objects equal what the eval adapter sends (text, options, order).
-2. **Dispatcher on training labels:** labels of the built examples, mapped through the dispatcher, reproduce `support.expected_route` on 100% of train rows (gold record from labels plus slot status). This is the round-1 oracle test applied to the training files. **Exception (FT-C-24):** the rows whose only non-present slot is `date_reference` (14 in train) are expected to differ and the test asserts that exactly these, and no others, do.
-3. **Rule table of chapter 02:** no complexity question on out-of-scope or quick_reply rows; no slot question without gold; `insurer` skipped on the 100 train rows; `date_reference` never asked.
+2. **Dispatcher on training labels:** labels of the built examples, mapped through the dispatcher, reproduce `support.expected_route` on 100% of train rows (v2 dispatcher, 3 labels, no exception). This is the oracle test applied to the training files.
+3. **Rule table of chapter 02:** no complexity question on out-of-scope or quick_reply rows; no slot question at all (v2).
 4. **Split assertions** of chapter 02 on the real data and on a synthetic leaky split (which must fail).
 5. **Label validity:** every Kev label is a key of its `criteria`; every Laya `expected` value is in its `criteria`.
 6. **State format:** `state` in both formats is a string equal to the `serialize_state` output.
