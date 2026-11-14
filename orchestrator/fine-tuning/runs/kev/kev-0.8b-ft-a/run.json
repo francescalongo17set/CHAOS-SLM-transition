@@ -16,16 +16,17 @@
   "question_config": "questions.en.yaml (sha256 eb2cfd38c102b218e990f2d361791e7ebaed725314fbed770bcf9c4a84b1a753)",
   "state_template": "p-01",
   "data_manifest_sha256": {
-    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c"
+    "validation": "377d9873ae226a22737e07e58ddeaa13f410d4eaefa60f7c22fef00acd01d66c",
+    "test": "24253ef55c19cf86e4a6df00ea82f43e2419fa5c32826a7541a4b579108a522f"
   },
-  "load_time_s": 7.6,
+  "load_time_s": 25.3,
   "model_size": {
     "params_total": 752917824,
     "params_method": "sum(p.numel()) over the loaded DecisionModel (base + merged LoRA + pointer head)",
     "disk_mb_adapter": 65.5,
     "disk_mb_base": 1769.9,
     "disk_mb": 1835.4,
-    "peak_gpu_mem_mb": 3465.4,
+    "peak_gpu_mem_mb": 3460.0,
     "peak_gpu_mem_mb_per_device": null,
     "layer_split": null,
     "peak_host_ram_mb": null
@@ -34,12 +35,14 @@
   "weights_sha256": "bc80ff99bd46f1dcd5fb19474c6cdf7de31456b745d559b5855c821758c9f52b",
   "reference_tokenizer": "Qwen/Qwen3.5-0.8B-Base@dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
   "started_at": "2026-11-14T01:00:22.328450+00:00",
-  "ended_at": "2026-11-14T01:02:07.300180+00:00",
+  "ended_at": "2026-11-14T01:29:46.134706+00:00",
   "n_rows": {
-    "validation": 298
+    "validation": 298,
+    "test": 593
   },
   "n_error_rows": {
-    "validation": 0
+    "validation": 0,
+    "test": 0
   },
   "notes": "fp32 eager path (LoadOptions defaults). v2: one call per row (scope, feature, complexity; no slot questions). input_native is len(enc['ids']) of that call. Fine-tuned 0.8b checkpoint (kev-0.8b-ft-a); evaluated by baselines/kev/run.py unchanged, fields above added by fine-tuning/kev/run_ft.py. Raw (T=1) probabilities are recoverable offline as softmax(T * log p) with T = temperature_applied (head divides logits by T, kev/model.py PointerHead).",
   "finetuned_from": {

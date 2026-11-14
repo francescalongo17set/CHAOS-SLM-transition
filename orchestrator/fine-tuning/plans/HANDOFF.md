@@ -1,8 +1,10 @@
 # Handoff · where the fine-tuning round stands
 
+> **14 Nov 2026: Kev-0.8B `kev-0.8b-ft-a` is finished (validation macro-F1 0.889, test 0.874 vs 0.550 zero-shot).** See Results. Open: paired bootstrap comparison, raw ECE, Kev-4B, Laya.
+
 > **Aligned with dataset v2 (14 Nov 2026, FT-C-26).** `orchestrator/ft` was fast-forwarded to `main` (v2 merged). The data step now reads `final_v2/`, builds 3-question examples (no slot questions), uses the 4-route dispatcher, and `data/manifest.json` was regenerated (train 1,903 / calibration 189 / development 298). Zero-shot reference values are the v2 ones (Kev-0.8B 0.596 dev macro-F1; Kev-4B has no v2 run yet). The earlier C1 smoke run (`kev-0.8b-ft-a-c1`) was trained on v1 and is **stale**; the Kaggle bundle must be rebuilt (`make_bundle_ft.py`) and re-uploaded before any run.
 
-Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync, test touched once per model). This file says what is done, where it lives, and what to do next. Branch: `orchestrator/ft` (FT-C-23).
+Updated 14 Nov 2026 (first full Kev-0.8B run finished: train, calibration, validation and test). Read the [handbook README](../handbook/README.md) rules first (stop and ask on `PENDING`, docs in sync, test touched once per model). This file says what is done, where it lives, and what to do next. Branch: `orchestrator/ft` (FT-C-23).
 
 ## State
 
@@ -10,7 +12,7 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 |---|---|---|
 | FT-P0 shared data step | **DONE**, 9 tests pass locally, committed | `common/` (`audit_train.py`, `build_data.py`, `split.py`, `checks.py`, `tests/`), `data/manifest.json`. Audit matched chapter 02 exactly. |
 | FT-P2 Kev-0.8B code | **DONE**, 8 unit tests + format-parity test pass locally | `kev/` (`train_kev.py`, `calibrate_kev.py`, `run_ft.py`, `make_bundle_ft.py`, `kaggle_kev_ft.ipynb`), [plan](FT-P2-kev-0.8b.md) |
-| Kev-0.8B run `kev-0.8b-ft-a` | **NOT RUN YET (owner corrected, 13 Nov).** Only C0 and C1 (smoke) have run; the earlier note that the run was finished was wrong. No full training, calibration, validation or test exists. | will be `runs/kev/kev-0.8b-ft-a/`; today `runs/kev/` holds only the C1 scratch folders |
+| Kev-0.8B run `kev-0.8b-ft-a` | **DONE (14 Nov 2026).** c3 train + calibration, validation (sanity check passed) and test (run once, FROZEN) all finished on a Kaggle T4; 0 error rows, dispatcher oracle 298/298 and 593/593. Results below. Weights are NOT in git: adapter and `head.pt` are in a private Kaggle Dataset (name not recorded here: owner to add). | `runs/kev/kev-0.8b-ft-a/` (c1/c2 scratch folders are not results) |
 | FT-P1 Laya | not started; no code. Folders `laya/`, `data/laya/` exist; Laya JSONL is already generated | [chapter 05](../handbook/pipelines/laya.md) |
 | FT-P3 Kev-4B | not started. Allowed now: C0 and C1 of 0.8B are done (FT-P-02) | [chapter 06](../handbook/pipelines/kev.md) |
 | FT-P4 comparison | not started | `common/compare.py` in baselines; the shared bootstrap script (chapter 07 test 7) is not written |
@@ -26,6 +28,8 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 
 ## What the next agent does first (verify before relying on anything)
 
+*(Steps 1 to 5 were done on 14 Nov for `kev-0.8b-ft-a`; keep them for the next run.)*
+
 1. Look at `runs/kev/kev-0.8b-ft-a/`: `train_report.json`, `run.json`, `calibration/temperature.json`, `validation.jsonl`, `metrics_validation.json`, `report_validation.md`, and `test.jsonl` / `metrics_test.json` if test was run.
 2. Validate every log: `common.logs.validate_log` clean, 0 error rows, dispatcher oracle 593/593 (chapter 03). `run.json` must hold: `finetuned_from`, `train_run_id`, `adapter_sha256`, `head_sha256`, `temperature_fit`, `training`. Missing or null: report, do not fill by hand.
 3. Check the sanity check (FT-C-12): validation route macro-F1 above 0.596 (v2 zero-shot). If the notebook asserted it, say so; if not, compute it from `metrics_validation.json`.
@@ -36,9 +40,9 @@ Updated 13 Nov 2026. Read the [handbook README](../handbook/README.md) rules fir
 
 | | Validation (route acc / macro-F1) | Test (route acc / macro-F1) | Zero-shot test | Temperature fitted | Train wall time |
 |---|---|---|---|---|---|
-| `kev-0.8b-ft-a` | | | 0.654 / 0.550 (v2) | | |
+| `kev-0.8b-ft-a` | 0.889 / 0.889 (n = 298; zero-shot 0.596 macro-F1) | 0.882 / 0.874 (n = 593) | 0.654 / 0.550 (v2) | T = 1.3195 (previous 1.0; 189 calibration records, 514 questions) | 3,368 s (238 steps) |
 
-Also record: peak GPU memory in training, step time, records seen, the notebook stages that ran, Kaggle session length and weekly quota (chapter 09 item 6), the adapter and `head.pt` sha256 and the private Kaggle Dataset name that holds the checkpoint.
+Also recorded (14 Nov): peak GPU memory in training 3.78 GB, mean step 13.1 s (after the first two), 2,877 records seen (about 3 questions per request), 238 optimizer steps, every step grad-clipped (grad-norm mean 13.4, max 49.3), 0 rejected / 0 truncated. Final loss about 0.35. `adapter_sha256` `bc80ff99…c52b`, `head_sha256` `0f054e2e…20e6` (full values in `run.json`). Notebook stages that ran: `c3`, `c4_validation` (sanity check 0.889 > 0.596), then a separate session with `restore` + `c4_test` (the notebook gained a `restore` stage that copies the run from the checkpoint Dataset). Test macro-F1 per question: scope 0.885, feature 0.878, complexity 0.882. Refuse recall on test is weak: 0.632 (60 of 95; fraud_or_illegal 0.40, prompt_injection 0.56). Latency is not comparable with zero-shot (FT-C-25 kernel). Still to record: Kaggle session length and weekly quota (chapter 09 item 6), the Dataset name.
 
 ## Still to build
 
