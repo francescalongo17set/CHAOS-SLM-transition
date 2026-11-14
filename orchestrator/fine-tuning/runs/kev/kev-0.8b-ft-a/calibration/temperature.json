@@ -1,0 +1,9 @@
+{
+  "rows": "calibration.jsonl",
+  "n_records": 189,
+  "n_questions": 514,
+  "method": "min NLL, micro, kev.metrics.fit_temperature (81-point grid 0.25..4)",
+  "value": 1.319507910772894,
+  "previous": 1.0,
+  "reason": "fit on our calibration partition (FT-C-07)"
+}
