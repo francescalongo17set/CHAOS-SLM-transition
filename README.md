@@ -8,6 +8,10 @@ Small language models (SLMs) for an Italian insurance assistant. The repo covers
 
 Last updated: 14 Nov 2026.
 
+## Pipeline
+
+Each system has its own folder and one entry point `run(XIn) -> XOut`, typed in `contracts/`. See [docs/pipeline.md](docs/pipeline.md) and [CONTRIBUTING.md](CONTRIBUTING.md). The systems are stubs for now.
+
 ## Repository layout
 
 | Path | What it holds |
@@ -15,7 +19,11 @@ Last updated: 14 Nov 2026.
 | [`data-generation/`](data-generation/) | Specs (`instructions/`) and the data build (`data/`): code, chunks, plan, final datasets, data card |
 | [`orchestrator/baselines/`](orchestrator/baselines/) | Zero-shot baselines for the orchestrator: shared package, Kev and Laya pipelines, run logs and reports |
 | [`orchestrator/fine-tuning/`](orchestrator/fine-tuning/) | Fine-tuning of the best baseline (Kev-0.8B): shared data step, training and calibration code, plans |
-| [`question_answering_finetuning.ipynb`](question_answering_finetuning.ipynb) | Early notebook: prompting Qwen2.5-1.5B-Instruct for grounded QA over policy chunks |
+| [`lightweight/`](lightweight/) | RAG + answer writer (stub). `notebooks/` holds the early notebook: prompting Qwen2.5-1.5B-Instruct for grounded QA over policy chunks |
+| [`contracts/`](contracts/) | Typed In/Out of every system, with examples |
+| [`pipeline/`](pipeline/) | The only code that composes systems |
+| [`safety/`](safety/), [`orchestrator/src/`](orchestrator/src/), [`quick_reply/`](quick_reply/), [`agentic/`](agentic/), [`verification/`](verification/) | One system each (stubs) |
+| [`mlops/`](mlops/), [`ui/`](ui/) | Training/registry scripts and Gradio app (stubs) |
 
 ## 1. Data (`data-generation/`)
 

@@ -1,0 +1,25 @@
+{
+  "in": {
+    "question": "Quanto preavviso serve per attivare la forma diretta?",
+    "context": {
+      "history": [
+        {
+          "role": "user",
+          "content": "Buongiorno"
+        },
+        {
+          "role": "assistant",
+          "content": "Buongiorno, come posso aiutare?"
+        }
+      ],
+      "selected_policy": "POLICY_1",
+      "library": "LIBRARY_1"
+    },
+    "tau": null
+  },
+  "out": {
+    "route": "lightweight",
+    "reason": "single_lookup",
+    "confidence": 0.91
+  }
+}

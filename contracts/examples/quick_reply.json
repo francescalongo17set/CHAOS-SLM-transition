@@ -1,0 +1,25 @@
+{
+  "in": {
+    "question": "Grazie",
+    "context": {
+      "history": [
+        {
+          "role": "user",
+          "content": "Buongiorno"
+        },
+        {
+          "role": "assistant",
+          "content": "Buongiorno, come posso aiutare?"
+        }
+      ],
+      "selected_policy": "POLICY_1",
+      "library": "LIBRARY_1"
+    }
+  },
+  "out": {
+    "answer": {
+      "text": "Prego.",
+      "sources": []
+    }
+  }
+}
