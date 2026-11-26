@@ -1,0 +1,27 @@
+{
+  "in": {
+    "question": "Quanto preavviso serve per attivare la forma diretta?",
+    "route": "lightweight",
+    "answer": {
+      "text": "Almeno 2 giorni lavorativi, salvo urgenza medica certificata.",
+      "sources": [
+        {
+          "id": "P001",
+          "text": "Per attivare la forma diretta serve un preavviso di almeno 2 giorni lavorativi."
+        }
+      ]
+    }
+  },
+  "out": {
+    "passed": true,
+    "answer": {
+      "text": "Almeno 2 giorni lavorativi, salvo urgenza medica certificata.",
+      "sources": [
+        {
+          "id": "P001",
+          "text": "Per attivare la forma diretta serve un preavviso di almeno 2 giorni lavorativi."
+        }
+      ]
+    }
+  }
+}
